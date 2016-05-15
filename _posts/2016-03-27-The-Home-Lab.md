@@ -41,3 +41,9 @@ The Aiino rack houses the following kit:
 	* HMC 7.7.4 running as a VM
 
 Connection to the  Internet (BT Infinity FTTC) is handled by a Cisco 887VA router. Great piece of kit providing both IPSEC and SSL VPN, as well as better throughput than the standard BT modem. Wi-Fi is taken care of by an Apple Airport Extreme base station and a handful of Apple Airport Express bases around the house. 
+
+## Meet the Chief Architect
+
+No changes to the Home Lab will happen without approval from the Chief Architect:
+
+![Chief Architect](/images/chief_architect.png){: .align-center}
