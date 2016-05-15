@@ -1,0 +1,788 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+
+<meta charset="utf-8">
+
+
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>            Want a USB Ethernet driver for ESXi? You can have two. - DEV      TTY      </title>
+
+
+
+
+
+
+
+<meta property="og:locale" content="en-UK">
+<meta property="og:site_name" content="DEV | TTY">
+<meta property="og:title" content="Want a USB Ethernet driver for ESXi? You can have two.">
+
+
+
+
+  <meta property="og:description" content="Ah, that mythical home lab beast: a working USB Ethernet driver for ESXi. You wait and wait for one, and then two come along…">
+
+
+
+  <meta name="twitter:site" content="@devttyuk">
+  <meta name="twitter:title" content="Want a USB Ethernet driver for ESXi? You can have two.">
+  <meta name="twitter:description" content="Ah, that mythical home lab beast: a working USB Ethernet driver for ESXi. You wait and wait for one, and then two come along…">
+  <meta name="twitter:url" content="">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+  
+
+  
+
+
+
+  
+
+  
+
+
+
+
+
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2016-05-14T00:00:00+01:00">
+  
+  
+    <link rel="prev" href="/apple/Intel_Mesh_Commander_on_Mac_OS_X/" title="Intel Mesh Commander on Mac OS X">
+  
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context" : "http://schema.org",
+      "@type" : "person",
+      "name" : "Jose Gomes",
+      "url" : null,
+      "sameAs" : ["https://twitter.com/devttyuk","https://www.linkedin.com/in/jjgomes","https://github.com/gomesjj"]
+    }
+  </script>
+
+
+
+
+
+
+<!-- end SEO -->
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="DEV | TTY Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><div class="navicon"></div></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="/">DEV | TTY</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="/year-archive/">Posts</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="/categories/">Categories</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="/tags/">Tags</a></li>
+          
+            
+            <li class="masthead__menu-item"><a href="/about/">About</a></li>
+          
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
+  
+    
+
+
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="/categories/#apple" itemprop="item"><span itemprop="name">Apple</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">Want a USB Ethernet driver for ESXi? You can have two.</li>
+      
+    
+  </ol>
+</nav>
+  
+
+
+<div id="main" role="main">
+  
+
+
+  <div class="sidebar sticky">
+  
+
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  <div class="author__avatar">
+    
+    	<img src="/images/bio-photo.png" class="author__avatar" alt="Jose Gomes">
+    
+  </div>
+
+  <div class="author__content">
+    <h3 class="author__name">Jose Gomes</h3>
+    <p class="author__bio">... is just another techie.</p>
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> United Kingdom</li>
+      
+      
+      
+      
+      
+        <li><a href="http://twitter.com/devttyuk"><i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      
+      
+      
+      
+        <li><a href="http://linkedin.com/in/jjgomes"><i class="fa fa-fw fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a></li>
+      
+      
+      
+      
+      
+      
+        <li><a href="http://github.com/gomesjj"><i class="fa fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Want a USB Ethernet driver for ESXi? You can have two.">
+    <meta itemprop="description" content="Ah, that mythical home lab beast: a working USB Ethernet driver for ESXi. You wait and wait for one, and then two come along…">
+    <meta itemprop="datePublished" content="May 14, 2016">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Want a USB Ethernet driver for ESXi? You can have two.
+</h1>
+          
+            <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  9 minutes read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <p>Ah, that mythical home lab beast: a working USB Ethernet driver for ESXi. You wait and wait for one, and then two come along…</p>
+
+<aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fa fa-file-text"></i> On This Page</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#tested-devices" id="markdown-toc-tested-devices">Tested devices</a>    <ul>
+      <li><a href="#asix" id="markdown-toc-asix">ASIX</a></li>
+      <li><a href="#realtek" id="markdown-toc-realtek">Realtek</a></li>
+    </ul>
+  </li>
+  <li><a href="#performance" id="markdown-toc-performance">Performance</a>    <ul>
+      <li><a href="#iperf-figures-for-the-asix-driver" id="markdown-toc-iperf-figures-for-the-asix-driver">iPerf figures for the ASIX driver</a></li>
+      <li><a href="#iperf-figures-for-the-realtek-driver" id="markdown-toc-iperf-figures-for-the-realtek-driver">iPerf figures for the Realtek driver</a></li>
+    </ul>
+  </li>
+  <li><a href="#device-details" id="markdown-toc-device-details">Device details</a></li>
+  <li><a href="#esxi-quirks" id="markdown-toc-esxi-quirks">ESXi quirks</a></li>
+  <li><a href="#compiling-the-drivers" id="markdown-toc-compiling-the-drivers">Compiling the drivers</a></li>
+  <li><a href="#just-gimme-the-driver" id="markdown-toc-just-gimme-the-driver">Just gimme the driver</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<p><strong>TL;DR.</strong> <a href="#just-gimme-driver">Just gimme the driver</a></p>
+
+<p>If, like myself, you run an ESXi lab based on the Intel NUC, you might have looked at options to add a second Ethernet adapter. For the 3<sup>rd</sup> Generation NUC I solved the problem with my <a href="/NUC-Squarepants">NUC Squarepants</a> contraption, but was yet to find a good solution for later generations NUCs. That is, until I came across a great post by William Lam called <a href="http://www.virtuallyghetto.com/2016/03/working-usb-ethernet-adapter-nic-for-esxi.html">“Working USB Ethernet Adapter (NIC) for ESXi”</a>.</p>
+
+<p>You can read the full details on William’s blog, but the gist is that he was trying to resurrect a custom compiled driver that had been posted to the forum at vm-help.com back in 2013. That driver had been successfully compiled and worked fine on ESXi 5.1, but not on 5.5 or 6.0. By the time I came across William’s article, he was looking at ways to compile a new version of the driver targeted at later ESXi releases.</p>
+
+<p>My interest was piqued and the question was: could I get it working myself? I decided to have a go, so I spent some time reading the original forum thread to get a feel for what lay ahead. I am by no means a programmer, but I do from time to time write some code. The challenge was set…</p>
+
+<p>The one thing I didn’t like about the original driver William had found was the fact that it also needed a modified version of the <code class="highlighter-rouge">usbnet</code> module. I just thought that interfering with the native modules was a step too far, so wanted to avoid that.</p>
+
+<p>Anyway, to cut a long story short, I got the ASIX 88179_178a driver compiled and running on both ESXi 5.5 and 6.0. Funnily enough, by the time I contacted William about my success he had also got the driver built, and both <a href="https://github.com/lamw/ax88179_178a-esxi">his</a> and <a href="https://github.com/gomesjj/ax88179_178a">my</a> changes to the Linux source code were pretty much the same. Eventually I also got the driver compiled for ESXi 5.1, which took longer due to a puzzling DMA mask error when connected to USB 2.0 ports. It is resolved now, but bear in mind that the bandwidth limitation on USB 2.0 (there is no support for xHCI on ESXi 5.1) means that the adapter will never achieve Gigabit speeds.</p>
+
+<p>So, that is it? What about the second driver I implied at above? Well, that will be the driver for USB Ethernet adapters based on the Realtek RTL8153/RTL8152 chipset (r8152 driver) that I also got working. You see, once I got the first driver going I got the taste for it and had to have a go at another. The source code for this driver is also on <a href="https://github.com/gomesjj/r8152">GitHub</a>. This second driver also works on ESXi 6.0, 5.5 and 5.1, with the adapter plugged in to either a USB 3.0 or USB 2.0 (note the bandwidth limitation I mentioned above). Also,  the Realtek driver is a slightly faster than the ASIX one.</p>
+
+<h2 id="tested-devices">Tested devices</h2>
+
+<p>The following devices were tested with these drivers.</p>
+
+<h3 id="asix">ASIX</h3>
+
+<ul>
+  <li>
+    <p><a href="https://www.amazon.co.uk/gp/product/B0095EFXMC/ref=oh_aui_detailpage_o04_s00?ie=UTF8&amp;psc=1">StarTech USB 3.0 to RJ45 Ethernet LAN 10/100/100 Network Adapter</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.amazon.co.uk/gp/product/B00D8XTOD0/ref=oh_aui_detailpage_o03_s00?ie=UTF8&amp;psc=1">StarTech USB 3.0 to Dual Port Gigabit Ethernet Adapter NIC with USB Port</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.amazon.co.uk/gp/product/B00AQM8586/ref=oh_aui_detailpage_o02_s00?ie=UTF8&amp;psc=1">Plugable USB 3.0 to 10/100/1000 Gigabit Ethernet LAN Network Adapter</a></p>
+  </li>
+</ul>
+
+<h3 id="realtek">Realtek</h3>
+
+<ul>
+  <li>
+    <p><a href="https://www.amazon.co.uk/Anker-AK-A7611011-USB-1000Mbit-networking/dp/B00PC0P2DI?ie=UTF8&amp;*Version*=1&amp;*entries*=0">ANKER Aluminum USB 3.0 to Ethernet Adapter</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.amazon.co.uk/dp/B00NPJP33M/ref=pd_lpo_sbs_dp_ss_1?pf_rd_p=569136327&amp;pf_rd_s=lpo-top-stripe&amp;pf_rd_t=201&amp;pf_rd_i=B00DNU8Y20&amp;pf_rd_m=A3P5ROKL5A1OLE&amp;pf_rd_r=C5N2DD7H2D7AVRXM1VHP">ANKER USB 3.0 to RJ45 Gigabit Ethernet Adapter</a></p>
+  </li>
+</ul>
+
+<p>I have not tested it, but other devices based on the same chipset should work, such as the <a href="https://www.amazon.co.uk/gp/product/B00YOKMKE6/ref=pe_1959711_130662621_em_1p_0_ti">TP-LINK UE300</a></p>
+
+<h2 id="performance">Performance</h2>
+
+<p>I have been testing the drivers for almost two months now and performance has been rock solid, and on a par with the onboard Intel adapter or the Realtek Mini PCIe adapter I use on the <a href="/NUC-Squarepants">NUC Squarepants</a>. I had a few hiccups to start with, and that is detailed under the <a href="#esxi-quirks">ESXi quirks</a> section below.</p>
+
+<h3 id="iperf-figures-for-the-asix-driver">iPerf figures for the ASIX driver</h3>
+
+<p><img src="/images/usb/iperf_asix.png" alt="ASIX 88179_178a" class="align-center" /></p>
+
+<h3 id="iperf-figures-for-the-realtek-driver">iPerf figures for the Realtek driver</h3>
+
+<p><img src="/images/usb/iperf_rtl.png" alt="RTL8153" class="align-center" /></p>
+
+<p>Using iPerf alone is not a reliable way of measuring throughput, but it gives a good indication. I have, however, performed many vMotion operations to get better “real world” figures. For example, migrating a VM assigned 8 GB of RAM (VCSA), host only, takes ~4 seconds; migration to another host and datastore (iSCSI to internal disk) around ~4 minutes. Those figures are pretty much identical to what I see when the same operations are performed using the onboard Intel adapter.</p>
+
+<h2 id="device-details">Device details</h2>
+
+<p><img src="/images/usb/lsnics.png" alt="lsnics" class="align-center" /></p>
+
+<p>As can be seen above both devices show up as “Pseudo” devices, but have very different names. The reason for that is that the Realtek driver is CDC-Ether compliant, whereas the ASIX driver is not. One approach is no better than the other, though.</p>
+
+<p><strong>ASIX</strong></p>
+
+<p><img src="/images/usb/asix_getnic.png" alt="getnic" class="align-center" /></p>
+
+<p><img src="/images/usb/asix_ethtool.png" alt="getnic" /></p>
+
+<p><strong>Realtek</strong></p>
+
+<p><img src="/images/usb/rtl_getnic.png" alt="getnic" class="align-center" /></p>
+
+<p><img src="/images/usb/rtl_ethtool.png" alt="getnic" /></p>
+
+<h2 id="esxi-quirks">ESXi quirks</h2>
+
+<p><strong>Stacks</strong></p>
+
+<p>As you can imagine I was very happy that I managed to get the ASIX driver working, but I noticed from the beginning that whilst egress (TX) throughput was in line with gigabit speed, ingress (RX) was at least 300 Mbits/sec less. I exchanged a few emails with William Lam, and he was also seeing the same lower throughput (sometimes even less). I tried tweeking the code every which way to no avail, and I came to the conclusion that this was the better we could get off of those adapters. I was miffed.</p>
+
+<p>I started looking around the web and came across the ANKER adapter, noticing that it used a different chipset and driver. Emboldened by my success with the ASIX driver I turned my hand to the newly discovered Realtek driver. A few days later I had the driver compiled and working on ESXi 6.0, 5.5 and 5.1. Woo-hoo!</p>
+
+<p>Another round of iPerf tests revealed the exact same lower RX throughput with the new adapter (what?). Next, I moved the adapters around: the builtin NIC (vmnic0) was moved to vSwitch1 (iSCSI) and the USB adapter moved to vSwitch0. I had baseline test results for the Intel adapter, so I knew the throughput was the same for TX and RX. When I performed the same iPerf test again, this time with the Intel NIC on the other vSwitch, the RX throughput was lower too, as seen with the USB adapters…</p>
+
+<p>What could be causing this? The only thing I could think of was the fact that on vSwitch1 the ethernet traffic was tagged. Shirley that couldn’t be the reason? And it wasn’t – it was routing. I have a Cisco SG300 running on Layer 3 mode (router) and it will happily do inter-VLAN routing, no problem. The difference on ESXi is that with the single TCP/IP stack design there is only one default gateway (unlike most other sensible operating systems). Traffic was hitting the default gateway (VLAN 100), then being re-routed to the ISCSI VLAN (10). That worked fine on egress, but the return trip, bouncing from VLAN to VLAN, was killing the speed.</p>
+
+<p>I dully created a custom TCP/IP stack for VLAN 10, which enabled me to then assign another gateway, as well as appropriate static routes. That immediately resolved the issue; but then I could not bind the vNIC anymore to the iSCSI adapter. Is the Custom TCP/IP Stack feature on ESXi actually working? Answers on a post card, please.</p>
+
+<p><strong>The neighbourhood</strong></p>
+
+<p>I had kind of resolved the first issue, so I went on to test the speed of the USB adapter again. Remember that it was now on vSwitch0, home of the default gateway, so I was expecting everything to be fine. Egress, as always, fine; then I tried the other way around and… Boom!. The speed was down on the floor, just unusable (double “what?”).</p>
+
+<p>It was so bad that I could not even keep the SSH sessions open anymore. Pinging the server resulted in multiple packets dropped, with the occasional response coming trough. Time to bring around the bloodhound (Wireshark) to see what was going on. I could not see packets hiting the interface at all – they were actually hitting the other interface on the server (treble “What?”)</p>
+
+<p>Time to look at the ARP table from another server:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>esxcli network ip neighbor list
+Neighbor        Mac Address        Vmknic    Expiry  State  Type
+--------------  -----------------  ------  --------  -----  -------
+192.168.10.132  0c:c4:7a:a9:55:89  vmk1     873 sec         Unknown
+<span class="gp">--&gt; </span>192.168.10.226   3c:97:0e:5e:a1:bd  vmk1    1190 sec         Unknown &lt;--
+192.168.10.232  d0:50:99:c0:ae:8f  vmk1     919 sec         Unknown
+192.168.1.234   00:0c:29:97:66:3a  vmk0    1162 sec         Unknown
+<span class="gp">--&gt; </span>192.168.1.226   3c:97:0e:5e:a1:bd  vmk0    1181 sec         Unknown &lt;--
+192.168.1.223   00:0c:29:13:d3:03  vmk0    1143 sec         Unknown
+192.168.1.254   7c:69:f6:9a:c9:d0  vmk0     649 sec         Unknown
+192.168.1.222   c0:3f:d5:64:ae:5d  vmk0    1130 sec         Unknown
+192.168.1.240   14:b1:c8:00:37:80  vmk0    1173 sec         Unknown
+</code></pre>
+</div>
+<p>You can clearly see two different IP addresses linked to the same MAC address. Well, I thought, let’s try clearing the ARP cache.</p>
+
+<p>On the other ESXi servers:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>esxcli network ip neighbor remove --version<span class="o">=</span>4 --neighbor-addr<span class="o">=</span>192.168.1.226
+esxcli network ip neighbor remove --version<span class="o">=</span>4 --neighbor-addr<span class="o">=</span>192.168.1.220
+</code></pre>
+</div>
+<p>And on my own machine:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo arp -a -d
+</code></pre>
+</div>
+<p>Ping the server again with <code class="highlighter-rouge">arping</code></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>arping -S 192.168.1.240 -i en8 192.168.1.226
+ARPING 192.168.1.226
+60 bytes from 00:50:56:67:91:a9 <span class="o">(</span>192.168.1.226<span class="o">)</span>: <span class="nv">index</span><span class="o">=</span>0 <span class="nb">time</span><span class="o">=</span>318.050 usec
+60 bytes from 00:50:56:67:91:a9 <span class="o">(</span>192.168.1.226<span class="o">)</span>: <span class="nv">index</span><span class="o">=</span>0 <span class="nb">time</span><span class="o">=</span>318.050 usec
+60 bytes from 00:50:56:67:91:a9 <span class="o">(</span>192.168.1.226<span class="o">)</span>: <span class="nv">index</span><span class="o">=</span>1 <span class="nb">time</span><span class="o">=</span>276.089 usec
+</code></pre>
+</div>
+<p>That is more like it!</p>
+
+<p class="notice--info">During development of the driver, I had loaded and unloaded the module whilst tailing the vmkernel.log so many times that I had memorised the MAC address. I knew that was the correct one.</p>
+
+<p>Then I try to SSH to the server again, and nothing. Look at the ARP table, and the IP address is yet again listed against the wrong MAC address. What is going on here?</p>
+
+<p>It was time for some search-fu to be applied. Hit the webs, and got this: <a href="https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=1031111">vmk0 management network MAC address is not updated when NIC card is replaced or vmkernel has duplicate MAC address (1031111)</a>, which included this gem:</p>
+
+<p><em>The MAC address of vmk0 management network may not get updated after you replace or assign a new MAC address to the NIC and run the esxcfg-vmknic –l command from the command line. The default setting for the ESXi host is not to select the new hardware MAC address.</em></p>
+
+<p>The proposed solution? Delete and recreate the <code class="highlighter-rouge">vmknic</code>. Not what I wanted to read, as I was going to be swapping the adapters around many times to complete my tests. But wait, there is a workaround:</p>
+
+<div class="notice--warning">
+<p><b>Workaround</b></p>
+<p>To work around the issue, manually configure the MAC address on the ESXi host:</p>
+<p style="margin-left: 40px">1. In the troubleshooting console, run the command:</p>
+	<p style="margin-left:60px">esxcfg-advcfg -s 1 /Net/FollowHardwareMac</p>
+<p style="margin-left: 40px"> 2. Restart the ESXi server.</p>
+</div>
+
+<p>After applying the workaround I was then able to move the physical adapters freely between <code class="highlighter-rouge">vmknics</code> and the MAC address changed as expected.</p>
+
+<p>I understand that moving physical adapters around is not something that would be done regularly, but I would have preferred if the “workaround” was actually the default behaviour. Having said that, I changed stuff around, changed ESXi versions, and moved adapters so many times on that server that I am surprised I did’t hit any other problems…</p>
+
+<h2 id="compiling-the-drivers">Compiling the drivers</h2>
+
+<p>I will not elaborate on how to compile the drivers here. If you are interested, I have some reasonably detailed steps and also build scripts accompanying the source code on GitHub.</p>
+
+<h2 id="just-gimme-the-driver">Just gimme the driver</h2>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+  
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#esxi" class="page__taxonomy-item" rel="tag">ESXi</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#ethernet" class="page__taxonomy-item" rel="tag">Ethernet</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#homelab" class="page__taxonomy-item" rel="tag">HomeLab</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#usb" class="page__taxonomy-item" rel="tag">USB</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fa fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#apple" class="page__taxonomy-item" rel="tag">Apple</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2016-05-14T00:00:00+01:00">May 14, 2016</time></p>
+        
+      </footer>
+
+      
+
+<section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=/apple/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/" class="btn btn--twitter" title="Share on Twitter"><i class="fa fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=/apple/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/" class="btn btn--facebook" title="Share on Facebook"><i class="fa fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=/apple/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/" class="btn btn--google-plus" title="Share on Google Plus"><i class="fa fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=/apple/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/" class="btn btn--linkedin" title="Share on LinkedIn"><i class="fa fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+      
+
+
+  <nav class="pagination">
+    
+      <a href="/apple/Intel_Mesh_Commander_on_Mac_OS_X/" class="pagination--pager" title="Intel Mesh Commander on Mac OS X
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+      
+
+<div class="page__comments">
+  <h4 class="page__comments-title">Leave a Comment</h4>
+  
+    <section id="disqus_thread"></section>
+  
+</div>
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      
+        <h4 class="page__related-title">You May Also Enjoy</h4>
+      
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="/apple/Intel_Mesh_Commander_on_Mac_OS_X/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+        <div class="archive__item-teaser">
+          <img src=
+            
+              "/images/meshcommander.png"
+            
+            alt="">
+        </div>
+      
+      <h2 class="archive__item-title" itemprop="headline">Intel Mesh Commander on Mac OS X
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  4 minutes read
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">Intel Active Management Technology is one of the hardware technologies (perhaps the most recognised and representative) that is part of Intel’s vPro offering...</p>
+    </article>
+  </a>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="/homelab/NUC-Squarepants/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+        <div class="archive__item-teaser">
+          <img src=
+            
+              "/images//nuc/nuc_squarepants.png"
+            
+            alt="">
+        </div>
+      
+      <h2 class="archive__item-title" itemprop="headline">NUC Squarepants
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  4 minutes read
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">My first Intel NUC was yet to be delivered, but I was already looking around for a solution for it’s greatest shortcoming: the single Ethernet adapter. So, h...</p>
+    </article>
+  </a>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="/apple/iTunes-Library-on-NFS-share/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+        <div class="archive__item-teaser">
+          <img src=
+            
+              "/images/itunes_media.png"
+            
+            alt="">
+        </div>
+      
+      <h2 class="archive__item-title" itemprop="headline">iTunes Media Folder on NFS share
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  4 minutes read
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">Mine is a Mac household and as such, iTunes plays a part on our entertainment strategy. I generally like Apple products and software, but I must confess iTun...</p>
+    </article>
+  </a>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  
+    <a href="/homelab/Intel-NUC-to-the-rescue/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+        <div class="archive__item-teaser">
+          <img src=
+            
+              "/images/intel-nucs.png"
+            
+            alt="">
+        </div>
+      
+      <h2 class="archive__item-title" itemprop="headline">Intel NUC to the rescue
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+
+
+  1 minute read
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">The components of my home lab changed many times over the years, but lately I embarked on a different approach: I wanted to come up with a design that kept t...</p>
+    </article>
+  </a>
+</div>
+        
+      </div>
+    </div>
+  
+</div>
+
+    <div class="page__footer">
+      <footer>
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+      <li><a href="https://twitter.com/devttyuk"><i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+    
+    
+    
+      <li><a href="http://github.com/gomesjj"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2016 Jose Gomes. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+  
+  <script type="text/javascript">
+  	/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  	var disqus_shortname = 'devttyuk';
+
+  	/* * * DON'T EDIT BELOW THIS LINE * * */
+  	(function() {
+  		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  	})();
+
+  	/* * * DON'T EDIT BELOW THIS LINE * * */
+  	(function () {
+  		var s = document.createElement('script'); s.async = true;
+  		s.type = 'text/javascript';
+  		s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+  		(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+  	}());
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+
+    <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+
+  </body>
+</html>
+
