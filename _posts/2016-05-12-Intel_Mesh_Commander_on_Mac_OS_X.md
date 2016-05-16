@@ -188,7 +188,7 @@ MeshCommander.app
 
 ![Remote](/images/mesh/rdesk.png)
 
-### Can I it it?
+### Can I eat it?
 
 Yes, you can. Download the application:
 
