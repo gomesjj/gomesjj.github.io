@@ -14,7 +14,7 @@ When I was selecting the NUC model(s) to use for my ESXi home lab, the fact that
 
 There was a little fly in the ointment though. As I researched the technology it became clear that all the management tools were Windows only. Even Linux support was almost non-existent except for some example code distributed with the AMT SDK. Bummer, I thought to myself, another "Macs need not apply" zone.
 
-I do run a Windows 7 VM on my laptop solely because of Visio (another bummer), so I resined to the fact that the VM would just have to spin a few more times a week. That is, until I came across [Mesh Commander](http://www.meshcommander.com/meshcommander). Mesh Commander is open source software developed by Intel's Ylian Saint-Hilaire, which is distributed as a WIN64 binary or as a website served from IIS (Yuck!). Since the IIS version included the source code, I decided to download it and see if I could coerce the code to run on Apache or something else. To my surprise, in the bowels of the source code, I found an NW.js folder. That was more like it!
+I do run a Windows 7 VM on my laptop solely because of Visio (another bummer), so I resigned to the fact that the VM would just have to spin a few more times a week. That is, until I came across [Mesh Commander](http://www.meshcommander.com/meshcommander). Mesh Commander is open source software developed by Intel's Ylian Saint-Hilaire, which is distributed as a WIN64 binary or as a website served from IIS (Yuck!). Since the IIS version included the source code, I decided to download it and see if I could coerce the code to run on Apache or something else. To my surprise, in the bowels of the source code, I found an NW.js folder. That was more like it!
 
 *[IIS]: Internet Information Services
 
