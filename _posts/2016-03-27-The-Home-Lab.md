@@ -44,6 +44,6 @@ Connection to the  Internet (BT Infinity FTTC) is handled by a Cisco 887VA route
 
 ## Meet the Chief Architect
 
-No changes to the Home Lab will happen without approval from the Chief Architect:
+No changes to the Home Lab will happen without approval from the Chief Architect!
 
 ![Chief Architect](/images/chief_architect.png){: .align-center}
