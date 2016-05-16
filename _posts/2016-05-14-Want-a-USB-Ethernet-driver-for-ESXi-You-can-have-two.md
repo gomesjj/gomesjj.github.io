@@ -14,7 +14,7 @@ Ah, that mythical home lab beast: a working USB Ethernet driver for ESXi. You wa
 
 I would like to acknowledge the help all the people mentioned on this post, knowingly or otherwise, provided me. Their efforts inspired me to try my hand at this.
 
-In particular, I would like to thank William Lam (tip o' the hat to you, Sir), as without his help things would be very different. It was William who provided the solution that allows persistence of the network configuration across reboots. If you have a chance, stop by [virtuallyGhetto](http://www.virtuallyghetto.com) and show you appreciation.
+In particular, I would like to thank William Lam (tip o' the hat to you, Sir), as without his help things would be very different. It was William who provided the solution that allows automatic load of the modules at boot and persistence of the network configuration across reboots. If you have a chance, stop by [virtuallyGhetto](http://www.virtuallyghetto.com) and show you appreciation.
 
 ## The story   
 
