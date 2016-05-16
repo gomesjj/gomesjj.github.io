@@ -175,7 +175,7 @@ ls ./build/MeshCommander/osx64/
 MeshCommander.app
 ```
 
-### Look what's come out of the oven
+### Look what's come out off the oven
 
 
 ![Start](/images/mesh/mesh.png)
