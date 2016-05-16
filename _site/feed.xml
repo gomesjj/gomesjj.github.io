@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2016-05-16T11:50:14+01:00</updated><id>/</id><title>DEV | TTY</title><subtitle>The personal blog of Jose Gomes</subtitle><author><name>Jose Gomes</name></author><entry><title>Want a USB Ethernet driver for ESXi? You can have two.</title><link href="/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/" rel="alternate" type="text/html" title="Want a USB Ethernet driver for ESXi? You can have two." /><published>2016-05-14T00:00:00+01:00</published><updated>2016-05-14T00:00:00+01:00</updated><id>/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two</id><content type="html" xml:base="/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/">&lt;p&gt;Ah, that mythical home lab beast: a working USB Ethernet driver for ESXi. You wait and wait for one, and then two come along…&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2016-05-16T12:47:29+01:00</updated><id>/</id><title>DEV | TTY</title><subtitle>The personal blog of Jose Gomes</subtitle><author><name>Jose Gomes</name></author><entry><title>Want a USB Ethernet driver for ESXi? You can have two.</title><link href="/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/" rel="alternate" type="text/html" title="Want a USB Ethernet driver for ESXi? You can have two." /><published>2016-05-14T00:00:00+01:00</published><updated>2016-05-14T00:00:00+01:00</updated><id>/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two</id><content type="html" xml:base="/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/">&lt;p&gt;Ah, that mythical home lab beast: a working USB Ethernet driver for ESXi. You wait and wait for one, and then two come along…&lt;/p&gt;
 
 &lt;aside class=&quot;sidebar__right&quot;&gt;
 &lt;nav class=&quot;toc&quot;&gt;
@@ -464,7 +464,7 @@ MeshCommander.app
 
 &lt;p&gt;&lt;img src=&quot;/images/nuc/mpcie_extender.png&quot; alt=&quot;Syba mPCIe Adapter&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
 
-&lt;p class=&quot;notice--info&quot;&gt;&lt;strong&gt;Note:&lt;/strong&gt; The small board on the left of is connected to the mPCIe interface in the motherboard.&lt;/p&gt;
+&lt;p class=&quot;notice--info&quot;&gt;&lt;strong&gt;Note:&lt;/strong&gt; The small board on the left is connected to the mPCIe interface in the motherboard.&lt;/p&gt;
 
 &lt;h3 id=&quot;putting-it-all-together&quot;&gt;Putting it all together&lt;/h3&gt;
 
@@ -500,7 +500,7 @@ MeshCommander.app
 
 &lt;p&gt;&lt;img src=&quot;/images/nuc/7_nuc_complete.png&quot; alt=&quot;Syba mPCIe Adapter&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;So we now have an NUC with a new pair of pants large enough to accommodate it’s extra  package. Oo-er missus!&lt;/p&gt;
+&lt;p&gt;So we now have a NUC with a new pair of pants large enough to accommodate it’s extra  package. Oo-er missus!&lt;/p&gt;
 
 &lt;p class=&quot;notice--warning&quot;&gt;&lt;strong&gt;I know, I know. That is not a pair of pants, the base is not really square and there is no tie… but I like the name NUC Squarepants. I must be going senile.&lt;/strong&gt;&lt;/p&gt;
 

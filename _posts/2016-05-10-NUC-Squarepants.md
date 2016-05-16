@@ -48,7 +48,7 @@ And this is the mPCIe extender:
 ![Syba mPCIe Adapter](/images/nuc/mpcie_extender.png){: .align-center}
 
 {: .notice--info}
-**Note:** The small board on the left of is connected to the mPCIe interface in the motherboard.
+**Note:** The small board on the left is connected to the mPCIe interface in the motherboard.
 
 ### Putting it all together
 
@@ -84,7 +84,7 @@ And this is the mPCIe extender:
 
 ![Syba mPCIe Adapter](/images/nuc/7_nuc_complete.png){: .align-center}
 
-So we now have an NUC with a new pair of pants large enough to accommodate it's extra  package. Oo-er missus!
+So we now have a NUC with a new pair of pants large enough to accommodate it's extra  package. Oo-er missus!
 
 {: .notice--warning}
 **I know, I know. That is not a pair of pants, the base is not really square and there is no tie... but I like the name NUC Squarepants. I must be going senile.**
