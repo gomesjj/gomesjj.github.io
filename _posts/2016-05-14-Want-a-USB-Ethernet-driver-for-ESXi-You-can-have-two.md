@@ -170,7 +170,11 @@ I understand that moving physical adapters around is not something that would be
 
 ## Compiling the drivers
 
-I will not elaborate on how to compile the drivers here. If you are interested, I have some reasonably detailed steps and also build scripts accompanying the source code on GitHub.
+I will not elaborate on how to compile the drivers here. If you are interested, I have some reasonably detailed steps and also build scripts accompanying the source code on GitHub:
+
+* Repository for the [ASIX ax88179_178a](https://github.com/gomesjj/ax88179_178a) driver.
+* Repository for the [Realtek r8152](https://github.com/gomesjj/r8152) driver.
+
 
 ## TL;DR - Just gimme the driver
 

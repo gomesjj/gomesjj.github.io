@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2016-05-16T15:24:12+01:00</updated><id>/</id><title>DEV | TTY</title><subtitle>The personal blog of Jose Gomes</subtitle><author><name>Jose Gomes</name></author><entry><title>Want a USB Ethernet driver for ESXi? You can have two.</title><link href="/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/" rel="alternate" type="text/html" title="Want a USB Ethernet driver for ESXi? You can have two." /><published>2016-05-14T00:00:00+01:00</published><updated>2016-05-14T00:00:00+01:00</updated><id>/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two</id><content type="html" xml:base="/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/">&lt;p&gt;Ah, that mythical home lab beast: a working USB Ethernet driver for ESXi. You wait and wait for one, and then two come along…&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2016-05-16T16:39:56+01:00</updated><id>/</id><title>DEV | TTY</title><subtitle>The personal blog of Jose Gomes</subtitle><author><name>Jose Gomes</name></author><entry><title>Want a USB Ethernet driver for ESXi? You can have two.</title><link href="/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/" rel="alternate" type="text/html" title="Want a USB Ethernet driver for ESXi? You can have two." /><published>2016-05-14T00:00:00+01:00</published><updated>2016-05-14T00:00:00+01:00</updated><id>/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two</id><content type="html" xml:base="/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/">&lt;p&gt;Ah, that mythical home lab beast: a working USB Ethernet driver for ESXi. You wait and wait for one, and then two come along…&lt;/p&gt;
 
 &lt;aside class=&quot;sidebar__right&quot;&gt;
 &lt;nav class=&quot;toc&quot;&gt;
@@ -210,7 +210,12 @@ ARPING 192.168.1.226
 
 &lt;h2 id=&quot;compiling-the-drivers&quot;&gt;Compiling the drivers&lt;/h2&gt;
 
-&lt;p&gt;I will not elaborate on how to compile the drivers here. If you are interested, I have some reasonably detailed steps and also build scripts accompanying the source code on GitHub.&lt;/p&gt;
+&lt;p&gt;I will not elaborate on how to compile the drivers here. If you are interested, I have some reasonably detailed steps and also build scripts accompanying the source code on GitHub:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Repository for the &lt;a href=&quot;https://github.com/gomesjj/ax88179_178a&quot;&gt;ASIX ax88179_178a&lt;/a&gt; driver.&lt;/li&gt;
+  &lt;li&gt;Repository for the &lt;a href=&quot;https://github.com/gomesjj/r8152&quot;&gt;Realtek r8152&lt;/a&gt; driver.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h2 id=&quot;tldr---just-gimme-the-driver&quot;&gt;TL;DR - Just gimme the driver&lt;/h2&gt;
 
