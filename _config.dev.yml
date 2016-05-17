@@ -11,7 +11,7 @@ title                    : "DEV | TTY"
 title_separator          : "-"
 name                     : "Jose Gomes"
 description              : "The personal blog of Jose Gomes"
-url                      : "http://www.devtty.uk"
+url                      : "http://localhost:4000"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 gh_repo                  :
 teaser                   : "cat_tty.png"
