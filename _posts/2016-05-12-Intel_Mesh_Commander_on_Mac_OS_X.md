@@ -193,4 +193,4 @@ MeshCommander.app
 
 Yes, you can. Download the latest version of the application:
 
-![MeshCommander.app](/images/mesh/meshcommander.png) [ ![Download](https://api.bintray.com/packages/gomesjj/APPS/MeshCommander.app/images/download.svg) ](https://bintray.com/gomesjj/APPS/MeshCommander.app/_latestVersion)
+![MeshCommander.app](/images/mesh/meshcommander_app.png) [ ![Download](https://api.bintray.com/packages/gomesjj/APPS/MeshCommander.app/images/download.svg) ](https://bintray.com/gomesjj/APPS/MeshCommander.app/_latestVersion)
