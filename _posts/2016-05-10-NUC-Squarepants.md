@@ -1,5 +1,6 @@
 ---
 title: NUC Squarepants
+excerpt: "Adding a Mini PCIe Ethernet adapter to 3rd or 4th generation Intel NUC, housed on a 3D printed custom base."
 header:
   teaser: "/nuc/nuc_squarepants.png"
 category: [Homelab] 

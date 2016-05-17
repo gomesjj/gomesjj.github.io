@@ -1,5 +1,6 @@
 ---
 title: Intel NUC to the rescue
+excerpt: "Updating my home lab with Intel NUCs and a self-build NAS based on the Supermicro A1SAi-2750F board"
 header:
   teaser: "intel-nucs.png"
 category: [Homelab] 
