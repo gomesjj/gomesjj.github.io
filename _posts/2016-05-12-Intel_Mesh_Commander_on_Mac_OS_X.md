@@ -1,7 +1,7 @@
 ---
 title: Intel Mesh Commander on Mac OS X
 header:
-  teaser: "meshcommander.png"
+  teaser: "commander.png"
 category: [Apple] 
 tags: [Mac, OS X, NW.js, Homelab, Virtualisation, NUC]
 ---
@@ -190,6 +190,6 @@ MeshCommander.app
 
 ### Can I eat it?
 
-Yes, you can. Download the application:
+Yes, you can. Download the latest version of the application:
 
-[MeshCommander.app](https://bintray.com/gomesjj/APPS/download_file?file_path=OSX%2FMeshCommander.dmg.zip)
+![MeshCommander.app](/images/mesh/meshcommander.png) [ ![Download](https://api.bintray.com/packages/gomesjj/APPS/MeshCommander.app/images/download.svg) ](https://bintray.com/gomesjj/APPS/MeshCommander.app/_latestVersion)
