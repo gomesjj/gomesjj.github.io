@@ -186,26 +186,37 @@ You can download the VIBs using the following links:
 
 #### ESXi 6.0
 
-[ax88179-1.14.0-1-esxi60u2.vib](https://bintray.com/gomesjj/VIBs/download_file?file_path=ESXi60%2Fax88179-1.14.0-1-esxi60u2.vib)
+#### ax88179-1.14.0-1-esxi60u2.vib 
+[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/ax88179-1.14.0-1-esxi60u2.vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/ax88179-1.14.0-1-esxi60u2.vib/_latestVersion)
 
 #### ESXi 5.5
 
-[ax88179-1.14.0-1-esxi55u3.vib](https://bintray.com/gomesjj/VIBs/download_file?file_path=ESXi55%2Fax88179-1.14.0-1-esxi55u3.vib)
+#### ax88179-1.14.0-1-esxi55u3.vib
+
+ [ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/ax88179-1.14.0-1-esxi55u3.vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/ax88179-1.14.0-1-esxi55u3.vib/_latestVersion)
 
 #### ESXi 5.1
 
-[ax88179-1.14.0-1-esxi51u3.vib](https://bintray.com/gomesjj/VIBs/download_file?file_path=ESXi51%2Fax88179-1.14.0-1-esxi51u3.vib)
+#### ax88179-1.14.0-1-esxi51u3.vib
+
+ [ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/ax88179-1.14.0-1-esxi51u3.vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/ax88179-1.14.0-1-esxi51u3.vib/_latestVersion)
 
 ### Realtek
 
 #### ESXi 6.0
 
-[r8152-2.06.0-1.esxi60u2.vib](https://bintray.com/gomesjj/VIBs/download_file?file_path=ESXi60%2Fr8152-2.06.0-1.esxi60u2.vib)
+#### r8152-2.06.0-1.esxi60u2.vib
+
+[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/r8152-2.06.0-1.esxi60u2.vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/r8152-2.06.0-1.esxi60u2.vib/_latestVersion)
 
 #### ESXi 5.5
 
-[r8152-2.06.0-1.esxi55u3.vib](https://bintray.com/gomesjj/VIBs/download_file?file_path=ESXi55%2Fr8152-2.06.0-1.esxi55u3.vib)
+#### r8152-2.06.0-1.esxi55u3.vib
+
+ [ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/r8152-2.06.0-1.esxi55u3.vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/r8152-2.06.0-1.esxi55u3.vib/_latestVersion)
 
 #### ESXi 5.1
 
-[r8152-2.06.0-1.esxi51u3.vib](https://bintray.com/gomesjj/VIBs/download_file?file_path=ESXi51%2Fr8152-2.06.0-1.esxi51u3.vib)
+#### r8152-2.06.0-1.esxi51u3.vib
+
+[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/r8152-2.06.0-1.esxi51u3.vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/r8152-2.06.0-1.esxi51u3.vib/_latestVersion)
