@@ -80,7 +80,7 @@ I have been testing the drivers for almost two months now and performance has be
 ![ASIX 88179_178a](/images/usb/iperf_dual_usb_rx.png){: .align-center}
 
 {: .notice--danger}
-When using both ports of the dual ethernet adapter performance is less than stellar: the bandwidth available per port is effectively halved. If at all possible, stick to the single port adapters.
+When using both ports of the dual ethernet adapter performance is less than stellar: the bandwidth available per port is effectively halved. If at all possible, use the single port adapters.
 
 ### iPerf figures for the Realtek driver
 
