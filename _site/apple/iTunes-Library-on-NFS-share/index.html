@@ -325,7 +325,7 @@ cp /etc/login.conf /conf/base/etc
 
 <p>I suppose I could have done the same with Solaris and just set the <em>charset</em> and <em>lang</em> to UTF 8, but hey.</p>
 
-<p class="notice--warning"><strong>Note:</strong> Don’t try to add directories or files with UTF 8 characters directly from the command line – use the Finder instead and all will be peachy.</p>
+<p class="notice--danger"><strong>Note:</strong> Don’t try to add directories or files with UTF 8 characters directly from the command line – use the Finder instead and all will be peachy.</p>
 
 <h3 id="automount-is-your-friend">Automount is your friend</h3>
 
@@ -341,7 +341,7 @@ cp /etc/login.conf /conf/base/etc
 
 <p>I normally use the IP address so that it doesn’t depend on DNS resolution, but you can choose otherwise. In this case, my ZFS share is called <strong>media</strong> and I am mounting it under a folder called <strong>/Media</strong>.</p>
 
-<p class="notice--warning">Do not create the mount point directory (<strong>/Media</strong> in this case). The directory will be created automatically on first mount.</p>
+<p class="notice--danger">Do not create the mount point directory (<strong>/Media</strong> in this case). The directory will be created automatically on first mount.</p>
 
 <p>Next, add your newly created map as the last item on <strong>/etc/auto_master</strong>, also as root:</p>
 

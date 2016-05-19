@@ -38,7 +38,7 @@ cp /etc/login.conf /conf/base/etc
 
 I suppose I could have done the same with Solaris and just set the *charset* and *lang* to UTF 8, but hey.
 
-{:.notice--warning}
+{:.notice--danger}
 
 **Note:** Don't try to add directories or files with UTF 8 characters directly from the command line -- use the Finder instead and all will be peachy.
 
@@ -56,7 +56,7 @@ So, start by creating your auto mount map, as root, using you preferred editor (
 
 I normally use the IP address so that it doesn't depend on DNS resolution, but you can choose otherwise. In this case, my ZFS share is called **media** and I am mounting it under a folder called **/Media**.
 
-{:.notice--warning}
+{:.notice--danger}
 Do not create the mount point directory (**/Media** in this case). The directory will be created automatically on first mount.
 
 Next, add your newly created map as the last item on **/etc/auto_master**, also as root:
