@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-05-17T18:32:57+01:00</updated><id>http://localhost:4000/</id><title>DEV | TTY</title><subtitle>The personal blog of Jose Gomes</subtitle><author><name>Jose Gomes</name></author><entry><title>Want a USB Ethernet driver for ESXi? You can have two.</title><link href="http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/" rel="alternate" type="text/html" title="Want a USB Ethernet driver for ESXi? You can have two." /><published>2016-05-14T00:00:00+01:00</published><updated>2016-05-14T00:00:00+01:00</updated><id>http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two</id><content type="html" xml:base="http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/">&lt;p&gt;Ah, that mythical home lab beast: a working USB Ethernet driver for ESXi. You wait and wait for one, and then two come along…&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-05-19T13:03:08+01:00</updated><id>http://localhost:4000/</id><title>DEV | TTY</title><subtitle>The personal blog of Jose Gomes</subtitle><author><name>Jose Gomes</name></author><entry><title>Want a USB Ethernet driver for ESXi? You can have two.</title><link href="http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/" rel="alternate" type="text/html" title="Want a USB Ethernet driver for ESXi? You can have two." /><published>2016-05-14T00:00:00+01:00</published><updated>2016-05-14T00:00:00+01:00</updated><id>http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two</id><content type="html" xml:base="http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/">&lt;p&gt;Ah, that mythical home lab beast: a working USB Ethernet driver for ESXi. You wait and wait for one, and then two come along…&lt;/p&gt;
 
 &lt;aside class=&quot;sidebar__right&quot;&gt;
 &lt;nav class=&quot;toc&quot;&gt;
-    &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fa fa-file-text&quot;&gt;&lt;/i&gt; On This Page&lt;/h4&gt;&lt;/header&gt;
+    &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fa fa-file-text&quot;&gt;&lt;/i&gt; Contents&lt;/h4&gt;&lt;/header&gt;
 &lt;ul class=&quot;toc__menu&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#first-of-all&quot; id=&quot;markdown-toc-first-of-all&quot;&gt;First of all&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#the-story&quot; id=&quot;markdown-toc-the-story&quot;&gt;The story&lt;/a&gt;&lt;/li&gt;
@@ -12,7 +12,8 @@
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#performance&quot; id=&quot;markdown-toc-performance&quot;&gt;Performance&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#iperf-figures-for-the-asix-driver&quot; id=&quot;markdown-toc-iperf-figures-for-the-asix-driver&quot;&gt;iPerf figures for the ASIX driver&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#iperf-figures-for-the-asix-driver-single-port-adapter&quot; id=&quot;markdown-toc-iperf-figures-for-the-asix-driver-single-port-adapter&quot;&gt;iPerf figures for the ASIX driver (Single port adapter)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#iperf-figures-for-the-asix-driver-dual-port-adapter&quot; id=&quot;markdown-toc-iperf-figures-for-the-asix-driver-dual-port-adapter&quot;&gt;iPerf figures for the ASIX driver (Dual Port adapter)&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#iperf-figures-for-the-realtek-driver&quot; id=&quot;markdown-toc-iperf-figures-for-the-realtek-driver&quot;&gt;iPerf figures for the Realtek driver&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
@@ -48,6 +49,13 @@
 &lt;p&gt;I would like to acknowledge the help all the people mentioned on this post, knowingly or otherwise, provided me. Their efforts inspired me to try my hand at this.&lt;/p&gt;
 
 &lt;p&gt;In particular, I would like to thank William Lam (tip o’ the hat to you, Sir), as without his help things would be very different. It was William who provided the solution that allows automatic load of the modules at boot and persistence of the network configuration across reboots. If you have a chance, stop by &lt;a href=&quot;http://www.virtuallyghetto.com&quot;&gt;virtuallyGhetto&lt;/a&gt; and show you appreciation.&lt;/p&gt;
+
+&lt;div class=&quot;notice--warning&quot;&gt;
+  &lt;p&gt;&lt;strong&gt;Update (19/05/16)&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;p&gt;Following a question from Charles Biggers, I have included iPerf figures for the ASIX Dual Port Ethernet adapter.&lt;/p&gt;
+
+&lt;/div&gt;
 
 &lt;h2 id=&quot;the-story&quot;&gt;The story&lt;/h2&gt;
 
@@ -98,9 +106,21 @@
 
 &lt;p&gt;I have been testing the drivers for almost two months now and performance has been rock solid, and on a par with the onboard Intel adapter or the Realtek Mini PCIe adapter I use on the &lt;a href=&quot;/NUC-Squarepants&quot;&gt;NUC Squarepants&lt;/a&gt;. I had a few hiccups to start with, and that is detailed under the &lt;a href=&quot;#esxi-quirks&quot;&gt;ESXi quirks&lt;/a&gt; section below.&lt;/p&gt;
 
-&lt;h3 id=&quot;iperf-figures-for-the-asix-driver&quot;&gt;iPerf figures for the ASIX driver&lt;/h3&gt;
+&lt;h3 id=&quot;iperf-figures-for-the-asix-driver-single-port-adapter&quot;&gt;iPerf figures for the ASIX driver (Single port adapter)&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/usb/iperf_asix.png&quot; alt=&quot;ASIX 88179_178a&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;iperf-figures-for-the-asix-driver-dual-port-adapter&quot;&gt;iPerf figures for the ASIX driver (Dual Port adapter)&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;TX&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/usb/iperf_dual_usb_tx.png&quot; alt=&quot;ASIX 88179_178a&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;RX&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/usb/iperf_dual_usb_rx.png&quot; alt=&quot;ASIX 88179_178a&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;notice--danger&quot;&gt;When using both ports of the dual ethernet adapter performance is less than stellar. The bandwidth available per port is effectively halved.&lt;/p&gt;
 
 &lt;h3 id=&quot;iperf-figures-for-the-realtek-driver&quot;&gt;iPerf figures for the Realtek driver&lt;/h3&gt;
 

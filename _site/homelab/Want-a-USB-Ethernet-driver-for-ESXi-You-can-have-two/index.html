@@ -183,7 +183,7 @@
           <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
           <meta itemprop="position" content="1" />
         </li>
-        <span class="sep">/</span>
+        <span class="sep">></span>
       
       
         
@@ -191,7 +191,7 @@
           <a href="http://localhost:4000/categories/#homelab" itemprop="item"><span itemprop="name">Homelab</span></a>
           <meta itemprop="position" content="2" />
         </li>
-        <span class="sep">/</span>
+        <span class="sep">></span>
       
     
       
@@ -296,7 +296,7 @@
 
 <aside class="sidebar__right">
 <nav class="toc">
-    <header><h4 class="nav__title"><i class="fa fa-file-text"></i> On This Page</h4></header>
+    <header><h4 class="nav__title"><i class="fa fa-file-text"></i> Contents</h4></header>
 <ul class="toc__menu" id="markdown-toc">
   <li><a href="#first-of-all" id="markdown-toc-first-of-all">First of all</a></li>
   <li><a href="#the-story" id="markdown-toc-the-story">The story</a></li>
@@ -306,7 +306,8 @@
     </ul>
   </li>
   <li><a href="#performance" id="markdown-toc-performance">Performance</a>    <ul>
-      <li><a href="#iperf-figures-for-the-asix-driver" id="markdown-toc-iperf-figures-for-the-asix-driver">iPerf figures for the ASIX driver</a></li>
+      <li><a href="#iperf-figures-for-the-asix-driver-single-port-adapter" id="markdown-toc-iperf-figures-for-the-asix-driver-single-port-adapter">iPerf figures for the ASIX driver (Single port adapter)</a></li>
+      <li><a href="#iperf-figures-for-the-asix-driver-dual-port-adapter" id="markdown-toc-iperf-figures-for-the-asix-driver-dual-port-adapter">iPerf figures for the ASIX driver (Dual Port adapter)</a></li>
       <li><a href="#iperf-figures-for-the-realtek-driver" id="markdown-toc-iperf-figures-for-the-realtek-driver">iPerf figures for the Realtek driver</a></li>
     </ul>
   </li>
@@ -342,6 +343,13 @@
 <p>I would like to acknowledge the help all the people mentioned on this post, knowingly or otherwise, provided me. Their efforts inspired me to try my hand at this.</p>
 
 <p>In particular, I would like to thank William Lam (tip o’ the hat to you, Sir), as without his help things would be very different. It was William who provided the solution that allows automatic load of the modules at boot and persistence of the network configuration across reboots. If you have a chance, stop by <a href="http://www.virtuallyghetto.com">virtuallyGhetto</a> and show you appreciation.</p>
+
+<div class="notice--warning">
+  <p><strong>Update (19/05/16)</strong></p>
+
+  <p>Following a question from Charles Biggers, I have included iPerf figures for the ASIX Dual Port Ethernet adapter.</p>
+
+</div>
 
 <h2 id="the-story">The story</h2>
 
@@ -392,9 +400,21 @@
 
 <p>I have been testing the drivers for almost two months now and performance has been rock solid, and on a par with the onboard Intel adapter or the Realtek Mini PCIe adapter I use on the <a href="/NUC-Squarepants">NUC Squarepants</a>. I had a few hiccups to start with, and that is detailed under the <a href="#esxi-quirks">ESXi quirks</a> section below.</p>
 
-<h3 id="iperf-figures-for-the-asix-driver">iPerf figures for the ASIX driver</h3>
+<h3 id="iperf-figures-for-the-asix-driver-single-port-adapter">iPerf figures for the ASIX driver (Single port adapter)</h3>
 
 <p><img src="/images/usb/iperf_asix.png" alt="ASIX 88179_178a" class="align-center" /></p>
+
+<h3 id="iperf-figures-for-the-asix-driver-dual-port-adapter">iPerf figures for the ASIX driver (Dual Port adapter)</h3>
+
+<p><strong>TX</strong></p>
+
+<p><img src="/images/usb/iperf_dual_usb_tx.png" alt="ASIX 88179_178a" class="align-center" /></p>
+
+<p><strong>RX</strong></p>
+
+<p><img src="/images/usb/iperf_dual_usb_rx.png" alt="ASIX 88179_178a" class="align-center" /></p>
+
+<p class="notice--danger">When using both ports of the dual ethernet adapter performance is less than stellar. The bandwidth available per port is effectively halved.</p>
 
 <h3 id="iperf-figures-for-the-realtek-driver">iPerf figures for the Realtek driver</h3>
 

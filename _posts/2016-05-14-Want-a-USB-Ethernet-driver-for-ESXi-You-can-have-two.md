@@ -17,6 +17,15 @@ I would like to acknowledge the help all the people mentioned on this post, know
 
 In particular, I would like to thank William Lam (tip o' the hat to you, Sir), as without his help things would be very different. It was William who provided the solution that allows automatic load of the modules at boot and persistence of the network configuration across reboots. If you have a chance, stop by [virtuallyGhetto](http://www.virtuallyghetto.com) and show you appreciation.
 
+
+<div class="notice--warning" markdown="1">
+**Update (19/05/16)**
+
+Following a question from Charles Biggers, I have included iPerf figures for the ASIX Dual Port Ethernet adapter.
+
+</div>
+
+
 ## The story   
 
 If, like myself, you run an ESXi lab based on the Intel NUC, you might have looked at options to add a second Ethernet adapter. For the 3<sup>rd</sup> Generation NUC I solved the problem with my [NUC Squarepants](/Homelab/NUC-Squarepants/) contraption, but was yet to find a good solution for later generations NUCs. That is, until I came across a great post by William Lam called ["Working USB Ethernet Adapter (NIC) for ESXi"](http://www.virtuallyghetto.com/2016/03/working-usb-ethernet-adapter-nic-for-esxi.html).
@@ -56,9 +65,22 @@ I have not tested it, but other devices based on the same chipset should work, s
 
 I have been testing the drivers for almost two months now and performance has been rock solid, and on a par with the onboard Intel adapter or the Realtek Mini PCIe adapter I use on the [NUC Squarepants](/NUC-Squarepants). I had a few hiccups to start with, and that is detailed under the [ESXi quirks](#esxi-quirks) section below. 
 
-### iPerf figures for the ASIX driver
+### iPerf figures for the ASIX driver (Single port adapter)
 
 ![ASIX 88179_178a](/images/usb/iperf_asix.png){: .align-center}
+
+### iPerf figures for the ASIX driver (Dual Port adapter)
+
+**TX**
+
+![ASIX 88179_178a](/images/usb/iperf_dual_usb_tx.png){: .align-center}
+
+**RX**
+
+![ASIX 88179_178a](/images/usb/iperf_dual_usb_rx.png){: .align-center}
+
+{: .notice--danger}
+When using both ports of the dual ethernet adapter performance is less than stellar. The bandwidth available per port is effectively halved.
 
 ### iPerf figures for the Realtek driver
 
