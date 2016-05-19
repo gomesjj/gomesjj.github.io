@@ -9,7 +9,7 @@ tags: [Homelab, Virtualisation, NUC]
 
 My first Intel NUC was yet to be delivered, but I was already looking around for a solution for it's greatest shortcoming: the single Ethernet adapter. So, here is how my first attempt at solving that went. 
 
-As I mentioned in my previous post about the evolution of my [home lab](/Intel-NUC-to-the-rescue), I decided to test the waters with an Intel NUC [DC53427HYEA](http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-dc53427hye-board-d53427rke.html). I was as yet unsure as to whether or not the NUC would be an ESXi host, but I knew I could run Windows Server 2012 on it. If I couldn't get a second NIC for ESXi, the NUC would still have a purpose as my new Domain Controller. 
+As I mentioned in my previous post about the evolution of my [home lab](/homelab/Intel-NUC-to-the-rescue), I decided to test the waters with an Intel NUC [DC53427HYEA](http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-dc53427hye-board-d53427rke.html). I was as yet unsure as to whether or not the NUC would be an ESXi host, but I knew I could run Windows Server 2012 on it. If I couldn't get a second NIC for ESXi, the NUC would still have a purpose as my new Domain Controller. 
 
 {: .notice--info}
 As an aside, I chose this older NUC model, and later the [NUC5i5RYH](http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-nuc5i5ryh.html), because they are the only models in the line up to include Intel AMT. I think running with slightly older models is a price worth paying in exchange for remote out-of-band management.
@@ -109,4 +109,4 @@ Interestingly, only *rx-checksuming* is enable for this driver; there is no way 
 
 ### Later generation NUCs
 
-This solution does not work for the 5<sup>th</sup> and later generation NUCs, as the mPCIe slot has been replaced by an M.2 slot. If you don't mind running with a NIC outside the NUC case and a second power adapter, then Florian's [solution](http://blog.fosketts.net/2015/06/05/adding-a-second-ethernet-port-to-an-intel-nuc-via-mini-pcie/) is an option. Otherwise, come along this [way](/Homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/) for a solution that will work on all generations of the NUC (or anything else with a USB port).
+This solution does not work for the 5<sup>th</sup> and later generation NUCs, as the mPCIe slot has been replaced by an M.2 slot. If you don't mind running with a NIC outside the NUC case and a second power adapter, then Florian's [solution](http://blog.fosketts.net/2015/06/05/adding-a-second-ethernet-port-to-an-intel-nuc-via-mini-pcie/) is an option. Otherwise, come along this [way](/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/) for a solution that will work on all generations of the NUC (or anything else with a USB port).

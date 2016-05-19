@@ -9,7 +9,7 @@ tags: [Mac, OS X, iTunes, NFS, NAS]
 
 Mine is a Mac household and as such, iTunes plays a part on our entertainment strategy. I generally like Apple products and software, but I must confess iTunes is not one of my preferred offerings from them.
 
-I thought it would be a good idea to have a single repository for all the iTunes Library items residing on the NAS. By the way, the setup I have at the moment is based on two custom built FreeNAS 9.3 servers, but in the past it was based on Solaris 11 (then 11.2) running on a Sun Fire X4240. You can see what my current home lab looked like [here](/The-Home-Lab/) -- I will be documenting the new setup soon.
+I thought it would be a good idea to have a single repository for all the iTunes Library items residing on the NAS. By the way, the setup I have at the moment is based on two custom built FreeNAS 9.3 servers, but in the past it was based on Solaris 11 (then 11.2) running on a Sun Fire X4240. You can see what my current home lab looked like [here](/homelab/The-Home-Lab/) -- I will be documenting the new setup soon.
 
 ### All those funny characters
 

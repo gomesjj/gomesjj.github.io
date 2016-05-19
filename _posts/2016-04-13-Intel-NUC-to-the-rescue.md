@@ -11,7 +11,7 @@ The components of my home lab changed many times over the years, but lately I em
 
 *[GLW]: Good Lady Wife
 
-I talked about my current set-up in this [post](/The-Home-Lab/). Some of my servers are quite old now (still serviceable, though), so it is understandable that the power requirements are high. The IBM POWER5 p505 server, in particular, slurps electricity as if there was no tomorrow.
+I talked about my current set-up in this [post](/homelab/The-Home-Lab/). Some of my servers are quite old now (still serviceable, though), so it is understandable that the power requirements are high. The IBM POWER5 p505 server, in particular, slurps electricity as if there was no tomorrow.
 
 So, I deployed my search-fu skills and came to the conclusion that I had two options: build something based on the Intel Avoton (Atom C2000 series) or go with the Intel NUC. I also looked briefly at the Mac Mini, but the latest models with soldered on memory didn't appeal to me. In the end, I plumped for both an Avoton self-build based around the [Supermicro A1SAi-2750F](https://www.supermicro.com/products/motherboard/ATOM/X10/A1SAi-2750F.cfm) and an Intel NUC [DC53427HYEA](http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-dc53427hye-board-d53427rke.html) to try them out. 
 
@@ -21,4 +21,4 @@ The Atom C2750 eight-core is a small beast: enough grunt to play the ESXi game, 
 
 In the end, I decided to buy three more NUCs (another DC53427HYEA and two [NUC5i5RYH](http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-nuc5i5ryh.html)) to power my minuscule VMware cluster. One of the reasons was aesthetics: I just wanted the smallest possible footprint for the lab; and the other was the challenge of coming up with a way to add a second NIC to the little beauties. 😎 
 
-"What about the Atom Board?" you might ask. Well, I decided to build a FreeNAS server with that. I will be elaborating on my NAS set-up in another post sometime. Meanwhile, you can see how I resolved the issue of the single Ethernet adapter in the NUC in this [post](/Homelab/NUC-Squarepants/) and [this](/Homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/).
+"What about the Atom Board?" you might ask. Well, I decided to build a FreeNAS server with that. I will be elaborating on my NAS set-up in another post sometime. Meanwhile, you can see how I resolved the issue of the single Ethernet adapter in the NUC in this [post](/homelab/NUC-Squarepants/) and [this](/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/).
