@@ -112,7 +112,7 @@ As can be seen above both devices show up as "Pseudo" devices, but have very dif
 
 ### Stacks
 
-As you can imagine I was very happy that I managed to get the ASIX driver working, but I noticed from the beginning that whilst egress (TX) throughput was in line with gigabit speed, ingress (RX) was at least 300 Mbits/sec less. I exchanged a few emails with William Lam, and he was also seeing the same lower throughput (sometimes even less). I tried tweeking the code every which way to no avail, and I came to the conclusion that this was the better we could get off of those adapters. I was miffed.
+As you can imagine I was very happy that I managed to get the ASIX driver working, but I noticed from the beginning that whilst egress (TX) throughput was in line with gigabit speed, ingress (RX) was at least 300 Mbits/sec less. I exchanged a few emails with William Lam, and he was also seeing the same lower throughput (sometimes even less). I tried tweeking the code every which way to no avail, and I came to the conclusion that this was the best we could get off of those adapters. I was miffed.
 
 I started looking around the web and came across the ANKER adapter, noticing that it used a different chipset and driver. Emboldened by my success with the ASIX driver I turned my hand to the newly discovered Realtek driver. A few days later I had the driver compiled and working on ESXi 6.0, 5.5 and 5.1. Woo-hoo! 
 
