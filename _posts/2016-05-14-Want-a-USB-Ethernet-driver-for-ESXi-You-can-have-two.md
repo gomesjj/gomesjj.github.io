@@ -63,7 +63,7 @@ I have not tested it, but other devices based on the same chipset should work, s
 
 ## Performance
 
-I have been testing the drivers for almost two months now and performance has been rock solid, and on a par with the onboard Intel adapter or the Realtek Mini PCIe adapter I use on the [NUC Squarepants](/NUC-Squarepants). I had a few hiccups to start with, and that is detailed under the [ESXi quirks](#esxi-quirks) section below. 
+I have been testing the drivers for almost two months now and performance has been rock solid, and on a par with the onboard Intel adapter or the Realtek Mini PCIe adapter I use on the [NUC Squarepants](/homelab/NUC-Squarepants). I had a few hiccups to start with, and that is detailed under the [ESXi quirks](#esxi-quirks) section below. 
 
 ### iPerf figures for the ASIX driver (Single port adapter)
 
