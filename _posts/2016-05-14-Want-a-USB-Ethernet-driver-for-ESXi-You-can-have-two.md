@@ -150,7 +150,7 @@ On the other ESXi servers:
 
 ```sh
 esxcli network ip neighbor remove --version=4 --neighbor-addr=192.168.1.226
-esxcli network ip neighbor remove --version=4 --neighbor-addr=192.168.1.220
+esxcli network ip neighbor remove --version=4 --neighbor-addr=192.168.10.226
 ```
 And on my own machine:
 
