@@ -233,6 +233,6 @@ You can download the VIBs using the following links:
 [ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/r8152-2.06.0-1.esxi55u3.vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/r8152-2.06.0-1.esxi55u3.vib/_latestVersion)
 
 
-#### r8152-2.06.0-1.esxi51u3.vib
+#### r8152-2.06.0-1a.esxi51u3.vib
 
 [ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/r8152-2.06.0-1.esxi51u3.vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/r8152-2.06.0-1.esxi51u3.vib/_latestVersion)
