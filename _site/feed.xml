@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-05-22T10:44:22+01:00</updated><id>http://localhost:4000/</id><title>DEV | TTY</title><subtitle>The personal blog of Jose Gomes</subtitle><author><name>Jose Gomes</name></author><entry><title>Want a USB Ethernet driver for ESXi? You can have two.</title><link href="http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/" rel="alternate" type="text/html" title="Want a USB Ethernet driver for ESXi? You can have two." /><published>2016-05-14T00:00:00+01:00</published><updated>2016-05-14T00:00:00+01:00</updated><id>http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two</id><content type="html" xml:base="http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/">&lt;p&gt;Ah, that mythical home lab beast: a working USB Ethernet driver for ESXi. You wait and wait for one, and then two come along…&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-05-23T17:34:15+01:00</updated><id>http://localhost:4000/</id><title>DEV | TTY</title><subtitle>The personal blog of Jose Gomes</subtitle><author><name>Jose Gomes</name></author><entry><title>Want a USB Ethernet driver for ESXi? You can have two.</title><link href="http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/" rel="alternate" type="text/html" title="Want a USB Ethernet driver for ESXi? You can have two." /><published>2016-05-14T00:00:00+01:00</published><updated>2016-05-14T00:00:00+01:00</updated><id>http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two</id><content type="html" xml:base="http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/">&lt;p&gt;Ah, that mythical home lab beast: a working USB Ethernet driver for ESXi. You wait and wait for one, and then two come along…&lt;/p&gt;
 
 &lt;aside class=&quot;sidebar__right&quot;&gt;
 &lt;nav class=&quot;toc&quot;&gt;
@@ -32,8 +32,8 @@
         &lt;/ul&gt;
       &lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#realtek-1&quot; id=&quot;markdown-toc-realtek-1&quot;&gt;Realtek&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#r8152-2060-1esxi60u2vib&quot; id=&quot;markdown-toc-r8152-2060-1esxi60u2vib&quot;&gt;r8152-2.06.0-1.esxi60u2.vib&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#r8152-2060-1esxi55u3vib&quot; id=&quot;markdown-toc-r8152-2060-1esxi55u3vib&quot;&gt;r8152-2.06.0-1.esxi55u3.vib&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#r8152-2060-1aesxi60u2vib&quot; id=&quot;markdown-toc-r8152-2060-1aesxi60u2vib&quot;&gt;r8152-2.06.0-1a.esxi60u2.vib&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#r8152-2060-1aesxi55u3vib&quot; id=&quot;markdown-toc-r8152-2060-1aesxi55u3vib&quot;&gt;r8152-2.06.0-1a.esxi55u3.vib&lt;/a&gt;&lt;/li&gt;
           &lt;li&gt;&lt;a href=&quot;#r8152-2060-1esxi51u3vib&quot; id=&quot;markdown-toc-r8152-2060-1esxi51u3vib&quot;&gt;r8152-2.06.0-1.esxi51u3.vib&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
@@ -258,11 +258,11 @@ ARPING 192.168.1.226
 
 &lt;h3 id=&quot;realtek-1&quot;&gt;Realtek&lt;/h3&gt;
 
-&lt;h4 id=&quot;r8152-2060-1esxi60u2vib&quot;&gt;r8152-2.06.0-1.esxi60u2.vib&lt;/h4&gt;
+&lt;h4 id=&quot;r8152-2060-1aesxi60u2vib&quot;&gt;r8152-2.06.0-1a.esxi60u2.vib&lt;/h4&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://bintray.com/gomesjj/VIBs/r8152-2.06.0-1.esxi60u2.vib/_latestVersion&quot;&gt; &lt;img src=&quot;https://api.bintray.com/packages/gomesjj/VIBs/r8152-2.06.0-1.esxi60u2.vib/images/download.svg&quot; alt=&quot;Download&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;r8152-2060-1esxi55u3vib&quot;&gt;r8152-2.06.0-1.esxi55u3.vib&lt;/h4&gt;
+&lt;h4 id=&quot;r8152-2060-1aesxi55u3vib&quot;&gt;r8152-2.06.0-1a.esxi55u3.vib&lt;/h4&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://bintray.com/gomesjj/VIBs/r8152-2.06.0-1.esxi55u3.vib/_latestVersion&quot;&gt; &lt;img src=&quot;https://api.bintray.com/packages/gomesjj/VIBs/r8152-2.06.0-1.esxi55u3.vib/images/download.svg&quot; alt=&quot;Download&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 

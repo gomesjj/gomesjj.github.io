@@ -223,14 +223,14 @@ You can download the VIBs using the following links:
 
 ### Realtek
 
-#### r8152-2.06.0-1.esxi60u2.vib
+#### r8152-2.06.0-1a.esxi60u2.vib
 
 [ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/r8152-2.06.0-1.esxi60u2.vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/r8152-2.06.0-1.esxi60u2.vib/_latestVersion)
 
 
-#### r8152-2.06.0-1.esxi55u3.vib
+#### r8152-2.06.0-1a.esxi55u3.vib
 
- [ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/r8152-2.06.0-1.esxi55u3.vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/r8152-2.06.0-1.esxi55u3.vib/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/r8152-2.06.0-1.esxi55u3.vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/r8152-2.06.0-1.esxi55u3.vib/_latestVersion)
 
 
 #### r8152-2.06.0-1.esxi51u3.vib
