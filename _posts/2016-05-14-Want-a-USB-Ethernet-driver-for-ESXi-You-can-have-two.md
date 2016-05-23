@@ -199,7 +199,7 @@ I will not elaborate on how to compile the drivers here. If you are interested, 
 * Repository for the [Realtek r8152](https://github.com/gomesjj/r8152) driver.
 
 
-## TL;DR - Just gimme the driver
+## TL;DR - Just gimme the drivers
 
 OK, OK. You are impatient...
 
