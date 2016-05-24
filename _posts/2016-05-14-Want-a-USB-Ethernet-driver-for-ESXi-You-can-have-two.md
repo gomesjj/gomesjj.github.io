@@ -208,31 +208,32 @@ You can download the VIBs using the following links:
 ### ASIX
 
 
-#### ax88179-1.14.0-1-esxi60u2.vib 
-[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/ax88179-1.14.0-1-esxi60u2.vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/ax88179-1.14.0-1-esxi60u2.vib/_latestVersion)
+#### ESXi 6.0 VIB 
+
+[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/ax88179_esxi60u2_vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/ax88179_esxi60u2_vib/_latestVersion)
 
 
-#### ax88179-1.14.0-1-esxi55u3.vib
+#### ESXi 5.5 VIB
 
- [ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/ax88179-1.14.0-1-esxi55u3.vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/ax88179-1.14.0-1-esxi55u3.vib/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/ax88179_esxi55u3_vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/ax88179_esxi55u3_vib/_latestVersion)
 
 
-#### ax88179-1.14.0-1-esxi51u3.vib
+#### ESXi 5.1 VIB
 
- [ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/ax88179-1.14.0-1-esxi51u3.vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/ax88179-1.14.0-1-esxi51u3.vib/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/ax88179_esxi51u3_vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/ax88179_esxi51u3_vib/_latestVersion)
 
 ### Realtek
 
-#### r8152-2.06.0-1a.esxi60u2.vib
+#### ESXi 6.0 VIB
 
-[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/r8152-2.06.0-1.esxi60u2.vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/r8152-2.06.0-1.esxi60u2.vib/_latestVersion)
-
-
-#### r8152-2.06.0-1a.esxi55u3.vib
-
-[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/r8152-2.06.0-1.esxi55u3.vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/r8152-2.06.0-1.esxi55u3.vib/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/r8152_esxi60u2_vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/r8152_esxi60u2_vib/_latestVersion)
 
 
-#### r8152-2.06.0-1a.esxi51u3.vib
+#### ESXi 5.5 VIB
 
-[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/r8152-2.06.0-1.esxi51u3.vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/r8152-2.06.0-1.esxi51u3.vib/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/r8152_esxi55u3_vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/r8152_esxi55u3_vib/_latestVersion)
+
+
+#### ESXi 5.1 VIB
+
+[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/r8152_esxi51u3_vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/r8152_esxi51u3_vib/_latestVersion)

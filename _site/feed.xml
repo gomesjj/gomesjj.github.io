@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-05-23T17:45:25+01:00</updated><id>http://localhost:4000/</id><title>DEV | TTY</title><subtitle>The personal blog of Jose Gomes</subtitle><author><name>Jose Gomes</name></author><entry><title>Want a USB Ethernet driver for ESXi? You can have two.</title><link href="http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/" rel="alternate" type="text/html" title="Want a USB Ethernet driver for ESXi? You can have two." /><published>2016-05-14T00:00:00+01:00</published><updated>2016-05-14T00:00:00+01:00</updated><id>http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two</id><content type="html" xml:base="http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/">&lt;p&gt;Ah, that mythical home lab beast: a working USB Ethernet driver for ESXi. You wait and wait for one, and then two come along…&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-05-24T09:48:35+01:00</updated><id>http://localhost:4000/</id><title>DEV | TTY</title><subtitle>The personal blog of Jose Gomes</subtitle><author><name>Jose Gomes</name></author><entry><title>Want a USB Ethernet driver for ESXi? You can have two.</title><link href="http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/" rel="alternate" type="text/html" title="Want a USB Ethernet driver for ESXi? You can have two." /><published>2016-05-14T00:00:00+01:00</published><updated>2016-05-14T00:00:00+01:00</updated><id>http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two</id><content type="html" xml:base="http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/">&lt;p&gt;Ah, that mythical home lab beast: a working USB Ethernet driver for ESXi. You wait and wait for one, and then two come along…&lt;/p&gt;
 
 &lt;aside class=&quot;sidebar__right&quot;&gt;
 &lt;nav class=&quot;toc&quot;&gt;
@@ -26,15 +26,15 @@
   &lt;li&gt;&lt;a href=&quot;#compiling-the-drivers&quot; id=&quot;markdown-toc-compiling-the-drivers&quot;&gt;Compiling the drivers&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#tldr---just-gimme-the-drivers&quot; id=&quot;markdown-toc-tldr---just-gimme-the-drivers&quot;&gt;TL;DR - Just gimme the drivers&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#asix-1&quot; id=&quot;markdown-toc-asix-1&quot;&gt;ASIX&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#ax88179-1140-1-esxi60u2vib&quot; id=&quot;markdown-toc-ax88179-1140-1-esxi60u2vib&quot;&gt;ax88179-1.14.0-1-esxi60u2.vib&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#ax88179-1140-1-esxi55u3vib&quot; id=&quot;markdown-toc-ax88179-1140-1-esxi55u3vib&quot;&gt;ax88179-1.14.0-1-esxi55u3.vib&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#ax88179-1140-1-esxi51u3vib&quot; id=&quot;markdown-toc-ax88179-1140-1-esxi51u3vib&quot;&gt;ax88179-1.14.0-1-esxi51u3.vib&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#esxi-60-vib&quot; id=&quot;markdown-toc-esxi-60-vib&quot;&gt;ESXi 6.0 VIB&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#esxi-55-vib&quot; id=&quot;markdown-toc-esxi-55-vib&quot;&gt;ESXi 5.5 VIB&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#esxi-51-vib&quot; id=&quot;markdown-toc-esxi-51-vib&quot;&gt;ESXi 5.1 VIB&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#realtek-1&quot; id=&quot;markdown-toc-realtek-1&quot;&gt;Realtek&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#r8152-2060-1aesxi60u2vib&quot; id=&quot;markdown-toc-r8152-2060-1aesxi60u2vib&quot;&gt;r8152-2.06.0-1a.esxi60u2.vib&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#r8152-2060-1aesxi55u3vib&quot; id=&quot;markdown-toc-r8152-2060-1aesxi55u3vib&quot;&gt;r8152-2.06.0-1a.esxi55u3.vib&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#r8152-2060-1aesxi51u3vib&quot; id=&quot;markdown-toc-r8152-2060-1aesxi51u3vib&quot;&gt;r8152-2.06.0-1a.esxi51u3.vib&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#esxi-60-vib-1&quot; id=&quot;markdown-toc-esxi-60-vib-1&quot;&gt;ESXi 6.0 VIB&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#esxi-55-vib-1&quot; id=&quot;markdown-toc-esxi-55-vib-1&quot;&gt;ESXi 5.5 VIB&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#esxi-51-vib-1&quot; id=&quot;markdown-toc-esxi-51-vib-1&quot;&gt;ESXi 5.1 VIB&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
@@ -245,30 +245,31 @@ ARPING 192.168.1.226
 
 &lt;h3 id=&quot;asix-1&quot;&gt;ASIX&lt;/h3&gt;
 
-&lt;h4 id=&quot;ax88179-1140-1-esxi60u2vib&quot;&gt;ax88179-1.14.0-1-esxi60u2.vib&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&quot;https://bintray.com/gomesjj/VIBs/ax88179-1.14.0-1-esxi60u2.vib/_latestVersion&quot;&gt; &lt;img src=&quot;https://api.bintray.com/packages/gomesjj/VIBs/ax88179-1.14.0-1-esxi60u2.vib/images/download.svg&quot; alt=&quot;Download&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;esxi-60-vib&quot;&gt;ESXi 6.0 VIB&lt;/h4&gt;
 
-&lt;h4 id=&quot;ax88179-1140-1-esxi55u3vib&quot;&gt;ax88179-1.14.0-1-esxi55u3.vib&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://bintray.com/gomesjj/VIBs/ax88179_esxi60u2_vib/_latestVersion&quot;&gt; &lt;img src=&quot;https://api.bintray.com/packages/gomesjj/VIBs/ax88179_esxi60u2_vib/images/download.svg&quot; alt=&quot;Download&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://bintray.com/gomesjj/VIBs/ax88179-1.14.0-1-esxi55u3.vib/_latestVersion&quot;&gt; &lt;img src=&quot;https://api.bintray.com/packages/gomesjj/VIBs/ax88179-1.14.0-1-esxi55u3.vib/images/download.svg&quot; alt=&quot;Download&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;esxi-55-vib&quot;&gt;ESXi 5.5 VIB&lt;/h4&gt;
 
-&lt;h4 id=&quot;ax88179-1140-1-esxi51u3vib&quot;&gt;ax88179-1.14.0-1-esxi51u3.vib&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;https://bintray.com/gomesjj/VIBs/ax88179_esxi55u3_vib/_latestVersion&quot;&gt; &lt;img src=&quot;https://api.bintray.com/packages/gomesjj/VIBs/ax88179_esxi55u3_vib/images/download.svg&quot; alt=&quot;Download&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://bintray.com/gomesjj/VIBs/ax88179-1.14.0-1-esxi51u3.vib/_latestVersion&quot;&gt; &lt;img src=&quot;https://api.bintray.com/packages/gomesjj/VIBs/ax88179-1.14.0-1-esxi51u3.vib/images/download.svg&quot; alt=&quot;Download&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&quot;esxi-51-vib&quot;&gt;ESXi 5.1 VIB&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://bintray.com/gomesjj/VIBs/ax88179_esxi51u3_vib/_latestVersion&quot;&gt; &lt;img src=&quot;https://api.bintray.com/packages/gomesjj/VIBs/ax88179_esxi51u3_vib/images/download.svg&quot; alt=&quot;Download&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;realtek-1&quot;&gt;Realtek&lt;/h3&gt;
 
-&lt;h4 id=&quot;r8152-2060-1aesxi60u2vib&quot;&gt;r8152-2.06.0-1a.esxi60u2.vib&lt;/h4&gt;
+&lt;h4 id=&quot;esxi-60-vib-1&quot;&gt;ESXi 6.0 VIB&lt;/h4&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://bintray.com/gomesjj/VIBs/r8152-2.06.0-1.esxi60u2.vib/_latestVersion&quot;&gt; &lt;img src=&quot;https://api.bintray.com/packages/gomesjj/VIBs/r8152-2.06.0-1.esxi60u2.vib/images/download.svg&quot; alt=&quot;Download&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://bintray.com/gomesjj/VIBs/r8152_esxi60u2_vib/_latestVersion&quot;&gt; &lt;img src=&quot;https://api.bintray.com/packages/gomesjj/VIBs/r8152_esxi60u2_vib/images/download.svg&quot; alt=&quot;Download&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;r8152-2060-1aesxi55u3vib&quot;&gt;r8152-2.06.0-1a.esxi55u3.vib&lt;/h4&gt;
+&lt;h4 id=&quot;esxi-55-vib-1&quot;&gt;ESXi 5.5 VIB&lt;/h4&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://bintray.com/gomesjj/VIBs/r8152-2.06.0-1.esxi55u3.vib/_latestVersion&quot;&gt; &lt;img src=&quot;https://api.bintray.com/packages/gomesjj/VIBs/r8152-2.06.0-1.esxi55u3.vib/images/download.svg&quot; alt=&quot;Download&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://bintray.com/gomesjj/VIBs/r8152_esxi55u3_vib/_latestVersion&quot;&gt; &lt;img src=&quot;https://api.bintray.com/packages/gomesjj/VIBs/r8152_esxi55u3_vib/images/download.svg&quot; alt=&quot;Download&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;r8152-2060-1aesxi51u3vib&quot;&gt;r8152-2.06.0-1a.esxi51u3.vib&lt;/h4&gt;
+&lt;h4 id=&quot;esxi-51-vib-1&quot;&gt;ESXi 5.1 VIB&lt;/h4&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://bintray.com/gomesjj/VIBs/r8152-2.06.0-1.esxi51u3.vib/_latestVersion&quot;&gt; &lt;img src=&quot;https://api.bintray.com/packages/gomesjj/VIBs/r8152-2.06.0-1.esxi51u3.vib/images/download.svg&quot; alt=&quot;Download&quot; /&gt; &lt;/a&gt;&lt;/p&gt;</content><category term="[&quot;Homelab&quot;]" /><category term="Homelab" /><category term="ESXi" /><category term="USB" /><category term="Ethernet" /><summary>ESXi drivers for USB 3.0 Gigabit Ethernet adapters based on the ASIX ax88179_178a or the Realtek RLT8153/RTL8152 chipsets</summary></entry><entry><title>Intel Mesh Commander on Mac OS X</title><link href="http://localhost:4000/apple/Intel_Mesh_Commander_on_Mac_OS_X/" rel="alternate" type="text/html" title="Intel Mesh Commander on Mac OS X" /><published>2016-05-12T00:00:00+01:00</published><updated>2016-05-12T00:00:00+01:00</updated><id>http://localhost:4000/apple/Intel_Mesh_Commander_on_Mac_OS_X</id><content type="html" xml:base="http://localhost:4000/apple/Intel_Mesh_Commander_on_Mac_OS_X/">&lt;p&gt;Intel Active Management Technology is one of the hardware technologies (perhaps the most recognised and representative) that is part of Intel’s &lt;a href=&quot;http://www.intel.co.uk/content/www/uk/en/architecture-and-technology/vpro/vpro-technology-general.html&quot;&gt;vPro&lt;/a&gt; offerings. AMT offers the benefits of out-of-band management similar to &lt;abbr title=&quot;Intelligent Platform Management Interface&quot;&gt;IPMI&lt;/abbr&gt;, but for personal computers as opposed to servers.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://bintray.com/gomesjj/VIBs/r8152_esxi51u3_vib/_latestVersion&quot;&gt; &lt;img src=&quot;https://api.bintray.com/packages/gomesjj/VIBs/r8152_esxi51u3_vib/images/download.svg&quot; alt=&quot;Download&quot; /&gt; &lt;/a&gt;&lt;/p&gt;</content><category term="[&quot;Homelab&quot;]" /><category term="Homelab" /><category term="ESXi" /><category term="USB" /><category term="Ethernet" /><summary>ESXi drivers for USB 3.0 Gigabit Ethernet adapters based on the ASIX ax88179_178a or the Realtek RLT8153/RTL8152 chipsets</summary></entry><entry><title>Intel Mesh Commander on Mac OS X</title><link href="http://localhost:4000/apple/Intel_Mesh_Commander_on_Mac_OS_X/" rel="alternate" type="text/html" title="Intel Mesh Commander on Mac OS X" /><published>2016-05-12T00:00:00+01:00</published><updated>2016-05-12T00:00:00+01:00</updated><id>http://localhost:4000/apple/Intel_Mesh_Commander_on_Mac_OS_X</id><content type="html" xml:base="http://localhost:4000/apple/Intel_Mesh_Commander_on_Mac_OS_X/">&lt;p&gt;Intel Active Management Technology is one of the hardware technologies (perhaps the most recognised and representative) that is part of Intel’s &lt;a href=&quot;http://www.intel.co.uk/content/www/uk/en/architecture-and-technology/vpro/vpro-technology-general.html&quot;&gt;vPro&lt;/a&gt; offerings. AMT offers the benefits of out-of-band management similar to &lt;abbr title=&quot;Intelligent Platform Management Interface&quot;&gt;IPMI&lt;/abbr&gt;, but for personal computers as opposed to servers.&lt;/p&gt;
 
 &lt;p&gt;When I was selecting the NUC model(s) to use for my ESXi home lab, the fact that both the &lt;a href=&quot;http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-dc53427hye-board-d53427rke.html&quot;&gt;DC53427HYEA&lt;/a&gt; and the &lt;a href=&quot;http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-nuc5i5ryh.html&quot;&gt;NUC5i5RYH&lt;/a&gt; sported processors with vPro and AMT support helped me sway towards them. The NUCs were replacing kit that had full &lt;abbr title=&quot;Intelligent Platform Management Interface&quot;&gt;IPMI&lt;/abbr&gt; functionality, and I knew how much I would miss the convenience of managing the new “servers” remotely.&lt;/p&gt;
 
