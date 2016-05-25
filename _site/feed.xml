@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-05-25T15:07:31+01:00</updated><id>http://localhost:4000/</id><title>DEV | TTY</title><subtitle>The personal blog of Jose Gomes</subtitle><author><name>Jose Gomes</name></author><entry><title>Want a USB Ethernet driver for ESXi? You can have two.</title><link href="http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/" rel="alternate" type="text/html" title="Want a USB Ethernet driver for ESXi? You can have two." /><published>2016-05-14T00:00:00+01:00</published><updated>2016-05-14T00:00:00+01:00</updated><id>http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two</id><content type="html" xml:base="http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/">&lt;p&gt;Ah, that mythical home lab beast: a working USB Ethernet driver for ESXi. You wait and wait for one, and then two come along…&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-05-25T15:14:45+01:00</updated><id>http://localhost:4000/</id><title>DEV | TTY</title><subtitle>The personal blog of Jose Gomes</subtitle><author><name>Jose Gomes</name></author><entry><title>Want a USB Ethernet driver for ESXi? You can have two.</title><link href="http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/" rel="alternate" type="text/html" title="Want a USB Ethernet driver for ESXi? You can have two." /><published>2016-05-14T00:00:00+01:00</published><updated>2016-05-14T00:00:00+01:00</updated><id>http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two</id><content type="html" xml:base="http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/">&lt;p&gt;Ah, that mythical home lab beast: a working USB Ethernet driver for ESXi. You wait and wait for one, and then two come along…&lt;/p&gt;
 
 &lt;aside class=&quot;sidebar__right&quot;&gt;
 &lt;nav class=&quot;toc&quot;&gt;
@@ -94,12 +94,6 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Tested by Glen Kemp&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.co.uk/Anker®-Unibody-Ethernet-RTL8153-Chipset/dp/B00PC0J1VC/ref=sr_1_1?s=computers&amp;amp;ie=UTF8&amp;amp;qid=1464184877&amp;amp;sr=1-1&amp;amp;keywords=Anker+Unibody+3-Port+USB+3.0+and+Ethernet+Hub&quot;&gt;Anker Unibody 3-Port USB 3.0 and Ethernet Hub&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
 &lt;h3 id=&quot;realtek&quot;&gt;Realtek&lt;/h3&gt;
 
 &lt;ul&gt;
@@ -117,7 +111,12 @@
 &lt;p&gt;Tested by Glen Kemp&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.co.uk/gp/product/B00WR6A57S/ref=as_li_ss_tl?ie=UTF8&amp;amp;psc=1&amp;amp;linkCode=sl1&amp;amp;tag=s0517-21&amp;amp;linkId=5815c60c53524b534b98dcd596eab09c&quot;&gt;Smays 3-Port OTG USB-HUB and USB2.0 RJ45 Ethernet Network Adapter&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/Anker®-Unibody-Ethernet-RTL8153-Chipset/dp/B00PC0J1VC/ref=sr_1_1?s=computers&amp;amp;ie=UTF8&amp;amp;qid=1464184877&amp;amp;sr=1-1&amp;amp;keywords=Anker+Unibody+3-Port+USB+3.0+and+Ethernet+Hub&quot;&gt;Anker Unibody 3-Port USB 3.0 and Ethernet Hub&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.amazon.co.uk/gp/product/B00WR6A57S/ref=as_li_ss_tl?ie=UTF8&amp;amp;psc=1&amp;amp;linkCode=sl1&amp;amp;tag=s0517-21&amp;amp;linkId=5815c60c53524b534b98dcd596eab09c&quot;&gt;Smays 3-Port OTG USB-HUB and USB2.0 RJ45 Ethernet Network Adapter&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;performance&quot;&gt;Performance&lt;/h2&gt;
