@@ -285,7 +285,7 @@
             <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
 
 
-  10 minutes read
+  11 minutes read
 </p>
           
         </header>
@@ -349,6 +349,11 @@
 
   <p>Following a question from Charles Biggers, I have included iPerf figures for the ASIX Dual Port Ethernet adapter. Doesn’t look good…</p>
 
+  <p><strong>Update (25/05/16)</strong></p>
+
+  <li>TP-LINK UE300 added to the list of tested adapters</li>
+  <li>Realtek driver updated to version 2.06.0-2 (Scatter Gather disabled)</li>
+
 </div>
 
 <h2 id="the-story">The story</h2>
@@ -392,13 +397,20 @@
   <li>
     <p><a href="https://www.amazon.co.uk/dp/B00NPJP33M/ref=pd_lpo_sbs_dp_ss_1?pf_rd_p=569136327&amp;pf_rd_s=lpo-top-stripe&amp;pf_rd_t=201&amp;pf_rd_i=B00DNU8Y20&amp;pf_rd_m=A3P5ROKL5A1OLE&amp;pf_rd_r=C5N2DD7H2D7AVRXM1VHP">ANKER USB 3.0 to RJ45 Gigabit Ethernet Adapter</a></p>
   </li>
+  <li>
+    <p><a href="https://www.amazon.co.uk/gp/product/B00YOKMKE6/ref=pe_1959711_130662621_em_1p_0_ti">TP-LINK UE300 USB 3.0 to Gigabit Ethernet Network Adapter</a></p>
+  </li>
 </ul>
-
-<p>I have not tested it, but other devices based on the same chipset should work, such as the <a href="https://www.amazon.co.uk/gp/product/B00YOKMKE6/ref=pe_1959711_130662621_em_1p_0_ti">TP-LINK UE300</a></p>
 
 <h2 id="performance">Performance</h2>
 
-<p>I have been testing the drivers for almost two months now and performance has been rock solid, and on a par with the onboard Intel adapter or the Realtek Mini PCIe adapter I use on the <a href="/homelab/NUC-Squarepants">NUC Squarepants</a>. I had a few hiccups to start with, and that is detailed under the <a href="#esxi-quirks">ESXi quirks</a> section below.</p>
+<p>I have been testing the drivers for almost two months now and performance has been rock solid, and on a par with the onboard Intel adapter or the <del>Mini PCIe adapters (Syba and StarTech)</del> I use on the <a href="/homelab/NUC-Squarepants">NUC Squarepants</a>. I had a few hiccups to start with, and that is detailed under the <a href="#esxi-quirks">ESXi quirks</a> section below.</p>
+
+<div class="notice--danger">
+<p><b>Update 25/05/2016:</b></p>
+<p>I have performed a new round of tests with the latest release of the driver and it is now clear that the Mini PCIe adapters are not stable, and throughput can vary dramatically.</p>
+<p>The figures below are still valid, as the iPerf tests were performed against different NICs. I will probably have to revisit the NUC Squarepants setup.</p>
+</div>
 
 <h3 id="iperf-figures-for-the-asix-driver-single-port-adapter">iPerf figures for the ASIX driver (Single port adapter)</h3>
 
@@ -444,7 +456,7 @@
 
 <h3 id="stacks">Stacks</h3>
 
-<p>As you can imagine I was very happy that I managed to get the ASIX driver working, but I noticed from the beginning that whilst egress (TX) throughput was in line with gigabit speed, ingress (RX) was at least 300 Mbits/sec less. I exchanged a few emails with William Lam, and he was also seeing the same lower throughput (sometimes even less). I tried tweeking the code every which way to no avail, and I came to the conclusion that this was the best we could get off of those adapters. I was miffed.</p>
+<p>As you can imagine I was very happy that I managed to get the ASIX driver working, but I noticed from the beginning that whilst egress (TX) throughput was in line with gigabit speed, ingress (RX) was at least 300 Mbits/sec less. I exchanged a few emails with William Lam, and he was also seeing the same lower throughput (sometimes even less). I tried tweaking the code every which way to no avail, and I came to the conclusion that this was the best we could get off of those adapters. I was miffed.</p>
 
 <p>I started looking around the web and came across the ANKER adapter, noticing that it used a different chipset and driver. Emboldened by my success with the ASIX driver I turned my hand to the newly discovered Realtek driver. A few days later I had the driver compiled and working on ESXi 6.0, 5.5 and 5.1. Woo-hoo!</p>
 

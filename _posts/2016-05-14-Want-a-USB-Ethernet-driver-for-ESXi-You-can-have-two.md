@@ -23,6 +23,11 @@ In particular, I would like to thank William Lam (tip o' the hat to you, Sir), a
 
 Following a question from Charles Biggers, I have included iPerf figures for the ASIX Dual Port Ethernet adapter. Doesn't look good...
 
+**Update (25/05/16)**
+
+<li>TP-LINK UE300 added to the list of tested adapters</li>
+<li>Realtek driver updated to version 2.06.0-2 (Scatter Gather disabled)</li>
+
 </div>
 
 
@@ -58,12 +63,19 @@ The following devices were tested with these drivers.
 
 * [ANKER USB 3.0 to RJ45 Gigabit Ethernet Adapter](https://www.amazon.co.uk/dp/B00NPJP33M/ref=pd_lpo_sbs_dp_ss_1?pf_rd_p=569136327&pf_rd_s=lpo-top-stripe&pf_rd_t=201&pf_rd_i=B00DNU8Y20&pf_rd_m=A3P5ROKL5A1OLE&pf_rd_r=C5N2DD7H2D7AVRXM1VHP)
 
-I have not tested it, but other devices based on the same chipset should work, such as the [TP-LINK UE300](https://www.amazon.co.uk/gp/product/B00YOKMKE6/ref=pe_1959711_130662621_em_1p_0_ti)
+* [TP-LINK UE300 USB 3.0 to Gigabit Ethernet Network Adapter](https://www.amazon.co.uk/gp/product/B00YOKMKE6/ref=pe_1959711_130662621_em_1p_0_ti)
+
 
 
 ## Performance
 
-I have been testing the drivers for almost two months now and performance has been rock solid, and on a par with the onboard Intel adapter or the Realtek Mini PCIe adapter I use on the [NUC Squarepants](/homelab/NUC-Squarepants). I had a few hiccups to start with, and that is detailed under the [ESXi quirks](#esxi-quirks) section below. 
+I have been testing the drivers for almost two months now and performance has been rock solid, and on a par with the onboard Intel adapter or the ~~Mini PCIe adapters (Syba and StarTech)~~ I use on the [NUC Squarepants](/homelab/NUC-Squarepants). I had a few hiccups to start with, and that is detailed under the [ESXi quirks](#esxi-quirks) section below.
+
+<div class="notice--danger">
+<p><b>Update 25/05/2016:</b></p>
+<p>I have performed a new round of tests with the latest release of the driver and it is now clear that the Mini PCIe adapters are not stable, and throughput can vary dramatically.</p>
+<p>The figures below are still valid, as the iPerf tests were performed against different NICs. I will probably have to revisit the NUC Squarepants setup.</p>
+</div> 
 
 ### iPerf figures for the ASIX driver (Single port adapter)
 
@@ -112,7 +124,7 @@ As can be seen above both devices show up as "Pseudo" devices, but have very dif
 
 ### Stacks
 
-As you can imagine I was very happy that I managed to get the ASIX driver working, but I noticed from the beginning that whilst egress (TX) throughput was in line with gigabit speed, ingress (RX) was at least 300 Mbits/sec less. I exchanged a few emails with William Lam, and he was also seeing the same lower throughput (sometimes even less). I tried tweeking the code every which way to no avail, and I came to the conclusion that this was the best we could get off of those adapters. I was miffed.
+As you can imagine I was very happy that I managed to get the ASIX driver working, but I noticed from the beginning that whilst egress (TX) throughput was in line with gigabit speed, ingress (RX) was at least 300 Mbits/sec less. I exchanged a few emails with William Lam, and he was also seeing the same lower throughput (sometimes even less). I tried tweaking the code every which way to no avail, and I came to the conclusion that this was the best we could get off of those adapters. I was miffed.
 
 I started looking around the web and came across the ANKER adapter, noticing that it used a different chipset and driver. Emboldened by my success with the ASIX driver I turned my hand to the newly discovered Realtek driver. A few days later I had the driver compiled and working on ESXi 6.0, 5.5 and 5.1. Woo-hoo! 
 
@@ -218,7 +230,7 @@ You can download the VIBs using the following links:
 [ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/ax88179_esxi55u3_vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/ax88179_esxi55u3_vib/_latestVersion)
 
 
-#### ESXi 5.1 VIB
+#### ESXi 5.1 VIB 
 
 [ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/ax88179_esxi51u3_vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/ax88179_esxi51u3_vib/_latestVersion)
 
