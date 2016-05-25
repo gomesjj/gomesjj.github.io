@@ -69,7 +69,7 @@ The following devices were tested with these drivers.
 
 ## Performance
 
-I have been testing the drivers for almost two months now and performance has been rock solid, and on a par with the onboard Intel adapter or the ~~Mini PCIe adapters (Syba and StarTech)~~ I use on the [NUC Squarepants](/homelab/NUC-Squarepants). I had a few hiccups to start with, and that is detailed under the [ESXi quirks](#esxi-quirks) section below.
+I have been testing the drivers for almost two months now and performance has been rock solid, and on a par with the onboard Intel adapter ~~or the Mini PCIe adapters (Syba and StarTech)~~ I use on the [NUC Squarepants](/homelab/NUC-Squarepants). I had a few hiccups to start with, and that is detailed under the [ESXi quirks](#esxi-quirks) section below.
 
 <div class="notice--danger">
 <p><b>Update 25/05/2016:</b></p>
