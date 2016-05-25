@@ -64,7 +64,16 @@ I have used both ```nw-builder``` and ```nwjs-macappstore-builder```. Whilst bot
 
 If you would rather decide for yourself, have a look at [nw-builder](https://github.com/nwjs/nw-builder) and [nwjs-macappstore-builder](https://www.npmjs.com/package/nwjs-macappstore-builder).
 
+<div class="notice--warning" markdown="1">
+**Update (25/05/16)**
+
+<li>Mesh Commander updated to version 0.2.1</li>
+<p></p>
+<p>The modifications I made to the code have been accepted by Ylian Saint-Hilaire and are now part of Mesh Commander's source.</p>
+</div>
+
 5\. Grab the modified source files and other requisites from my GitHub [repository](https://github.com/gomesjj/MeshCommander)
+
 
 ### Lets bake it
 
