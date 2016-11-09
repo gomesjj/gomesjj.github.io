@@ -66,6 +66,8 @@ The following devices were tested with these drivers.
 
 * [TP-LINK UE300 USB 3.0 to Gigabit Ethernet Network Adapter](https://www.amazon.co.uk/gp/product/B00YOKMKE6/ref=pe_1959711_130662621_em_1p_0_ti)
 
+* [Rankie SuperSpeed USB 3.0 to RJ45 Gigabit Ethernet Network Adapter](https://www.amazon.co.uk/gp/product/B010SEARPU/ref=ox_sc_act_title_1?ie=UTF8&psc=1&smid=A7ZMMLW05YAY7)
+
 Tested by Glen Kemp
 
 * [Anker Unibody 3-Port USB 3.0 and Ethernet Hub](https://www.amazon.co.uk/Anker®-Unibody-Ethernet-RTL8153-Chipset/dp/B00PC0J1VC/ref=sr_1_1?s=computers&ie=UTF8&qid=1464184877&sr=1-1&keywords=Anker+Unibody+3-Port+USB+3.0+and+Ethernet+Hub)
@@ -237,7 +239,7 @@ You can download the VIBs using the following links:
 
 #### ESXi 5.1 VIB 
 
-[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/ax88179_esxi51u3_vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/ax88179_esxi51u3_vib/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/ax88179_esxi51u3_vib/images/download.svg?version=1.14.0-3) ](https://bintray.com/gomesjj/VIBs/ax88179_esxi51u3_vib/1.14.0-3/link)
 
 ### Realtek
 
@@ -253,4 +255,4 @@ You can download the VIBs using the following links:
 
 #### ESXi 5.1 VIB
 
-[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/r8152_esxi51u3_vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/r8152_esxi51u3_vib/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/r8152_esxi51u3_vib/images/download.svg?version=2.06.0-3) ](https://bintray.com/gomesjj/VIBs/r8152_esxi51u3_vib/2.06.0-3/link)
