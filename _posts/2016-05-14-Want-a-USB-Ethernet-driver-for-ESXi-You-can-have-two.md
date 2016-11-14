@@ -19,9 +19,9 @@ In particular, I would like to thank William Lam (tip o' the hat to you, Sir), a
 
 
 <div class="notice--warning" markdown="1">
-**Update (19/05/16)**
+**Update (19/05/16)**  
 
-Following a question from Charles Biggers, I have included iPerf figures for the ASIX Dual Port Ethernet adapter. Doesn't look good...
+Following a question from Charles Biggers, I have included iPerf figures for the ASIX Dual Port Ethernet adapter. Doesn't look good...    
 
 **Update (25/05/16)**
 
