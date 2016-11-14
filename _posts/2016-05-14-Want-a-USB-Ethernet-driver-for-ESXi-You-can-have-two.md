@@ -26,13 +26,13 @@ Following a question from Charles Biggers, I have included iPerf figures for the
 **Update (25/05/16)**
 
 <li>TP-LINK UE300 added to the list of tested adapters</li>
-<li>Realtek driver updated to version 2.06.0-2 (Scatter Gather disabled)</li>
+<li>Realtek driver updated to version 2.06.0-2 (Scatter Gather disabled)</li>  
 
-**Update (14/11/16)**
+**Update (14/11/16)**  
 
-<li>All drivers recompiled and VIBs uploaded to Bintray. Driver version numbers changed to a consistent format.</li>
+All drivers recompiled and VIBs uploaded to Bintray. Driver version numbers changed to a consistent format.  
 
-Following a request from reader Vitali the Relatek r8152 driver has been updated to support USB 2.0 adapters based on the RTL8152B chipset.
+Following a request from reader Vitali the Relatek r8152 driver has been updated to support USB 2.0 adapters based on the RTL8152B chipset.  
 
 <li>TP-LINK UE200 added to the list of tested adapters</li>
 
