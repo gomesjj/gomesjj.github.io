@@ -28,6 +28,17 @@ Following a question from Charles Biggers, I have included iPerf figures for the
 <li>TP-LINK UE300 added to the list of tested adapters</li>
 <li>Realtek driver updated to version 2.06.0-2 (Scatter Gather disabled)</li>
 
+**Update (14/11/16)**
+
+All drivers recompiled and VIBs uploaded to Bintray. Driver version numbers changed to a consistent format.
+
+<li>Rankie SuperSpeed USB 3.0 adapter added to the list of tested adapters</li>
+<li>Realtek driver updated to version 2.06.0-2 (Scatter Gather disabled)</li>
+
+Following a request from reader Vitali the Relatek r8152 driver has been updated to support USB 2.0 adapters based on the RTL8152B chipset.
+
+<li>TP-LINK UE200 added to the list of tested adapters</li>
+
 </div>
 
 
@@ -73,6 +84,10 @@ Tested by Glen Kemp
 * [Anker Unibody 3-Port USB 3.0 and Ethernet Hub](https://www.amazon.co.uk/Anker®-Unibody-Ethernet-RTL8153-Chipset/dp/B00PC0J1VC/ref=sr_1_1?s=computers&ie=UTF8&qid=1464184877&sr=1-1&keywords=Anker+Unibody+3-Port+USB+3.0+and+Ethernet+Hub)
 
 * [Smays 3-Port OTG USB-HUB and USB2.0 RJ45 Ethernet Network Adapter](https://www.amazon.co.uk/gp/product/B00WR6A57S/ref=as_li_ss_tl?ie=UTF8&psc=1&linkCode=sl1&tag=s0517-21&linkId=5815c60c53524b534b98dcd596eab09c)
+
+USB 2.0 Adapter (RTL8152B Chipset)
+
+* [TP-LINK UE200 USB 2.0 to 100 Mbps Ethernet Network Adapter](https://www.amazon.co.uk/TP-LINK-UE200-Ethernet-Foldable-Ultrabook/dp/B01GRY7RHG)
 
 ## Performance
 
@@ -229,30 +244,30 @@ You can download the VIBs using the following links:
 
 #### ESXi 6.0 VIB 
 
-[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/ax88179_esxi60u2_vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/ax88179_esxi60u2_vib/_latestVersion)
+ [ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/ax88179_esxi60u2_vib/images/download.svg?version=1.14.4-1) ](https://bintray.com/gomesjj/VIBs/ax88179_esxi60u2_vib/1.14.4-1/link)
 
 
 #### ESXi 5.5 VIB
 
-[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/ax88179_esxi55u3_vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/ax88179_esxi55u3_vib/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/ax88179_esxi55u3_vib/images/download.svg?version=1.14.4-1) ](https://bintray.com/gomesjj/VIBs/ax88179_esxi55u3_vib/1.14.4-1/link)
 
 
 #### ESXi 5.1 VIB 
 
-[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/ax88179_esxi51u3_vib/images/download.svg?version=1.14.0-3) ](https://bintray.com/gomesjj/VIBs/ax88179_esxi51u3_vib/1.14.0-3/link)
+[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/ax88179_esxi51u3_vib/images/download.svg?version=1.14.4-1) ](https://bintray.com/gomesjj/VIBs/ax88179_esxi51u3_vib/1.14.4-1/link)
 
 ### Realtek
 
 #### ESXi 6.0 VIB
 
-[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/r8152_esxi60u2_vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/r8152_esxi60u2_vib/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/r8152_esxi60u2_vib/images/download.svg?version=2.06.0-4) ](https://bintray.com/gomesjj/VIBs/r8152_esxi60u2_vib/2.06.0-4/link)
 
 
 #### ESXi 5.5 VIB
 
-[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/r8152_esxi55u3_vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/r8152_esxi55u3_vib/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/r8152_esxi55u3_vib/images/download.svg?version=2.06.0-4) ](https://bintray.com/gomesjj/VIBs/r8152_esxi55u3_vib/2.06.0-4/link)
 
 
 #### ESXi 5.1 VIB
 
-[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/r8152_esxi51u3_vib/images/download.svg?version=2.06.0-3) ](https://bintray.com/gomesjj/VIBs/r8152_esxi51u3_vib/2.06.0-3/link)
+[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/r8152_esxi51u3_vib/images/download.svg?version=2.06.0-4) ](https://bintray.com/gomesjj/VIBs/r8152_esxi51u3_vib/2.06.0-4/link)
