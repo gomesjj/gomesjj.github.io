@@ -34,9 +34,13 @@ All drivers recompiled and VIBs uploaded to Bintray. Driver version numbers chan
 
 Following a request from reader Vitali the Relatek r8152 driver has been updated to support USB 2.0 adapters based on the RTL8152B chipset.  
 
-<li>TP-LINK UE200 added to the list of tested adapters</li>
+<li>TP-LINK UE200 added to the list of tested adapters</li>  
 
-</div>
+**Update (17/11/16)**
+
+Both the Realtek and ASIX drivers have been recompiled for ESXi 6.5. Further details and download links [here](/homelab/USB-Ethernet-driver-for-ESXi-6.5/)
+
+</div>  
 
 
 ## The story   
