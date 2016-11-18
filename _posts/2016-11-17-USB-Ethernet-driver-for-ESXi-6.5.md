@@ -10,7 +10,7 @@ tags: [Homelab, ESXi, USB, Ethernet]
 <div class="notice--warning" markdown="1">
 **Update (18/11/16)**  
 
-I have included iPerf figures for the ASIX and Realtek adapters on both the Intel NUC 4th generation (DC53427HYEA) and the 5th Generation (NUC5i5RYH).   
+I have included iPerf figures for the ASIX and Realtek adapters on both the Intel NUC 4th generation DC53427HYEA and the 5th Generation NUC5i5RYH.   
 
 </div> 
 
