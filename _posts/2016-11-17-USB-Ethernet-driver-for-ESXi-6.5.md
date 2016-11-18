@@ -46,7 +46,7 @@ My first attempt at loading the USB Ethernet drivers failed miserably. It took m
 
 Anyway, in other to get the USB Ethernet drivers to load the vmkusb module must be disabled in other for the legacy USB drivers to load. The details are described in the VMware Knowledge Base article [2147650](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2147650).
 
-Other than the above, there are no material differences between 6.0 and 6.5 for the legacy adapters so all performance figures described on the previous article are still valid.  
+Other than the above, there are no material differences between 6.0 and 6.5 for the legacy adapters so all performance figures described on the previous article are still valid, but I will be validating in due course. 
 
 ## Performance  
 
