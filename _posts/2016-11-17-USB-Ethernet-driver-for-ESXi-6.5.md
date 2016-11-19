@@ -18,18 +18,18 @@ Back in May I wrote this [piece](/homelab/Want-a-USB-Ethernet-driver-for-ESXi-Yo
 
 Fast forward a few months, and as soon as ESXi 6.5 was announced people started asking if I could recompile the drivers for the new release. Finally I had some time this week to look into that. The result? A lot of wasted time downloading the 6.5 disclosure packages, setting up the environment, tweaking build scripts, etc. It turns out that compiling the drivers in the ESXi 6.0 environment I built previously worked much better, with just a single trivial change to the USB namespace.
 
-The single alteration I had to make was to change the namespace dependencies map from this:
+The single alteration I had to make was to change the namespace dependencies map (__namespace.h) from this:
 
 ```sh
-echo -e "VMK_NAMESPACE_REQUIRED(\"com.vmware.usb\", \"9.2.3.0\");\
-\nVMK_NAMESPACE_REQUIRED(\"com.vmware.usbnet\", \"9.2.3.0\");"\
+VMK_NAMESPACE_REQUIRED("com.vmware.usb", "9.2.3.0");
+VMK_NAMESPACE_REQUIRED("com.vmware.usbnet", "9.2.3.0")
 ```
 
 To this:
 
 ```sh
-echo -e "VMK_NAMESPACE_REQUIRED(\"com.vmware.usb\", \"10.0\");\
-\nVMK_NAMESPACE_REQUIRED(\"com.vmware.usbnet\", \"9.2.3.0\");"\
+VMK_NAMESPACE_REQUIRED("com.vmware.usb", "10.0");
+VMK_NAMESPACE_REQUIRED("com.vmware.usbnet", "9.2.3.0");
 ```
 
 Note the sneak change introduced by VMware -- the USB namespace is version 10.0 now...
