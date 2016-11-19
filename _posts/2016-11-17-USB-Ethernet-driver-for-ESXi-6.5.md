@@ -5,7 +5,9 @@ header:
   teaser: "usb_adapters_65.png"
 category: [Homelab]
 tags: [Homelab, ESXi, USB, Ethernet]
----
+---  
+
+{% include toc %}
 
 <div class="notice--warning" markdown="1">
 **Update (18/11/16)**  
@@ -33,8 +35,6 @@ VMK_NAMESPACE_REQUIRED("com.vmware.usbnet", "9.2.3.0");
 ```
 
 Note the sneak change introduced by VMware -- the USB namespace is version 10.0 now...
-
-{% include toc %}
 
 ## What's new
 
