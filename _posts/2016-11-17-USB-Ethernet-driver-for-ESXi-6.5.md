@@ -44,7 +44,7 @@ The USB Ethernet drivers are dependent on two legacy modules (usb and usbnet); t
 
 My first attempt at loading the USB Ethernet drivers failed miserably. It took me some time to realise that in 6.5 all legacy USB drivers (xhci, ehci-hcd, usb-uhci, usb, usb-storage, etc.) have been replaced by a single native driver called vmkusb. It serves me right for not paying attention to the various announcements...
 
-Anyway, in order to get the USB Ethernet drivers to load the vmkusb module must be disabled in other for the legacy USB drivers to load. The details are described in the VMware Knowledge Base article [2147650](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2147650). I will save you a trip to the KB article, though. ;-)
+Anyway, in order to get the USB Ethernet drivers to load the vmkusb module must be disabled to allow for the legacy USB drivers to load. The details are described in the VMware Knowledge Base article [2147650](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2147650). I will save you a trip to the KB article, though. ;-)
 
 To disable the vmkusb module, run the command below and reboot the ESXi server:
 
