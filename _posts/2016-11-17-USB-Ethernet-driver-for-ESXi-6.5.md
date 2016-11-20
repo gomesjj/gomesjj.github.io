@@ -123,7 +123,7 @@ I tested the adapters on two different Intel NUC models: the 4th Generation DC53
 
 I was quite surprised by the results obtained with the ASIX adapter on the DC53427HYEA NUC. It is obvious that the older generation NUC is impacting performance badly -- I assume this is related to either the CPU or the USB subsystem.  
 
-The performance figures of the adapters on the NUC5i5MYHE NUC look pretty good though, for both the ASIX and Realtek adapters. Plenty of choices there, and I would expect that would be the same on newer generation NUCs. Both the ASIX and Realtek adapters are also available from StarTech, ANKER and Belkin are also available with USB-C interfaces.
+The performance figures of the adapters on the NUC5i5MYHE NUC look pretty good though, for both the ASIX and Realtek adapters. Plenty of choices there, and I would expect that would be the same on newer generation NUCs. Both the ASIX and Realtek adapters are also available from StarTech, ANKER and Belkin with USB-C interfaces.
 
 
 ## Tested devices
@@ -153,7 +153,9 @@ Tested by Glen Kemp
 
 * [Anker Unibody 3-Port USB 3.0 and Ethernet Hub](https://www.amazon.co.uk/Anker®-Unibody-Ethernet-RTL8153-Chipset/dp/B00PC0J1VC/ref=sr_1_1?s=computers&ie=UTF8&qid=1464184877&sr=1-1&keywords=Anker+Unibody+3-Port+USB+3.0+and+Ethernet+Hub)
 
-USB 2.0 Adapter (RTL8152B Chipset)
+<u>*USB 2.0 Adapter (RTL8152B Chipset)*</u> 
+
+Tested by reader Vitali (Виталий)
 
 * [TP-LINK UE200 USB 2.0 to 100 Mbps Ethernet Network Adapter](https://www.amazon.co.uk/TP-LINK-UE200-Ethernet-Foldable-Ultrabook/dp/B01GRY7RHG)  
 
