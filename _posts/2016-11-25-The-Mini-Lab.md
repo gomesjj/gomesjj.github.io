@@ -39,7 +39,7 @@ There are five VLANs routed by the SG300-10 switch:
 
 That is where all the home gear (laptops, desktops, home wifi, etc.) sits.
 
-* Cisco SG200-18
+* Cisco SG300-10
 * DC Controller
 	* Intel DC53427HYE
 	* 8GB RAM
