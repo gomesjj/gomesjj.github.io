@@ -1,31 +1,129 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-11-18T20:25:29+00:00</updated><id>http://localhost:4000/</id><title>DEV | TTY</title><subtitle>The personal blog of Jose Gomes</subtitle><author><name>Jose Gomes</name></author><entry><title>USB Ethernet driver for ESXi 6.5</title><link href="http://localhost:4000/homelab/USB-Ethernet-driver-for-ESXi-6.5/" rel="alternate" type="text/html" title="USB Ethernet driver for ESXi 6.5" /><published>2016-11-17T00:00:00+00:00</published><updated>2016-11-17T00:00:00+00:00</updated><id>http://localhost:4000/homelab/USB-Ethernet-driver-for-ESXi-6.5</id><content type="html" xml:base="http://localhost:4000/homelab/USB-Ethernet-driver-for-ESXi-6.5/">&lt;div class=&quot;notice--warning&quot;&gt;
-  &lt;p&gt;&lt;strong&gt;Update (18/11/16)&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-11-25T18:58:00+00:00</updated><id>http://localhost:4000/</id><title>DEV | TTY</title><subtitle>The personal blog of Jose Gomes</subtitle><author><name>Jose Gomes</name></author><entry><title>The Mini Lab</title><link href="http://localhost:4000/homelab/The-Mini-Lab/" rel="alternate" type="text/html" title="The Mini Lab" /><published>2016-11-25T00:00:00+00:00</published><updated>2016-11-25T00:00:00+00:00</updated><id>http://localhost:4000/homelab/The-Mini-Lab</id><content type="html" xml:base="http://localhost:4000/homelab/The-Mini-Lab/">&lt;aside class=&quot;sidebar__right&quot;&gt;
+&lt;nav class=&quot;toc&quot;&gt;
+    &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fa fa-file-text&quot;&gt;&lt;/i&gt; Contents&lt;/h4&gt;&lt;/header&gt;
+&lt;ul class=&quot;toc__menu&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#burning-the-money-dont-tell-the-wife&quot; id=&quot;markdown-toc-burning-the-money-dont-tell-the-wife&quot;&gt;Burning the money (don’t tell the wife)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#lets-get-physical&quot; id=&quot;markdown-toc-lets-get-physical&quot;&gt;Let’s get physical&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#drn-domestic-routed-network&quot; id=&quot;markdown-toc-drn-domestic-routed-network&quot;&gt;DRN (Domestic Routed Network)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#mini-lab-vlans-10-20-and-30&quot; id=&quot;markdown-toc-mini-lab-vlans-10-20-and-30&quot;&gt;Mini Lab (VLANs 10, 20 and 30)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#dr-lab-streched-vlans-10-20-and-30&quot; id=&quot;markdown-toc-dr-lab-streched-vlans-10-20-and-30&quot;&gt;DR Lab (Streched VLANs 10, 20 and 30)&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#the-chief-architect-says&quot; id=&quot;markdown-toc-the-chief-architect-says&quot;&gt;The Chief Architect says:&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-  &lt;p&gt;I have included iPerf figures for the ASIX and Realtek adapters on both the Intel NUC 4th generation DC53427HYEA and the 5th Generation NUC5i5RYH.&lt;/p&gt;
+  &lt;/nav&gt;
+&lt;/aside&gt;
 
-&lt;/div&gt;
+&lt;h2 id=&quot;burning-the-money-dont-tell-the-wife&quot;&gt;Burning the money (don’t tell the wife)&lt;/h2&gt;
 
-&lt;p&gt;Back in May I wrote this &lt;a href=&quot;/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/&quot;&gt;piece&lt;/a&gt; about USB Ethernet drivers for ESXi. I have been using both Realtek and ASIX adapters to complement the single Ethernet adapter on the Intel NUCs, and they have proved to be rock solid.&lt;/p&gt;
+&lt;p&gt;I wrote about my old set-up in this &lt;a href=&quot;/homelab/The-Home-Lab/&quot;&gt;post&lt;/a&gt; and then again about the future state of my Home Lab &lt;a href=&quot;/homelab/Intel-NUC-to-the-rescue/&quot;&gt;here&lt;/a&gt;, when I mentioned my intention of doing something to placate the &lt;abbr title=&quot;Good Lady Wife&quot;&gt;GLW&lt;/abbr&gt;. See, my electricity bill was going well past £4k a year…&lt;/p&gt;
 
-&lt;p&gt;Fast forward a few months, and as soon as ESXi 6.5 was announced people started asking if I could recompile the drivers for the new release. Finally I had some time this week to look into that. The result? A lot of wasted time downloading the 6.5 disclosure packages, setting up the environment, tweaking build scripts, etc. It turns out that compiling the drivers in the ESXi 6.0 environment I built previously worked much better, with just a single trivial change to the USB namespace.&lt;/p&gt;
+&lt;p&gt;Anyway, at the time of writing the second article (April 2016) I had one &lt;a href=&quot;http://ark.intel.com/products/74483/Intel-NUC-Kit-DC53427HYE&quot;&gt;DC53427HYEA&lt;/a&gt; (my physical AD controller), so I decided to buy another two NUCs, but this time the &lt;a href=&quot;http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-nuc5i5ryh.html&quot;&gt;NUC5i5RYH&lt;/a&gt;. A few weeks later I bought yet another NUC5i5RYH, so I could play with vSAN too…&lt;/p&gt;
 
-&lt;p&gt;The single alteration I had to make was to change the namespace dependencies map from this:&lt;/p&gt;
+&lt;p&gt;For the NAS, I had settled on building something around the &lt;a href=&quot;http://www.asrockrack.com/general/productdetail.asp?Model=C2750D4I#Specifications&quot;&gt;ASRock C2750D41&lt;/a&gt;, but shortly after, I also bought a &lt;a href=&quot;https://www.supermicro.com/products/motherboard/ATOM/X10/A1SAi-2750F.cfm&quot;&gt;Supermicro A1SAi-2750F&lt;/a&gt;.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; -e &lt;span class=&quot;s2&quot;&gt;&quot;VMK_NAMESPACE_REQUIRED(&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;com.vmware.usb&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;9.2.3.0&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;VMK_NAMESPACE_REQUIRED(&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;com.vmware.usbnet&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;9.2.3.0&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;);&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;p&gt;You would have thought that that was enough by now, and any sane person would agree, but not me! The ASRock board was going to be the foundation for my FreeNAS build (what with 12 SATA ports and all), but, six of the SATA ports are controlled by Marvell chipsets and they simply suck. Instead, I used the Supermicro board for my NAS with a cheap Dell PERC H200 HBA flashed to IT mode, and finally crossflashed with the LSI 9211i8i firmware. But then I had an idea – Hey, what about resilience for the data? – so another A1SAi-2750F lightened my wallet further…&lt;/p&gt;
 
-&lt;p&gt;To this:&lt;/p&gt;
+&lt;h2 id=&quot;lets-get-physical&quot;&gt;Let’s get physical&lt;/h2&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; -e &lt;span class=&quot;s2&quot;&gt;&quot;VMK_NAMESPACE_REQUIRED(&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;com.vmware.usb&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;10.0&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;VMK_NAMESPACE_REQUIRED(&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;com.vmware.usbnet&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;9.2.3.0&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;);&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;p&gt;The network infrastructure remains the same: a Cisco SG200-18 with an etherchannel link via OM2 fibre link to an SG300-10 (on layer 3 mode). Access to the networks beyond (Internet) goes trough a Cisco rv320 router. It might change soon, but that is for another post…&lt;/p&gt;
 
-&lt;p&gt;Note the sneak change introduced by VMware – the USB namespace is version 10.0 now…&lt;/p&gt;
+&lt;p&gt;There are five VLANs routed by the SG300-10 switch:&lt;/p&gt;
 
-&lt;aside class=&quot;sidebar__right&quot;&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;VLAN ID&lt;/th&gt;
+      &lt;th&gt;Purpose&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;DRN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;Management&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;20&lt;/td&gt;
+      &lt;td&gt;vSAN&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;30&lt;/td&gt;
+      &lt;td&gt;vMotion&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;40&lt;/td&gt;
+      &lt;td&gt;Guest Wi-Fi&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;drn-domestic-routed-network&quot;&gt;DRN (Domestic Routed Network)&lt;/h3&gt;
+
+&lt;p&gt;That is where all the home gear (laptops, desktops, home wifi, etc.) sits.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Cisco SG200-18&lt;/li&gt;
+  &lt;li&gt;DC Controller
+    &lt;ul&gt;
+      &lt;li&gt;Intel DC53427HYE&lt;/li&gt;
+      &lt;li&gt;8GB RAM&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;mini-lab-vlans-10-20-and-30&quot;&gt;Mini Lab (VLANs 10, 20 and 30)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Cisco SG200-18&lt;/li&gt;
+  &lt;li&gt;NAS
+    &lt;ul&gt;
+      &lt;li&gt;Lian Li PC-Q25B case&lt;/li&gt;
+      &lt;li&gt;Supermicro A1SAi-2750F&lt;/li&gt;
+      &lt;li&gt;32GB RAM&lt;/li&gt;
+      &lt;li&gt;6 x SATA 4TB drives&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;vSAN Cluster (3 nodes)
+    &lt;ul&gt;
+      &lt;li&gt;Intel NUC5i5RYH&lt;/li&gt;
+      &lt;li&gt;32GB RAM&lt;/li&gt;
+      &lt;li&gt;1 x 128GB M.2 SATA drive&lt;/li&gt;
+      &lt;li&gt;1 x 250GB SATA SSD drive&lt;/li&gt;
+      &lt;li&gt;2 x USB 3.0 Ethernet adapters&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Nested ESXi Host
+    &lt;ul&gt;
+      &lt;li&gt;Streacom F7CWS ALPHA Black case&lt;/li&gt;
+      &lt;li&gt;64GB RAM&lt;/li&gt;
+      &lt;li&gt;2 x 250GB SATA SSD drives&lt;/li&gt;
+      &lt;li&gt;1 x 1TB SATA drive&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; The NUCs are now housed on my Lego NUC Rack. I will be writing another post with instructions on how to build a rack just like that soon (maybe!).&lt;/p&gt;
+
+&lt;h3 id=&quot;dr-lab-streched-vlans-10-20-and-30&quot;&gt;DR Lab (Streched VLANs 10, 20 and 30)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Cisco SG200-18&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Still being built. I am think about getting an SG-500 switch to replace the SG-300-10. The DR lab would then go to the bottom of the garden. ;-)&lt;/p&gt;
+
+&lt;p&gt;At the moment, just a second NAS with the same specification as that of the mini lab. Data replicated via ZFS send/receive.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-chief-architect-says&quot;&gt;The Chief Architect says:&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/chief_architect.png&quot; alt=&quot;Chief Architect&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+
+&lt;center&gt;A reasonable effort, but could do better.&lt;/center&gt;</content><category term="[&quot;Homelab&quot;]" /><category term="Homelab" /><category term="Education" /><category term="Virtualisation" /><category term="NAS" /><category term="NUC" /><summary>The evolution of the home lab: Intel Avoton, Intel NUC, FreeNAS, ESXi and FreeNAS</summary></entry><entry><title>USB Ethernet driver for ESXi 6.5</title><link href="http://localhost:4000/homelab/USB-Ethernet-driver-for-ESXi-6.5/" rel="alternate" type="text/html" title="USB Ethernet driver for ESXi 6.5" /><published>2016-11-17T00:00:00+00:00</published><updated>2016-11-17T00:00:00+00:00</updated><id>http://localhost:4000/homelab/USB-Ethernet-driver-for-ESXi-6.5</id><content type="html" xml:base="http://localhost:4000/homelab/USB-Ethernet-driver-for-ESXi-6.5/">&lt;aside class=&quot;sidebar__right&quot;&gt;
 &lt;nav class=&quot;toc&quot;&gt;
     &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fa fa-file-text&quot;&gt;&lt;/i&gt; Contents&lt;/h4&gt;&lt;/header&gt;
 &lt;ul class=&quot;toc__menu&quot; id=&quot;markdown-toc&quot;&gt;
@@ -60,6 +158,33 @@
   &lt;/nav&gt;
 &lt;/aside&gt;
 
+&lt;div class=&quot;notice--warning&quot;&gt;
+  &lt;p&gt;&lt;strong&gt;Update (18/11/16)&lt;/strong&gt;&lt;/p&gt;
+
+  &lt;p&gt;I have included iPerf figures for the ASIX and Realtek adapters on both the Intel NUC 4th generation DC53427HYEA and the 5th Generation NUC5i5RYH.&lt;/p&gt;
+
+&lt;/div&gt;
+
+&lt;p&gt;Back in May I wrote this &lt;a href=&quot;/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/&quot;&gt;piece&lt;/a&gt; about USB Ethernet drivers for ESXi. I have been using both Realtek and ASIX adapters to complement the single Ethernet adapter on the Intel NUCs, and they have proved to be rock solid.&lt;/p&gt;
+
+&lt;p&gt;Fast forward a few months, and as soon as ESXi 6.5 was announced people started asking if I could recompile the drivers for the new release. Finally I had some time this week to look into that. The result? A lot of wasted time downloading the 6.5 disclosure packages, setting up the environment, tweaking build scripts, etc. It turns out that compiling the drivers in the ESXi 6.0 environment I built previously worked much better, with just a single trivial change to the USB namespace.&lt;/p&gt;
+
+&lt;p&gt;The single alteration I had to make was to change the namespace dependencies map (__namespace.h) from this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;VMK_NAMESPACE_REQUIRED&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;com.vmware.usb&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;9.2.3.0&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;;
+VMK_NAMESPACE_REQUIRED&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;com.vmware.usbnet&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;9.2.3.0&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;VMK_NAMESPACE_REQUIRED&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;com.vmware.usb&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;10.0&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;;
+VMK_NAMESPACE_REQUIRED&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;com.vmware.usbnet&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;9.2.3.0&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Note the sneak change introduced by VMware – the USB namespace is version 10.0 now…&lt;/p&gt;
+
 &lt;h2 id=&quot;whats-new&quot;&gt;What’s new&lt;/h2&gt;
 
 &lt;p&gt;Quite a lot! Apart from the new functionality discussed in detail by the VMware Gurus elsewhere, looking at the latest ODP packages clearly reveals VMware’s intention to move away from what they call “legacy” drivers.&lt;/p&gt;
@@ -68,7 +193,13 @@
 
 &lt;p&gt;My first attempt at loading the USB Ethernet drivers failed miserably. It took me some time to realise that in 6.5 all legacy USB drivers (xhci, ehci-hcd, usb-uhci, usb, usb-storage, etc.) have been replaced by a single native driver called vmkusb. It serves me right for not paying attention to the various announcements…&lt;/p&gt;
 
-&lt;p&gt;Anyway, in orther to get the USB Ethernet drivers to load the vmkusb module must be disabled in other for the legacy USB drivers to load. The details are described in the VMware Knowledge Base article &lt;a href=&quot;https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;amp;cmd=displayKC&amp;amp;externalId=2147650&quot;&gt;2147650&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Anyway, in order to get the USB Ethernet drivers to load the vmkusb module must be disabled to allow for the legacy USB drivers to load. The details are described in the VMware Knowledge Base article &lt;a href=&quot;https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;amp;cmd=displayKC&amp;amp;externalId=2147650&quot;&gt;2147650&lt;/a&gt;. I will save you a trip to the KB article, though. ;-)&lt;/p&gt;
+
+&lt;p&gt;To disable the vmkusb module, run the command below and reboot the ESXi server:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;esxcli system module &lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt; -m&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;vmkusb -e&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;FALSE
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Other than the above, there are no material differences between 6.0 and 6.5 for the legacy adapters so all performance figures described on the previous article are still valid, but I will be validating in due course.&lt;/p&gt;
 
@@ -138,7 +269,7 @@
 
 &lt;p&gt;I was quite surprised by the results obtained with the ASIX adapter on the DC53427HYEA NUC. It is obvious that the older generation NUC is impacting performance badly – I assume this is related to either the CPU or the USB subsystem.&lt;/p&gt;
 
-&lt;p&gt;The performance figures of the adapters on the NUC5i5MYHE NUC look pretty good though, for both the ASIX and Realtek adapters. Plenty of choices there, and I would expect that would be the same on newer generation NUCs. Both the ASIX and Realtek adapters are also available from StarTech, ANKER and Belkin are also available with USB-C interfaces.&lt;/p&gt;
+&lt;p&gt;The performance figures of the adapters on the NUC5i5MYHE NUC look pretty good though, for both the ASIX and Realtek adapters. Plenty of choices there, and I would expect that would be the same on newer generation NUCs. Both the ASIX and Realtek adapters are also available from StarTech, ANKER and Belkin with USB-C interfaces.&lt;/p&gt;
 
 &lt;h2 id=&quot;tested-devices&quot;&gt;Tested devices&lt;/h2&gt;
 
@@ -181,7 +312,9 @@
   &lt;li&gt;&lt;a href=&quot;https://www.amazon.co.uk/Anker®-Unibody-Ethernet-RTL8153-Chipset/dp/B00PC0J1VC/ref=sr_1_1?s=computers&amp;amp;ie=UTF8&amp;amp;qid=1464184877&amp;amp;sr=1-1&amp;amp;keywords=Anker+Unibody+3-Port+USB+3.0+and+Ethernet+Hub&quot;&gt;Anker Unibody 3-Port USB 3.0 and Ethernet Hub&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;USB 2.0 Adapter (RTL8152B Chipset)&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;*USB 2.0 Adapter (RTL8152B Chipset)*&lt;/u&gt;&lt;/p&gt;
+
+&lt;p&gt;Tested by reader Vitali (Виталий)&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.amazon.co.uk/TP-LINK-UE200-Ethernet-Foldable-Ultrabook/dp/B01GRY7RHG&quot;&gt;TP-LINK UE200 USB 2.0 to 100 Mbps Ethernet Network Adapter&lt;/a&gt;&lt;/li&gt;
