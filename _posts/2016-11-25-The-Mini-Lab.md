@@ -70,7 +70,7 @@ That is where all the home gear (laptops, desktops, home wifi, etc.) sits.
 
 * Cisco SG200-18  
 
-Still being built. I am think about getting an SG-500 switch to replace the SG-300-10. The DR lab would then go to the bottom of the garden. ;-)
+Still being built. I am thinking about getting an SG-500 switch to replace the SG-300-10. The DR lab would then go to the bottom of the garden. ;-)
 
 At the moment, just a second NAS with the same specification as that of the mini lab. Data replicated via ZFS send/receive. 
 
