@@ -5,36 +5,29 @@ header:
   teaser: "usb_adapters_65.png"
 category: [Homelab]
 tags: [Homelab, ESXi, USB, Ethernet]
----  
-
-{% include toc %}
-
-<div class="notice--warning" markdown="1">
-**Update (18/11/16)**  
-
-I have included iPerf figures for the ASIX and Realtek adapters on both the Intel NUC 4th generation DC53427HYEA and the 5th Generation NUC5i5RYH.   
-
-</div> 
+---
 
 Back in May I wrote this [piece](/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/) about USB Ethernet drivers for ESXi. I have been using both Realtek and ASIX adapters to complement the single Ethernet adapter on the Intel NUCs, and they have proved to be rock solid. 
 
 Fast forward a few months, and as soon as ESXi 6.5 was announced people started asking if I could recompile the drivers for the new release. Finally I had some time this week to look into that. The result? A lot of wasted time downloading the 6.5 disclosure packages, setting up the environment, tweaking build scripts, etc. It turns out that compiling the drivers in the ESXi 6.0 environment I built previously worked much better, with just a single trivial change to the USB namespace.
 
-The single alteration I had to make was to change the namespace dependencies map (__namespace.h) from this:
+The single change I had to make was to change the namespace dependencies map from this:
 
 ```sh
-VMK_NAMESPACE_REQUIRED("com.vmware.usb", "9.2.3.0");
-VMK_NAMESPACE_REQUIRED("com.vmware.usbnet", "9.2.3.0")
+echo -e "VMK_NAMESPACE_REQUIRED(\"com.vmware.usb\", \"9.2.3.0\");\
+\nVMK_NAMESPACE_REQUIRED(\"com.vmware.usbnet\", \"9.2.3.0\");"\
 ```
 
 To this:
 
 ```sh
-VMK_NAMESPACE_REQUIRED("com.vmware.usb", "10.0");
-VMK_NAMESPACE_REQUIRED("com.vmware.usbnet", "9.2.3.0");
+echo -e "VMK_NAMESPACE_REQUIRED(\"com.vmware.usb\", \"10.0\");\
+\nVMK_NAMESPACE_REQUIRED(\"com.vmware.usbnet\", \"9.2.3.0\");"\
 ```
 
 Note the sneak change introduced by VMware -- the USB namespace is version 10.0 now...
+
+{% include toc %}
 
 ## What's new
 
@@ -44,87 +37,9 @@ The USB Ethernet drivers are dependent on two legacy modules (usb and usbnet); t
 
 My first attempt at loading the USB Ethernet drivers failed miserably. It took me some time to realise that in 6.5 all legacy USB drivers (xhci, ehci-hcd, usb-uhci, usb, usb-storage, etc.) have been replaced by a single native driver called vmkusb. It serves me right for not paying attention to the various announcements...
 
-Anyway, in order to get the USB Ethernet drivers to load the vmkusb module must be disabled to allow for the legacy USB drivers to load. The details are described in the VMware Knowledge Base article [2147650](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2147650). I will save you a trip to the KB article, though. ;-)
+Anyway, in other to get the USB Ethernet drivers to load the vmkusb module must be disabled in other for the legacy USB drivers to load. The details are described in the VMware Knowledge Base article [2147650](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2147650).
 
-To disable the vmkusb module, run the command below and reboot the ESXi server:
-
-```sh
-esxcli system module set -m=vmkusb -e=FALSE
-```
-
-Other than the above, there are no material differences between 6.0 and 6.5 for the legacy adapters so all performance figures described on the previous article are still valid, but I will be validating in due course. 
-
-## Performance  
-
-I tested the adapters on two different Intel NUC models: the 4th Generation DC53427HYEA and the 5th NUC5i5MYHE. As mentioned in this [post](/homelab/NUC-Squarepants/) I am sticking with the 5th Generation Intel NUC because it is one of the only NUCs in the entire line-up sporting the Intel vPro/AMT technology.  
-
-### Configuration  
-
-*ESXi Version*
-
-![Version](/images/usb65/esxi_65.png){: .align-center}  
-
-*Adapters*  
-
-![NICs](/images/usb65/nics.png){: .align-center} 
- 
-
-### iPerf figures for the ASIX driver (DC53427HYEA)  
-
-*vSwitch Configuration*  
-
-![ASIX vSwitch](/images/usb65/asix_vswitch.png){: .align-center}  
-
-*Performance* 
-
-![ASIX 88179_178a](/images/usb65/iperf_asix_4th.png){: .align-center}  
-
-
-### iPerf figures for the Realtek driver (DC53427HYEA)  
-
-*vSwitch Configuration*  
-
-![Realtek vSwitch](/images/usb65/rtl_vswitch.png){: .align-center}  
-
-*Performance* 
-
-![Realtek 8152](/images/usb65/iperf_rtl_4th.png){: .align-center}  
-
-### iPerf figures for the ASIX driver (NUC5i5MYHE)  
-
-*vSwitch Configuration*  
-
-![ASIX vSwitch](/images/usb65/asix_vswitch.png){: .align-center}  
-
-*RX*  
-
-![ASIX r8152_5th](/images/usb65/asix_rx.png){: .align-center}  
-
-*TX*  
-
-![ASIX r8152_5th](/images/usb65/asix_tx.png){: .align-center}  
-
-### iPerf figures for the Realtek driver (NUC5i5MYHE)  
-
-*vSwitch Configuration*  
-
-![Realtek vSwitch](/images/usb65/rtl_vswitch.png){: .align-center}  
-
-*RX*  
-
-![Realtek 8152_5th](/images/usb65/rtl_rx.png){: .align-center}  
-
-*TX*  
-
-![Realtek 8152_178a_5th](/images/usb65/rtl_tx.png){: .align-center}  
-
-
-## Performance Takeaway  
-
-I was quite surprised by the results obtained with the ASIX adapter on the DC53427HYEA NUC. It is obvious that the older generation NUC is impacting performance badly -- I assume this is related to either the CPU or the USB subsystem.  
-
-The performance figures of the adapters on the NUC5i5MYHE NUC look pretty good though, for both the ASIX and Realtek adapters. Plenty of choices there, and I would expect that would be the same on newer generation NUCs. Both the ASIX and Realtek adapters are also available from StarTech, ANKER and Belkin with USB-C interfaces.
-
+Other than the above, there are no material differences between 6.0 and 6.5 for the legacy adapters so all performance figures described on the previous article are still valid.
 
 ## Tested devices
 
@@ -153,9 +68,7 @@ Tested by Glen Kemp
 
 * [Anker Unibody 3-Port USB 3.0 and Ethernet Hub](https://www.amazon.co.uk/Anker®-Unibody-Ethernet-RTL8153-Chipset/dp/B00PC0J1VC/ref=sr_1_1?s=computers&ie=UTF8&qid=1464184877&sr=1-1&keywords=Anker+Unibody+3-Port+USB+3.0+and+Ethernet+Hub)
 
-<u>*USB 2.0 Adapter (RTL8152B Chipset)*</u> 
-
-Tested by reader Vitali (Виталий)
+USB 2.0 Adapter (RTL8152B Chipset)
 
 * [TP-LINK UE200 USB 2.0 to 100 Mbps Ethernet Network Adapter](https://www.amazon.co.uk/TP-LINK-UE200-Ethernet-Foldable-Ultrabook/dp/B01GRY7RHG)  
 

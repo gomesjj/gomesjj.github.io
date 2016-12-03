@@ -64,8 +64,6 @@ That is where all the home gear (laptops, desktops, home wifi, etc.) sits.
 	* 2 x 250GB SATA SSD drives
 	* 1 x 1TB SATA drive  
 
-**Note:** The NUCs are now housed on my Lego NUC Rack. I will be writing another post with instructions on how to build a rack just like that soon (maybe!).
-
 ### DR Lab (Streched VLANs 10, 20 and 30)
 
 * Cisco SG200-18  
@@ -73,6 +71,10 @@ That is where all the home gear (laptops, desktops, home wifi, etc.) sits.
 Still being built. I am thinking about getting an SG-500 switch to replace the SG-300-10. The DR lab would then go to the bottom of the garden. ;-)
 
 At the moment, just a second NAS with the same specification as that of the mini lab. Data replicated via ZFS send/receive. 
+
+**Note:** The NUCs are now housed on my Lego NUC Rack. I will be writing another post with instructions on how to build a rack just like that soon (maybe!).
+
+![Lego NUCRack](/images/nucrack/47_rack_front_final.png){: .align-center} 
 
 ## The Chief Architect says:
 

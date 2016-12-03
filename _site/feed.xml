@@ -1,15 +1,963 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-11-25T18:58:19+00:00</updated><id>http://localhost:4000/</id><title>DEV | TTY</title><subtitle>The personal blog of Jose Gomes</subtitle><author><name>Jose Gomes</name></author><entry><title>The Mini Lab</title><link href="http://localhost:4000/homelab/The-Mini-Lab/" rel="alternate" type="text/html" title="The Mini Lab" /><published>2016-11-25T00:00:00+00:00</published><updated>2016-11-25T00:00:00+00:00</updated><id>http://localhost:4000/homelab/The-Mini-Lab</id><content type="html" xml:base="http://localhost:4000/homelab/The-Mini-Lab/">&lt;aside class=&quot;sidebar__right&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-12-03T17:54:08+00:00</updated><id>http://localhost:4000/</id><title type="html">DEV | TTY</title><subtitle>The personal blog of Jose Gomes</subtitle><author><name>Jose Gomes</name></author><entry><title type="html">How I built a Lego Rack for the Intel NUCs</title><link href="http://localhost:4000/homelab/How-I-Built-a-Lego-Rack-for-the-Intel-NUCs/" rel="alternate" type="text/html" title="How I built a Lego Rack for the Intel NUCs" /><published>2016-11-27T00:00:00+00:00</published><updated>2016-11-27T00:00:00+00:00</updated><id>http://localhost:4000/homelab/How-I-Built-a-Lego-Rack-for-the-Intel-NUCs</id><content type="html" xml:base="http://localhost:4000/homelab/How-I-Built-a-Lego-Rack-for-the-Intel-NUCs/">&lt;aside class=&quot;sidebar__right&quot;&gt;
 &lt;nav class=&quot;toc&quot;&gt;
-    &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fa fa-file-text&quot;&gt;&lt;/i&gt; Contents&lt;/h4&gt;&lt;/header&gt;
+    &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fa fa-&quot;&gt;&lt;/i&gt; &lt;/h4&gt;&lt;/header&gt;
 &lt;ul class=&quot;toc__menu&quot; id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#burning-the-money-dont-tell-the-wife&quot; id=&quot;markdown-toc-burning-the-money-dont-tell-the-wife&quot;&gt;Burning the money (don’t tell the wife)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#lets-get-physical&quot; id=&quot;markdown-toc-lets-get-physical&quot;&gt;Let’s get physical&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#drn-domestic-routed-network&quot; id=&quot;markdown-toc-drn-domestic-routed-network&quot;&gt;DRN (Domestic Routed Network)&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#mini-lab-vlans-10-20-and-30&quot; id=&quot;markdown-toc-mini-lab-vlans-10-20-and-30&quot;&gt;Mini Lab (VLANs 10, 20 and 30)&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#dr-lab-streched-vlans-10-20-and-30&quot; id=&quot;markdown-toc-dr-lab-streched-vlans-10-20-and-30&quot;&gt;DR Lab (Streched VLANs 10, 20 and 30)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#the-story&quot;&gt;The story&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#pick-a-brick&quot;&gt;Pick a Brick&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#bill-of-materials-bom&quot;&gt;Bill of Materials (BOM)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#the-build-in-pictures-and-words&quot;&gt;The Build in Pictures (and words)&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#ground-floor&quot;&gt;Ground Floor&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#first-floor&quot;&gt;First Floor&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#second-floor&quot;&gt;Second Floor&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#third-floor&quot;&gt;Third Floor&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#roof&quot;&gt;Roof&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#the-work-so-far&quot;&gt;The Work so Far&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#the-door&quot;&gt;The Door&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#the-glass&quot;&gt;The Glass&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#door-finish&quot;&gt;Door Finish&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#the-nucrac&quot;&gt;The NUCRac&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#what-could-be-better&quot;&gt;What could be better?&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#parting-shot&quot;&gt;Parting Shot&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#the-chief-architect-says&quot; id=&quot;markdown-toc-the-chief-architect-says&quot;&gt;The Chief Architect says:&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/nav&gt;
+&lt;/aside&gt;
+
+&lt;p&gt;I wrote about my new mini lab in this &lt;a href=&quot;/homelab/The-Mini-Lab/&quot;&gt;post&lt;/a&gt; recently, where I mentioned the fact that I had built a rack out of legos for my Intel NUCs. I had also posted a few pics of my set-up on Twitter and Reddit and I got quite a few requests to write a set of detailed build instructions for the Lego &lt;del&gt;House&lt;/del&gt; Rack.  &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; No musical sensibilities were harmed during the writing of this blog post. Ed Sheeran’s Lego House was not played even once… &lt;img class=&quot;emoji&quot; title=&quot;:wink:&quot; alt=&quot;:wink:&quot; src=&quot;https://assets.github.com/images/icons/emoji/unicode/1f609.png&quot; height=&quot;20&quot; width=&quot;20&quot; align=&quot;absmiddle&quot; /&gt;  &lt;/p&gt;
+
+&lt;h2 id=&quot;the-story&quot;&gt;The story&lt;/h2&gt;
+
+&lt;p&gt;There are some quite nice looking Lego based racks around the Web. For example, the awesome &lt;a href=&quot;http://vmnick0.me/?p=7&quot;&gt;Lego VSAN EVO Rack&lt;/a&gt; by Nicholas Farmer, or the also brilliant &lt;a href=&quot;https://roguevcdx.com/2016/06/10/fun-with-legos-and-intel-nucs/&quot;&gt;Fun with Legos and Intel NUCs&lt;/a&gt; by Andy Smith. Problem is, nobody is writing any guides on how to build the little beasties…&lt;/p&gt;
+
+&lt;p&gt;For my build, I wanted to mix (I mean, steal) the best aspects of both Nicholas’ and Andy’s designs. I started by examining their pictures and then came up with a design, initially sketched on paper, so that I could have a basic idea of the number of bricks required. The overhang column seen on my design was inspired by the case design of the Power Macintosh 8600/9600 with the side compartment for the motherboard:  &lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/rack/power-mac-9600.jpg&quot; alt=&quot;Power Macintosh 9600&quot; class=&quot;align-center&quot; /&gt;  &lt;/p&gt;
+
+&lt;p&gt;But, I must confess that it was a lot of trial and error and that I didn’t keep the best of notes as I was building the rack. For this guide, in the spirit of helping the community, I sucked it up and dismantled the rack to document the build again…&lt;/p&gt;
+
+&lt;h2 id=&quot;pick-a-brick&quot;&gt;Pick a Brick&lt;/h2&gt;
+
+&lt;p&gt;It turned out to be very difficult to source the Lego bricks I needed for this build. I initially thought about a blue and black build (like the EVO), but blue bricks were very hard to come by. I suspect my friends in the US of A will have better luck…&lt;/p&gt;
+
+&lt;p&gt;Even the black stackable base plates are now hard to find in the UK (other colours available). They are available directly from &lt;a href=&quot;http://strictlybriks.com/stackable-baseplates/6-x-6-single-color-stackables.html&quot;&gt;Strictly Briks&lt;/a&gt;, though. &lt;/p&gt;
+
+&lt;h2 id=&quot;bill-of-materials-bom&quot;&gt;Bill of Materials (BOM)&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;b&gt;Quantity&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Colour&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Size&lt;/b&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1 (pack of 10)&lt;/td&gt;
+      &lt;td&gt;Stackable Plates&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;20x20 (6” x 6”)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;1x16&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;1x8&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;64&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;2x6&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;48&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;2x6&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;14&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;2x4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;2x4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;1x4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;2x2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;24&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;2x2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;18&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;1x4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;1x3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;1x2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Corner Brick&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;1x2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Roof Tiles&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;2x8/45˚&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Roof Tiles&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;2x4/45˚&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;Flat Tiles&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;1x8&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Flat Tiles&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;1x6&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Flat Tiles&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;1x4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Flat Tiles&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;1x2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;Flat Tiles&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;1x6&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;Flat Tiles&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;1x4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Flat Tiles&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;1x1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Arch Continuous Bow&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;1x6&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Plate&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;2x16&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Plate&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;2x12&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;Plate&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;2x10&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;Plate&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;2x8&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Plate&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;2x6&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Plate&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;2x4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Plate&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;1x2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Angle Plate&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;1x2/2x2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Hinge Plate Locking Dual Finger on End&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;1x2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Hinge Plate Locking Single Finger on Top&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;1x2&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Other than the bricks and plates above, I also used the following items to complete the rack door:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.hobbycraft.co.uk/midwest-polyester-clear-sheet-006-mm-single/569117-1000&quot;&gt;Midwest Polyester Clear Sheet 0.06 mm Single&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.hobbycraft.co.uk/stix2-self_adhesive-magnetic-tape-3-metres/606215-1000?queryFromSuggest=true&amp;amp;userInput=magnetic%20tape&quot;&gt;Stix2 Self-Adhesive Magnetic Tape&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.hobbycraft.co.uk/modelcraft-universal-razor-saw/569370-1000?queryFromSuggest=true&amp;amp;userInput=craft%20saw&quot;&gt;Modelcraft Universal Razor Saw&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;the-build-in-pictures-and-words&quot;&gt;The Build in Pictures (and words)&lt;/h2&gt;
+
+&lt;p&gt;I spent a considerable amount of time thinking about what size rack I wanted to build. I had seen the Strictly Briks’ Stackable Base Plates before and noticed that Andy had used them for his own rack, so it was just a question of selecting a size that was enough to accommodate the NUCs. &lt;/p&gt;
+
+&lt;p&gt;I decided to go with the smallest of the bases, which are available in sizes of 20x20 (brick dots), 22x26, 32x32 and even 50x50 (from other vendors); the larger plates just seemed too big for the look and proportions I wanted to achieve. However, the first build looked a bit boring, so I ended up having to come up with a way of extending the plates somehow, which then allowed me to incorporate the side overhang to my design.  &lt;/p&gt;
+
+&lt;h3 id=&quot;ground-floor&quot;&gt;Ground Floor&lt;/h3&gt;
+
+&lt;p&gt;The basic building blocks are the Strictly Briks Stackable Plates and the hollow building bricks that come with them. When two of these bricks are joined together, they form a nice 2x2x5 smooth column.&lt;/p&gt;
+
+&lt;p&gt;BOM for this section:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;b&gt;Quantity&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Colour&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Size&lt;/b&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Plates&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;20x20&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;16&lt;/td&gt;
+      &lt;td&gt;Stackable/Column Brick&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;1x16&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;2x6&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;2x4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;2x6&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;u&gt;Step 1&lt;/u&gt;
+
+&lt;p&gt;Sandwich together two of the base plates and add four building blocks to each corner to form a 4x2x5 column.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/base_and_column_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/base_and_column_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt; &lt;a href=&quot;/images/rack/column_brick_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/column_brick_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
+&lt;u&gt;Step 2&lt;/u&gt;
+
+&lt;p&gt;Two sides of the base plate will have a narrower gap: stick four 6x2 grey bricks (two over two) to complete the lower side wall.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/base_lower_wall_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/base_lower_wall_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;  &lt;/p&gt;
+
+&lt;u&gt;Step 3&lt;/u&gt;
+
+&lt;p&gt;Build the front and back “partition” walls by stacking five 4x2 grey brick right in the middle of the opening: &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/base_front_back_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/base_front_back_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
+&lt;u&gt;Step 4&lt;/u&gt;
+
+&lt;p&gt;It is now time to put together the second pair of plates, which will enclose the base and serve as the 1st level “floor”. As I decided to have a kind of overhang on one side of the rack, two plates will be placed on top of each other, but this time the top one will be offset by four “dots”.  &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/overhang_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/overhang_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt; &lt;/p&gt;
+
+&lt;u&gt;Step 5&lt;/u&gt;
+
+&lt;p&gt;We are left with a “step-down” at one end of both the top and bottom of the combined plate, which will need to be filled up with two 4x8 and one 4x4 plates on each side. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/overhang_fill_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/overhang_fill_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;Once done, the base plates for the 1st, and subsequent floors, will have an overall size of 24 dots (w) by 20 dots (d).  &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/overhang_final_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/overhang_final_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;  &lt;/p&gt;
+
+&lt;u&gt;Step 6&lt;/u&gt;
+
+&lt;p&gt;Turn the baseplate upside down and add to the middle of the short edges four 2x6 black bricks (two over two); on one side, right on the edge, and on the other offset by four dots. Those will form the upper half of the side wall of the base, including a gap in the middle.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/base_upper_wall_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/base_upper_wall_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally, place the assembled 1st level plate over the base.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/base_complete_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/base_complete_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt; &lt;a href=&quot;/images/rack/base_side_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/base_side_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt; &lt;/p&gt;
+
+&lt;h3 id=&quot;first-floor&quot;&gt;First Floor&lt;/h3&gt;
+
+&lt;p&gt;BOM for this section:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;b&gt;Quantity&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Colour&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Size&lt;/b&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Plates&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;20x20&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Plates&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;4x8&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Plates&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;4x4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Stackable/Column Brick&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;1x16&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;24&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;2x6&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;2x4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;2x2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;2x6&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;2x2&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;u&gt;Step 7&lt;/u&gt;
+
+&lt;p&gt;The first floor build starts by adding the side walls to the base plate (floor). Place three 2x6 grey bricks along the overhang edge (offset by four dots) and finish off with a 2x4 brick running lengthwise along the bottom edge of the plate.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/1st_row1_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/1st_row1_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Start the second row with a 2x2 grey brick, followed by three 2x6 grey bricks.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/1st_row2_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/1st_row2_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Rows 3 and 4 are built with 2x6 black bricks only, leaving a gap in the middle; rows 5 and 6 are built with 2x2 and 2x6 black bricks – I started with the 2x2 bricks at different ends of the plate.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/1st_row3_6_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/1st_row3_6_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/1st_final_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/1st_final_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Finally, place 2 building bricks together at each end of the overhang, capped by a 2x2 black brick. This will give extra height to the column, matching the six row wall.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/column_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/column_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt; &lt;a href=&quot;/images/rack/1st_column_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/1st_column_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;second-floor&quot;&gt;Second Floor&lt;/h3&gt;
+
+&lt;p&gt;BOM for this section:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;b&gt;Quantity&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Colour&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Size&lt;/b&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Plates&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;20x20&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Plates&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;4x8&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Plates&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;4x4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Stackable/Column Brick&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;1x16&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;24&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;2x6&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;2x4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;2x2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;2x6&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;2x2&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;u&gt;Step 8&lt;/u&gt;
+
+&lt;p&gt;Build the base plate (floor) as per steps 4 and 5.&lt;/p&gt;
+
+&lt;u&gt;Step 9&lt;/u&gt;
+
+&lt;p&gt;As per Step 7, but starting with black, instead of grey, bricks.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/2nd_floor_walls_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/2nd_floor_walls_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt; &lt;/p&gt;
+
+&lt;h3 id=&quot;third-floor&quot;&gt;Third Floor&lt;/h3&gt;
+
+&lt;p&gt;BOM for this section:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;b&gt;Quantity&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Colour&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Size&lt;/b&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Plates&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;20x20&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Plates&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;4x8&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Plates&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;4x4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Stackable/Column Brick&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;1x16&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;24&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;2x6&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;2x4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;2x2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;2x6&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;2x2&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;A repeat of steps 4, 5 and 7 (grey bricks).  &lt;/p&gt;
+
+&lt;h3 id=&quot;roof&quot;&gt;Roof&lt;/h3&gt;
+
+&lt;p&gt;BOM for this section: &lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;b&gt;Quantity&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Colour&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Size&lt;/b&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Plates&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;20x20&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Roof Tiles&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;2x8/45˚&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Roof Tiles&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;2x4/45˚&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;Flat Tiles&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;1x8&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Flat Tiles&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;1x4&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;The top of the rack (roof, if you will) is built with the same overhang base plates, then finished off by 2x8/45˚ and 2x4/45˚ black roof tiles, and capped by two 1x8 and one 1x4 grey smooth plates to the sides. The front and back of the roof are finished off with one 1x16 and one 1x4 black bricks capped by two 1x6 and one 1x8 grey smooth plates.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/roof_front_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/roof_front_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt; &lt;a href=&quot;/images/rack/roof_side_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/roof_side_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/roof_final_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/roof_final_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;  &lt;/p&gt;
+
+&lt;h3 id=&quot;the-work-so-far&quot;&gt;The Work so Far&lt;/h3&gt;
+
+&lt;p&gt;We now have a rack that will suit most people.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/rack_no_door_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/rack_no_door_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;I myself wanted the rack to have a working door. Off course, it is not essential, but I just enjoyed the challenge… &lt;img class=&quot;emoji&quot; title=&quot;:wink:&quot; alt=&quot;:wink:&quot; src=&quot;https://assets.github.com/images/icons/emoji/unicode/1f609.png&quot; height=&quot;20&quot; width=&quot;20&quot; align=&quot;absmiddle&quot; /&gt; &lt;/p&gt;
+
+&lt;h3 id=&quot;the-door&quot;&gt;The Door&lt;/h3&gt;
+
+&lt;p&gt;BOM for this section: &lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;b&gt;Quantity&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Colour&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Size&lt;/b&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Corner Brick&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;1x2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;18&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;1x4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;1x3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Brick&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;1x2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Plate&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;2x16&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Plate&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;2x12&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;6&lt;/td&gt;
+      &lt;td&gt;Plate&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;2x10&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;Plate&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;2x8&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Plate&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;2x6&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Plate&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;2x4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Plate&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;1x2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Angle Plate&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;1x2/2x2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Hinge Plate Locking Dual Finger on End&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;1x2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Hinge Plate Locking Single Finger on Top&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;1x2&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Designing and building the door frame was reasonably easy, but the hinges (ah the hinges) proved to be a much tougher nut to crack. There are plenty of different, nice looking hinges out there and I tested most of them. Some come fully assembled, some are hard to put together, but all proved to be either too weak to support the door or just impossible to attach to the frame. The one thing I didn’t want was to glue any parts together…&lt;/p&gt;
+
+&lt;p&gt;I had to come up with a custom design, and it proved to be not only strong enough to hold the door, but also pretty reliable in operation. The hinges are built by using four Hinge Plate Locking Dual Finger on End (black), four Hinge Plate Locking Single Finger on Top (grey) and two 1x2/2x2 grey Angle Plates.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/hinge_pieces_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/hinge_pieces_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Well, lets get on with the program… &lt;/p&gt;
+
+&lt;u&gt;Step 10&lt;/u&gt;
+
+&lt;p&gt;The basic shape for the door frame is built by arranging two 2x16 grey plates (width) and four 2x12 grey plates (height).&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/door_frame_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/door_frame_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
+&lt;u&gt;Step 11&lt;/u&gt;
+
+&lt;p&gt;On the hinge side, start joining the base plate with one 2x4 grey plate offset by two dots; leave another two dots free and add one 2x6 grey plate. Finally, skip another two dots and add a second 2x4 grey plate.  &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/door_frame_hinge_side_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/door_frame_hinge_side_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt; &lt;/p&gt;
+
+&lt;u&gt;Step 12&lt;/u&gt;
+
+&lt;p&gt;Place two black hinge plates (with the two “fingers”) on each gap between the 2x4 and 2x6 plates, and  connected to the grey hinge plates (“single finger on top”); the hinges are finished off by two 1x2 black smooth plates. Finally, attach the angle plates.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/hinge_connected_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/hinge_connected_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt; &lt;a href=&quot;/images/rack/hinge_capped_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/hinge_capped_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt; &lt;a href=&quot;/images/rack/hinge_angle_plate_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/hinge_angle_plate_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/door_frame_and_hinge_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/door_frame_and_hinge_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
+&lt;p class=&quot;notice--info&quot;&gt;I couldn’t find a mounting position for the hinges that would line up correctly with the distance between two overhangs. The top hinge needs to be “packed” with one 1x4 grey brick and two 1x2 grey plates to compensate for this.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/hinge_packers_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/hinge_packers_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt; &lt;a href=&quot;/images/rack/hinge_top_detail_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/hinge_top_detail_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
+&lt;u&gt;Step 13&lt;/u&gt;
+
+&lt;p&gt;On the handle side, the base plates are simply joined by three 2x6 plates offset by two dots either side.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/door_frame_handle_side_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/door_frame_handle_side_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt; &lt;/p&gt;
+
+&lt;u&gt;Step 14&lt;/u&gt;
+
+&lt;p&gt;The top and bottom base plates are fixed by adding two 2x10 grey plates, starting from the free 2x2 space on each of the side plates.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/door_frame_top_bottom_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/door_frame_top_bottom_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;The complete door base frame:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/door_frame_final_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/door_frame_final_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
+&lt;u&gt;Step 15&lt;/u&gt;
+
+&lt;p&gt;Starting with the 1x2 corner bricks, add grey 1x4 bricks around the outer perimeter of the base frame. &lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/door_frame_edge_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/door_frame_edge_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt; &lt;a href=&quot;/images/rack/door_frame_edge_2_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/door_frame_edge_2_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;  &lt;/p&gt;
+
+&lt;p&gt;Note that on the handle side, an extra two 1x3 (or one 1x6) grey bricks are set in the middle of the lower perimeter; those bricks form the basis where the door handle itself will sit.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/door_frame_edge_handle_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/door_frame_edge_handle_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;  &lt;/p&gt;
+
+&lt;u&gt;Step 16&lt;/u&gt;
+
+&lt;p&gt;To finish off the inner frame, place 1x8 grey smooth plates around the inner perimeter. Note that on the hinge side, one 1x6 grey smooth plate is placed between the two 1x8 plates.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/door_frame_inner_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/door_frame_inner_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;  &lt;/p&gt;
+
+&lt;h3 id=&quot;the-glass&quot;&gt;The Glass&lt;/h3&gt;
+
+&lt;p&gt;BOM for this section: &lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;b&gt;Quantity&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Colour&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Size&lt;/b&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Midwest Polyester Clear Sheet Single&lt;/td&gt;
+      &lt;td&gt;Clear&lt;/td&gt;
+      &lt;td&gt;0.06 mm&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Stix2 Self-Adhesive Magnetic Tape&lt;/td&gt;
+      &lt;td&gt;Brown&lt;/td&gt;
+      &lt;td&gt;3 m&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Modelcraft Universal Razor Saw&lt;/td&gt;
+      &lt;td&gt;N/A&lt;/td&gt;
+      &lt;td&gt;N/A&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; I used a razor saw, but I suppose a sharp pair of scissors would also do the trick.&lt;/p&gt;
+
+&lt;u&gt;Step 17&lt;/u&gt;
+
+&lt;p&gt;Measure and cut the polyester sheet to the desired size. In this case, the sheet was cut to a size of 144mm x 175mm, which fits snuggly within the inner edge of the door frame. On the handle side of the frame, a cut measuring 50mm x 10mm is also required in order for the glass to wrap around the door handle itself. The glass is then framed with the magnetic tape (both sides):&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/door_glass_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/door_glass_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt; &lt;a href=&quot;/images/rack/door_glass_cut_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/door_glass_cut_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
+&lt;u&gt;Step 18&lt;/u&gt;
+
+&lt;p&gt;Carefully place the polyester sheet within the door frame. As mentioned above, the glass sits very snugly within the frame and might require some gentle persuasion when fit to the frame.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/door_with_glass_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/door_with_glass_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;door-finish&quot;&gt;Door Finish&lt;/h3&gt;
+
+&lt;p&gt;BOM for this section: &lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;b&gt;Quantity&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Colour&lt;/b&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;b&gt;Size&lt;/b&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Arch Continuous Bow&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;1x6&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Flat Tiles&lt;/td&gt;
+      &lt;td&gt;Grey&lt;/td&gt;
+      &lt;td&gt;1x6&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;9&lt;/td&gt;
+      &lt;td&gt;Flat Tiles&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;1x6&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;Flat Tiles&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;1x4&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Flat Tiles&lt;/td&gt;
+      &lt;td&gt;Black&lt;/td&gt;
+      &lt;td&gt;1x1&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;The handle is made up of two black arch continuous bows capped off by 1x6 grey tiles:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/door_handle_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/door_handle_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;With the glass and handle in place, the only thing left is to cap the outer frame bricks with smooth black tiles. &lt;/p&gt;
+
+&lt;p&gt;Starting with one 1x1 black smooth tile at the corners, add six 1x6 smooth black tiles to the top and bottom edges; three 1x6 and one 1x4 black smooth tiles to the hinge side and four 1x4 black smooth tiles to the handle side.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/door_finish_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/door_finish_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt; &lt;a href=&quot;/images/rack/door_final_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/door_final_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;the-nucrac&quot;&gt;The NUCRac&lt;/h3&gt;
+
+&lt;p&gt;Now, we simply attach the assembled door to the frame: the top hinge goes into the overhang of the second floor and the bottom hing into the overhang of the first floor. And that’s it, the rack is complete:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/final_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/final_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt; &lt;a href=&quot;/images/rack/rack_final_no_door_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/rack_final_no_door_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;what-could-be-better&quot;&gt;What could be better?&lt;/h3&gt;
+
+&lt;p&gt;Well, the top of the NUCs are very close to the “floor” above and it is very difficult to reach the power button. It is not much of a problem, because I don’t expect to be powering the NUCs up and down on a regular basis. Besides, my NUCs all have vPro/AMT, so I can use the remote out-of-band features to power them up. &lt;img class=&quot;emoji&quot; title=&quot;:wink:&quot; alt=&quot;:wink:&quot; src=&quot;https://assets.github.com/images/icons/emoji/unicode/1f609.png&quot; height=&quot;20&quot; width=&quot;20&quot; align=&quot;absmiddle&quot; /&gt; &lt;/p&gt;
+
+&lt;p&gt;As I was preparing this guide I thought about changing the height of the sections by an extra row of bricks, however, that would change the proportions of the door – I just didn’t feel like re-designing it all again…&lt;/p&gt;
+
+&lt;h3 id=&quot;parting-shot&quot;&gt;Parting Shot&lt;/h3&gt;
+
+&lt;p&gt;Lastly, the wife (&lt;img class=&quot;emoji&quot; title=&quot;:ok_woman:&quot; alt=&quot;:ok_woman:&quot; src=&quot;https://assets.github.com/images/icons/emoji/unicode/1f646.png&quot; height=&quot;20&quot; width=&quot;20&quot; align=&quot;absmiddle&quot; /&gt;) was so happy with the end product, she decided it could stay in the kitchen…&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/images/rack/kitchen_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/kitchen_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;</content><category term="[&quot;Homelab&quot;]" /><category term="Homelab" /><category term="Education" /><category term="Virtualisation" /><category term="Lego" /><category term="NUC" /><category term="Rack" /><category term="Server" /><summary type="html">Building a Lego Rack for the Intel NUCs, including a working front door. Lots of sweat, tears and last minute purchases from eBay...</summary></entry><entry><title type="html">The Mini Lab</title><link href="http://localhost:4000/homelab/The-Mini-Lab/" rel="alternate" type="text/html" title="The Mini Lab" /><published>2016-11-25T00:00:00+00:00</published><updated>2016-11-25T00:00:00+00:00</updated><id>http://localhost:4000/homelab/The-Mini-Lab</id><content type="html" xml:base="http://localhost:4000/homelab/The-Mini-Lab/">&lt;aside class=&quot;sidebar__right&quot;&gt;
+&lt;nav class=&quot;toc&quot;&gt;
+    &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fa fa-&quot;&gt;&lt;/i&gt; &lt;/h4&gt;&lt;/header&gt;
+&lt;ul class=&quot;toc__menu&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#burning-the-money-dont-tell-the-wife&quot;&gt;Burning the money (don’t tell the wife)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#lets-get-physical&quot;&gt;Let’s get physical&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#drn-domestic-routed-network&quot;&gt;DRN (Domestic Routed Network)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#mini-lab-vlans-10-20-and-30&quot;&gt;Mini Lab (VLANs 10, 20 and 30)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#dr-lab-streched-vlans-10-20-and-30&quot;&gt;DR Lab (Streched VLANs 10, 20 and 30)&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#the-chief-architect-says&quot;&gt;The Chief Architect says:&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
   &lt;/nav&gt;
@@ -17,19 +965,19 @@
 
 &lt;h2 id=&quot;burning-the-money-dont-tell-the-wife&quot;&gt;Burning the money (don’t tell the wife)&lt;/h2&gt;
 
-&lt;p&gt;I wrote about my old set-up in this &lt;a href=&quot;/homelab/The-Home-Lab/&quot;&gt;post&lt;/a&gt; and then again about the future state of my Home Lab &lt;a href=&quot;/homelab/Intel-NUC-to-the-rescue/&quot;&gt;here&lt;/a&gt;, when I mentioned my intention of doing something to placate the &lt;abbr title=&quot;Good Lady Wife&quot;&gt;GLW&lt;/abbr&gt;. See, my electricity bill was going well past £4k a year…&lt;/p&gt;
+&lt;p&gt;I wrote about my old set-up in this &lt;a href=&quot;/homelab/The-Home-Lab/&quot;&gt;post&lt;/a&gt; and then again about the future state of my Home Lab &lt;a href=&quot;/homelab/Intel-NUC-to-the-rescue/&quot;&gt;here&lt;/a&gt;, when I mentioned my intention of doing something to placate the &lt;abbr title=&quot;Good Lady Wife&quot;&gt;GLW&lt;/abbr&gt;. See, my electricity bill was going well past £4k a year…   &lt;/p&gt;
 
 &lt;p&gt;Anyway, at the time of writing the second article (April 2016) I had one &lt;a href=&quot;http://ark.intel.com/products/74483/Intel-NUC-Kit-DC53427HYE&quot;&gt;DC53427HYEA&lt;/a&gt; (my physical AD controller), so I decided to buy another two NUCs, but this time the &lt;a href=&quot;http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-nuc5i5ryh.html&quot;&gt;NUC5i5RYH&lt;/a&gt;. A few weeks later I bought yet another NUC5i5RYH, so I could play with vSAN too…&lt;/p&gt;
 
 &lt;p&gt;For the NAS, I had settled on building something around the &lt;a href=&quot;http://www.asrockrack.com/general/productdetail.asp?Model=C2750D4I#Specifications&quot;&gt;ASRock C2750D41&lt;/a&gt;, but shortly after, I also bought a &lt;a href=&quot;https://www.supermicro.com/products/motherboard/ATOM/X10/A1SAi-2750F.cfm&quot;&gt;Supermicro A1SAi-2750F&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;You would have thought that that was enough by now, and any sane person would agree, but not me! The ASRock board was going to be the foundation for my FreeNAS build (what with 12 SATA ports and all), but, six of the SATA ports are controlled by Marvell chipsets and they simply suck. Instead, I used the Supermicro board for my NAS with a cheap Dell PERC H200 HBA flashed to IT mode, and finally crossflashed with the LSI 9211i8i firmware. But then I had an idea – Hey, what about resilience for the data? – so another A1SAi-2750F lightened my wallet further…&lt;/p&gt;
+&lt;p&gt;You would have thought that that was enough by now, and any sane person would agree, but not me! The ASRock board was going to be the foundation for my FreeNAS build (what with 12 SATA ports and all), but, six of the SATA ports are controlled by Marvell chipsets and they simply suck. Instead, I used the Supermicro board for my NAS with a cheap Dell PERC H200 HBA flashed to IT mode, and finally crossflashed with the LSI 9211i8i firmware. But then I had an idea – Hey, what about resilience for the data? – so another A1SAi-2750F lightened my wallet further…  &lt;/p&gt;
 
 &lt;h2 id=&quot;lets-get-physical&quot;&gt;Let’s get physical&lt;/h2&gt;
 
-&lt;p&gt;The network infrastructure remains the same: a Cisco SG200-18 with an etherchannel link via OM2 fibre link to an SG300-10 (on layer 3 mode). Access to the networks beyond (Internet) goes trough a Cisco rv320 router. It might change soon, but that is for another post…&lt;/p&gt;
+&lt;p&gt;The network infrastructure remains the same: a Cisco SG200-18 with an etherchannel link via OM2 fibre link to an SG300-10 (on layer 3 mode). Access to the networks beyond (Internet) goes trough a Cisco rv320 router. It might change soon, but that is for another post…   &lt;/p&gt;
 
-&lt;p&gt;There are five VLANs routed by the SG300-10 switch:&lt;/p&gt;
+&lt;p&gt;There are five VLANs routed by the SG300-10 switch:  &lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -80,7 +1028,7 @@
 
 &lt;ul&gt;
   &lt;li&gt;Cisco SG200-18&lt;/li&gt;
-  &lt;li&gt;NAS
+  &lt;li&gt;NAS	
     &lt;ul&gt;
       &lt;li&gt;Lian Li PC-Q25B case&lt;/li&gt;
       &lt;li&gt;Supermicro A1SAi-2750F&lt;/li&gt;
@@ -102,53 +1050,64 @@
       &lt;li&gt;Streacom F7CWS ALPHA Black case&lt;/li&gt;
       &lt;li&gt;64GB RAM&lt;/li&gt;
       &lt;li&gt;2 x 250GB SATA SSD drives&lt;/li&gt;
-      &lt;li&gt;1 x 1TB SATA drive&lt;/li&gt;
+      &lt;li&gt;1 x 1TB SATA drive  &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; The NUCs are now housed on my Lego NUC Rack. I will be writing another post with instructions on how to build a rack just like that soon (maybe!).&lt;/p&gt;
 
 &lt;h3 id=&quot;dr-lab-streched-vlans-10-20-and-30&quot;&gt;DR Lab (Streched VLANs 10, 20 and 30)&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Cisco SG200-18&lt;/li&gt;
+  &lt;li&gt;Cisco SG200-18  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Still being built. I am think about getting an SG-500 switch to replace the SG-300-10. The DR lab would then go to the bottom of the garden. ;-)&lt;/p&gt;
+&lt;p&gt;Still being built. I am thinking about getting an SG-500 switch to replace the SG-300-10. The DR lab would then go to the bottom of the garden. ;-)&lt;/p&gt;
 
-&lt;p&gt;At the moment, just a second NAS with the same specification as that of the mini lab. Data replicated via ZFS send/receive.&lt;/p&gt;
+&lt;p&gt;At the moment, just a second NAS with the same specification as that of the mini lab. Data replicated via ZFS send/receive. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; The NUCs are now housed on my Lego NUC Rack. I will be writing another post with instructions on how to build a rack just like that soon (maybe!).&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/nucrack/47_rack_front_final.png&quot; alt=&quot;Lego NUCRack&quot; class=&quot;align-center&quot; /&gt; &lt;/p&gt;
 
 &lt;h2 id=&quot;the-chief-architect-says&quot;&gt;The Chief Architect says:&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/chief_architect.png&quot; alt=&quot;Chief Architect&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/chief_architect.png&quot; alt=&quot;Chief Architect&quot; class=&quot;align-center&quot; /&gt;  &lt;/p&gt;
 
-&lt;center&gt;A reasonable effort, but could do better.&lt;/center&gt;</content><category term="[&quot;Homelab&quot;]" /><category term="Homelab" /><category term="Education" /><category term="Virtualisation" /><category term="NAS" /><category term="NUC" /><summary>The evolution of the home lab: Intel Avoton, Intel NUC, FreeNAS, ESXi and FreeNAS</summary></entry><entry><title>USB Ethernet driver for ESXi 6.5</title><link href="http://localhost:4000/homelab/USB-Ethernet-driver-for-ESXi-6.5/" rel="alternate" type="text/html" title="USB Ethernet driver for ESXi 6.5" /><published>2016-11-17T00:00:00+00:00</published><updated>2016-11-17T00:00:00+00:00</updated><id>http://localhost:4000/homelab/USB-Ethernet-driver-for-ESXi-6.5</id><content type="html" xml:base="http://localhost:4000/homelab/USB-Ethernet-driver-for-ESXi-6.5/">&lt;aside class=&quot;sidebar__right&quot;&gt;
+&lt;center&gt;A reasonable effort, but could do better.&lt;/center&gt;</content><category term="[&quot;Homelab&quot;]" /><category term="Homelab" /><category term="Education" /><category term="Virtualisation" /><category term="NAS" /><category term="NUC" /><summary type="html">The evolution of the home lab: Intel Avoton, Intel NUC, FreeNAS, ESXi and FreeNAS</summary></entry><entry><title type="html">USB Ethernet driver for ESXi 6.5</title><link href="http://localhost:4000/homelab/USB-Ethernet-driver-for-ESXi-6.5/" rel="alternate" type="text/html" title="USB Ethernet driver for ESXi 6.5" /><published>2016-11-17T00:00:00+00:00</published><updated>2016-11-17T00:00:00+00:00</updated><id>http://localhost:4000/homelab/USB-Ethernet-driver-for-ESXi-6.5</id><content type="html" xml:base="http://localhost:4000/homelab/USB-Ethernet-driver-for-ESXi-6.5/">&lt;p&gt;Back in May I wrote this &lt;a href=&quot;/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/&quot;&gt;piece&lt;/a&gt; about USB Ethernet drivers for ESXi. I have been using both Realtek and ASIX adapters to complement the single Ethernet adapter on the Intel NUCs, and they have proved to be rock solid. &lt;/p&gt;
+
+&lt;p&gt;Fast forward a few months, and as soon as ESXi 6.5 was announced people started asking if I could recompile the drivers for the new release. Finally I had some time this week to look into that. The result? A lot of wasted time downloading the 6.5 disclosure packages, setting up the environment, tweaking build scripts, etc. It turns out that compiling the drivers in the ESXi 6.0 environment I built previously worked much better, with just a single trivial change to the USB namespace.&lt;/p&gt;
+
+&lt;p&gt;The single change I had to make was to change the namespace dependencies map from this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;echo -e &quot;VMK_NAMESPACE_REQUIRED(\&quot;com.vmware.usb\&quot;, \&quot;9.2.3.0\&quot;);\
+\nVMK_NAMESPACE_REQUIRED(\&quot;com.vmware.usbnet\&quot;, \&quot;9.2.3.0\&quot;);&quot;\
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;echo -e &quot;VMK_NAMESPACE_REQUIRED(\&quot;com.vmware.usb\&quot;, \&quot;10.0\&quot;);\
+\nVMK_NAMESPACE_REQUIRED(\&quot;com.vmware.usbnet\&quot;, \&quot;9.2.3.0\&quot;);&quot;\
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note the sneak change introduced by VMware – the USB namespace is version 10.0 now…&lt;/p&gt;
+
+&lt;aside class=&quot;sidebar__right&quot;&gt;
 &lt;nav class=&quot;toc&quot;&gt;
-    &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fa fa-file-text&quot;&gt;&lt;/i&gt; Contents&lt;/h4&gt;&lt;/header&gt;
+    &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fa fa-&quot;&gt;&lt;/i&gt; &lt;/h4&gt;&lt;/header&gt;
 &lt;ul class=&quot;toc__menu&quot; id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#whats-new&quot; id=&quot;markdown-toc-whats-new&quot;&gt;What’s new&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#performance&quot; id=&quot;markdown-toc-performance&quot;&gt;Performance&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#configuration&quot; id=&quot;markdown-toc-configuration&quot;&gt;Configuration&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#iperf-figures-for-the-asix-driver-dc53427hyea&quot; id=&quot;markdown-toc-iperf-figures-for-the-asix-driver-dc53427hyea&quot;&gt;iPerf figures for the ASIX driver (DC53427HYEA)&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#iperf-figures-for-the-realtek-driver-dc53427hyea&quot; id=&quot;markdown-toc-iperf-figures-for-the-realtek-driver-dc53427hyea&quot;&gt;iPerf figures for the Realtek driver (DC53427HYEA)&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#iperf-figures-for-the-asix-driver-nuc5i5myhe&quot; id=&quot;markdown-toc-iperf-figures-for-the-asix-driver-nuc5i5myhe&quot;&gt;iPerf figures for the ASIX driver (NUC5i5MYHE)&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#iperf-figures-for-the-realtek-driver-nuc5i5myhe&quot; id=&quot;markdown-toc-iperf-figures-for-the-realtek-driver-nuc5i5myhe&quot;&gt;iPerf figures for the Realtek driver (NUC5i5MYHE)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#whats-new&quot;&gt;What’s new&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#tested-devices&quot;&gt;Tested devices&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#asix&quot;&gt;ASIX&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#realtek&quot;&gt;Realtek&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#performance-takeaway&quot; id=&quot;markdown-toc-performance-takeaway&quot;&gt;Performance Takeaway&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#tested-devices&quot; id=&quot;markdown-toc-tested-devices&quot;&gt;Tested devices&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#asix&quot; id=&quot;markdown-toc-asix&quot;&gt;ASIX&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#realtek&quot; id=&quot;markdown-toc-realtek&quot;&gt;Realtek&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#the-drivers&quot; id=&quot;markdown-toc-the-drivers&quot;&gt;The drivers&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#asix-1&quot; id=&quot;markdown-toc-asix-1&quot;&gt;ASIX&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#esxi-65-vib&quot; id=&quot;markdown-toc-esxi-65-vib&quot;&gt;ESXi 6.5 VIB&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#the-drivers&quot;&gt;The drivers&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#asix-1&quot;&gt;ASIX&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#esxi-65-vib&quot;&gt;ESXi 6.5 VIB&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#realtek-1&quot; id=&quot;markdown-toc-realtek-1&quot;&gt;Realtek&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#esxi-65-vib-1&quot; id=&quot;markdown-toc-esxi-65-vib-1&quot;&gt;ESXi 6.5 VIB&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#realtek-1&quot;&gt;Realtek&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#esxi-65-vib-1&quot;&gt;ESXi 6.5 VIB&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
@@ -158,118 +1117,17 @@
   &lt;/nav&gt;
 &lt;/aside&gt;
 
-&lt;div class=&quot;notice--warning&quot;&gt;
-  &lt;p&gt;&lt;strong&gt;Update (18/11/16)&lt;/strong&gt;&lt;/p&gt;
-
-  &lt;p&gt;I have included iPerf figures for the ASIX and Realtek adapters on both the Intel NUC 4th generation DC53427HYEA and the 5th Generation NUC5i5RYH.&lt;/p&gt;
-
-&lt;/div&gt;
-
-&lt;p&gt;Back in May I wrote this &lt;a href=&quot;/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/&quot;&gt;piece&lt;/a&gt; about USB Ethernet drivers for ESXi. I have been using both Realtek and ASIX adapters to complement the single Ethernet adapter on the Intel NUCs, and they have proved to be rock solid.&lt;/p&gt;
-
-&lt;p&gt;Fast forward a few months, and as soon as ESXi 6.5 was announced people started asking if I could recompile the drivers for the new release. Finally I had some time this week to look into that. The result? A lot of wasted time downloading the 6.5 disclosure packages, setting up the environment, tweaking build scripts, etc. It turns out that compiling the drivers in the ESXi 6.0 environment I built previously worked much better, with just a single trivial change to the USB namespace.&lt;/p&gt;
-
-&lt;p&gt;The single alteration I had to make was to change the namespace dependencies map (__namespace.h) from this:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;VMK_NAMESPACE_REQUIRED&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;com.vmware.usb&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;9.2.3.0&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;;
-VMK_NAMESPACE_REQUIRED&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;com.vmware.usbnet&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;9.2.3.0&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;To this:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;VMK_NAMESPACE_REQUIRED&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;com.vmware.usb&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;10.0&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;;
-VMK_NAMESPACE_REQUIRED&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;com.vmware.usbnet&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;9.2.3.0&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Note the sneak change introduced by VMware – the USB namespace is version 10.0 now…&lt;/p&gt;
-
 &lt;h2 id=&quot;whats-new&quot;&gt;What’s new&lt;/h2&gt;
 
 &lt;p&gt;Quite a lot! Apart from the new functionality discussed in detail by the VMware Gurus elsewhere, looking at the latest ODP packages clearly reveals VMware’s intention to move away from what they call “legacy” drivers.&lt;/p&gt;
 
-&lt;p&gt;The USB Ethernet drivers are dependent on two legacy modules (usb and usbnet); the modules are still available in ESXi 6.5, but will not load by default.&lt;/p&gt;
+&lt;p&gt;The USB Ethernet drivers are dependent on two legacy modules (usb and usbnet); the modules are still available in ESXi 6.5, but will not load by default. &lt;/p&gt;
 
 &lt;p&gt;My first attempt at loading the USB Ethernet drivers failed miserably. It took me some time to realise that in 6.5 all legacy USB drivers (xhci, ehci-hcd, usb-uhci, usb, usb-storage, etc.) have been replaced by a single native driver called vmkusb. It serves me right for not paying attention to the various announcements…&lt;/p&gt;
 
-&lt;p&gt;Anyway, in order to get the USB Ethernet drivers to load the vmkusb module must be disabled to allow for the legacy USB drivers to load. The details are described in the VMware Knowledge Base article &lt;a href=&quot;https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;amp;cmd=displayKC&amp;amp;externalId=2147650&quot;&gt;2147650&lt;/a&gt;. I will save you a trip to the KB article, though. ;-)&lt;/p&gt;
+&lt;p&gt;Anyway, in other to get the USB Ethernet drivers to load the vmkusb module must be disabled in other for the legacy USB drivers to load. The details are described in the VMware Knowledge Base article &lt;a href=&quot;https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;amp;cmd=displayKC&amp;amp;externalId=2147650&quot;&gt;2147650&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;To disable the vmkusb module, run the command below and reboot the ESXi server:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;esxcli system module &lt;span class=&quot;nb&quot;&gt;set&lt;/span&gt; -m&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;vmkusb -e&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;FALSE
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Other than the above, there are no material differences between 6.0 and 6.5 for the legacy adapters so all performance figures described on the previous article are still valid, but I will be validating in due course.&lt;/p&gt;
-
-&lt;h2 id=&quot;performance&quot;&gt;Performance&lt;/h2&gt;
-
-&lt;p&gt;I tested the adapters on two different Intel NUC models: the 4th Generation DC53427HYEA and the 5th NUC5i5MYHE. As mentioned in this &lt;a href=&quot;/homelab/NUC-Squarepants/&quot;&gt;post&lt;/a&gt; I am sticking with the 5th Generation Intel NUC because it is one of the only NUCs in the entire line-up sporting the Intel vPro/AMT technology.&lt;/p&gt;
-
-&lt;h3 id=&quot;configuration&quot;&gt;Configuration&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;ESXi Version&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/usb65/esxi_65.png&quot; alt=&quot;Version&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Adapters&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/usb65/nics.png&quot; alt=&quot;NICs&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;iperf-figures-for-the-asix-driver-dc53427hyea&quot;&gt;iPerf figures for the ASIX driver (DC53427HYEA)&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;vSwitch Configuration&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/usb65/asix_vswitch.png&quot; alt=&quot;ASIX vSwitch&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Performance&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/usb65/iperf_asix_4th.png&quot; alt=&quot;ASIX 88179_178a&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;iperf-figures-for-the-realtek-driver-dc53427hyea&quot;&gt;iPerf figures for the Realtek driver (DC53427HYEA)&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;vSwitch Configuration&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/usb65/rtl_vswitch.png&quot; alt=&quot;Realtek vSwitch&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Performance&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/usb65/iperf_rtl_4th.png&quot; alt=&quot;Realtek 8152&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;iperf-figures-for-the-asix-driver-nuc5i5myhe&quot;&gt;iPerf figures for the ASIX driver (NUC5i5MYHE)&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;vSwitch Configuration&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/usb65/asix_vswitch.png&quot; alt=&quot;ASIX vSwitch&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;RX&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/usb65/asix_rx.png&quot; alt=&quot;ASIX r8152_5th&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;TX&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/usb65/asix_tx.png&quot; alt=&quot;ASIX r8152_5th&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;iperf-figures-for-the-realtek-driver-nuc5i5myhe&quot;&gt;iPerf figures for the Realtek driver (NUC5i5MYHE)&lt;/h3&gt;
-
-&lt;p&gt;&lt;em&gt;vSwitch Configuration&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/usb65/rtl_vswitch.png&quot; alt=&quot;Realtek vSwitch&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;RX&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/usb65/rtl_rx.png&quot; alt=&quot;Realtek 8152_5th&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;TX&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/images/usb65/rtl_tx.png&quot; alt=&quot;Realtek 8152_178a_5th&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;performance-takeaway&quot;&gt;Performance Takeaway&lt;/h2&gt;
-
-&lt;p&gt;I was quite surprised by the results obtained with the ASIX adapter on the DC53427HYEA NUC. It is obvious that the older generation NUC is impacting performance badly – I assume this is related to either the CPU or the USB subsystem.&lt;/p&gt;
-
-&lt;p&gt;The performance figures of the adapters on the NUC5i5MYHE NUC look pretty good though, for both the ASIX and Realtek adapters. Plenty of choices there, and I would expect that would be the same on newer generation NUCs. Both the ASIX and Realtek adapters are also available from StarTech, ANKER and Belkin with USB-C interfaces.&lt;/p&gt;
+&lt;p&gt;Other than the above, there are no material differences between 6.0 and 6.5 for the legacy adapters so all performance figures described on the previous article are still valid.&lt;/p&gt;
 
 &lt;h2 id=&quot;tested-devices&quot;&gt;Tested devices&lt;/h2&gt;
 
@@ -312,15 +1170,13 @@ VMK_NAMESPACE_REQUIRED&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span cla
   &lt;li&gt;&lt;a href=&quot;https://www.amazon.co.uk/Anker®-Unibody-Ethernet-RTL8153-Chipset/dp/B00PC0J1VC/ref=sr_1_1?s=computers&amp;amp;ie=UTF8&amp;amp;qid=1464184877&amp;amp;sr=1-1&amp;amp;keywords=Anker+Unibody+3-Port+USB+3.0+and+Ethernet+Hub&quot;&gt;Anker Unibody 3-Port USB 3.0 and Ethernet Hub&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;u&gt;*USB 2.0 Adapter (RTL8152B Chipset)*&lt;/u&gt;&lt;/p&gt;
-
-&lt;p&gt;Tested by reader Vitali (Виталий)&lt;/p&gt;
+&lt;p&gt;USB 2.0 Adapter (RTL8152B Chipset)&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.amazon.co.uk/TP-LINK-UE200-Ethernet-Foldable-Ultrabook/dp/B01GRY7RHG&quot;&gt;TP-LINK UE200 USB 2.0 to 100 Mbps Ethernet Network Adapter&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.co.uk/TP-LINK-UE200-Ethernet-Foldable-Ultrabook/dp/B01GRY7RHG&quot;&gt;TP-LINK UE200 USB 2.0 to 100 Mbps Ethernet Network Adapter&lt;/a&gt;  &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Tested by Glen Kemp&lt;/p&gt;
+&lt;p&gt;Tested by Glen Kemp  &lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.amazon.co.uk/gp/product/B00WR6A57S/ref=as_li_ss_tl?ie=UTF8&amp;amp;psc=1&amp;amp;linkCode=sl1&amp;amp;tag=s0517-21&amp;amp;linkId=5815c60c53524b534b98dcd596eab09c&quot;&gt;Smays 3-Port OTG USB-HUB and USB2.0 RJ45 Ethernet Network Adapter&lt;/a&gt;&lt;/li&gt;
@@ -340,43 +1196,43 @@ VMK_NAMESPACE_REQUIRED&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span cla
 
 &lt;h4 id=&quot;esxi-65-vib-1&quot;&gt;ESXi 6.5 VIB&lt;/h4&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://bintray.com/gomesjj/VIBs/r8152_esxi65_vib/_latestVersion&quot;&gt; &lt;img src=&quot;https://api.bintray.com/packages/gomesjj/VIBs/r8152_esxi65_vib/images/download.svg&quot; alt=&quot;Download&quot; /&gt; &lt;/a&gt;&lt;/p&gt;</content><category term="[&quot;Homelab&quot;]" /><category term="Homelab" /><category term="ESXi" /><category term="USB" /><category term="Ethernet" /><summary>ESXi 6.5 drivers for USB 3.0 Gigabit Ethernet adapters based on the ASIX ax88179_178a or the Realtek RLT8153/RTL8152 chipsets</summary></entry><entry><title>Want a USB Ethernet driver for ESXi? You can have two.</title><link href="http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/" rel="alternate" type="text/html" title="Want a USB Ethernet driver for ESXi? You can have two." /><published>2016-05-14T00:00:00+01:00</published><updated>2016-05-14T00:00:00+01:00</updated><id>http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two</id><content type="html" xml:base="http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/">&lt;p&gt;Ah, that mythical home lab beast: a working USB Ethernet driver for ESXi. You wait and wait for one, and then two come along…&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://bintray.com/gomesjj/VIBs/r8152_esxi65_vib/_latestVersion&quot;&gt; &lt;img src=&quot;https://api.bintray.com/packages/gomesjj/VIBs/r8152_esxi65_vib/images/download.svg&quot; alt=&quot;Download&quot; /&gt; &lt;/a&gt;&lt;/p&gt;</content><category term="[&quot;Homelab&quot;]" /><category term="Homelab" /><category term="ESXi" /><category term="USB" /><category term="Ethernet" /><summary type="html">ESXi 6.5 drivers for USB 3.0 Gigabit Ethernet adapters based on the ASIX ax88179_178a or the Realtek RLT8153/RTL8152 chipsets</summary></entry><entry><title type="html">Want a USB Ethernet driver for ESXi? You can have two.</title><link href="http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/" rel="alternate" type="text/html" title="Want a USB Ethernet driver for ESXi? You can have two." /><published>2016-05-14T00:00:00+01:00</published><updated>2016-05-14T00:00:00+01:00</updated><id>http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two</id><content type="html" xml:base="http://localhost:4000/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/">&lt;p&gt;Ah, that mythical home lab beast: a working USB Ethernet driver for ESXi. You wait and wait for one, and then two come along…&lt;/p&gt;
 
 &lt;aside class=&quot;sidebar__right&quot;&gt;
 &lt;nav class=&quot;toc&quot;&gt;
-    &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fa fa-file-text&quot;&gt;&lt;/i&gt; Contents&lt;/h4&gt;&lt;/header&gt;
+    &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fa fa-&quot;&gt;&lt;/i&gt; &lt;/h4&gt;&lt;/header&gt;
 &lt;ul class=&quot;toc__menu&quot; id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#first-of-all&quot; id=&quot;markdown-toc-first-of-all&quot;&gt;First of all&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#the-story&quot; id=&quot;markdown-toc-the-story&quot;&gt;The story&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#tested-devices&quot; id=&quot;markdown-toc-tested-devices&quot;&gt;Tested devices&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#asix&quot; id=&quot;markdown-toc-asix&quot;&gt;ASIX&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#realtek&quot; id=&quot;markdown-toc-realtek&quot;&gt;Realtek&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#first-of-all&quot;&gt;First of all&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#the-story&quot;&gt;The story&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#tested-devices&quot;&gt;Tested devices&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#asix&quot;&gt;ASIX&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#realtek&quot;&gt;Realtek&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#performance&quot; id=&quot;markdown-toc-performance&quot;&gt;Performance&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#iperf-figures-for-the-asix-driver-single-port-adapter&quot; id=&quot;markdown-toc-iperf-figures-for-the-asix-driver-single-port-adapter&quot;&gt;iPerf figures for the ASIX driver (Single port adapter)&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#iperf-figures-for-the-asix-driver-dual-port-adapter&quot; id=&quot;markdown-toc-iperf-figures-for-the-asix-driver-dual-port-adapter&quot;&gt;iPerf figures for the ASIX driver (Dual Port adapter)&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#iperf-figures-for-the-realtek-driver&quot; id=&quot;markdown-toc-iperf-figures-for-the-realtek-driver&quot;&gt;iPerf figures for the Realtek driver&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#performance&quot;&gt;Performance&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#iperf-figures-for-the-asix-driver-single-port-adapter&quot;&gt;iPerf figures for the ASIX driver (Single port adapter)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#iperf-figures-for-the-asix-driver-dual-port-adapter&quot;&gt;iPerf figures for the ASIX driver (Dual Port adapter)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#iperf-figures-for-the-realtek-driver&quot;&gt;iPerf figures for the Realtek driver&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#device-details&quot; id=&quot;markdown-toc-device-details&quot;&gt;Device details&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#esxi-quirks&quot; id=&quot;markdown-toc-esxi-quirks&quot;&gt;ESXi quirks&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#stacks&quot; id=&quot;markdown-toc-stacks&quot;&gt;Stacks&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#the-neighbourhood&quot; id=&quot;markdown-toc-the-neighbourhood&quot;&gt;The neighbourhood&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#device-details&quot;&gt;Device details&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#esxi-quirks&quot;&gt;ESXi quirks&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#stacks&quot;&gt;Stacks&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#the-neighbourhood&quot;&gt;The neighbourhood&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#compiling-the-drivers&quot; id=&quot;markdown-toc-compiling-the-drivers&quot;&gt;Compiling the drivers&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#tldr---just-gimme-the-drivers&quot; id=&quot;markdown-toc-tldr---just-gimme-the-drivers&quot;&gt;TL;DR - Just gimme the drivers&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#asix-1&quot; id=&quot;markdown-toc-asix-1&quot;&gt;ASIX&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#esxi-60-vib&quot; id=&quot;markdown-toc-esxi-60-vib&quot;&gt;ESXi 6.0 VIB&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#esxi-55-vib&quot; id=&quot;markdown-toc-esxi-55-vib&quot;&gt;ESXi 5.5 VIB&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#esxi-51-vib&quot; id=&quot;markdown-toc-esxi-51-vib&quot;&gt;ESXi 5.1 VIB&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#compiling-the-drivers&quot;&gt;Compiling the drivers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#tldr---just-gimme-the-drivers&quot;&gt;TL;DR - Just gimme the drivers&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#asix-1&quot;&gt;ASIX&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#esxi-60-vib&quot;&gt;ESXi 6.0 VIB&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#esxi-55-vib&quot;&gt;ESXi 5.5 VIB&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#esxi-51-vib&quot;&gt;ESXi 5.1 VIB&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#realtek-1&quot; id=&quot;markdown-toc-realtek-1&quot;&gt;Realtek&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#esxi-60-vib-1&quot; id=&quot;markdown-toc-esxi-60-vib-1&quot;&gt;ESXi 6.0 VIB&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#esxi-55-vib-1&quot; id=&quot;markdown-toc-esxi-55-vib-1&quot;&gt;ESXi 5.5 VIB&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#esxi-51-vib-1&quot; id=&quot;markdown-toc-esxi-51-vib-1&quot;&gt;ESXi 5.1 VIB&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#realtek-1&quot;&gt;Realtek&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#esxi-60-vib-1&quot;&gt;ESXi 6.0 VIB&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#esxi-55-vib-1&quot;&gt;ESXi 5.5 VIB&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#esxi-51-vib-1&quot;&gt;ESXi 5.1 VIB&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
@@ -393,20 +1249,20 @@ VMK_NAMESPACE_REQUIRED&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span cla
 &lt;p&gt;In particular, I would like to thank William Lam (tip o’ the hat to you, Sir), as without his help things would be very different. It was William who provided the solution that allows automatic load of the modules at boot and persistence of the network configuration across reboots. If you have a chance, stop by &lt;a href=&quot;http://www.virtuallyghetto.com&quot;&gt;virtuallyGhetto&lt;/a&gt; and show you appreciation.&lt;/p&gt;
 
 &lt;div class=&quot;notice--warning&quot;&gt;
-  &lt;p&gt;&lt;strong&gt;Update (19/05/16)&lt;/strong&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;Update (19/05/16)&lt;/strong&gt;  &lt;/p&gt;
 
-  &lt;p&gt;Following a question from Charles Biggers, I have included iPerf figures for the ASIX Dual Port Ethernet adapter. Doesn’t look good…&lt;/p&gt;
+  &lt;p&gt;Following a question from Charles Biggers, I have included iPerf figures for the ASIX Dual Port Ethernet adapter. Doesn’t look good…    &lt;/p&gt;
 
   &lt;p&gt;&lt;strong&gt;Update (25/05/16)&lt;/strong&gt;&lt;/p&gt;
 
   &lt;li&gt;TP-LINK UE300 added to the list of tested adapters&lt;/li&gt;
   &lt;li&gt;Realtek driver updated to version 2.06.0-2 (Scatter Gather disabled)&lt;/li&gt;
 
-  &lt;p&gt;&lt;strong&gt;Update (14/11/16)&lt;/strong&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;Update (14/11/16)&lt;/strong&gt;  &lt;/p&gt;
 
-  &lt;p&gt;All drivers recompiled and VIBs uploaded to Bintray. Driver version numbers changed to a consistent format.&lt;/p&gt;
+  &lt;p&gt;All drivers recompiled and VIBs uploaded to Bintray. Driver version numbers changed to a consistent format.  &lt;/p&gt;
 
-  &lt;p&gt;Following a request from reader Vitali the Relatek r8152 driver has been updated to support USB 2.0 adapters based on the RTL8152B chipset.&lt;/p&gt;
+  &lt;p&gt;Following a request from reader Vitali the Relatek r8152 driver has been updated to support USB 2.0 adapters based on the RTL8152B chipset.  &lt;/p&gt;
 
   &lt;li&gt;TP-LINK UE200 added to the list of tested adapters&lt;/li&gt;
 
@@ -424,7 +1280,7 @@ VMK_NAMESPACE_REQUIRED&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span cla
 
 &lt;p&gt;My interest was piqued and the question was: could I get it working myself? I decided to have a go, so I spent some time reading the original forum thread to get a feel for what lay ahead. I am by no means a programmer, but I do from time to time write some code. The challenge was set…&lt;/p&gt;
 
-&lt;p&gt;The one thing I didn’t like about the original driver William had found was the fact that it also needed a modified version of the &lt;code class=&quot;highlighter-rouge&quot;&gt;usbnet&lt;/code&gt; module. I just thought that interfering with the native modules was a step too far, so wanted to avoid that.&lt;/p&gt;
+&lt;p&gt;The one thing I didn’t like about the original driver William had found was the fact that it also needed a modified version of the &lt;code&gt;usbnet&lt;/code&gt; module. I just thought that interfering with the native modules was a step too far, so wanted to avoid that.&lt;/p&gt;
 
 &lt;p&gt;Anyway, to cut a long story short, I got the ASIX 88179_178a driver compiled and running on both ESXi 5.5 and 6.0. Funnily enough, by the time I contacted William about my success he had also got the driver built, and both &lt;a href=&quot;https://github.com/lamw/ax88179_178a-esxi&quot;&gt;his&lt;/a&gt; and &lt;a href=&quot;https://github.com/gomesjj/ax88179_178a&quot;&gt;my&lt;/a&gt; changes to the Linux source code were pretty much the same. Eventually I also got the driver compiled for ESXi 5.1, which took longer due to a puzzling DMA mask error when connected to USB 2.0 ports. It is resolved now, but bear in mind that the bandwidth limitation on USB 2.0 (there is no support for xHCI on ESXi 5.1) means that the adapter will never achieve Gigabit speeds.&lt;/p&gt;
 
@@ -484,7 +1340,7 @@ VMK_NAMESPACE_REQUIRED&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span cla
 
 &lt;h2 id=&quot;performance&quot;&gt;Performance&lt;/h2&gt;
 
-&lt;p&gt;I have been testing the drivers for almost two months now and performance has been rock solid, and on a par with the onboard Intel adapter &lt;del&gt;or the Mini PCIe adapters (Syba and StarTech)&lt;/del&gt; I use on the &lt;a href=&quot;/homelab/NUC-Squarepants&quot;&gt;NUC Squarepants&lt;/a&gt;. I had a few hiccups to start with, and that is detailed under the &lt;a href=&quot;#esxi-quirks&quot;&gt;ESXi quirks&lt;/a&gt; section below.&lt;/p&gt;
+&lt;p&gt;I have been testing the drivers for almost two months now and performance has been rock solid, and on a par with the onboard Intel adapter ~~or the Mini PCIe adapters (Syba and StarTech)~~ I use on the &lt;a href=&quot;/homelab/NUC-Squarepants&quot;&gt;NUC Squarepants&lt;/a&gt;. I had a few hiccups to start with, and that is detailed under the &lt;a href=&quot;#esxi-quirks&quot;&gt;ESXi quirks&lt;/a&gt; section below.&lt;/p&gt;
 
 &lt;div class=&quot;notice--danger&quot;&gt;
 &lt;p&gt;&lt;b&gt;Update 25/05/2016:&lt;/b&gt;&lt;/p&gt;
@@ -512,13 +1368,13 @@ VMK_NAMESPACE_REQUIRED&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span cla
 
 &lt;p&gt;&lt;img src=&quot;/images/usb/iperf_rtl.png&quot; alt=&quot;RTL8153&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Using iPerf alone is not a reliable way of measuring throughput, but it gives a good indication. I have, however, performed many vMotion operations to get better “real world” figures. For example, migrating a VM assigned 8 GB of RAM (VCSA), host only, takes ~4 seconds; migration to another host and datastore (iSCSI to internal disk) around ~4 minutes. Those figures are pretty much identical to what I see when the same operations are performed using the onboard Intel adapter.&lt;/p&gt;
+&lt;p&gt;Using iPerf alone is not a reliable way of measuring throughput, but it gives a good indication. I have, however, performed many vMotion operations to get better “real world” figures. For example, migrating a VM assigned 8 GB of RAM (VCSA), host only, takes ~4 seconds; migration to another host and datastore (iSCSI to internal disk) around ~4 minutes. Those figures are pretty much identical to what I see when the same operations are performed using the onboard Intel adapter. &lt;/p&gt;
 
 &lt;h2 id=&quot;device-details&quot;&gt;Device details&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/usb/lsnics.png&quot; alt=&quot;lsnics&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;As can be seen above both devices show up as “Pseudo” devices, but have very different names. The reason for that is that the Realtek driver is CDC-Ether compliant, whereas the ASIX driver is not. One approach is no better than the other, though.&lt;/p&gt;
+&lt;p&gt;As can be seen above both devices show up as “Pseudo” devices, but have very different names. The reason for that is that the Realtek driver is CDC-Ether compliant, whereas the ASIX driver is not. One approach is no better than the other, though. &lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;ASIX&lt;/strong&gt;&lt;/p&gt;
 
@@ -538,9 +1394,9 @@ VMK_NAMESPACE_REQUIRED&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span cla
 
 &lt;p&gt;As you can imagine I was very happy that I managed to get the ASIX driver working, but I noticed from the beginning that whilst egress (TX) throughput was in line with gigabit speed, ingress (RX) was at least 300 Mbits/sec less. I exchanged a few emails with William Lam, and he was also seeing the same lower throughput (sometimes even less). I tried tweaking the code every which way to no avail, and I came to the conclusion that this was the best we could get off of those adapters. I was miffed.&lt;/p&gt;
 
-&lt;p&gt;I started looking around the web and came across the ANKER adapter, noticing that it used a different chipset and driver. Emboldened by my success with the ASIX driver I turned my hand to the newly discovered Realtek driver. A few days later I had the driver compiled and working on ESXi 6.0, 5.5 and 5.1. Woo-hoo!&lt;/p&gt;
+&lt;p&gt;I started looking around the web and came across the ANKER adapter, noticing that it used a different chipset and driver. Emboldened by my success with the ASIX driver I turned my hand to the newly discovered Realtek driver. A few days later I had the driver compiled and working on ESXi 6.0, 5.5 and 5.1. Woo-hoo! &lt;/p&gt;
 
-&lt;p&gt;Another round of iPerf tests revealed the exact same lower RX throughput with the new adapter (what?). Next, I moved the adapters around: the builtin NIC (vmnic0) was moved to vSwitch1 (iSCSI) and the USB adapter moved to vSwitch0. I had baseline test results for the Intel adapter, so I knew the throughput was the same for TX and RX. When I performed the same iPerf test again, this time with the Intel NIC on the other vSwitch, the RX throughput was lower too, as seen with the USB adapters…&lt;/p&gt;
+&lt;p&gt;Another round of iPerf tests revealed the exact same lower RX throughput with the new adapter (what?). Next, I moved the adapters around: the builtin NIC (vmnic0) was moved to vSwitch1 (iSCSI) and the USB adapter moved to vSwitch0. I had baseline test results for the Intel adapter, so I knew the throughput was the same for TX and RX. When I performed the same iPerf test again, this time with the Intel NIC on the other vSwitch, the RX throughput was lower too, as seen with the USB adapters… &lt;/p&gt;
 
 &lt;p&gt;What could be causing this? The only thing I could think of was the fact that on vSwitch1 the ethernet traffic was tagged. Shirley that couldn’t be the reason? And it wasn’t – it was routing. I have a Cisco SG300 running on Layer 3 mode (router) and it will happily do inter-VLAN routing, no problem. The difference on ESXi is that with the single TCP/IP stack design there is only the default gateway, and a different gateway cannot be assigned to interfaces on different VLANs (unlike most other sensible operating systems). Traffic was hitting the default gateway (VLAN 100), then being re-routed to the ISCSI VLAN (10). That worked fine on egress, but the return trip, bouncing from VLAN to VLAN, was killing the speed.&lt;/p&gt;
 
@@ -554,42 +1410,38 @@ VMK_NAMESPACE_REQUIRED&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span cla
 
 &lt;p&gt;Time to look at the ARP table from another server:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;esxcli network ip neighbor list
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;esxcli network ip neighbor list
 Neighbor        Mac Address        Vmknic    Expiry  State  Type
 --------------  -----------------  ------  --------  -----  -------
 192.168.10.132  0c:c4:7a:a9:55:89  vmk1     873 sec         Unknown
-&lt;span class=&quot;gp&quot;&gt;--&amp;gt; &lt;/span&gt;192.168.10.226   3c:97:0e:5e:a1:bd  vmk1    1190 sec         Unknown &amp;lt;--
+--&amp;gt; 192.168.10.226   3c:97:0e:5e:a1:bd  vmk1    1190 sec         Unknown &amp;lt;--
 192.168.10.232  d0:50:99:c0:ae:8f  vmk1     919 sec         Unknown
 192.168.1.234   00:0c:29:97:66:3a  vmk0    1162 sec         Unknown
-&lt;span class=&quot;gp&quot;&gt;--&amp;gt; &lt;/span&gt;192.168.1.226   3c:97:0e:5e:a1:bd  vmk0    1181 sec         Unknown &amp;lt;--
+--&amp;gt; 192.168.1.226   3c:97:0e:5e:a1:bd  vmk0    1181 sec         Unknown &amp;lt;--
 192.168.1.223   00:0c:29:13:d3:03  vmk0    1143 sec         Unknown
 192.168.1.254   7c:69:f6:9a:c9:d0  vmk0     649 sec         Unknown
 192.168.1.222   c0:3f:d5:64:ae:5d  vmk0    1130 sec         Unknown
 192.168.1.240   14:b1:c8:00:37:80  vmk0    1173 sec         Unknown
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;You can clearly see two different IP addresses linked to the same MAC address. Well, I thought, let’s try clearing the ARP cache.&lt;/p&gt;
+&lt;p&gt;You can clearly see two different IP addresses linked to the same MAC address. Well, I thought, let’s try clearing the ARP cache. &lt;/p&gt;
 
 &lt;p&gt;On the other ESXi servers:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;esxcli network ip neighbor remove --version&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;4 --neighbor-addr&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;192.168.1.226
-esxcli network ip neighbor remove --version&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;4 --neighbor-addr&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;192.168.10.226
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;esxcli network ip neighbor remove --version=4 --neighbor-addr=192.168.1.226
+esxcli network ip neighbor remove --version=4 --neighbor-addr=192.168.10.226
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 &lt;p&gt;And on my own machine:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo arp -a -d
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;sudo arp -a -d
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Ping the server again with &lt;code class=&quot;highlighter-rouge&quot;&gt;arping&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Ping the server again with &lt;code&gt;arping&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;arping -S 192.168.1.240 -i en8 192.168.1.226
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;arping -S 192.168.1.240 -i en8 192.168.1.226
 ARPING 192.168.1.226
-60 bytes from 00:50:56:67:91:a9 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;192.168.1.226&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;: &lt;span class=&quot;nv&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0 &lt;span class=&quot;nb&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;318.050 usec
-60 bytes from 00:50:56:67:91:a9 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;192.168.1.226&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;: &lt;span class=&quot;nv&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;0 &lt;span class=&quot;nb&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;318.050 usec
-60 bytes from 00:50:56:67:91:a9 &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;192.168.1.226&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;: &lt;span class=&quot;nv&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;1 &lt;span class=&quot;nb&quot;&gt;time&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;276.089 usec
+60 bytes from 00:50:56:67:91:a9 (192.168.1.226): index=0 time=318.050 usec
+60 bytes from 00:50:56:67:91:a9 (192.168.1.226): index=0 time=318.050 usec
+60 bytes from 00:50:56:67:91:a9 (192.168.1.226): index=1 time=276.089 usec
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 &lt;p&gt;That is more like it!&lt;/p&gt;
 
 &lt;p class=&quot;notice--info&quot;&gt;During development of the driver, I had loaded and unloaded the module whilst tailing the vmkernel.log so many times that I had memorised the MAC address. I knew that was the correct one.&lt;/p&gt;
@@ -600,7 +1452,7 @@ ARPING 192.168.1.226
 
 &lt;p&gt;&lt;em&gt;The MAC address of vmk0 management network may not get updated after you replace or assign a new MAC address to the NIC and run the esxcfg-vmknic –l command from the command line. The default setting for the ESXi host is not to select the new hardware MAC address.&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;The proposed solution? Delete and recreate the &lt;code class=&quot;highlighter-rouge&quot;&gt;vmknic&lt;/code&gt;. Not what I wanted to read, as I was going to be swapping the adapters around many times to complete my tests. But wait, there is a workaround:&lt;/p&gt;
+&lt;p&gt;The proposed solution? Delete and recreate the &lt;code&gt;vmknic&lt;/code&gt;. Not what I wanted to read, as I was going to be swapping the adapters around many times to complete my tests. But wait, there is a workaround:&lt;/p&gt;
 
 &lt;div class=&quot;notice--warning&quot;&gt;
 &lt;p&gt;&lt;b&gt;Workaround&lt;/b&gt;&lt;/p&gt;
@@ -610,9 +1462,9 @@ ARPING 192.168.1.226
 &lt;p style=&quot;margin-left: 40px&quot;&gt; 2. Restart the ESXi server.&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;p&gt;After applying the workaround I was then able to move the physical adapters freely between &lt;code class=&quot;highlighter-rouge&quot;&gt;vmknics&lt;/code&gt; and the MAC address changed as expected.&lt;/p&gt;
+&lt;p&gt;After applying the workaround I was then able to move the physical adapters freely between &lt;code&gt;vmknics&lt;/code&gt; and the MAC address changed as expected. &lt;/p&gt;
 
-&lt;p&gt;I understand that moving physical adapters around is not something that would be done regularly, but I would have preferred if the “workaround” was actually the default behaviour. Having said that, I changed stuff around, changed ESXi versions, and moved adapters so many times on that server that I am surprised I did’t hit any other problems…&lt;/p&gt;
+&lt;p&gt;I understand that moving physical adapters around is not something that would be done regularly, but I would have preferred if the “workaround” was actually the default behaviour. Having said that, I changed stuff around, changed ESXi versions, and moved adapters so many times on that server that I am surprised I did’t hit any other problems…  &lt;/p&gt;
 
 &lt;h2 id=&quot;compiling-the-drivers&quot;&gt;Compiling the drivers&lt;/h2&gt;
 
@@ -655,7 +1507,7 @@ ARPING 192.168.1.226
 
 &lt;h4 id=&quot;esxi-51-vib-1&quot;&gt;ESXi 5.1 VIB&lt;/h4&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://bintray.com/gomesjj/VIBs/r8152_esxi51_vib/_latestVersion&quot;&gt; &lt;img src=&quot;https://api.bintray.com/packages/gomesjj/VIBs/r8152_esxi51_vib/images/download.svg&quot; alt=&quot;Download&quot; /&gt; &lt;/a&gt;&lt;/p&gt;</content><category term="[&quot;Homelab&quot;]" /><category term="Homelab" /><category term="ESXi" /><category term="USB" /><category term="Ethernet" /><summary>ESXi drivers for USB 3.0 Gigabit Ethernet adapters based on the ASIX ax88179_178a or the Realtek RLT8153/RTL8152 chipsets</summary></entry><entry><title>Intel Mesh Commander on Mac OS X</title><link href="http://localhost:4000/apple/Intel_Mesh_Commander_on_Mac_OS_X/" rel="alternate" type="text/html" title="Intel Mesh Commander on Mac OS X" /><published>2016-05-12T00:00:00+01:00</published><updated>2016-05-12T00:00:00+01:00</updated><id>http://localhost:4000/apple/Intel_Mesh_Commander_on_Mac_OS_X</id><content type="html" xml:base="http://localhost:4000/apple/Intel_Mesh_Commander_on_Mac_OS_X/">&lt;div class=&quot;notice--warning&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;https://bintray.com/gomesjj/VIBs/r8152_esxi51_vib/_latestVersion&quot;&gt; &lt;img src=&quot;https://api.bintray.com/packages/gomesjj/VIBs/r8152_esxi51_vib/images/download.svg&quot; alt=&quot;Download&quot; /&gt; &lt;/a&gt;&lt;/p&gt;</content><category term="[&quot;Homelab&quot;]" /><category term="Homelab" /><category term="ESXi" /><category term="USB" /><category term="Ethernet" /><summary type="html">ESXi drivers for USB 3.0 Gigabit Ethernet adapters based on the ASIX ax88179_178a or the Realtek RLT8153/RTL8152 chipsets</summary></entry><entry><title type="html">Intel Mesh Commander on Mac OS X</title><link href="http://localhost:4000/apple/Intel_Mesh_Commander_on_Mac_OS_X/" rel="alternate" type="text/html" title="Intel Mesh Commander on Mac OS X" /><published>2016-05-12T00:00:00+01:00</published><updated>2016-05-12T00:00:00+01:00</updated><id>http://localhost:4000/apple/Intel_Mesh_Commander_on_Mac_OS_X</id><content type="html" xml:base="http://localhost:4000/apple/Intel_Mesh_Commander_on_Mac_OS_X/">&lt;div class=&quot;notice--warning&quot;&gt;
   &lt;p&gt;&lt;strong&gt;Update (25/05/16)&lt;/strong&gt;&lt;/p&gt;
 
   &lt;li&gt;Pre-built package of MeshCommander updated to version 0.2.1&lt;/li&gt;
@@ -669,7 +1521,7 @@ ARPING 192.168.1.226
 
 &lt;p&gt;Intel Active Management Technology is one of the hardware technologies (perhaps the most recognised and representative) that is part of Intel’s &lt;a href=&quot;http://www.intel.co.uk/content/www/uk/en/architecture-and-technology/vpro/vpro-technology-general.html&quot;&gt;vPro&lt;/a&gt; offerings. AMT offers the benefits of out-of-band management similar to &lt;abbr title=&quot;Intelligent Platform Management Interface&quot;&gt;IPMI&lt;/abbr&gt;, but for personal computers as opposed to servers.&lt;/p&gt;
 
-&lt;p&gt;When I was selecting the NUC model(s) to use for my ESXi home lab, the fact that both the &lt;a href=&quot;http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-dc53427hye-board-d53427rke.html&quot;&gt;DC53427HYEA&lt;/a&gt; and the &lt;a href=&quot;http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-nuc5i5ryh.html&quot;&gt;NUC5i5RYH&lt;/a&gt; sported processors with vPro and AMT support helped me sway towards them. The NUCs were replacing kit that had full &lt;abbr title=&quot;Intelligent Platform Management Interface&quot;&gt;IPMI&lt;/abbr&gt; functionality, and I knew how much I would miss the convenience of managing the new “servers” remotely.&lt;/p&gt;
+&lt;p&gt;When I was selecting the NUC model(s) to use for my ESXi home lab, the fact that both the &lt;a href=&quot;http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-dc53427hye-board-d53427rke.html&quot;&gt;DC53427HYEA&lt;/a&gt; and the &lt;a href=&quot;http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-nuc5i5ryh.html&quot;&gt;NUC5i5RYH&lt;/a&gt; sported processors with vPro and AMT support helped me sway towards them. The NUCs were replacing kit that had full &lt;abbr title=&quot;Intelligent Platform Management Interface&quot;&gt;IPMI&lt;/abbr&gt; functionality, and I knew how much I would miss the convenience of managing the new “servers” remotely. &lt;/p&gt;
 
 &lt;p&gt;There was a little fly in the ointment though. As I researched the technology it became clear that all the management tools were Windows only. Even Linux support was almost non-existent except for some example code distributed with the AMT SDK. Bummer, I thought to myself, another “Macs need not apply” zone.&lt;/p&gt;
 
@@ -693,29 +1545,27 @@ ARPING 192.168.1.226
 
 &lt;p&gt;2. Xcode&lt;/p&gt;
 
-&lt;p&gt;If you haven’t installed Xcode yet, get it from the App Store, or download from &lt;a href=&quot;https://developer.apple.com/xcode/download/&quot;&gt; Developer&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you haven’t installed Xcode yet, get it from the App Store, or download from &lt;a href=&quot;https://developer.apple.com/xcode/download/&quot;&gt; Developer&lt;/a&gt;. &lt;/p&gt;
 
 &lt;p&gt;Time for a cuppa of whatever rocks your boat, as it will take some time…&lt;/p&gt;
 
-&lt;p&gt;3. Install &lt;code class=&quot;highlighter-rouge&quot;&gt;node&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;3. Install &lt;code&gt;node&lt;/code&gt;:&lt;/p&gt;
 
 &lt;p&gt;The easiest way is by installing Homebrew first&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ruby -e &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;Now, you could just install &lt;code class=&quot;highlighter-rouge&quot;&gt;node&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;npm&lt;/code&gt; straight away, but I recommend you follow the instructions in this &lt;a href=&quot;https://johnpapa.net/how-to-use-npm-global-without-sudo-on-osx/&quot;&gt;post&lt;/a&gt; by John Papa. The instructions show how to use &lt;code class=&quot;highlighter-rouge&quot;&gt;npm global&lt;/code&gt; without the need for &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Now, you could just install &lt;code&gt;node&lt;/code&gt; and &lt;code&gt;npm&lt;/code&gt; straight away, but I recommend you follow the instructions in this &lt;a href=&quot;https://johnpapa.net/how-to-use-npm-global-without-sudo-on-osx/&quot;&gt;post&lt;/a&gt; by John Papa. The instructions show how to use &lt;code&gt;npm global&lt;/code&gt; without the need for &lt;code&gt;sudo&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;or&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;If you don’t mind running code compiled by someone else, just install the &lt;code class=&quot;highlighter-rouge&quot;&gt;node&lt;/code&gt; binary, which also includes &lt;code class=&quot;highlighter-rouge&quot;&gt;npm&lt;/code&gt;. Download it from &lt;a href=&quot;https://nodejs.org/en/download/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;If you don’t mind running code compiled by someone else, just install the &lt;code&gt;node&lt;/code&gt; binary, which also includes &lt;code&gt;npm&lt;/code&gt;. Download it from &lt;a href=&quot;https://nodejs.org/en/download/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;4. Install &lt;code class=&quot;highlighter-rouge&quot;&gt;nw-builder&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;4. Install &lt;code&gt;nw-builder&lt;/code&gt;:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install -g nw-builder
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;npm install -g nw-builder
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;p&gt;I have used both &lt;code class=&quot;highlighter-rouge&quot;&gt;nw-builder&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;nwjs-macappstore-builder&lt;/code&gt;. Whilst both of them work well, I prefer &lt;code class=&quot;highlighter-rouge&quot;&gt;nw-builder&lt;/code&gt; as it offers more control.&lt;/p&gt;
+&lt;p&gt;I have used both &lt;code&gt;nw-builder&lt;/code&gt; and &lt;code&gt;nwjs-macappstore-builder&lt;/code&gt;. Whilst both of them work well, I prefer &lt;code&gt;nw-builder&lt;/code&gt; as it offers more control.&lt;/p&gt;
 
 &lt;p&gt;If you would rather decide for yourself, have a look at &lt;a href=&quot;https://github.com/nwjs/nw-builder&quot;&gt;nw-builder&lt;/a&gt; and &lt;a href=&quot;https://www.npmjs.com/package/nwjs-macappstore-builder&quot;&gt;nwjs-macappstore-builder&lt;/a&gt;.&lt;/p&gt;
 
@@ -725,27 +1575,25 @@ ARPING 192.168.1.226
 
 &lt;p&gt;1. Create a directory to store the files and the built application.&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mkdir -p ~/devel
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;mkdir -p ~/devel
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;p&gt;If you downloaded the contents of my repository, just copy them over to the above created folder. You can also clone the contents directly with &lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;If you downloaded the contents of my repository, just copy them over to the above created folder. You can also clone the contents directly with &lt;code&gt;git&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/devel
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;cd ~/devel
 git clone https://github.com/gomesjj/MeshCommander.git
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 &lt;p&gt;You should end-up with something like this&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ls
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;ls
 MeshCommander/
 
 ls -lR MeshCommander
 total 16
 -rw-r--r--  1 gj1606  staff    90B 4 May 14:00 README.md
--rwxr-xr-x  1 gj1606  staff   1.8K 4 May 14:00 mkapp&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
+-rwxr-xr-x  1 gj1606  staff   1.8K 4 May 14:00 mkapp*
 drwxr-xr-x  5 gj1606  staff   170B 4 May 14:00 files/
-drwxr-xr-x  7 gj1606  staff   238B 4 May 14:00 &lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt;/
+drwxr-xr-x  7 gj1606  staff   238B 4 May 14:00 source/
 
 MeshCommander/files:
 total 88
@@ -756,21 +1604,19 @@ total 88
 MeshCommander/source:
 total 3504
 -rw-r--r--  1 gj1606  staff   1.7M 4 May 14:00 Commander.htm
--rwxr-xr-x  1 gj1606  staff   3.6K 4 May 14:00 favicon.ico&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
--rwxr-xr-x  1 gj1606  staff   3.1K 4 May 14:00 favicon.png&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
+-rwxr-xr-x  1 gj1606  staff   3.6K 4 May 14:00 favicon.ico*
+-rwxr-xr-x  1 gj1606  staff   3.1K 4 May 14:00 favicon.png*
 -rw-r--r--  1 gj1606  staff   593B 4 May 14:00 package.json
 -rw-r--r--  1 gj1606  staff    18K 4 May 14:00 scriptblocks.txt
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 &lt;p&gt;2. Build the application&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;MeshCommander
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;cd MeshCommander
 . ./mkapp
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 &lt;p&gt;If the build is successful you should see output similar to this:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;node:61321) fs: re-evaluating native module sources is not supported. If you are using the graceful-fs module, please update it to a more recent version.
+&lt;pre&gt;&lt;code&gt;node:61321) fs: re-evaluating native module sources is not supported. If you are using the graceful-fs module, please update it to a more recent version.
   downloading [====================] 100% 0.0s
 
 all done!
@@ -812,24 +1658,21 @@ Veriyfing Gatekeeper acceptance...
 source=Developer ID
 override=security disabled
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; On first run, NW.js is downloaded and cached locally for subsequent builds:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;SNIP&amp;gt;
-  downloading &lt;span class=&quot;o&quot;&gt;[====================]&lt;/span&gt; 100% 0.0s
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;&amp;lt;SNIP&amp;gt;
+  downloading [====================] 100% 0.0s
 &amp;lt;/SNIP&amp;gt;
 
 ls cache/
 0.15.0-rc2/
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 &lt;p&gt;The packaged application will be under the &lt;strong&gt;build&lt;/strong&gt; directory:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ls ./build/MeshCommander/osx64/
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;ls ./build/MeshCommander/osx64/
 MeshCommander.app
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;h3 id=&quot;look-whats-come-out-from-the-oven&quot;&gt;Look what’s come out from the oven&lt;/h3&gt;
 
@@ -847,9 +1690,9 @@ MeshCommander.app
 
 &lt;p&gt;Yes, you can. Download the latest version of the application:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/mesh/meshcommander_app.png&quot; alt=&quot;MeshCommander.app&quot; /&gt; &lt;a href=&quot;https://bintray.com/gomesjj/APPS/MeshCommander.app/_latestVersion&quot;&gt; &lt;img src=&quot;https://api.bintray.com/packages/gomesjj/APPS/MeshCommander.app/images/download.svg&quot; alt=&quot;Download&quot; /&gt; &lt;/a&gt;&lt;/p&gt;</content><category term="[&quot;Apple&quot;]" /><category term="Mac" /><category term="OS X" /><category term="NW.js" /><category term="Homelab" /><category term="Virtualisation" /><category term="NUC" /><summary>A Mac OS X application for the management of computers with Intel AMT (Active Management Technology), supporting redirection, remote desktop, remote terminal and scripted management.</summary></entry><entry><title>NUC Squarepants</title><link href="http://localhost:4000/homelab/NUC-Squarepants/" rel="alternate" type="text/html" title="NUC Squarepants" /><published>2016-05-10T00:00:00+01:00</published><updated>2016-05-10T00:00:00+01:00</updated><id>http://localhost:4000/homelab/NUC-Squarepants</id><content type="html" xml:base="http://localhost:4000/homelab/NUC-Squarepants/">&lt;p&gt;My first Intel NUC was yet to be delivered, but I was already looking around for a solution for it’s greatest shortcoming: the single Ethernet adapter. So, here is how my first attempt at solving that went.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/mesh/meshcommander_app.png&quot; alt=&quot;MeshCommander.app&quot; /&gt; &lt;a href=&quot;https://bintray.com/gomesjj/APPS/MeshCommander.app/_latestVersion&quot;&gt; &lt;img src=&quot;https://api.bintray.com/packages/gomesjj/APPS/MeshCommander.app/images/download.svg&quot; alt=&quot;Download&quot; /&gt; &lt;/a&gt;&lt;/p&gt;</content><category term="[&quot;Apple&quot;]" /><category term="Mac" /><category term="OS X" /><category term="NW.js" /><category term="Homelab" /><category term="Virtualisation" /><category term="NUC" /><summary type="html">A Mac OS X application for the management of computers with Intel AMT (Active Management Technology), supporting redirection, remote desktop, remote terminal and scripted management.</summary></entry><entry><title type="html">NUC Squarepants</title><link href="http://localhost:4000/homelab/NUC-Squarepants/" rel="alternate" type="text/html" title="NUC Squarepants" /><published>2016-05-10T00:00:00+01:00</published><updated>2016-05-10T00:00:00+01:00</updated><id>http://localhost:4000/homelab/NUC-Squarepants</id><content type="html" xml:base="http://localhost:4000/homelab/NUC-Squarepants/">&lt;p&gt;My first Intel NUC was yet to be delivered, but I was already looking around for a solution for it’s greatest shortcoming: the single Ethernet adapter. So, here is how my first attempt at solving that went. &lt;/p&gt;
 
-&lt;p&gt;As I mentioned in my previous post about the evolution of my &lt;a href=&quot;/homelab/Intel-NUC-to-the-rescue&quot;&gt;home lab&lt;/a&gt;, I decided to test the waters with an Intel NUC &lt;a href=&quot;http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-dc53427hye-board-d53427rke.html&quot;&gt;DC53427HYEA&lt;/a&gt;. I was as yet unsure as to whether or not the NUC would be an ESXi host, but I knew I could run Windows Server 2012 on it. If I couldn’t get a second NIC for ESXi, the NUC would still have a purpose as my new Domain Controller.&lt;/p&gt;
+&lt;p&gt;As I mentioned in my previous post about the evolution of my &lt;a href=&quot;/homelab/Intel-NUC-to-the-rescue&quot;&gt;home lab&lt;/a&gt;, I decided to test the waters with an Intel NUC &lt;a href=&quot;http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-dc53427hye-board-d53427rke.html&quot;&gt;DC53427HYEA&lt;/a&gt;. I was as yet unsure as to whether or not the NUC would be an ESXi host, but I knew I could run Windows Server 2012 on it. If I couldn’t get a second NIC for ESXi, the NUC would still have a purpose as my new Domain Controller. &lt;/p&gt;
 
 &lt;p class=&quot;notice--info&quot;&gt;As an aside, I chose this older NUC model, and later the &lt;a href=&quot;http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-nuc5i5ryh.html&quot;&gt;NUC5i5RYH&lt;/a&gt;, because they are the only models in the line up to include Intel &lt;abbr title=&quot;Active Management Technology&quot;&gt;AMT&lt;/abbr&gt;. I think running with slightly older models is a price worth paying in exchange for remote out-of-band management.&lt;/p&gt;
 
@@ -863,7 +1706,7 @@ MeshCommander.app
 
 &lt;p&gt;Without further ado, I present to you the NUC Squarepants design:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/nuc/nuc_squarepants.png&quot; alt=&quot;NUC Squarepants&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/nuc/nuc_squarepants.png&quot; alt=&quot;NUC Squarepants&quot; class=&quot;align-center&quot; /&gt; &lt;/p&gt;
 
 &lt;p&gt;OK, it doesn’t look quite like that. We will see how it really looks like in a while, but first, here is the shopping list.&lt;/p&gt;
 
@@ -901,11 +1744,11 @@ MeshCommander.app
 
 &lt;p&gt;3. Fix the second half of the extender (with the mPCIe connector) to the custom base.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/nuc/3_nuc_base_adap.png&quot; alt=&quot;Syba mPCIe Adapter&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/nuc/3_nuc_base_adap.png&quot; alt=&quot;Syba mPCIe Adapter&quot; class=&quot;align-center&quot; /&gt;   &lt;/p&gt;
 
 &lt;p&gt;4. Plug the main board of the Ethernet adapter to the extender in the custom base:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/nuc/4_nuc_base_eth.png&quot; alt=&quot;Syba mPCIe Adapter&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/nuc/4_nuc_base_eth.png&quot; alt=&quot;Syba mPCIe Adapter&quot; class=&quot;align-center&quot; /&gt; &lt;/p&gt;
 
 &lt;p&gt;5. The custom base should look like this once all the cables are connected:&lt;/p&gt;
 
@@ -929,9 +1772,9 @@ MeshCommander.app
 
 &lt;h3 id=&quot;making-it-all-work&quot;&gt;Making it all work&lt;/h3&gt;
 
-&lt;p&gt;There is no out-of-the-box support for Realtek adapters on ESXi, so a driver will need to be installed. I will just point you in the direction of the excellent &lt;a href=&quot;https://vibsdepot.v-front.de/wiki/index.php/List_of_currently_available_ESXi_packages&quot;&gt;VIBSDepot&lt;/a&gt; – just grab the &lt;code class=&quot;highlighter-rouge&quot;&gt;net55-r8168&lt;/code&gt; VIB and you should be sorted.&lt;/p&gt;
+&lt;p&gt;There is no out-of-the-box support for Realtek adapters on ESXi, so a driver will need to be installed. I will just point you in the direction of the excellent &lt;a href=&quot;https://vibsdepot.v-front.de/wiki/index.php/List_of_currently_available_ESXi_packages&quot;&gt;VIBSDepot&lt;/a&gt; – just grab the &lt;code&gt;net55-r8168&lt;/code&gt; VIB and you should be sorted.&lt;/p&gt;
 
-&lt;p class=&quot;notice--info&quot;&gt;&lt;strong&gt;Note:&lt;/strong&gt; If you are not running ESXi 6.0 or 5.5 Update 3, you will also need a driver for the on-board Intel NIC. You need the &lt;code class=&quot;highlighter-rouge&quot;&gt;net-e1000e&lt;/code&gt; VIB, so get it too whilst you are at it.&lt;/p&gt;
+&lt;p class=&quot;notice--info&quot;&gt;&lt;strong&gt;Note:&lt;/strong&gt; If you are not running ESXi 6.0 or 5.5 Update 3, you will also need a driver for the on-board Intel NIC. You need the &lt;code&gt;net-e1000e&lt;/code&gt; VIB, so get it too whilst you are at it.&lt;/p&gt;
 
 &lt;h3 id=&quot;ether-device-details&quot;&gt;Ether device details&lt;/h3&gt;
 
@@ -945,7 +1788,7 @@ MeshCommander.app
 
 &lt;h3 id=&quot;later-generation-nucs&quot;&gt;Later generation NUCs&lt;/h3&gt;
 
-&lt;p&gt;This solution does not work for the 5&lt;sup&gt;th&lt;/sup&gt; and later generation NUCs, as the mPCIe slot has been replaced by an M.2 slot. If you don’t mind running with a NIC outside the NUC case and a second power adapter, then Florian’s &lt;a href=&quot;http://blog.fosketts.net/2015/06/05/adding-a-second-ethernet-port-to-an-intel-nuc-via-mini-pcie/&quot;&gt;solution&lt;/a&gt; is an option. Otherwise, come along this &lt;a href=&quot;/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/&quot;&gt;way&lt;/a&gt; for a solution that will work on all generations of the NUC (or anything else with a USB port).&lt;/p&gt;</content><category term="[&quot;Homelab&quot;]" /><category term="Homelab" /><category term="Virtualisation" /><category term="NUC" /><summary>Adding a Mini PCIe Ethernet adapter to 3rd or 4th generation Intel NUC, housed on a 3D printed custom base.</summary></entry><entry><title>iTunes Media Folder on NFS share</title><link href="http://localhost:4000/apple/iTunes-Library-on-NFS-share/" rel="alternate" type="text/html" title="iTunes Media Folder on NFS share" /><published>2016-05-01T00:00:00+01:00</published><updated>2016-05-01T00:00:00+01:00</updated><id>http://localhost:4000/apple/iTunes-Library-on-NFS-share</id><content type="html" xml:base="http://localhost:4000/apple/iTunes-Library-on-NFS-share/">&lt;p&gt;Mine is a Mac household and as such, iTunes plays a part on our entertainment strategy. I generally like Apple products and software, but I must confess iTunes is not one of my preferred offerings from them.&lt;/p&gt;
+&lt;p&gt;This solution does not work for the 5&lt;sup&gt;th&lt;/sup&gt; and later generation NUCs, as the mPCIe slot has been replaced by an M.2 slot. If you don’t mind running with a NIC outside the NUC case and a second power adapter, then Florian’s &lt;a href=&quot;http://blog.fosketts.net/2015/06/05/adding-a-second-ethernet-port-to-an-intel-nuc-via-mini-pcie/&quot;&gt;solution&lt;/a&gt; is an option. Otherwise, come along this &lt;a href=&quot;/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/&quot;&gt;way&lt;/a&gt; for a solution that will work on all generations of the NUC (or anything else with a USB port).&lt;/p&gt;</content><category term="[&quot;Homelab&quot;]" /><category term="Homelab" /><category term="Virtualisation" /><category term="NUC" /><summary type="html">Adding a Mini PCIe Ethernet adapter to 3rd or 4th generation Intel NUC, housed on a 3D printed custom base.</summary></entry><entry><title type="html">iTunes Media Folder on NFS share</title><link href="http://localhost:4000/apple/iTunes-Library-on-NFS-share/" rel="alternate" type="text/html" title="iTunes Media Folder on NFS share" /><published>2016-05-01T00:00:00+01:00</published><updated>2016-05-01T00:00:00+01:00</updated><id>http://localhost:4000/apple/iTunes-Library-on-NFS-share</id><content type="html" xml:base="http://localhost:4000/apple/iTunes-Library-on-NFS-share/">&lt;p&gt;Mine is a Mac household and as such, iTunes plays a part on our entertainment strategy. I generally like Apple products and software, but I must confess iTunes is not one of my preferred offerings from them.&lt;/p&gt;
 
 &lt;p&gt;I thought it would be a good idea to have a single repository for all the iTunes Library items residing on the NAS. By the way, the setup I have at the moment is based on two custom built FreeNAS 9.3 servers, but in the past it was based on Solaris 11 (then 11.2) running on a Sun Fire X4240. You can see what my current home lab looked like &lt;a href=&quot;/homelab/The-Home-Lab/&quot;&gt;here&lt;/a&gt; – I will be documenting the new setup soon.&lt;/p&gt;
 
@@ -955,40 +1798,36 @@ MeshCommander.app
 
 &lt;p&gt;What I needed was UTF 8 support. Not only that, but UTF 8 support that was compatible with the Unicode normalisation adopted by Apple, which is NFD. This is not something that can be changed once a ZFS file system is created, so I had to destroy the file system and recreate like so:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;zfs create -o &lt;span class=&quot;nv&quot;&gt;normalization&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;formD -o &lt;span class=&quot;nv&quot;&gt;casesensitivity&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;mixed -o &lt;span class=&quot;nv&quot;&gt;nfs&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;on &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
--o &lt;span class=&quot;nv&quot;&gt;aclinherit&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;passthrough-x -o &lt;span class=&quot;nv&quot;&gt;aclmode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;passthrough -o &lt;span class=&quot;nv&quot;&gt;compression&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;on -o &lt;span class=&quot;nv&quot;&gt;utf8only&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;on tank/media 
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;zfs create -o normalization=formD -o casesensitivity=mixed -o nfs=on \
+-o aclinherit=passthrough-x -o aclmode=passthrough -o compression=on -o utf8only=on tank/media 
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Now, lets forward on a few years and see if the same had to be done on FreeNAS. It turns out it didn’t. Instead, what I did was to change the “charset” and “lang” login options to support UTF 8. To do that, as root, edit &lt;em&gt;/etc/login.conf&lt;/em&gt; and add the following lines to the &lt;em&gt;default:&lt;/em&gt; stanza after the &lt;em&gt;umask&lt;/em&gt; entry:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;charset&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;UTF&lt;span class=&quot;m&quot;&gt;-8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;\
-&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;en_GB&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;UTF&lt;span class=&quot;m&quot;&gt;-8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+&lt;pre&gt;&lt;code class=&quot;language-vim&quot;&gt;:charset=UTF-8:\
+:lang=en_GB.UTF-8:
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 &lt;p&gt;Save the file, then run the following commands:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cap_mkdb /etc/login.conf
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;cap_mkdb /etc/login.conf
 cp /etc/login.conf.db /conf/base/etc
 cp /etc/login.conf /conf/base/etc
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;I suppose I could have done the same with Solaris and just set the &lt;em&gt;charset&lt;/em&gt; and &lt;em&gt;lang&lt;/em&gt; to UTF 8, but hey.&lt;/p&gt;
 
-&lt;p class=&quot;notice--danger&quot;&gt;&lt;strong&gt;Note:&lt;/strong&gt; Don’t try to add directories or files with UTF 8 characters directly from the command line – use the Finder instead and all will be peachy.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Don’t try to add directories or files with UTF 8 characters directly from the command line – use the Finder instead and all will be peachy.&lt;/p&gt;
 
 &lt;h3 id=&quot;automount-is-your-friend&quot;&gt;Automount is your friend&lt;/h3&gt;
 
-&lt;p&gt;With my NFS share in place, I then had to look at the best way to make it available at boot time. If you look around t’interwebs, the default solution is to use the “Connect to Server” dialog in the Finder. That is not very elegant and in my experience does not survive a reboot. Well, you can add the driver to your “Login Items”, but that is even uglier. Instead, I opted for an &lt;code class=&quot;highlighter-rouge&quot;&gt;automount&lt;/code&gt; map. The great thing about Mac OS X is that it is still BSD at heart, and the tools are all there.&lt;/p&gt;
+&lt;p&gt;With my NFS share in place, I then had to look at the best way to make it available at boot time. If you look around t’interwebs, the default solution is to use the “Connect to Server” dialog in the Finder. That is not very elegant and in my experience does not survive a reboot. Well, you can add the driver to your “Login Items”, but that is even uglier. Instead, I opted for an &lt;code&gt;automount&lt;/code&gt; map. The great thing about Mac OS X is that it is still BSD at heart, and the tools are all there.&lt;/p&gt;
 
-&lt;p&gt;So, start by creating your auto mount map, as root, using you preferred editor (I am a &lt;code class=&quot;highlighter-rouge&quot;&gt;vi&lt;/code&gt; man):&lt;/p&gt;
+&lt;p&gt;So, start by creating your auto mount map, as root, using you preferred editor (I am a &lt;code&gt;vi&lt;/code&gt; man):&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;pre&gt;&lt;code&gt;
 /Media -fstype=nfs,rw,bg,tcp,rsize=32768,wsize=32768,resvport,intr,nolocks,locallocks ip_address_or_hostname:/mnt/tank/media
 
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;I normally use the IP address so that it doesn’t depend on DNS resolution, but you can choose otherwise. In this case, my ZFS share is called &lt;strong&gt;media&lt;/strong&gt; and I am mounting it under a folder called &lt;strong&gt;/Media&lt;/strong&gt;.&lt;/p&gt;
 
@@ -996,15 +1835,13 @@ cp /etc/login.conf /conf/base/etc
 
 &lt;p&gt;Next, add your newly created map as the last item on &lt;strong&gt;/etc/auto_master&lt;/strong&gt;, also as root:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;			auto_nas	&lt;span class=&quot;p&quot;&gt;-&lt;/span&gt;nosuid
+&lt;pre&gt;&lt;code class=&quot;language-vim&quot;&gt;/-			auto_nas	-nosuid
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;You are now ready to mount your NFS share, by executing the following command:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo automount -vc
+&lt;pre&gt;&lt;code class=&quot;language-sh&quot;&gt;sudo automount -vc
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 &lt;p&gt;That is it. If your handy work is correct the NFS share should be mounted under &lt;strong&gt;/Volumes/Media&lt;/strong&gt; and ready to go.&lt;/p&gt;
 
 &lt;h3 id=&quot;point-itunes-to-the-new-media-folder-location&quot;&gt;Point iTunes to the new media folder location&lt;/h3&gt;
@@ -1015,21 +1852,21 @@ cp /etc/login.conf /conf/base/etc
 
 &lt;h3 id=&quot;thats-it&quot;&gt;That’s it&lt;/h3&gt;
 
-&lt;p&gt;Now, this is not quite a single iTunes Library for everybody, but it is the next best thing.&lt;/p&gt;
+&lt;p&gt;Now, this is not quite a single iTunes Library for everybody, but it is the next best thing. &lt;/p&gt;
 
 &lt;p&gt;I tried removing the “iTunes Music Library.xml” file from the local computers and having a single instance on the NAS, but that doesn’t work well long term. What it means is that if a new item is added to my library it will not be automatically added to my wife’s library – that needs to be done manually. On the other hand, I actually prefer this setup, as I don’t necessarily want some of my wife’s music on my library anyway… 😉&lt;/p&gt;
 
-&lt;p class=&quot;notice--info&quot;&gt;If you are NFS mounting your media library on a laptop and are out and about, the contents will not be accessible. If you want to have your media on the go you need to store your files locally. Or ran a VPN, as I do.&lt;/p&gt;</content><category term="[&quot;Apple&quot;]" /><category term="Mac" /><category term="OS X" /><category term="iTunes" /><category term="NFS" /><category term="NAS" /><summary>Place your iTunes Media folder on a NFS share, mounted automatically at startup with &#39;automount&#39;.</summary></entry><entry><title>Intel NUC to the rescue</title><link href="http://localhost:4000/homelab/Intel-NUC-to-the-rescue/" rel="alternate" type="text/html" title="Intel NUC to the rescue" /><published>2016-04-13T00:00:00+01:00</published><updated>2016-04-13T00:00:00+01:00</updated><id>http://localhost:4000/homelab/Intel-NUC-to-the-rescue</id><content type="html" xml:base="http://localhost:4000/homelab/Intel-NUC-to-the-rescue/">&lt;p&gt;The components of my home lab changed many times over the years, but lately I embarked on a different approach: I wanted to come up with a design that kept the power consumption to a minimum. Spending thousands of £ per year on the electricity bill started to upset the &lt;abbr title=&quot;Good Lady Wife&quot;&gt;GLW&lt;/abbr&gt;. The green credentials of my lab were also generally lacking.&lt;/p&gt;
+&lt;p class=&quot;notice--info&quot;&gt;If you are NFS mounting your media library on a laptop and are out and about, the contents will not be accessible. If you want to have your media on the go you need to store your files locally. Or ran a VPN, as I do.&lt;/p&gt;</content><category term="[&quot;Apple&quot;]" /><category term="Mac" /><category term="OS X" /><category term="iTunes" /><category term="NFS" /><category term="NAS" /><summary type="html">Place your iTunes Media folder on a NFS share, mounted automatically at startup with &#39;automount&#39;.</summary></entry><entry><title type="html">Intel NUC to the rescue</title><link href="http://localhost:4000/homelab/Intel-NUC-to-the-rescue/" rel="alternate" type="text/html" title="Intel NUC to the rescue" /><published>2016-04-13T00:00:00+01:00</published><updated>2016-04-13T00:00:00+01:00</updated><id>http://localhost:4000/homelab/Intel-NUC-to-the-rescue</id><content type="html" xml:base="http://localhost:4000/homelab/Intel-NUC-to-the-rescue/">&lt;p&gt;The components of my home lab changed many times over the years, but lately I embarked on a different approach: I wanted to come up with a design that kept the power consumption to a minimum. Spending thousands of £ per year on the electricity bill started to upset the &lt;abbr title=&quot;Good Lady Wife&quot;&gt;GLW&lt;/abbr&gt;. The green credentials of my lab were also generally lacking.&lt;/p&gt;
 
 &lt;p&gt;I talked about my current set-up in this &lt;a href=&quot;/homelab/The-Home-Lab/&quot;&gt;post&lt;/a&gt;. Some of my servers are quite old now (still serviceable, though), so it is understandable that the power requirements are high. The IBM POWER5 p505 server, in particular, slurps electricity as if there was no tomorrow.&lt;/p&gt;
 
-&lt;p&gt;So, I deployed my search-fu skills and came to the conclusion that I had two options: build something based on the Intel Avoton (Atom C2000 series) or go with the Intel NUC. I also looked briefly at the Mac Mini, but the latest models with soldered on memory didn’t appeal to me. In the end, I plumped for both an Avoton self-build based around the &lt;a href=&quot;https://www.supermicro.com/products/motherboard/ATOM/X10/A1SAi-2750F.cfm&quot;&gt;Supermicro A1SAi-2750F&lt;/a&gt; and an Intel NUC &lt;a href=&quot;http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-dc53427hye-board-d53427rke.html&quot;&gt;DC53427HYEA&lt;/a&gt; to try them out.&lt;/p&gt;
+&lt;p&gt;So, I deployed my search-fu skills and came to the conclusion that I had two options: build something based on the Intel Avoton (Atom C2000 series) or go with the Intel NUC. I also looked briefly at the Mac Mini, but the latest models with soldered on memory didn’t appeal to me. In the end, I plumped for both an Avoton self-build based around the &lt;a href=&quot;https://www.supermicro.com/products/motherboard/ATOM/X10/A1SAi-2750F.cfm&quot;&gt;Supermicro A1SAi-2750F&lt;/a&gt; and an Intel NUC &lt;a href=&quot;http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-dc53427hye-board-d53427rke.html&quot;&gt;DC53427HYEA&lt;/a&gt; to try them out. &lt;/p&gt;
 
-&lt;p&gt;The Atom C2750 eight-core is a small beast: enough grunt to play the ESXi game, but with a wallet friend 20W &lt;abbr title=&quot;Thermal Design Power&quot;&gt;TDP&lt;/abbr&gt;. On the other hand, the NUC I chose, albeit third generation, was also pretty decent (17W &lt;abbr title=&quot;Thermal Design Power&quot;&gt;TDP&lt;/abbr&gt;). The downside? Maximum 16GB of RAM and a single Ethernet adapter.&lt;/p&gt;
+&lt;p&gt;The Atom C2750 eight-core is a small beast: enough grunt to play the ESXi game, but with a wallet friend 20W &lt;abbr title=&quot;Thermal Design Power&quot;&gt;TDP&lt;/abbr&gt;. On the other hand, the NUC I chose, albeit third generation, was also pretty decent (17W &lt;abbr title=&quot;Thermal Design Power&quot;&gt;TDP&lt;/abbr&gt;). The downside? Maximum 16GB of RAM and a single Ethernet adapter. &lt;/p&gt;
 
-&lt;p&gt;In the end, I decided to buy three more NUCs (another DC53427HYEA and two &lt;a href=&quot;http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-nuc5i5ryh.html&quot;&gt;NUC5i5RYH&lt;/a&gt;) to power my minuscule VMware cluster. One of the reasons was aesthetics: I just wanted the smallest possible footprint for the lab; and the other was the challenge of coming up with a way to add a second NIC to the little beauties. 😎&lt;/p&gt;
+&lt;p&gt;In the end, I decided to buy three more NUCs (another DC53427HYEA and two &lt;a href=&quot;http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-nuc5i5ryh.html&quot;&gt;NUC5i5RYH&lt;/a&gt;) to power my minuscule VMware cluster. One of the reasons was aesthetics: I just wanted the smallest possible footprint for the lab; and the other was the challenge of coming up with a way to add a second NIC to the little beauties. 😎 &lt;/p&gt;
 
-&lt;p&gt;“What about the Atom Board?” you might ask. Well, I decided to build a FreeNAS server with that. I will be elaborating on my NAS set-up in another post sometime. Meanwhile, you can see how I resolved the issue of the single Ethernet adapter in the NUC in this &lt;a href=&quot;/homelab/NUC-Squarepants/&quot;&gt;post&lt;/a&gt; and &lt;a href=&quot;/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/&quot;&gt;this&lt;/a&gt;.&lt;/p&gt;</content><category term="[&quot;Homelab&quot;]" /><category term="Homelab" /><category term="Virtualisation" /><category term="Avoton" /><category term="NUC" /><summary>Updating my home lab with Intel NUCs and a self-build NAS based on the Supermicro A1SAi-2750F board</summary></entry><entry><title>The Home Lab</title><link href="http://localhost:4000/homelab/The-Home-Lab/" rel="alternate" type="text/html" title="The Home Lab" /><published>2016-03-27T00:00:00+00:00</published><updated>2016-03-27T00:00:00+00:00</updated><id>http://localhost:4000/homelab/The-Home-Lab</id><content type="html" xml:base="http://localhost:4000/homelab/The-Home-Lab/">&lt;p&gt;Like most technical people I have a home lab. Actually, I’ve had one for many years now and the lab became even more important once I moved from engineering roles to become a paper pusher (Architect). You see, I really like keeping up with the latest technologies, and more importantly, keep the skills up-to-date.&lt;/p&gt;
+&lt;p&gt;“What about the Atom Board?” you might ask. Well, I decided to build a FreeNAS server with that. I will be elaborating on my NAS set-up in another post sometime. Meanwhile, you can see how I resolved the issue of the single Ethernet adapter in the NUC in this &lt;a href=&quot;/homelab/NUC-Squarepants/&quot;&gt;post&lt;/a&gt; and &lt;a href=&quot;/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/&quot;&gt;this&lt;/a&gt;.&lt;/p&gt;</content><category term="[&quot;Homelab&quot;]" /><category term="Homelab" /><category term="Virtualisation" /><category term="Avoton" /><category term="NUC" /><summary type="html">Updating my home lab with Intel NUCs and a self-build NAS based on the Supermicro A1SAi-2750F board</summary></entry><entry><title type="html">The Home Lab</title><link href="http://localhost:4000/homelab/The-Home-Lab/" rel="alternate" type="text/html" title="The Home Lab" /><published>2016-03-27T00:00:00+00:00</published><updated>2016-03-27T00:00:00+00:00</updated><id>http://localhost:4000/homelab/The-Home-Lab</id><content type="html" xml:base="http://localhost:4000/homelab/The-Home-Lab/">&lt;p&gt;Like most technical people I have a home lab. Actually, I’ve had one for many years now and the lab became even more important once I moved from engineering roles to become a paper pusher (Architect). You see, I really like keeping up with the latest technologies, and more importantly, keep the skills up-to-date. &lt;/p&gt;
 
 &lt;p&gt;When we first moved into this house (10 years ago) I took the opportunity to lift the floor boards – suspended floors here in the UK – and run CAT5 and Coaxial all over. The cable runs terminated at the first floor, inside an airing cupboard (That is where the BT master socket was. Don’t ask!). Due to the limited space, I installed a &lt;a href=&quot;http://www.minitran.co.uk/pages/products/list.mhtml?ct=31&amp;amp;sc=107&quot;&gt;Minitran 10” inch 6U rack&lt;/a&gt; complete with 2 x patch panels, 1 x Voice Panel, 2 x Power Distribution units and 1 x Compact Ethernet Switch. The switch was the first one to go soon after, as it was only a 10/100 job.&lt;/p&gt;
 
@@ -1042,7 +1879,7 @@ Aiino ClusterMaster 12U rack to house the servers. This rack is superb – origi
 
 &lt;ul&gt;
   &lt;li&gt;Cisco SG200-18&lt;/li&gt;
-  &lt;li&gt;NEC Express5800/R120a-1 (ESXi server)
+  &lt;li&gt;NEC Express5800/R120a-1 (ESXi server)	
     &lt;ul&gt;
       &lt;li&gt;2 x Intel Xeon E5504 @ 2GHz&lt;/li&gt;
       &lt;li&gt;32GB RAM&lt;/li&gt;
@@ -1080,16 +1917,16 @@ Aiino ClusterMaster 12U rack to house the servers. This rack is superb – origi
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Connection to the  Internet (BT Infinity FTTC) is handled by a Cisco 887VA router. Great piece of kit providing both IPSEC and SSL VPN, as well as better throughput than the standard BT modem. Wi-Fi is taken care of by an Apple Airport Extreme base station and a handful of Apple Airport Express bases around the house.&lt;/p&gt;
+&lt;p&gt;Connection to the  Internet (BT Infinity FTTC) is handled by a Cisco 887VA router. Great piece of kit providing both IPSEC and SSL VPN, as well as better throughput than the standard BT modem. Wi-Fi is taken care of by an Apple Airport Extreme base station and a handful of Apple Airport Express bases around the house. &lt;/p&gt;
 
 &lt;h2 id=&quot;meet-the-chief-architect&quot;&gt;Meet the Chief Architect&lt;/h2&gt;
 
 &lt;p&gt;No changes to the Home Lab will happen without approval from the Chief Architect!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/chief_architect.png&quot; alt=&quot;Chief Architect&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;</content><category term="[&quot;Homelab&quot;]" /><category term="Homelab" /><category term="Education" /><category term="Virtualisation" /><category term="NAS" /><summary>Like most technical people I have a home lab. Actually, I’ve had one for many years now and the lab became even more important once I moved from engineering roles to become a paper pusher (Architect). You see, I really like keeping up with the latest technologies, and more importantly, keep the skills up-to-date.</summary></entry><entry><title>Why blog?</title><link href="http://localhost:4000/Why-blog/" rel="alternate" type="text/html" title="Why blog?" /><published>2016-03-25T00:00:00+00:00</published><updated>2016-03-25T00:00:00+00:00</updated><id>http://localhost:4000/Why-blog</id><content type="html" xml:base="http://localhost:4000/Why-blog/">&lt;p&gt;Until just a few days ago I had no presence online whatsoever. I have always been more of a lurker, avidly reading other people’s blogs and generally have scoured the Interwebs for bits of information to help me along whatever little project I am embarking on.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/chief_architect.png&quot; alt=&quot;Chief Architect&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;</content><category term="[&quot;Homelab&quot;]" /><category term="Homelab" /><category term="Education" /><category term="Virtualisation" /><category term="NAS" /><summary type="html">Like most technical people I have a home lab. Actually, I’ve had one for many years now and the lab became even more important once I moved from engineering roles to become a paper pusher (Architect). You see, I really like keeping up with the latest technologies, and more importantly, keep the skills up-to-date.</summary></entry><entry><title type="html">Why blog?</title><link href="http://localhost:4000/Why-blog/" rel="alternate" type="text/html" title="Why blog?" /><published>2016-03-25T00:00:00+00:00</published><updated>2016-03-25T00:00:00+00:00</updated><id>http://localhost:4000/Why-blog</id><content type="html" xml:base="http://localhost:4000/Why-blog/">&lt;p&gt;Until just a few days ago I had no presence online whatsoever. I have always been more of a lurker, avidly reading other people’s blogs and generally have scoured the Interwebs for bits of information to help me along whatever little project I am embarking on.&lt;/p&gt;
 
 &lt;p&gt;One such project I undertook recently was to get a USB Ethernet driver working on ESXi (ended up with two). Like most things I do on my spare time this project involved something I had no previous experience of.&lt;/p&gt;
 
 &lt;p&gt;What is the importance of the above? I am always doing this sort of things (mostly successfully), but I never bothered sharing the results with anyone. What is worse, I see myself looking back at the many things I have done in the past or the issues I have had, and thinking: Why didn’t I document it properly or blog about it? This is not an ego thing, but maybe, just maybe, such sharing could be useful to someone looking for just that little help… So I have decided to finally setup my own blog and learn something new as I go along (Jekyll, Markdown, Liquid, et al.). I am not sure I will be able to blog on a regular basis – only so many hours in a day – but I will try to write at least one post per month. Lets’ see.&lt;/p&gt;
 
-&lt;p&gt;These blog posts will be more or less an aide-mémoire for myself, but might be of help to you. You might even help me with your comments.&lt;/p&gt;</content><summary>Until just a few days ago I had no presence online whatsoever. I have always been more of a lurker, avidly reading other people’s blogs and generally have scoured the Interwebs for bits of information to help me along whatever little project I am embarking on.</summary></entry></feed>
+&lt;p&gt;These blog posts will be more or less an aide-mémoire for myself, but might be of help to you. You might even help me with your comments. &lt;/p&gt;</content><summary type="html">Until just a few days ago I had no presence online whatsoever. I have always been more of a lurker, avidly reading other people’s blogs and generally have scoured the Interwebs for bits of information to help me along whatever little project I am embarking on.</summary></entry></feed>

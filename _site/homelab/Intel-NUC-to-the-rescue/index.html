@@ -1,110 +1,12 @@
 
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="en-UK" class="no-js">
   <head>
     
 
 <meta charset="utf-8">
 
-
-
-<!-- begin SEO -->
-
-
-
-
-
-
-
-
-
-<title>            Intel NUC to the rescue - DEV      TTY      </title>
-
-
-
-
-
-
-
-<meta property="og:locale" content="en-UK">
-<meta property="og:site_name" content="DEV | TTY">
-<meta property="og:title" content="Intel NUC to the rescue">
-
-
-  <link rel="canonical" href="http://localhost:4000/homelab/Intel-NUC-to-the-rescue/">
-  <meta property="og:url" content="http://localhost:4000/homelab/Intel-NUC-to-the-rescue/">
-
-
-
-  <meta property="og:description" content="Updating my home lab with Intel NUCs and a self-build NAS based on the Supermicro A1SAi-2750F board">
-
-
-
-  <meta name="twitter:site" content="@devttyuk">
-  <meta name="twitter:title" content="Intel NUC to the rescue">
-  <meta name="twitter:description" content="Updating my home lab with Intel NUCs and a self-build NAS based on the Supermicro A1SAi-2750F board">
-  <meta name="twitter:url" content="http://localhost:4000/homelab/Intel-NUC-to-the-rescue/">
-
-  
-    <meta name="twitter:card" content="summary">
-    
-      <meta name="twitter:image" content="http://localhost:4000/images/cat_tty_sm.png">
-    
-  
-
-  
-
-
-
-  
-
-  
-
-
-
-
-
-  <meta property="og:type" content="article">
-  <meta property="article:published_time" content="2016-04-13T00:00:00+01:00">
-  
-    <link rel="next" href="http://localhost:4000/apple/iTunes-Library-on-NFS-share/" title="iTunes Media Folder on NFS share">
-  
-  
-    <link rel="prev" href="http://localhost:4000/homelab/The-Home-Lab/" title="The Home Lab">
-  
-
-
-
-  <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Organization",
-      "url": "http://localhost:4000",
-      "logo": "http://localhost:4000/images/cat_tty_sm.png"
-    }
-  </script>
-
-
-
-  <script type="application/ld+json">
-    {
-      "@context" : "http://schema.org",
-      "@type" : "person",
-      "name" : "Jose Gomes",
-      "url" : "http://localhost:4000",
-      "sameAs" : ["https://twitter.com/devttyuk","https://www.linkedin.com/in/jjgomes","https://github.com/gomesjj"]
-    }
-  </script>
-
-
-
-
-  <meta name="msvalidate.01" content="426C494E4ED223A19760E7EA3829FC1A">
-
-
-
-<!-- end SEO -->
 
 
 <link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="DEV | TTY Feed">
@@ -145,14 +47,22 @@
           <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">DEV | TTY</a></li>
           
             
+              
+            
             <li class="masthead__menu-item"><a href="http://localhost:4000/year-archive/">Posts</a></li>
           
+            
+              
             
             <li class="masthead__menu-item"><a href="http://localhost:4000/categories/">Categories</a></li>
           
             
+              
+            
             <li class="masthead__menu-item"><a href="http://localhost:4000/tags/">Tags</a></li>
           
+            
+              
             
             <li class="masthead__menu-item"><a href="http://localhost:4000/about/">About</a></li>
           
@@ -168,43 +78,6 @@
 
 
 
-  
-    
-
-
-
-
-
-<nav class="breadcrumbs">
-  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
-    
-    
-    
-      
-        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
-          <meta itemprop="position" content="1" />
-        </li>
-        <span class="sep">/</span>
-      
-      
-        
-        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-          <a href="http://localhost:4000/categories/#homelab" itemprop="item"><span itemprop="name">Homelab</span></a>
-          <meta itemprop="position" content="2" />
-        </li>
-        <span class="sep">/</span>
-      
-    
-      
-      
-        <li class="current">Intel NUC to the rescue</li>
-      
-    
-  </ol>
-</nav>
-  
-
 
 <div id="main" role="main">
   
@@ -212,6 +85,7 @@
 
   <div class="sidebar sticky">
   
+
 
 
 
@@ -285,6 +159,8 @@
 </h1>
           
             <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+  
+
 
 
   1 minute read
@@ -298,11 +174,11 @@
 
 <p>I talked about my current set-up in this <a href="/homelab/The-Home-Lab/">post</a>. Some of my servers are quite old now (still serviceable, though), so it is understandable that the power requirements are high. The IBM POWER5 p505 server, in particular, slurps electricity as if there was no tomorrow.</p>
 
-<p>So, I deployed my search-fu skills and came to the conclusion that I had two options: build something based on the Intel Avoton (Atom C2000 series) or go with the Intel NUC. I also looked briefly at the Mac Mini, but the latest models with soldered on memory didn’t appeal to me. In the end, I plumped for both an Avoton self-build based around the <a href="https://www.supermicro.com/products/motherboard/ATOM/X10/A1SAi-2750F.cfm">Supermicro A1SAi-2750F</a> and an Intel NUC <a href="http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-dc53427hye-board-d53427rke.html">DC53427HYEA</a> to try them out.</p>
+<p>So, I deployed my search-fu skills and came to the conclusion that I had two options: build something based on the Intel Avoton (Atom C2000 series) or go with the Intel NUC. I also looked briefly at the Mac Mini, but the latest models with soldered on memory didn’t appeal to me. In the end, I plumped for both an Avoton self-build based around the <a href="https://www.supermicro.com/products/motherboard/ATOM/X10/A1SAi-2750F.cfm">Supermicro A1SAi-2750F</a> and an Intel NUC <a href="http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-dc53427hye-board-d53427rke.html">DC53427HYEA</a> to try them out. </p>
 
-<p>The Atom C2750 eight-core is a small beast: enough grunt to play the ESXi game, but with a wallet friend 20W <abbr title="Thermal Design Power">TDP</abbr>. On the other hand, the NUC I chose, albeit third generation, was also pretty decent (17W <abbr title="Thermal Design Power">TDP</abbr>). The downside? Maximum 16GB of RAM and a single Ethernet adapter.</p>
+<p>The Atom C2750 eight-core is a small beast: enough grunt to play the ESXi game, but with a wallet friend 20W <abbr title="Thermal Design Power">TDP</abbr>. On the other hand, the NUC I chose, albeit third generation, was also pretty decent (17W <abbr title="Thermal Design Power">TDP</abbr>). The downside? Maximum 16GB of RAM and a single Ethernet adapter. </p>
 
-<p>In the end, I decided to buy three more NUCs (another DC53427HYEA and two <a href="http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-nuc5i5ryh.html">NUC5i5RYH</a>) to power my minuscule VMware cluster. One of the reasons was aesthetics: I just wanted the smallest possible footprint for the lab; and the other was the challenge of coming up with a way to add a second NIC to the little beauties. 😎</p>
+<p>In the end, I decided to buy three more NUCs (another DC53427HYEA and two <a href="http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-nuc5i5ryh.html">NUC5i5RYH</a>) to power my minuscule VMware cluster. One of the reasons was aesthetics: I just wanted the smallest possible footprint for the lab; and the other was the challenge of coming up with a way to add a second NIC to the little beauties. 😎 </p>
 
 <p>“What about the Atom Board?” you might ask. Well, I decided to build a FreeNAS server with that. I will be elaborating on my NAS set-up in another post sometime. Meanwhile, you can see how I resolved the issue of the single Ethernet adapter in the NUC in this <a href="/homelab/NUC-Squarepants/">post</a> and <a href="/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/">this</a>.</p>
 
@@ -317,6 +193,8 @@
   
 
 
+    
+  
 
 
   
@@ -354,6 +232,8 @@
 
 
 
+    
+  
 
 
   
@@ -366,7 +246,7 @@
     
       
       
-      <a href="http://localhost:4000/categories/#homelab" class="page__taxonomy-item" rel="tag">Homelab</a>
+      <a href="http://localhost:4000/categories/#homelab" class="page__taxonomy-item" rel="tag">homelab</a>
     
     </span>
   </p>
@@ -432,6 +312,45 @@
           
 
 
+  
+
+
+<div class="grid__item">
+  
+    <a href="http://localhost:4000/homelab/How-I-Built-a-Lego-Rack-for-the-Intel-NUCs/">
+  
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      
+        <div class="archive__item-teaser">
+          <img src=
+            
+              "http://localhost:4000/images/kitchen_teaser.png"
+            
+            alt="">
+        </div>
+      
+      <h2 class="archive__item-title" itemprop="headline">How I built a Lego Rack for the Intel NUCs
+</h2>
+      
+        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+  
+
+
+
+  11 minutes read
+</p>
+      
+      <p class="archive__item-excerpt" itemprop="description">Building a Lego Rack for the Intel NUCs, including a working front door. Lots of sweat, tears and last minute purchases from eBay…
+</p>
+    </article>
+  </a>
+</div>
+        
+          
+
+
+  
+
 
 <div class="grid__item">
   
@@ -451,6 +370,8 @@
 </h2>
       
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+  
+
 
 
   2 minutes read
@@ -464,6 +385,8 @@
         
           
 
+
+  
 
 
 <div class="grid__item">
@@ -484,9 +407,11 @@
 </h2>
       
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+  
 
 
-  4 minutes read
+
+  2 minutes read
 </p>
       
       <p class="archive__item-excerpt" itemprop="description">ESXi 6.5 drivers for USB 3.0 Gigabit Ethernet adapters based on the ASIX ax88179_178a or the Realtek RLT8153/RTL8152 chipsets
@@ -497,6 +422,8 @@
         
           
 
+
+  
 
 
 <div class="grid__item">
@@ -517,6 +444,8 @@
 </h2>
       
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
+  
+
 
 
   10 minutes read
@@ -524,38 +453,6 @@
       
       <p class="archive__item-excerpt" itemprop="description">ESXi drivers for USB 3.0 Gigabit Ethernet adapters based on the ASIX ax88179_178a or the Realtek RLT8153/RTL8152 chipsets
 </p>
-    </article>
-  </a>
-</div>
-        
-          
-
-
-
-<div class="grid__item">
-  
-    <a href="http://localhost:4000/apple/Intel_Mesh_Commander_on_Mac_OS_X/">
-  
-    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-      
-        <div class="archive__item-teaser">
-          <img src=
-            
-              "http://localhost:4000/images/commander.png"
-            
-            alt="">
-        </div>
-      
-      <h2 class="archive__item-title" itemprop="headline">Intel Mesh Commander on Mac OS X
-</h2>
-      
-        <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-
-
-  5 minutes read
-</p>
-      
-      <p class="archive__item-excerpt" itemprop="description">A Mac OS X application for the management of computers with Intel AMT (Active Management Technology), supporting redirection, remote desktop, remote terminal...</p>
     </article>
   </a>
 </div>
