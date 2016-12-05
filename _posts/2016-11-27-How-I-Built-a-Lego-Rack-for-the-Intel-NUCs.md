@@ -376,7 +376,7 @@ Starting with one 1x1 black smooth tile at the corners, add six 1x6 smooth black
 
 ### The NUCRac
 
-Now, we simply attach the assembled door to the frame: the top hinge goes into the overhang of the second floor and the bottom hing into the overhang of the first floor. And that's it, the rack is complete:
+Now, we simply attach the assembled door to the frame: the top hinge goes into the overhang of the second floor and the bottom hinge into the overhang of the first floor. And that's it, the rack is complete:
 
 [ ![](/images/rack/final_sm.png) ](/images/rack/final_lg.png) [ ![](/images/rack/rack_final_no_door_sm.png) ](/images/rack/rack_final_no_door_lg.png)
 
