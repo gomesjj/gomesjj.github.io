@@ -108,7 +108,7 @@ Two sides of the base plate will have a narrower gap: stick four 6x2 grey bricks
 
 <u>Step 3</u>
 
-Build the front and back "partition" walls by stacking five 4x2 grey brick right in the middle of the opening: 
+Build the front and back "partition" walls by stacking five 4x2 grey bricks right in the middle of the opening: 
 
 [ ![](/images/rack/base_front_back_sm.png) ](/images/rack/base_front_back_lg.png)
 
@@ -238,7 +238,7 @@ The top of the rack (roof, if you will) is built with the same overhang base pla
 
 ### The Work so Far  
 
-We now have a rack that will suit most people.
+We now we have a rack that will suit most people.
 
 [ ![](/images/rack/rack_no_door_sm.png) ](/images/rack/rack_no_door_lg.png)  
 
