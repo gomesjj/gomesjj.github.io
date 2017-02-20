@@ -15,7 +15,11 @@ tags: [Mac, OS X, NW.js, Homelab, Virtualisation, NUC]
 
 **Update (14/11/16)**
 
-<li>Pre-built package of MeshCommander updated to version 0.3.8</li>
+<li>Pre-built package of MeshCommander updated to version 0.3.8</li>     
+
+**Update (20/12/17)**
+
+<li>Pre-built package of MeshCommander updated to version 0.4.4</li>
 </div>
 
 Intel Active Management Technology is one of the hardware technologies (perhaps the most recognised and representative) that is part of Intel's [vPro](http://www.intel.co.uk/content/www/uk/en/architecture-and-technology/vpro/vpro-technology-general.html) offerings. AMT offers the benefits of out-of-band management similar to IPMI, but for personal computers as opposed to servers.
