@@ -21,24 +21,43 @@ In particular, I would like to thank William Lam (tip o' the hat to you, Sir), a
 <div class="notice--warning" markdown="1">
 **Update (19/05/16)**  
 
+<p></p>
+
 Following a question from Charles Biggers, I have included iPerf figures for the ASIX Dual Port Ethernet adapter. Doesn't look good...    
 
+<p></p>
+
 **Update (25/05/16)**
+<p></p>
 
 <li>TP-LINK UE300 added to the list of tested adapters</li>
 <li>Realtek driver updated to version 2.06.0-2 (Scatter Gather disabled)</li>  
 
-**Update (14/11/16)**  
+<p></p>
+
+**Update (14/11/16)**
+<p></p>  
 
 All drivers recompiled and VIBs uploaded to Bintray. Driver version numbers changed to a consistent format.  
 
-Following a request from reader Vitali the Relatek r8152 driver has been updated to support USB 2.0 adapters based on the RTL8152B chipset.  
+Following a request from reader Vitali the Relatek r8152 driver has been updated to support USB 2.0 adapters based on the RTL8152B chipset.
+<p></p>  
 
 <li>TP-LINK UE200 added to the list of tested adapters</li>  
 
-**Update (17/11/16)**
+<p></p>
 
-Both the Realtek and ASIX drivers have been recompiled for ESXi 6.5. Further details and download links [here](/homelab/USB-Ethernet-driver-for-ESXi-6.5/)
+**Update (17/11/16)**
+<p></p>
+Both the Realtek and ASIX drivers have been recompiled for ESXi 6.5. Further details and download links [here](/homelab/USB-Ethernet-driver-for-ESXi-6.5/) 
+
+<p></p> 
+
+**Update (25/02/17)**
+<p></p>  
+
+<li>Plugable USBC-E1000 added to the list of tested adapters</li>
+<li>CableCreation CD0004 added to the list of tested adapters</li>
 
 </div>  
 
@@ -69,6 +88,8 @@ The following devices were tested with these drivers.
 
 * [Plugable USB 3.0 to 10/100/1000 Gigabit Ethernet LAN Network Adapter](https://www.amazon.co.uk/gp/product/B00AQM8586/ref=oh_aui_detailpage_o02_s00?ie=UTF8&psc=1)
 
+* [Plugable USB-C to 10/100/1000 Gigabit Ethernet LAN Network Adapter](https://www.amazon.co.uk/dp/B011DDXGVC/ref=pe_1909131_77697001_tnp_email_TE_AMZLdp_2)
+
 
 ### Realtek
 
@@ -79,6 +100,8 @@ The following devices were tested with these drivers.
 * [TP-LINK UE300 USB 3.0 to Gigabit Ethernet Network Adapter](https://www.amazon.co.uk/gp/product/B00YOKMKE6/ref=pe_1959711_130662621_em_1p_0_ti)
 
 * [Rankie SuperSpeed USB 3.0 to RJ45 Gigabit Ethernet Network Adapter](https://www.amazon.co.uk/gp/product/B010SEARPU/ref=ox_sc_act_title_1?ie=UTF8&psc=1&smid=A7ZMMLW05YAY7)
+
+* [CableCreation Gold Plated USB 3.1 Type C (USB-C) to RJ45 Gigabit Ethernet LAN Network Adapter](https://www.amazon.co.uk/dp/B0126J6WYK/ref=pe_1909131_77697001_tnp_email_TE_AMZLdp_1)
 
 Tested by Glen Kemp
 
