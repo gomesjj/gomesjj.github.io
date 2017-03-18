@@ -37,7 +37,7 @@ The USB Ethernet drivers are dependent on two legacy modules (usb and usbnet); t
 
 My first attempt at loading the USB Ethernet drivers failed miserably. It took me some time to realise that in 6.5 all legacy USB drivers (xhci, ehci-hcd, usb-uhci, usb, usb-storage, etc.) have been replaced by a single native driver called vmkusb. It serves me right for not paying attention to the various announcements...
 
-Anyway, in order to get the USB Ethernet drivers to load the vmkusb module must be disabled in other for the legacy USB drivers to load. The details are described in the VMware Knowledge Base article [2147650](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2147650).
+Anyway, in order to get the USB Ethernet drivers to load the vmkusb module must be disabled for the legacy USB drivers to load. The details are described in the VMware Knowledge Base article [2147650](https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=2147650).
 
 Other than the above, there are no material differences between 6.0 and 6.5 for the legacy adapters so all performance figures described on the previous article are still valid.
 
