@@ -3,7 +3,7 @@ var store = [{
         "excerpt":"Until just a few days ago I had no presence online whatsoever. I have always been more of a lurker, avidly reading other people’s blogs and generally have scoured the Interwebs for bits of information to help me along whatever little project I am embarking on. One such project I...","categories": [],
         "tags": [],
         "url": "http://localhost:4000/Why-blog/",
-        "teaser":"http://localhost:4000/cat_tty.png"},{
+        "teaser":"http://localhost:4000/images/cat_tty.png"},{
         "title": "The Home Lab",
         "excerpt":"Like most technical people I have a home lab. Actually, I’ve had one for many years now and the lab became even more important once I moved from engineering roles to become a paper pusher (Architect). You see, I really like keeping up with the latest technologies, and more importantly,...","categories": ["Homelab"],
         "tags": ["Homelab","Education","Virtualisation","NAS"],
