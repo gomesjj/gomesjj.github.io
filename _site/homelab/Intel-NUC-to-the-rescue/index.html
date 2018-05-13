@@ -1,7 +1,7 @@
 
 
 <!doctype html>
-<html lang="en-UK" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
 
@@ -47,22 +47,14 @@
           <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">DEV | TTY</a></li>
           
             
-              
-            
             <li class="masthead__menu-item"><a href="http://localhost:4000/year-archive/">Posts</a></li>
           
-            
-              
             
             <li class="masthead__menu-item"><a href="http://localhost:4000/categories/">Categories</a></li>
           
             
-              
-            
             <li class="masthead__menu-item"><a href="http://localhost:4000/tags/">Tags</a></li>
           
-            
-              
             
             <li class="masthead__menu-item"><a href="http://localhost:4000/about/">About</a></li>
           
@@ -78,6 +70,43 @@
 
 
 
+  
+    
+
+
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="http://localhost:4000homelab" itemprop="item"><span itemprop="name">Homelab</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">Intel NUC to the rescue</li>
+      
+    
+  </ol>
+</nav>
+  
+
 
 <div id="main" role="main">
   
@@ -85,7 +114,6 @@
 
   <div class="sidebar sticky">
   
-
 
 
 
@@ -159,8 +187,6 @@
 </h1>
           
             <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-
 
 
   1 minute read
@@ -174,11 +200,11 @@
 
 <p>I talked about my current set-up in this <a href="/homelab/The-Home-Lab/">post</a>. Some of my servers are quite old now (still serviceable, though), so it is understandable that the power requirements are high. The IBM POWER5 p505 server, in particular, slurps electricity as if there was no tomorrow.</p>
 
-<p>So, I deployed my search-fu skills and came to the conclusion that I had two options: build something based on the Intel Avoton (Atom C2000 series) or go with the Intel NUC. I also looked briefly at the Mac Mini, but the latest models with soldered on memory didn’t appeal to me. In the end, I plumped for both an Avoton self-build based around the <a href="https://www.supermicro.com/products/motherboard/ATOM/X10/A1SAi-2750F.cfm">Supermicro A1SAi-2750F</a> and an Intel NUC <a href="http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-dc53427hye-board-d53427rke.html">DC53427HYEA</a> to try them out. </p>
+<p>So, I deployed my search-fu skills and came to the conclusion that I had two options: build something based on the Intel Avoton (Atom C2000 series) or go with the Intel NUC. I also looked briefly at the Mac Mini, but the latest models with soldered on memory didn’t appeal to me. In the end, I plumped for both an Avoton self-build based around the <a href="https://www.supermicro.com/products/motherboard/ATOM/X10/A1SAi-2750F.cfm">Supermicro A1SAi-2750F</a> and an Intel NUC <a href="http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-dc53427hye-board-d53427rke.html">DC53427HYEA</a> to try them out.</p>
 
-<p>The Atom C2750 eight-core is a small beast: enough grunt to play the ESXi game, but with a wallet friend 20W <abbr title="Thermal Design Power">TDP</abbr>. On the other hand, the NUC I chose, albeit third generation, was also pretty decent (17W <abbr title="Thermal Design Power">TDP</abbr>). The downside? Maximum 16GB of RAM and a single Ethernet adapter. </p>
+<p>The Atom C2750 eight-core is a small beast: enough grunt to play the ESXi game, but with a wallet friend 20W <abbr title="Thermal Design Power">TDP</abbr>. On the other hand, the NUC I chose, albeit third generation, was also pretty decent (17W <abbr title="Thermal Design Power">TDP</abbr>). The downside? Maximum 16GB of RAM and a single Ethernet adapter.</p>
 
-<p>In the end, I decided to buy three more NUCs (another DC53427HYEA and two <a href="http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-nuc5i5ryh.html">NUC5i5RYH</a>) to power my minuscule VMware cluster. One of the reasons was aesthetics: I just wanted the smallest possible footprint for the lab; and the other was the challenge of coming up with a way to add a second NIC to the little beauties. 😎 </p>
+<p>In the end, I decided to buy three more NUCs (another DC53427HYEA and two <a href="http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-nuc5i5ryh.html">NUC5i5RYH</a>) to power my minuscule VMware cluster. One of the reasons was aesthetics: I just wanted the smallest possible footprint for the lab; and the other was the challenge of coming up with a way to add a second NIC to the little beauties. 😎</p>
 
 <p>“What about the Atom Board?” you might ask. Well, I decided to build a FreeNAS server with that. I will be elaborating on my NAS set-up in another post sometime. Meanwhile, you can see how I resolved the issue of the single Ethernet adapter in the NUC in this <a href="/homelab/NUC-Squarepants/">post</a> and <a href="/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/">this</a>.</p>
 
@@ -190,66 +216,6 @@
         
 
 
-  
-
-
-    
-  
-
-
-  
-  
-  
-
-  <p class="page__taxonomy">
-    <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
-    <span itemprop="keywords">
-    
-      
-      
-      <a href="http://localhost:4000/tags/#avoton" class="page__taxonomy-item" rel="tag">Avoton</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#homelab" class="page__taxonomy-item" rel="tag">Homelab</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#nuc" class="page__taxonomy-item" rel="tag">NUC</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#virtualisation" class="page__taxonomy-item" rel="tag">Virtualisation</a>
-    
-    </span>
-  </p>
-
-
-
-
-  
-
-
-
-
-    
-  
-
-
-  
-  
-  
-
-  <p class="page__taxonomy">
-    <strong><i class="fa fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
-    <span itemprop="keywords">
-    
-      
-      
-      <a href="http://localhost:4000/categories/#homelab" class="page__taxonomy-item" rel="tag">homelab</a>
-    
-    </span>
-  </p>
 
 
         
@@ -312,8 +278,6 @@
           
 
 
-  
-
 
 <div class="grid__item">
   
@@ -333,8 +297,6 @@
 </h2>
       
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-
 
 
   11 minutes read
@@ -348,8 +310,6 @@
         
           
 
-
-  
 
 
 <div class="grid__item">
@@ -370,8 +330,6 @@
 </h2>
       
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-
 
 
   2 minutes read
@@ -385,8 +343,6 @@
         
           
 
-
-  
 
 
 <div class="grid__item">
@@ -407,8 +363,6 @@
 </h2>
       
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-
 
 
   2 minutes read
@@ -422,8 +376,6 @@
         
           
 
-
-  
 
 
 <div class="grid__item">
@@ -444,8 +396,6 @@
 </h2>
       
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-
 
 
   10 minutes read
@@ -483,11 +433,25 @@
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2016 Jose Gomes. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2018 Jose Gomes. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
       </footer>
     </div>
 
     <script src="http://localhost:4000/assets/js/main.min.js"></script>
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-77925543-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
 
 
 

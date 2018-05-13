@@ -1,7 +1,7 @@
 
 
 <!doctype html>
-<html lang="en-UK" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
 
@@ -47,22 +47,14 @@
           <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">DEV | TTY</a></li>
           
             
-              
-            
             <li class="masthead__menu-item"><a href="http://localhost:4000/year-archive/">Posts</a></li>
           
-            
-              
             
             <li class="masthead__menu-item"><a href="http://localhost:4000/categories/">Categories</a></li>
           
             
-              
-            
             <li class="masthead__menu-item"><a href="http://localhost:4000/tags/">Tags</a></li>
           
-            
-              
             
             <li class="masthead__menu-item"><a href="http://localhost:4000/about/">About</a></li>
           
@@ -78,6 +70,43 @@
 
 
 
+  
+    
+
+
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="http://localhost:4000apple" itemprop="item"><span itemprop="name">Apple</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">Intel Mesh Commander on Mac OS X</li>
+      
+    
+  </ol>
+</nav>
+  
+
 
 <div id="main" role="main">
   
@@ -85,7 +114,6 @@
 
   <div class="sidebar sticky">
   
-
 
 
 
@@ -159,8 +187,6 @@
 </h1>
           
             <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-
 
 
   5 minutes read
@@ -180,11 +206,27 @@
   <p><strong>Update (14/11/16)</strong></p>
 
   <li>Pre-built package of MeshCommander updated to version 0.3.8</li>
+  <p></p>
+
+  <p><strong>Update (20/02/17)</strong></p>
+
+  <li>Pre-built package of MeshCommander updated to version 0.4.4</li>
+  <p></p>
+
+  <p><strong>Update (03/07/17)</strong></p>
+
+  <li>Pre-built package of MeshCommander updated to version 0.4.7</li>
+  <p></p>
+
+  <p><strong>Update (05/12/17)</strong></p>
+
+  <li>Pre-built package of MeshCommander updated to version 0.5.7</li>
+  <p></p>
 </div>
 
 <p>Intel Active Management Technology is one of the hardware technologies (perhaps the most recognised and representative) that is part of Intel’s <a href="http://www.intel.co.uk/content/www/uk/en/architecture-and-technology/vpro/vpro-technology-general.html">vPro</a> offerings. AMT offers the benefits of out-of-band management similar to <abbr title="Intelligent Platform Management Interface">IPMI</abbr>, but for personal computers as opposed to servers.</p>
 
-<p>When I was selecting the NUC model(s) to use for my ESXi home lab, the fact that both the <a href="http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-dc53427hye-board-d53427rke.html">DC53427HYEA</a> and the <a href="http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-nuc5i5ryh.html">NUC5i5RYH</a> sported processors with vPro and AMT support helped me sway towards them. The NUCs were replacing kit that had full <abbr title="Intelligent Platform Management Interface">IPMI</abbr> functionality, and I knew how much I would miss the convenience of managing the new “servers” remotely. </p>
+<p>When I was selecting the NUC model(s) to use for my ESXi home lab, the fact that both the <a href="http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-dc53427hye-board-d53427rke.html">DC53427HYEA</a> and the <a href="http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-nuc5i5ryh.html">NUC5i5RYH</a> sported processors with vPro and AMT support helped me sway towards them. The NUCs were replacing kit that had full <abbr title="Intelligent Platform Management Interface">IPMI</abbr> functionality, and I knew how much I would miss the convenience of managing the new “servers” remotely.</p>
 
 <p>There was a little fly in the ointment though. As I researched the technology it became clear that all the management tools were Windows only. Even Linux support was almost non-existent except for some example code distributed with the AMT SDK. Bummer, I thought to myself, another “Macs need not apply” zone.</p>
 
@@ -208,27 +250,27 @@
 
 <p>2. Xcode</p>
 
-<p>If you haven’t installed Xcode yet, get it from the App Store, or download from <a href="https://developer.apple.com/xcode/download/"> Developer</a>. </p>
+<p>If you haven’t installed Xcode yet, get it from the App Store, or download from <a href="https://developer.apple.com/xcode/download/"> Developer</a>.</p>
 
 <p>Time for a cuppa of whatever rocks your boat, as it will take some time…</p>
 
-<p>3. Install <code>node</code>:</p>
+<p>3. Install <code class="highlighter-rouge">node</code>:</p>
 
 <p>The easiest way is by installing Homebrew first</p>
 
-<pre><code class="language-sh">ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-</code></pre>
-<p>Now, you could just install <code>node</code> and <code>npm</code> straight away, but I recommend you follow the instructions in this <a href="https://johnpapa.net/how-to-use-npm-global-without-sudo-on-osx/">post</a> by John Papa. The instructions show how to use <code>npm global</code> without the need for <code>sudo</code>.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby <span class="nt">-e</span> <span class="s2">"</span><span class="k">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/master/install<span class="k">)</span><span class="s2">"</span>
+</code></pre></div></div>
+<p>Now, you could just install <code class="highlighter-rouge">node</code> and <code class="highlighter-rouge">npm</code> straight away, but I recommend you follow the instructions in this <a href="https://johnpapa.net/how-to-use-npm-global-without-sudo-on-osx/">post</a> by John Papa. The instructions show how to use <code class="highlighter-rouge">npm global</code> without the need for <code class="highlighter-rouge">sudo</code>.</p>
 
 <p><strong><em>or</em></strong></p>
 
-<p>If you don’t mind running code compiled by someone else, just install the <code>node</code> binary, which also includes <code>npm</code>. Download it from <a href="https://nodejs.org/en/download/">here</a>.</p>
+<p>If you don’t mind running code compiled by someone else, just install the <code class="highlighter-rouge">node</code> binary, which also includes <code class="highlighter-rouge">npm</code>. Download it from <a href="https://nodejs.org/en/download/">here</a>.</p>
 
-<p>4. Install <code>nw-builder</code>:</p>
+<p>4. Install <code class="highlighter-rouge">nw-builder</code>:</p>
 
-<pre><code class="language-sh">npm install -g nw-builder
-</code></pre>
-<p>I have used both <code>nw-builder</code> and <code>nwjs-macappstore-builder</code>. Whilst both of them work well, I prefer <code>nw-builder</code> as it offers more control.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install <span class="nt">-g</span> nw-builder
+</code></pre></div></div>
+<p>I have used both <code class="highlighter-rouge">nw-builder</code> and <code class="highlighter-rouge">nwjs-macappstore-builder</code>. Whilst both of them work well, I prefer <code class="highlighter-rouge">nw-builder</code> as it offers more control.</p>
 
 <p>If you would rather decide for yourself, have a look at <a href="https://github.com/nwjs/nw-builder">nw-builder</a> and <a href="https://www.npmjs.com/package/nwjs-macappstore-builder">nwjs-macappstore-builder</a>.</p>
 
@@ -238,48 +280,48 @@
 
 <p>1. Create a directory to store the files and the built application.</p>
 
-<pre><code class="language-sh">mkdir -p ~/devel
-</code></pre>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir <span class="nt">-p</span> ~/devel
+</code></pre></div></div>
 
-<p>If you downloaded the contents of my repository, just copy them over to the above created folder. You can also clone the contents directly with <code>git</code></p>
+<p>If you downloaded the contents of my repository, just copy them over to the above created folder. You can also clone the contents directly with <code class="highlighter-rouge">git</code></p>
 
-<pre><code class="language-sh">cd ~/devel
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~/devel
 git clone https://github.com/gomesjj/MeshCommander.git
-</code></pre>
+</code></pre></div></div>
 <p>You should end-up with something like this</p>
 
-<pre><code class="language-sh">ls
-MeshCommander/
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls
+</span>MeshCommander/
 
-ls -lR MeshCommander
+<span class="nb">ls</span> <span class="nt">-lR</span> MeshCommander
 total 16
--rw-r--r--  1 gj1606  staff    90B 4 May 14:00 README.md
--rwxr-xr-x  1 gj1606  staff   1.8K 4 May 14:00 mkapp*
+<span class="nt">-rw-r--r--</span>  1 gj1606  staff    90B 4 May 14:00 README.md
+<span class="nt">-rwxr-xr-x</span>  1 gj1606  staff   1.8K 4 May 14:00 mkapp<span class="k">*</span>
 drwxr-xr-x  5 gj1606  staff   170B 4 May 14:00 files/
-drwxr-xr-x  7 gj1606  staff   238B 4 May 14:00 source/
+drwxr-xr-x  7 gj1606  staff   238B 4 May 14:00 <span class="nb">source</span>/
 
 MeshCommander/files:
 total 88
--rw-r--r--  1 gj1606  staff   2.6K 4 May 14:00 Info.plist
--rw-r--r--  1 gj1606  staff   600B 4 May 14:00 InfoPlist.strings
--rw-r--r--  1 gj1606  staff    36K 4 May 14:00 meshcommander.icns
+<span class="nt">-rw-r--r--</span>  1 gj1606  staff   2.6K 4 May 14:00 Info.plist
+<span class="nt">-rw-r--r--</span>  1 gj1606  staff   600B 4 May 14:00 InfoPlist.strings
+<span class="nt">-rw-r--r--</span>  1 gj1606  staff    36K 4 May 14:00 meshcommander.icns
 
 MeshCommander/source:
 total 3504
--rw-r--r--  1 gj1606  staff   1.7M 4 May 14:00 Commander.htm
--rwxr-xr-x  1 gj1606  staff   3.6K 4 May 14:00 favicon.ico*
--rwxr-xr-x  1 gj1606  staff   3.1K 4 May 14:00 favicon.png*
--rw-r--r--  1 gj1606  staff   593B 4 May 14:00 package.json
--rw-r--r--  1 gj1606  staff    18K 4 May 14:00 scriptblocks.txt
-</code></pre>
+<span class="nt">-rw-r--r--</span>  1 gj1606  staff   1.7M 4 May 14:00 Commander.htm
+<span class="nt">-rwxr-xr-x</span>  1 gj1606  staff   3.6K 4 May 14:00 favicon.ico<span class="k">*</span>
+<span class="nt">-rwxr-xr-x</span>  1 gj1606  staff   3.1K 4 May 14:00 favicon.png<span class="k">*</span>
+<span class="nt">-rw-r--r--</span>  1 gj1606  staff   593B 4 May 14:00 package.json
+<span class="nt">-rw-r--r--</span>  1 gj1606  staff    18K 4 May 14:00 scriptblocks.txt
+</code></pre></div></div>
 <p>2. Build the application</p>
 
-<pre><code class="language-sh">cd MeshCommander
-. ./mkapp
-</code></pre>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>MeshCommander
+<span class="nb">.</span> ./mkapp
+</code></pre></div></div>
 <p>If the build is successful you should see output similar to this:</p>
 
-<pre><code>node:61321) fs: re-evaluating native module sources is not supported. If you are using the graceful-fs module, please update it to a more recent version.
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>node:61321) fs: re-evaluating native module sources is not supported. If you are using the graceful-fs module, please update it to a more recent version.
   downloading [====================] 100% 0.0s
 
 all done!
@@ -320,22 +362,22 @@ Veriyfing Gatekeeper acceptance...
 ./build/MeshCommander/osx64/MeshCommander.app: accepted
 source=Developer ID
 override=security disabled
-</code></pre>
+</code></pre></div></div>
 
 <p><strong>Note:</strong> On first run, NW.js is downloaded and cached locally for subsequent builds:</p>
 
-<pre><code class="language-sh">&lt;SNIP&gt;
-  downloading [====================] 100% 0.0s
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;SNIP&gt;
+  downloading <span class="o">[====================]</span> 100% 0.0s
 &lt;/SNIP&gt;
 
-ls cache/
+<span class="nb">ls </span>cache/
 0.15.0-rc2/
-</code></pre>
+</code></pre></div></div>
 <p>The packaged application will be under the <strong>build</strong> directory:</p>
 
-<pre><code class="language-sh">ls ./build/MeshCommander/osx64/
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> ./build/MeshCommander/osx64/
 MeshCommander.app
-</code></pre>
+</code></pre></div></div>
 
 <h3 id="look-whats-come-out-from-the-oven">Look what’s come out from the oven</h3>
 
@@ -363,74 +405,6 @@ MeshCommander.app
         
 
 
-  
-
-
-    
-  
-
-
-  
-  
-  
-
-  <p class="page__taxonomy">
-    <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
-    <span itemprop="keywords">
-    
-      
-      
-      <a href="http://localhost:4000/tags/#homelab" class="page__taxonomy-item" rel="tag">Homelab</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#mac" class="page__taxonomy-item" rel="tag">Mac</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#nuc" class="page__taxonomy-item" rel="tag">NUC</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#nw-js" class="page__taxonomy-item" rel="tag">NW.js</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#os-x" class="page__taxonomy-item" rel="tag">OS X</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#virtualisation" class="page__taxonomy-item" rel="tag">Virtualisation</a>
-    
-    </span>
-  </p>
-
-
-
-
-  
-
-
-
-
-    
-  
-
-
-  
-  
-  
-
-  <p class="page__taxonomy">
-    <strong><i class="fa fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
-    <span itemprop="keywords">
-    
-      
-      
-      <a href="http://localhost:4000/categories/#apple" class="page__taxonomy-item" rel="tag">apple</a>
-    
-    </span>
-  </p>
 
 
         
@@ -493,8 +467,6 @@ MeshCommander.app
           
 
 
-  
-
 
 <div class="grid__item">
   
@@ -514,8 +486,6 @@ MeshCommander.app
 </h2>
       
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-
 
 
   11 minutes read
@@ -529,8 +499,6 @@ MeshCommander.app
         
           
 
-
-  
 
 
 <div class="grid__item">
@@ -551,8 +519,6 @@ MeshCommander.app
 </h2>
       
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-
 
 
   2 minutes read
@@ -566,8 +532,6 @@ MeshCommander.app
         
           
 
-
-  
 
 
 <div class="grid__item">
@@ -588,8 +552,6 @@ MeshCommander.app
 </h2>
       
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-
 
 
   2 minutes read
@@ -603,8 +565,6 @@ MeshCommander.app
         
           
 
-
-  
 
 
 <div class="grid__item">
@@ -625,8 +585,6 @@ MeshCommander.app
 </h2>
       
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-
 
 
   10 minutes read
@@ -664,11 +622,25 @@ MeshCommander.app
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2016 Jose Gomes. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2018 Jose Gomes. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
       </footer>
     </div>
 
     <script src="http://localhost:4000/assets/js/main.min.js"></script>
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-77925543-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
 
 
 

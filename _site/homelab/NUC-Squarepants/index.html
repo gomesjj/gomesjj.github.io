@@ -1,7 +1,7 @@
 
 
 <!doctype html>
-<html lang="en-UK" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
 
@@ -47,22 +47,14 @@
           <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">DEV | TTY</a></li>
           
             
-              
-            
             <li class="masthead__menu-item"><a href="http://localhost:4000/year-archive/">Posts</a></li>
           
-            
-              
             
             <li class="masthead__menu-item"><a href="http://localhost:4000/categories/">Categories</a></li>
           
             
-              
-            
             <li class="masthead__menu-item"><a href="http://localhost:4000/tags/">Tags</a></li>
           
-            
-              
             
             <li class="masthead__menu-item"><a href="http://localhost:4000/about/">About</a></li>
           
@@ -78,6 +70,43 @@
 
 
 
+  
+    
+
+
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="http://localhost:4000homelab" itemprop="item"><span itemprop="name">Homelab</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">NUC Squarepants</li>
+      
+    
+  </ol>
+</nav>
+  
+
 
 <div id="main" role="main">
   
@@ -85,7 +114,6 @@
 
   <div class="sidebar sticky">
   
-
 
 
 
@@ -159,8 +187,6 @@
 </h1>
           
             <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-
 
 
   5 minutes read
@@ -170,9 +196,9 @@
       
 
       <section class="page__content" itemprop="text">
-        <p>My first Intel NUC was yet to be delivered, but I was already looking around for a solution for it’s greatest shortcoming: the single Ethernet adapter. So, here is how my first attempt at solving that went. </p>
+        <p>My first Intel NUC was yet to be delivered, but I was already looking around for a solution for it’s greatest shortcoming: the single Ethernet adapter. So, here is how my first attempt at solving that went.</p>
 
-<p>As I mentioned in my previous post about the evolution of my <a href="/homelab/Intel-NUC-to-the-rescue">home lab</a>, I decided to test the waters with an Intel NUC <a href="http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-dc53427hye-board-d53427rke.html">DC53427HYEA</a>. I was as yet unsure as to whether or not the NUC would be an ESXi host, but I knew I could run Windows Server 2012 on it. If I couldn’t get a second NIC for ESXi, the NUC would still have a purpose as my new Domain Controller. </p>
+<p>As I mentioned in my previous post about the evolution of my <a href="/homelab/Intel-NUC-to-the-rescue">home lab</a>, I decided to test the waters with an Intel NUC <a href="http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-dc53427hye-board-d53427rke.html">DC53427HYEA</a>. I was as yet unsure as to whether or not the NUC would be an ESXi host, but I knew I could run Windows Server 2012 on it. If I couldn’t get a second NIC for ESXi, the NUC would still have a purpose as my new Domain Controller.</p>
 
 <p class="notice--info">As an aside, I chose this older NUC model, and later the <a href="http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-nuc5i5ryh.html">NUC5i5RYH</a>, because they are the only models in the line up to include Intel <abbr title="Active Management Technology">AMT</abbr>. I think running with slightly older models is a price worth paying in exchange for remote out-of-band management.</p>
 
@@ -186,7 +212,7 @@
 
 <p>Without further ado, I present to you the NUC Squarepants design:</p>
 
-<p><img src="/images/nuc/nuc_squarepants.png" alt="NUC Squarepants" class="align-center" /> </p>
+<p><img src="/images/nuc/nuc_squarepants.png" alt="NUC Squarepants" class="align-center" /></p>
 
 <p>OK, it doesn’t look quite like that. We will see how it really looks like in a while, but first, here is the shopping list.</p>
 
@@ -224,11 +250,11 @@
 
 <p>3. Fix the second half of the extender (with the mPCIe connector) to the custom base.</p>
 
-<p><img src="/images/nuc/3_nuc_base_adap.png" alt="Syba mPCIe Adapter" class="align-center" />   </p>
+<p><img src="/images/nuc/3_nuc_base_adap.png" alt="Syba mPCIe Adapter" class="align-center" /></p>
 
 <p>4. Plug the main board of the Ethernet adapter to the extender in the custom base:</p>
 
-<p><img src="/images/nuc/4_nuc_base_eth.png" alt="Syba mPCIe Adapter" class="align-center" /> </p>
+<p><img src="/images/nuc/4_nuc_base_eth.png" alt="Syba mPCIe Adapter" class="align-center" /></p>
 
 <p>5. The custom base should look like this once all the cables are connected:</p>
 
@@ -252,9 +278,9 @@
 
 <h3 id="making-it-all-work">Making it all work</h3>
 
-<p>There is no out-of-the-box support for Realtek adapters on ESXi, so a driver will need to be installed. I will just point you in the direction of the excellent <a href="https://vibsdepot.v-front.de/wiki/index.php/List_of_currently_available_ESXi_packages">VIBSDepot</a> – just grab the <code>net55-r8168</code> VIB and you should be sorted.</p>
+<p>There is no out-of-the-box support for Realtek adapters on ESXi, so a driver will need to be installed. I will just point you in the direction of the excellent <a href="https://vibsdepot.v-front.de/wiki/index.php/List_of_currently_available_ESXi_packages">VIBSDepot</a> – just grab the <code class="highlighter-rouge">net55-r8168</code> VIB and you should be sorted.</p>
 
-<p class="notice--info"><strong>Note:</strong> If you are not running ESXi 6.0 or 5.5 Update 3, you will also need a driver for the on-board Intel NIC. You need the <code>net-e1000e</code> VIB, so get it too whilst you are at it.</p>
+<p class="notice--info"><strong>Note:</strong> If you are not running ESXi 6.0 or 5.5 Update 3, you will also need a driver for the on-board Intel NIC. You need the <code class="highlighter-rouge">net-e1000e</code> VIB, so get it too whilst you are at it.</p>
 
 <h3 id="ether-device-details">Ether device details</h3>
 
@@ -278,62 +304,6 @@
         
 
 
-  
-
-
-    
-  
-
-
-  
-  
-  
-
-  <p class="page__taxonomy">
-    <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
-    <span itemprop="keywords">
-    
-      
-      
-      <a href="http://localhost:4000/tags/#homelab" class="page__taxonomy-item" rel="tag">Homelab</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#nuc" class="page__taxonomy-item" rel="tag">NUC</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#virtualisation" class="page__taxonomy-item" rel="tag">Virtualisation</a>
-    
-    </span>
-  </p>
-
-
-
-
-  
-
-
-
-
-    
-  
-
-
-  
-  
-  
-
-  <p class="page__taxonomy">
-    <strong><i class="fa fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
-    <span itemprop="keywords">
-    
-      
-      
-      <a href="http://localhost:4000/categories/#homelab" class="page__taxonomy-item" rel="tag">homelab</a>
-    
-    </span>
-  </p>
 
 
         
@@ -396,8 +366,6 @@
           
 
 
-  
-
 
 <div class="grid__item">
   
@@ -417,8 +385,6 @@
 </h2>
       
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-
 
 
   11 minutes read
@@ -432,8 +398,6 @@
         
           
 
-
-  
 
 
 <div class="grid__item">
@@ -454,8 +418,6 @@
 </h2>
       
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-
 
 
   2 minutes read
@@ -469,8 +431,6 @@
         
           
 
-
-  
 
 
 <div class="grid__item">
@@ -491,8 +451,6 @@
 </h2>
       
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-
 
 
   2 minutes read
@@ -506,8 +464,6 @@
         
           
 
-
-  
 
 
 <div class="grid__item">
@@ -528,8 +484,6 @@
 </h2>
       
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-
 
 
   10 minutes read
@@ -567,11 +521,25 @@
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2016 Jose Gomes. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2018 Jose Gomes. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
       </footer>
     </div>
 
     <script src="http://localhost:4000/assets/js/main.min.js"></script>
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-77925543-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
 
 
 

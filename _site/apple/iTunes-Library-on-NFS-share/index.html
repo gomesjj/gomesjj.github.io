@@ -1,7 +1,7 @@
 
 
 <!doctype html>
-<html lang="en-UK" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
 
@@ -47,22 +47,14 @@
           <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">DEV | TTY</a></li>
           
             
-              
-            
             <li class="masthead__menu-item"><a href="http://localhost:4000/year-archive/">Posts</a></li>
           
-            
-              
             
             <li class="masthead__menu-item"><a href="http://localhost:4000/categories/">Categories</a></li>
           
             
-              
-            
             <li class="masthead__menu-item"><a href="http://localhost:4000/tags/">Tags</a></li>
           
-            
-              
             
             <li class="masthead__menu-item"><a href="http://localhost:4000/about/">About</a></li>
           
@@ -78,6 +70,43 @@
 
 
 
+  
+    
+
+
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="http://localhost:4000apple" itemprop="item"><span itemprop="name">Apple</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">iTunes Media Folder on NFS share</li>
+      
+    
+  </ol>
+</nav>
+  
+
 
 <div id="main" role="main">
   
@@ -85,7 +114,6 @@
 
   <div class="sidebar sticky">
   
-
 
 
 
@@ -159,8 +187,6 @@
 </h1>
           
             <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-
 
 
   4 minutes read
@@ -180,36 +206,36 @@
 
 <p>What I needed was UTF 8 support. Not only that, but UTF 8 support that was compatible with the Unicode normalisation adopted by Apple, which is NFD. This is not something that can be changed once a ZFS file system is created, so I had to destroy the file system and recreate like so:</p>
 
-<pre><code class="language-sh">zfs create -o normalization=formD -o casesensitivity=mixed -o nfs=on \
--o aclinherit=passthrough-x -o aclmode=passthrough -o compression=on -o utf8only=on tank/media 
-</code></pre>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>zfs create <span class="nt">-o</span> <span class="nv">normalization</span><span class="o">=</span>formD <span class="nt">-o</span> <span class="nv">casesensitivity</span><span class="o">=</span>mixed <span class="nt">-o</span> <span class="nv">nfs</span><span class="o">=</span>on <span class="se">\</span>
+<span class="nt">-o</span> <span class="nv">aclinherit</span><span class="o">=</span>passthrough-x <span class="nt">-o</span> <span class="nv">aclmode</span><span class="o">=</span>passthrough <span class="nt">-o</span> <span class="nv">compression</span><span class="o">=</span>on <span class="nt">-o</span> <span class="nv">utf8only</span><span class="o">=</span>on tank/media 
+</code></pre></div></div>
 
 <p>Now, lets forward on a few years and see if the same had to be done on FreeNAS. It turns out it didn’t. Instead, what I did was to change the “charset” and “lang” login options to support UTF 8. To do that, as root, edit <em>/etc/login.conf</em> and add the following lines to the <em>default:</em> stanza after the <em>umask</em> entry:</p>
 
-<pre><code class="language-vim">:charset=UTF-8:\
-:lang=en_GB.UTF-8:
-</code></pre>
+<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">:</span>charset<span class="p">=</span>UTF<span class="m">-8</span><span class="p">:</span>\
+<span class="p">:</span><span class="k">lang</span><span class="p">=</span>en_GB<span class="p">.</span>UTF<span class="m">-8</span><span class="p">:</span>
+</code></pre></div></div>
 <p>Save the file, then run the following commands:</p>
 
-<pre><code class="language-sh">cap_mkdb /etc/login.conf
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cap_mkdb /etc/login.conf
 cp /etc/login.conf.db /conf/base/etc
 cp /etc/login.conf /conf/base/etc
-</code></pre>
+</code></pre></div></div>
 
 <p>I suppose I could have done the same with Solaris and just set the <em>charset</em> and <em>lang</em> to UTF 8, but hey.</p>
 
-<p><strong>Note:</strong> Don’t try to add directories or files with UTF 8 characters directly from the command line – use the Finder instead and all will be peachy.</p>
+<p class="notice--danger"><strong>Note:</strong> Don’t try to add directories or files with UTF 8 characters directly from the command line – use the Finder instead and all will be peachy.</p>
 
 <h3 id="automount-is-your-friend">Automount is your friend</h3>
 
-<p>With my NFS share in place, I then had to look at the best way to make it available at boot time. If you look around t’interwebs, the default solution is to use the “Connect to Server” dialog in the Finder. That is not very elegant and in my experience does not survive a reboot. Well, you can add the driver to your “Login Items”, but that is even uglier. Instead, I opted for an <code>automount</code> map. The great thing about Mac OS X is that it is still BSD at heart, and the tools are all there.</p>
+<p>With my NFS share in place, I then had to look at the best way to make it available at boot time. If you look around t’interwebs, the default solution is to use the “Connect to Server” dialog in the Finder. That is not very elegant and in my experience does not survive a reboot. Well, you can add the driver to your “Login Items”, but that is even uglier. Instead, I opted for an <code class="highlighter-rouge">automount</code> map. The great thing about Mac OS X is that it is still BSD at heart, and the tools are all there.</p>
 
-<p>So, start by creating your auto mount map, as root, using you preferred editor (I am a <code>vi</code> man):</p>
+<p>So, start by creating your auto mount map, as root, using you preferred editor (I am a <code class="highlighter-rouge">vi</code> man):</p>
 
-<pre><code>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 /Media -fstype=nfs,rw,bg,tcp,rsize=32768,wsize=32768,resvport,intr,nolocks,locallocks ip_address_or_hostname:/mnt/tank/media
 
-</code></pre>
+</code></pre></div></div>
 
 <p>I normally use the IP address so that it doesn’t depend on DNS resolution, but you can choose otherwise. In this case, my ZFS share is called <strong>media</strong> and I am mounting it under a folder called <strong>/Media</strong>.</p>
 
@@ -217,13 +243,13 @@ cp /etc/login.conf /conf/base/etc
 
 <p>Next, add your newly created map as the last item on <strong>/etc/auto_master</strong>, also as root:</p>
 
-<pre><code class="language-vim">/-			auto_nas	-nosuid
-</code></pre>
+<div class="language-vim highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/<span class="p">-</span>			auto_nas	<span class="p">-</span>nosuid
+</code></pre></div></div>
 
 <p>You are now ready to mount your NFS share, by executing the following command:</p>
 
-<pre><code class="language-sh">sudo automount -vc
-</code></pre>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>automount <span class="nt">-vc</span>
+</code></pre></div></div>
 <p>That is it. If your handy work is correct the NFS share should be mounted under <strong>/Volumes/Media</strong> and ready to go.</p>
 
 <h3 id="point-itunes-to-the-new-media-folder-location">Point iTunes to the new media folder location</h3>
@@ -234,7 +260,7 @@ cp /etc/login.conf /conf/base/etc
 
 <h3 id="thats-it">That’s it</h3>
 
-<p>Now, this is not quite a single iTunes Library for everybody, but it is the next best thing. </p>
+<p>Now, this is not quite a single iTunes Library for everybody, but it is the next best thing.</p>
 
 <p>I tried removing the “iTunes Music Library.xml” file from the local computers and having a single instance on the NAS, but that doesn’t work well long term. What it means is that if a new item is added to my library it will not be automatically added to my wife’s library – that needs to be done manually. On the other hand, I actually prefer this setup, as I don’t necessarily want some of my wife’s music on my library anyway… 😉</p>
 
@@ -248,70 +274,6 @@ cp /etc/login.conf /conf/base/etc
         
 
 
-  
-
-
-    
-  
-
-
-  
-  
-  
-
-  <p class="page__taxonomy">
-    <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
-    <span itemprop="keywords">
-    
-      
-      
-      <a href="http://localhost:4000/tags/#itunes" class="page__taxonomy-item" rel="tag">iTunes</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#mac" class="page__taxonomy-item" rel="tag">Mac</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#nas" class="page__taxonomy-item" rel="tag">NAS</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#nfs" class="page__taxonomy-item" rel="tag">NFS</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#os-x" class="page__taxonomy-item" rel="tag">OS X</a>
-    
-    </span>
-  </p>
-
-
-
-
-  
-
-
-
-
-    
-  
-
-
-  
-  
-  
-
-  <p class="page__taxonomy">
-    <strong><i class="fa fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
-    <span itemprop="keywords">
-    
-      
-      
-      <a href="http://localhost:4000/categories/#apple" class="page__taxonomy-item" rel="tag">apple</a>
-    
-    </span>
-  </p>
 
 
         
@@ -374,8 +336,6 @@ cp /etc/login.conf /conf/base/etc
           
 
 
-  
-
 
 <div class="grid__item">
   
@@ -395,8 +355,6 @@ cp /etc/login.conf /conf/base/etc
 </h2>
       
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-
 
 
   11 minutes read
@@ -410,8 +368,6 @@ cp /etc/login.conf /conf/base/etc
         
           
 
-
-  
 
 
 <div class="grid__item">
@@ -432,8 +388,6 @@ cp /etc/login.conf /conf/base/etc
 </h2>
       
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-
 
 
   2 minutes read
@@ -447,8 +401,6 @@ cp /etc/login.conf /conf/base/etc
         
           
 
-
-  
 
 
 <div class="grid__item">
@@ -469,8 +421,6 @@ cp /etc/login.conf /conf/base/etc
 </h2>
       
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-
 
 
   2 minutes read
@@ -484,8 +434,6 @@ cp /etc/login.conf /conf/base/etc
         
           
 
-
-  
 
 
 <div class="grid__item">
@@ -506,8 +454,6 @@ cp /etc/login.conf /conf/base/etc
 </h2>
       
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-
 
 
   10 minutes read
@@ -545,11 +491,25 @@ cp /etc/login.conf /conf/base/etc
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2016 Jose Gomes. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2018 Jose Gomes. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
       </footer>
     </div>
 
     <script src="http://localhost:4000/assets/js/main.min.js"></script>
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-77925543-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
 
 
 

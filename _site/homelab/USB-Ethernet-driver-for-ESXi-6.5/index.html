@@ -1,7 +1,7 @@
 
 
 <!doctype html>
-<html lang="en-UK" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
 
@@ -47,22 +47,14 @@
           <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">DEV | TTY</a></li>
           
             
-              
-            
             <li class="masthead__menu-item"><a href="http://localhost:4000/year-archive/">Posts</a></li>
           
-            
-              
             
             <li class="masthead__menu-item"><a href="http://localhost:4000/categories/">Categories</a></li>
           
             
-              
-            
             <li class="masthead__menu-item"><a href="http://localhost:4000/tags/">Tags</a></li>
           
-            
-              
             
             <li class="masthead__menu-item"><a href="http://localhost:4000/about/">About</a></li>
           
@@ -78,6 +70,43 @@
 
 
 
+  
+    
+
+
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="http://localhost:4000homelab" itemprop="item"><span itemprop="name">Homelab</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">USB Ethernet driver for ESXi 6.5</li>
+      
+    
+  </ol>
+</nav>
+  
+
 
 <div id="main" role="main">
   
@@ -85,7 +114,6 @@
 
   <div class="sidebar sticky">
   
-
 
 
 
@@ -159,8 +187,6 @@
 </h1>
           
             <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-
 
 
   2 minutes read
@@ -170,41 +196,41 @@
       
 
       <section class="page__content" itemprop="text">
-        <p>Back in May I wrote this <a href="/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/">piece</a> about USB Ethernet drivers for ESXi. I have been using both Realtek and ASIX adapters to complement the single Ethernet adapter on the Intel NUCs, and they have proved to be rock solid. </p>
+        <p>Back in May I wrote this <a href="/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/">piece</a> about USB Ethernet drivers for ESXi. I have been using both Realtek and ASIX adapters to complement the single Ethernet adapter on the Intel NUCs, and they have proved to be rock solid.</p>
 
 <p>Fast forward a few months, and as soon as ESXi 6.5 was announced people started asking if I could recompile the drivers for the new release. Finally I had some time this week to look into that. The result? A lot of wasted time downloading the 6.5 disclosure packages, setting up the environment, tweaking build scripts, etc. It turns out that compiling the drivers in the ESXi 6.0 environment I built previously worked much better, with just a single trivial change to the USB namespace.</p>
 
 <p>The single change I had to make was to change the namespace dependencies map from this:</p>
 
-<pre><code class="language-sh">echo -e "VMK_NAMESPACE_REQUIRED(\"com.vmware.usb\", \"9.2.3.0\");\
-\nVMK_NAMESPACE_REQUIRED(\"com.vmware.usbnet\", \"9.2.3.0\");"\
-</code></pre>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="nt">-e</span> <span class="s2">"VMK_NAMESPACE_REQUIRED(</span><span class="se">\"</span><span class="s2">com.vmware.usb</span><span class="se">\"</span><span class="s2">, </span><span class="se">\"</span><span class="s2">9.2.3.0</span><span class="se">\"</span><span class="s2">);</span><span class="se">\</span><span class="s2">
+</span><span class="se">\n</span><span class="s2">VMK_NAMESPACE_REQUIRED(</span><span class="se">\"</span><span class="s2">com.vmware.usbnet</span><span class="se">\"</span><span class="s2">, </span><span class="se">\"</span><span class="s2">9.2.3.0</span><span class="se">\"</span><span class="s2">);"</span><span class="se">\</span>
+</code></pre></div></div>
 
 <p>To this:</p>
 
-<pre><code class="language-sh">echo -e "VMK_NAMESPACE_REQUIRED(\"com.vmware.usb\", \"10.0\");\
-\nVMK_NAMESPACE_REQUIRED(\"com.vmware.usbnet\", \"9.2.3.0\");"\
-</code></pre>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="nt">-e</span> <span class="s2">"VMK_NAMESPACE_REQUIRED(</span><span class="se">\"</span><span class="s2">com.vmware.usb</span><span class="se">\"</span><span class="s2">, </span><span class="se">\"</span><span class="s2">10.0</span><span class="se">\"</span><span class="s2">);</span><span class="se">\</span><span class="s2">
+</span><span class="se">\n</span><span class="s2">VMK_NAMESPACE_REQUIRED(</span><span class="se">\"</span><span class="s2">com.vmware.usbnet</span><span class="se">\"</span><span class="s2">, </span><span class="se">\"</span><span class="s2">9.2.3.0</span><span class="se">\"</span><span class="s2">);"</span><span class="se">\</span>
+</code></pre></div></div>
 
 <p>Note the sneak change introduced by VMware – the USB namespace is version 10.0 now…</p>
 
 <aside class="sidebar__right">
 <nav class="toc">
-    <header><h4 class="nav__title"><i class="fa fa-"></i> </h4></header>
+    <header><h4 class="nav__title"><i class="fa fa-file-text"></i> Contents</h4></header>
 <ul class="toc__menu" id="markdown-toc">
-  <li><a href="#whats-new">What’s new</a></li>
-  <li><a href="#tested-devices">Tested devices</a>    <ul>
-      <li><a href="#asix">ASIX</a></li>
-      <li><a href="#realtek">Realtek</a></li>
+  <li><a href="#whats-new" id="markdown-toc-whats-new">What’s new</a></li>
+  <li><a href="#tested-devices" id="markdown-toc-tested-devices">Tested devices</a>    <ul>
+      <li><a href="#asix" id="markdown-toc-asix">ASIX</a></li>
+      <li><a href="#realtek" id="markdown-toc-realtek">Realtek</a></li>
     </ul>
   </li>
-  <li><a href="#the-drivers">The drivers</a>    <ul>
-      <li><a href="#asix-1">ASIX</a>        <ul>
-          <li><a href="#esxi-65-vib">ESXi 6.5 VIB</a></li>
+  <li><a href="#the-drivers" id="markdown-toc-the-drivers">The drivers</a>    <ul>
+      <li><a href="#asix-1" id="markdown-toc-asix-1">ASIX</a>        <ul>
+          <li><a href="#esxi-65-vib" id="markdown-toc-esxi-65-vib">ESXi 6.5 VIB</a></li>
         </ul>
       </li>
-      <li><a href="#realtek-1">Realtek</a>        <ul>
-          <li><a href="#esxi-65-vib-1">ESXi 6.5 VIB</a></li>
+      <li><a href="#realtek-1" id="markdown-toc-realtek-1">Realtek</a>        <ul>
+          <li><a href="#esxi-65-vib-1" id="markdown-toc-esxi-65-vib-1">ESXi 6.5 VIB</a></li>
         </ul>
       </li>
     </ul>
@@ -218,11 +244,11 @@
 
 <p>Quite a lot! Apart from the new functionality discussed in detail by the VMware Gurus elsewhere, looking at the latest ODP packages clearly reveals VMware’s intention to move away from what they call “legacy” drivers.</p>
 
-<p>The USB Ethernet drivers are dependent on two legacy modules (usb and usbnet); the modules are still available in ESXi 6.5, but will not load by default. </p>
+<p>The USB Ethernet drivers are dependent on two legacy modules (usb and usbnet); the modules are still available in ESXi 6.5, but will not load by default.</p>
 
 <p>My first attempt at loading the USB Ethernet drivers failed miserably. It took me some time to realise that in 6.5 all legacy USB drivers (xhci, ehci-hcd, usb-uhci, usb, usb-storage, etc.) have been replaced by a single native driver called vmkusb. It serves me right for not paying attention to the various announcements…</p>
 
-<p>Anyway, in other to get the USB Ethernet drivers to load the vmkusb module must be disabled in other for the legacy USB drivers to load. The details are described in the VMware Knowledge Base article <a href="https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=2147650">2147650</a>.</p>
+<p>Anyway, in order to get the USB Ethernet drivers to load the vmkusb module must be disabled for the legacy USB drivers to load. The details are described in the VMware Knowledge Base article <a href="https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&amp;cmd=displayKC&amp;externalId=2147650">2147650</a>.</p>
 
 <p>Other than the above, there are no material differences between 6.0 and 6.5 for the legacy adapters so all performance figures described on the previous article are still valid.</p>
 
@@ -270,10 +296,10 @@
 <p>USB 2.0 Adapter (RTL8152B Chipset)</p>
 
 <ul>
-  <li><a href="https://www.amazon.co.uk/TP-LINK-UE200-Ethernet-Foldable-Ultrabook/dp/B01GRY7RHG">TP-LINK UE200 USB 2.0 to 100 Mbps Ethernet Network Adapter</a>  </li>
+  <li><a href="https://www.amazon.co.uk/TP-LINK-UE200-Ethernet-Foldable-Ultrabook/dp/B01GRY7RHG">TP-LINK UE200 USB 2.0 to 100 Mbps Ethernet Network Adapter</a></li>
 </ul>
 
-<p>Tested by Glen Kemp  </p>
+<p>Tested by Glen Kemp</p>
 
 <ul>
   <li><a href="https://www.amazon.co.uk/gp/product/B00WR6A57S/ref=as_li_ss_tl?ie=UTF8&amp;psc=1&amp;linkCode=sl1&amp;tag=s0517-21&amp;linkId=5815c60c53524b534b98dcd596eab09c">Smays 3-Port OTG USB-HUB and USB2.0 RJ45 Ethernet Network Adapter</a></li>
@@ -303,66 +329,6 @@
         
 
 
-  
-
-
-    
-  
-
-
-  
-  
-  
-
-  <p class="page__taxonomy">
-    <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
-    <span itemprop="keywords">
-    
-      
-      
-      <a href="http://localhost:4000/tags/#esxi" class="page__taxonomy-item" rel="tag">ESXi</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#ethernet" class="page__taxonomy-item" rel="tag">Ethernet</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#homelab" class="page__taxonomy-item" rel="tag">Homelab</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#usb" class="page__taxonomy-item" rel="tag">USB</a>
-    
-    </span>
-  </p>
-
-
-
-
-  
-
-
-
-
-    
-  
-
-
-  
-  
-  
-
-  <p class="page__taxonomy">
-    <strong><i class="fa fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
-    <span itemprop="keywords">
-    
-      
-      
-      <a href="http://localhost:4000/categories/#homelab" class="page__taxonomy-item" rel="tag">homelab</a>
-    
-    </span>
-  </p>
 
 
         
@@ -425,8 +391,6 @@
           
 
 
-  
-
 
 <div class="grid__item">
   
@@ -446,8 +410,6 @@
 </h2>
       
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-
 
 
   11 minutes read
@@ -461,8 +423,6 @@
         
           
 
-
-  
 
 
 <div class="grid__item">
@@ -483,8 +443,6 @@
 </h2>
       
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-
 
 
   2 minutes read
@@ -498,8 +456,6 @@
         
           
 
-
-  
 
 
 <div class="grid__item">
@@ -520,8 +476,6 @@
 </h2>
       
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-
 
 
   11 minutes read
@@ -535,8 +489,6 @@
         
           
 
-
-  
 
 
 <div class="grid__item">
@@ -557,8 +509,6 @@
 </h2>
       
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-
 
 
   5 minutes read
@@ -595,11 +545,25 @@
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2016 Jose Gomes. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2018 Jose Gomes. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
       </footer>
     </div>
 
     <script src="http://localhost:4000/assets/js/main.min.js"></script>
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-77925543-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
 
 
 

@@ -1,7 +1,7 @@
 
 
 <!doctype html>
-<html lang="en-UK" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
 
@@ -47,22 +47,14 @@
           <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">DEV | TTY</a></li>
           
             
-              
-            
             <li class="masthead__menu-item"><a href="http://localhost:4000/year-archive/">Posts</a></li>
           
-            
-              
             
             <li class="masthead__menu-item"><a href="http://localhost:4000/categories/">Categories</a></li>
           
             
-              
-            
             <li class="masthead__menu-item"><a href="http://localhost:4000/tags/">Tags</a></li>
           
-            
-              
             
             <li class="masthead__menu-item"><a href="http://localhost:4000/about/">About</a></li>
           
@@ -78,6 +70,43 @@
 
 
 
+  
+    
+
+
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="http://localhost:4000homelab" itemprop="item"><span itemprop="name">Homelab</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">Want a USB Ethernet driver for ESXi? You can have two.</li>
+      
+    
+  </ol>
+</nav>
+  
+
 
 <div id="main" role="main">
   
@@ -85,7 +114,6 @@
 
   <div class="sidebar sticky">
   
-
 
 
 
@@ -159,11 +187,9 @@
 </h1>
           
             <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
 
 
-
-  10 minutes read
+  11 minutes read
 </p>
           
         </header>
@@ -174,39 +200,39 @@
 
 <aside class="sidebar__right">
 <nav class="toc">
-    <header><h4 class="nav__title"><i class="fa fa-"></i> </h4></header>
+    <header><h4 class="nav__title"><i class="fa fa-file-text"></i> Contents</h4></header>
 <ul class="toc__menu" id="markdown-toc">
-  <li><a href="#first-of-all">First of all</a></li>
-  <li><a href="#the-story">The story</a></li>
-  <li><a href="#tested-devices">Tested devices</a>    <ul>
-      <li><a href="#asix">ASIX</a></li>
-      <li><a href="#realtek">Realtek</a></li>
+  <li><a href="#first-of-all" id="markdown-toc-first-of-all">First of all</a></li>
+  <li><a href="#the-story" id="markdown-toc-the-story">The story</a></li>
+  <li><a href="#tested-devices" id="markdown-toc-tested-devices">Tested devices</a>    <ul>
+      <li><a href="#asix" id="markdown-toc-asix">ASIX</a></li>
+      <li><a href="#realtek" id="markdown-toc-realtek">Realtek</a></li>
     </ul>
   </li>
-  <li><a href="#performance">Performance</a>    <ul>
-      <li><a href="#iperf-figures-for-the-asix-driver-single-port-adapter">iPerf figures for the ASIX driver (Single port adapter)</a></li>
-      <li><a href="#iperf-figures-for-the-asix-driver-dual-port-adapter">iPerf figures for the ASIX driver (Dual Port adapter)</a></li>
-      <li><a href="#iperf-figures-for-the-realtek-driver">iPerf figures for the Realtek driver</a></li>
+  <li><a href="#performance" id="markdown-toc-performance">Performance</a>    <ul>
+      <li><a href="#iperf-figures-for-the-asix-driver-single-port-adapter" id="markdown-toc-iperf-figures-for-the-asix-driver-single-port-adapter">iPerf figures for the ASIX driver (Single port adapter)</a></li>
+      <li><a href="#iperf-figures-for-the-asix-driver-dual-port-adapter" id="markdown-toc-iperf-figures-for-the-asix-driver-dual-port-adapter">iPerf figures for the ASIX driver (Dual Port adapter)</a></li>
+      <li><a href="#iperf-figures-for-the-realtek-driver" id="markdown-toc-iperf-figures-for-the-realtek-driver">iPerf figures for the Realtek driver</a></li>
     </ul>
   </li>
-  <li><a href="#device-details">Device details</a></li>
-  <li><a href="#esxi-quirks">ESXi quirks</a>    <ul>
-      <li><a href="#stacks">Stacks</a></li>
-      <li><a href="#the-neighbourhood">The neighbourhood</a></li>
+  <li><a href="#device-details" id="markdown-toc-device-details">Device details</a></li>
+  <li><a href="#esxi-quirks" id="markdown-toc-esxi-quirks">ESXi quirks</a>    <ul>
+      <li><a href="#stacks" id="markdown-toc-stacks">Stacks</a></li>
+      <li><a href="#the-neighbourhood" id="markdown-toc-the-neighbourhood">The neighbourhood</a></li>
     </ul>
   </li>
-  <li><a href="#compiling-the-drivers">Compiling the drivers</a></li>
-  <li><a href="#tldr---just-gimme-the-drivers">TL;DR - Just gimme the drivers</a>    <ul>
-      <li><a href="#asix-1">ASIX</a>        <ul>
-          <li><a href="#esxi-60-vib">ESXi 6.0 VIB</a></li>
-          <li><a href="#esxi-55-vib">ESXi 5.5 VIB</a></li>
-          <li><a href="#esxi-51-vib">ESXi 5.1 VIB</a></li>
+  <li><a href="#compiling-the-drivers" id="markdown-toc-compiling-the-drivers">Compiling the drivers</a></li>
+  <li><a href="#tldr---just-gimme-the-drivers" id="markdown-toc-tldr---just-gimme-the-drivers">TL;DR - Just gimme the drivers</a>    <ul>
+      <li><a href="#asix-1" id="markdown-toc-asix-1">ASIX</a>        <ul>
+          <li><a href="#esxi-60-vib" id="markdown-toc-esxi-60-vib">ESXi 6.0 VIB</a></li>
+          <li><a href="#esxi-55-vib" id="markdown-toc-esxi-55-vib">ESXi 5.5 VIB</a></li>
+          <li><a href="#esxi-51-vib" id="markdown-toc-esxi-51-vib">ESXi 5.1 VIB</a></li>
         </ul>
       </li>
-      <li><a href="#realtek-1">Realtek</a>        <ul>
-          <li><a href="#esxi-60-vib-1">ESXi 6.0 VIB</a></li>
-          <li><a href="#esxi-55-vib-1">ESXi 5.5 VIB</a></li>
-          <li><a href="#esxi-51-vib-1">ESXi 5.1 VIB</a></li>
+      <li><a href="#realtek-1" id="markdown-toc-realtek-1">Realtek</a>        <ul>
+          <li><a href="#esxi-60-vib-1" id="markdown-toc-esxi-60-vib-1">ESXi 6.0 VIB</a></li>
+          <li><a href="#esxi-55-vib-1" id="markdown-toc-esxi-55-vib-1">ESXi 5.5 VIB</a></li>
+          <li><a href="#esxi-51-vib-1" id="markdown-toc-esxi-51-vib-1">ESXi 5.1 VIB</a></li>
         </ul>
       </li>
     </ul>
@@ -223,26 +249,45 @@
 <p>In particular, I would like to thank William Lam (tip o’ the hat to you, Sir), as without his help things would be very different. It was William who provided the solution that allows automatic load of the modules at boot and persistence of the network configuration across reboots. If you have a chance, stop by <a href="http://www.virtuallyghetto.com">virtuallyGhetto</a> and show you appreciation.</p>
 
 <div class="notice--warning">
-  <p><strong>Update (19/05/16)</strong>  </p>
+  <p><strong>Update (19/05/16)</strong></p>
 
-  <p>Following a question from Charles Biggers, I have included iPerf figures for the ASIX Dual Port Ethernet adapter. Doesn’t look good…    </p>
+  <p></p>
+
+  <p>Following a question from Charles Biggers, I have included iPerf figures for the ASIX Dual Port Ethernet adapter. Doesn’t look good…</p>
+
+  <p></p>
 
   <p><strong>Update (25/05/16)</strong></p>
+  <p></p>
 
   <li>TP-LINK UE300 added to the list of tested adapters</li>
   <li>Realtek driver updated to version 2.06.0-2 (Scatter Gather disabled)</li>
 
-  <p><strong>Update (14/11/16)</strong>  </p>
+  <p></p>
 
-  <p>All drivers recompiled and VIBs uploaded to Bintray. Driver version numbers changed to a consistent format.  </p>
+  <p><strong>Update (14/11/16)</strong></p>
+  <p></p>
 
-  <p>Following a request from reader Vitali the Relatek r8152 driver has been updated to support USB 2.0 adapters based on the RTL8152B chipset.  </p>
+  <p>All drivers recompiled and VIBs uploaded to Bintray. Driver version numbers changed to a consistent format.</p>
+
+  <p>Following a request from reader Vitali the Relatek r8152 driver has been updated to support USB 2.0 adapters based on the RTL8152B chipset.</p>
+  <p></p>
 
   <li>TP-LINK UE200 added to the list of tested adapters</li>
 
-  <p><strong>Update (17/11/16)</strong></p>
+  <p></p>
 
+  <p><strong>Update (17/11/16)</strong></p>
+  <p></p>
   <p>Both the Realtek and ASIX drivers have been recompiled for ESXi 6.5. Further details and download links <a href="/homelab/USB-Ethernet-driver-for-ESXi-6.5/">here</a></p>
+
+  <p></p>
+
+  <p><strong>Update (25/02/17)</strong></p>
+  <p></p>
+
+  <li>Plugable USBC-E1000 added to the list of tested adapters</li>
+  <li>CableCreation CD0004 added to the list of tested adapters</li>
 
 </div>
 
@@ -254,7 +299,7 @@
 
 <p>My interest was piqued and the question was: could I get it working myself? I decided to have a go, so I spent some time reading the original forum thread to get a feel for what lay ahead. I am by no means a programmer, but I do from time to time write some code. The challenge was set…</p>
 
-<p>The one thing I didn’t like about the original driver William had found was the fact that it also needed a modified version of the <code>usbnet</code> module. I just thought that interfering with the native modules was a step too far, so wanted to avoid that.</p>
+<p>The one thing I didn’t like about the original driver William had found was the fact that it also needed a modified version of the <code class="highlighter-rouge">usbnet</code> module. I just thought that interfering with the native modules was a step too far, so wanted to avoid that.</p>
 
 <p>Anyway, to cut a long story short, I got the ASIX 88179_178a driver compiled and running on both ESXi 5.5 and 6.0. Funnily enough, by the time I contacted William about my success he had also got the driver built, and both <a href="https://github.com/lamw/ax88179_178a-esxi">his</a> and <a href="https://github.com/gomesjj/ax88179_178a">my</a> changes to the Linux source code were pretty much the same. Eventually I also got the driver compiled for ESXi 5.1, which took longer due to a puzzling DMA mask error when connected to USB 2.0 ports. It is resolved now, but bear in mind that the bandwidth limitation on USB 2.0 (there is no support for xHCI on ESXi 5.1) means that the adapter will never achieve Gigabit speeds.</p>
 
@@ -276,6 +321,9 @@
   <li>
     <p><a href="https://www.amazon.co.uk/gp/product/B00AQM8586/ref=oh_aui_detailpage_o02_s00?ie=UTF8&amp;psc=1">Plugable USB 3.0 to 10/100/1000 Gigabit Ethernet LAN Network Adapter</a></p>
   </li>
+  <li>
+    <p><a href="https://www.amazon.co.uk/dp/B011DDXGVC/ref=pe_1909131_77697001_tnp_email_TE_AMZLdp_2">Plugable USB-C to 10/100/1000 Gigabit Ethernet LAN Network Adapter</a></p>
+  </li>
 </ul>
 
 <h3 id="realtek">Realtek</h3>
@@ -292,6 +340,9 @@
   </li>
   <li>
     <p><a href="https://www.amazon.co.uk/gp/product/B010SEARPU/ref=ox_sc_act_title_1?ie=UTF8&amp;psc=1&amp;smid=A7ZMMLW05YAY7">Rankie SuperSpeed USB 3.0 to RJ45 Gigabit Ethernet Network Adapter</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.amazon.co.uk/dp/B0126J6WYK/ref=pe_1909131_77697001_tnp_email_TE_AMZLdp_1">CableCreation Gold Plated USB 3.1 Type C (USB-C) to RJ45 Gigabit Ethernet LAN Network Adapter</a></p>
   </li>
 </ul>
 
@@ -314,7 +365,7 @@
 
 <h2 id="performance">Performance</h2>
 
-<p>I have been testing the drivers for almost two months now and performance has been rock solid, and on a par with the onboard Intel adapter ~~or the Mini PCIe adapters (Syba and StarTech)~~ I use on the <a href="/homelab/NUC-Squarepants">NUC Squarepants</a>. I had a few hiccups to start with, and that is detailed under the <a href="#esxi-quirks">ESXi quirks</a> section below.</p>
+<p>I have been testing the drivers for almost two months now and performance has been rock solid, and on a par with the onboard Intel adapter <del>or the Mini PCIe adapters (Syba and StarTech)</del> I use on the <a href="/homelab/NUC-Squarepants">NUC Squarepants</a>. I had a few hiccups to start with, and that is detailed under the <a href="#esxi-quirks">ESXi quirks</a> section below.</p>
 
 <div class="notice--danger">
 <p><b>Update 25/05/2016:</b></p>
@@ -342,13 +393,13 @@
 
 <p><img src="/images/usb/iperf_rtl.png" alt="RTL8153" class="align-center" /></p>
 
-<p>Using iPerf alone is not a reliable way of measuring throughput, but it gives a good indication. I have, however, performed many vMotion operations to get better “real world” figures. For example, migrating a VM assigned 8 GB of RAM (VCSA), host only, takes ~4 seconds; migration to another host and datastore (iSCSI to internal disk) around ~4 minutes. Those figures are pretty much identical to what I see when the same operations are performed using the onboard Intel adapter. </p>
+<p>Using iPerf alone is not a reliable way of measuring throughput, but it gives a good indication. I have, however, performed many vMotion operations to get better “real world” figures. For example, migrating a VM assigned 8 GB of RAM (VCSA), host only, takes ~4 seconds; migration to another host and datastore (iSCSI to internal disk) around ~4 minutes. Those figures are pretty much identical to what I see when the same operations are performed using the onboard Intel adapter.</p>
 
 <h2 id="device-details">Device details</h2>
 
 <p><img src="/images/usb/lsnics.png" alt="lsnics" class="align-center" /></p>
 
-<p>As can be seen above both devices show up as “Pseudo” devices, but have very different names. The reason for that is that the Realtek driver is CDC-Ether compliant, whereas the ASIX driver is not. One approach is no better than the other, though. </p>
+<p>As can be seen above both devices show up as “Pseudo” devices, but have very different names. The reason for that is that the Realtek driver is CDC-Ether compliant, whereas the ASIX driver is not. One approach is no better than the other, though.</p>
 
 <p><strong>ASIX</strong></p>
 
@@ -368,9 +419,9 @@
 
 <p>As you can imagine I was very happy that I managed to get the ASIX driver working, but I noticed from the beginning that whilst egress (TX) throughput was in line with gigabit speed, ingress (RX) was at least 300 Mbits/sec less. I exchanged a few emails with William Lam, and he was also seeing the same lower throughput (sometimes even less). I tried tweaking the code every which way to no avail, and I came to the conclusion that this was the best we could get off of those adapters. I was miffed.</p>
 
-<p>I started looking around the web and came across the ANKER adapter, noticing that it used a different chipset and driver. Emboldened by my success with the ASIX driver I turned my hand to the newly discovered Realtek driver. A few days later I had the driver compiled and working on ESXi 6.0, 5.5 and 5.1. Woo-hoo! </p>
+<p>I started looking around the web and came across the ANKER adapter, noticing that it used a different chipset and driver. Emboldened by my success with the ASIX driver I turned my hand to the newly discovered Realtek driver. A few days later I had the driver compiled and working on ESXi 6.0, 5.5 and 5.1. Woo-hoo!</p>
 
-<p>Another round of iPerf tests revealed the exact same lower RX throughput with the new adapter (what?). Next, I moved the adapters around: the builtin NIC (vmnic0) was moved to vSwitch1 (iSCSI) and the USB adapter moved to vSwitch0. I had baseline test results for the Intel adapter, so I knew the throughput was the same for TX and RX. When I performed the same iPerf test again, this time with the Intel NIC on the other vSwitch, the RX throughput was lower too, as seen with the USB adapters… </p>
+<p>Another round of iPerf tests revealed the exact same lower RX throughput with the new adapter (what?). Next, I moved the adapters around: the builtin NIC (vmnic0) was moved to vSwitch1 (iSCSI) and the USB adapter moved to vSwitch0. I had baseline test results for the Intel adapter, so I knew the throughput was the same for TX and RX. When I performed the same iPerf test again, this time with the Intel NIC on the other vSwitch, the RX throughput was lower too, as seen with the USB adapters…</p>
 
 <p>What could be causing this? The only thing I could think of was the fact that on vSwitch1 the ethernet traffic was tagged. Shirley that couldn’t be the reason? And it wasn’t – it was routing. I have a Cisco SG300 running on Layer 3 mode (router) and it will happily do inter-VLAN routing, no problem. The difference on ESXi is that with the single TCP/IP stack design there is only the default gateway, and a different gateway cannot be assigned to interfaces on different VLANs (unlike most other sensible operating systems). Traffic was hitting the default gateway (VLAN 100), then being re-routed to the ISCSI VLAN (10). That worked fine on egress, but the return trip, bouncing from VLAN to VLAN, was killing the speed.</p>
 
@@ -384,38 +435,38 @@
 
 <p>Time to look at the ARP table from another server:</p>
 
-<pre><code class="language-sh">esxcli network ip neighbor list
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>esxcli network ip neighbor list
 Neighbor        Mac Address        Vmknic    Expiry  State  Type
---------------  -----------------  ------  --------  -----  -------
+<span class="nt">--------------</span>  <span class="nt">-----------------</span>  <span class="nt">------</span>  <span class="nt">--------</span>  <span class="nt">-----</span>  <span class="nt">-------</span>
 192.168.10.132  0c:c4:7a:a9:55:89  vmk1     873 sec         Unknown
---&gt; 192.168.10.226   3c:97:0e:5e:a1:bd  vmk1    1190 sec         Unknown &lt;--
+<span class="nt">--</span><span class="o">&gt;</span> 192.168.10.226   3c:97:0e:5e:a1:bd  vmk1    1190 sec         Unknown &lt;<span class="nt">--</span>
 192.168.10.232  d0:50:99:c0:ae:8f  vmk1     919 sec         Unknown
 192.168.1.234   00:0c:29:97:66:3a  vmk0    1162 sec         Unknown
---&gt; 192.168.1.226   3c:97:0e:5e:a1:bd  vmk0    1181 sec         Unknown &lt;--
+<span class="nt">--</span><span class="o">&gt;</span> 192.168.1.226   3c:97:0e:5e:a1:bd  vmk0    1181 sec         Unknown &lt;<span class="nt">--</span>
 192.168.1.223   00:0c:29:13:d3:03  vmk0    1143 sec         Unknown
 192.168.1.254   7c:69:f6:9a:c9:d0  vmk0     649 sec         Unknown
 192.168.1.222   c0:3f:d5:64:ae:5d  vmk0    1130 sec         Unknown
 192.168.1.240   14:b1:c8:00:37:80  vmk0    1173 sec         Unknown
-</code></pre>
-<p>You can clearly see two different IP addresses linked to the same MAC address. Well, I thought, let’s try clearing the ARP cache. </p>
+</code></pre></div></div>
+<p>You can clearly see two different IP addresses linked to the same MAC address. Well, I thought, let’s try clearing the ARP cache.</p>
 
 <p>On the other ESXi servers:</p>
 
-<pre><code class="language-sh">esxcli network ip neighbor remove --version=4 --neighbor-addr=192.168.1.226
-esxcli network ip neighbor remove --version=4 --neighbor-addr=192.168.10.226
-</code></pre>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>esxcli network ip neighbor remove <span class="nt">--version</span><span class="o">=</span>4 <span class="nt">--neighbor-addr</span><span class="o">=</span>192.168.1.226
+esxcli network ip neighbor remove <span class="nt">--version</span><span class="o">=</span>4 <span class="nt">--neighbor-addr</span><span class="o">=</span>192.168.10.226
+</code></pre></div></div>
 <p>And on my own machine:</p>
 
-<pre><code class="language-sh">sudo arp -a -d
-</code></pre>
-<p>Ping the server again with <code>arping</code></p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>arp <span class="nt">-a</span> <span class="nt">-d</span>
+</code></pre></div></div>
+<p>Ping the server again with <code class="highlighter-rouge">arping</code></p>
 
-<pre><code class="language-sh">arping -S 192.168.1.240 -i en8 192.168.1.226
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>arping <span class="nt">-S</span> 192.168.1.240 <span class="nt">-i</span> en8 192.168.1.226
 ARPING 192.168.1.226
-60 bytes from 00:50:56:67:91:a9 (192.168.1.226): index=0 time=318.050 usec
-60 bytes from 00:50:56:67:91:a9 (192.168.1.226): index=0 time=318.050 usec
-60 bytes from 00:50:56:67:91:a9 (192.168.1.226): index=1 time=276.089 usec
-</code></pre>
+60 bytes from 00:50:56:67:91:a9 <span class="o">(</span>192.168.1.226<span class="o">)</span>: <span class="nv">index</span><span class="o">=</span>0 <span class="nb">time</span><span class="o">=</span>318.050 usec
+60 bytes from 00:50:56:67:91:a9 <span class="o">(</span>192.168.1.226<span class="o">)</span>: <span class="nv">index</span><span class="o">=</span>0 <span class="nb">time</span><span class="o">=</span>318.050 usec
+60 bytes from 00:50:56:67:91:a9 <span class="o">(</span>192.168.1.226<span class="o">)</span>: <span class="nv">index</span><span class="o">=</span>1 <span class="nb">time</span><span class="o">=</span>276.089 usec
+</code></pre></div></div>
 <p>That is more like it!</p>
 
 <p class="notice--info">During development of the driver, I had loaded and unloaded the module whilst tailing the vmkernel.log so many times that I had memorised the MAC address. I knew that was the correct one.</p>
@@ -426,7 +477,7 @@ ARPING 192.168.1.226
 
 <p><em>The MAC address of vmk0 management network may not get updated after you replace or assign a new MAC address to the NIC and run the esxcfg-vmknic –l command from the command line. The default setting for the ESXi host is not to select the new hardware MAC address.</em></p>
 
-<p>The proposed solution? Delete and recreate the <code>vmknic</code>. Not what I wanted to read, as I was going to be swapping the adapters around many times to complete my tests. But wait, there is a workaround:</p>
+<p>The proposed solution? Delete and recreate the <code class="highlighter-rouge">vmknic</code>. Not what I wanted to read, as I was going to be swapping the adapters around many times to complete my tests. But wait, there is a workaround:</p>
 
 <div class="notice--warning">
 <p><b>Workaround</b></p>
@@ -436,9 +487,9 @@ ARPING 192.168.1.226
 <p style="margin-left: 40px"> 2. Restart the ESXi server.</p>
 </div>
 
-<p>After applying the workaround I was then able to move the physical adapters freely between <code>vmknics</code> and the MAC address changed as expected. </p>
+<p>After applying the workaround I was then able to move the physical adapters freely between <code class="highlighter-rouge">vmknics</code> and the MAC address changed as expected.</p>
 
-<p>I understand that moving physical adapters around is not something that would be done regularly, but I would have preferred if the “workaround” was actually the default behaviour. Having said that, I changed stuff around, changed ESXi versions, and moved adapters so many times on that server that I am surprised I did’t hit any other problems…  </p>
+<p>I understand that moving physical adapters around is not something that would be done regularly, but I would have preferred if the “workaround” was actually the default behaviour. Having said that, I changed stuff around, changed ESXi versions, and moved adapters so many times on that server that I am surprised I did’t hit any other problems…</p>
 
 <h2 id="compiling-the-drivers">Compiling the drivers</h2>
 
@@ -491,66 +542,6 @@ ARPING 192.168.1.226
         
 
 
-  
-
-
-    
-  
-
-
-  
-  
-  
-
-  <p class="page__taxonomy">
-    <strong><i class="fa fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
-    <span itemprop="keywords">
-    
-      
-      
-      <a href="http://localhost:4000/tags/#esxi" class="page__taxonomy-item" rel="tag">ESXi</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#ethernet" class="page__taxonomy-item" rel="tag">Ethernet</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#homelab" class="page__taxonomy-item" rel="tag">Homelab</a><span class="sep">, </span>
-    
-      
-      
-      <a href="http://localhost:4000/tags/#usb" class="page__taxonomy-item" rel="tag">USB</a>
-    
-    </span>
-  </p>
-
-
-
-
-  
-
-
-
-
-    
-  
-
-
-  
-  
-  
-
-  <p class="page__taxonomy">
-    <strong><i class="fa fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
-    <span itemprop="keywords">
-    
-      
-      
-      <a href="http://localhost:4000/categories/#homelab" class="page__taxonomy-item" rel="tag">homelab</a>
-    
-    </span>
-  </p>
 
 
         
@@ -613,8 +604,6 @@ ARPING 192.168.1.226
           
 
 
-  
-
 
 <div class="grid__item">
   
@@ -634,8 +623,6 @@ ARPING 192.168.1.226
 </h2>
       
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-
 
 
   11 minutes read
@@ -649,8 +636,6 @@ ARPING 192.168.1.226
         
           
 
-
-  
 
 
 <div class="grid__item">
@@ -671,8 +656,6 @@ ARPING 192.168.1.226
 </h2>
       
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-
 
 
   2 minutes read
@@ -686,8 +669,6 @@ ARPING 192.168.1.226
         
           
 
-
-  
 
 
 <div class="grid__item">
@@ -708,8 +689,6 @@ ARPING 192.168.1.226
 </h2>
       
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-
 
 
   2 minutes read
@@ -723,8 +702,6 @@ ARPING 192.168.1.226
         
           
 
-
-  
 
 
 <div class="grid__item">
@@ -745,8 +722,6 @@ ARPING 192.168.1.226
 </h2>
       
         <p class="page__meta"><i class="fa fa-clock-o" aria-hidden="true"></i> 
-  
-
 
 
   5 minutes read
@@ -783,11 +758,25 @@ ARPING 192.168.1.226
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2016 Jose Gomes. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2018 Jose Gomes. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
       </footer>
     </div>
 
     <script src="http://localhost:4000/assets/js/main.min.js"></script>
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-77925543-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
 
 
 
