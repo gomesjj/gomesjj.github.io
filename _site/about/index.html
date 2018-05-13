@@ -1,15 +1,98 @@
-
-
 <!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.11.2 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
 <html lang="en" class="no-js">
   <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>            About - DEV      TTY      </title>
+<meta name="description" content="The personal blog of Jose Gomes">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_UK">
+<meta property="og:site_name" content="DEV | TTY">
+<meta property="og:title" content="About">
+<meta property="og:url" content="http://localhost:4000/about/">
+
+
+
+
+  <meta property="og:image" content="http://localhost:4000/cat_tty_sm.png">
+
+
+
+  <meta name="twitter:site" content="@devttyuk">
+  <meta name="twitter:title" content="About">
+  <meta name="twitter:description" content="The personal blog of Jose Gomes">
+  <meta name="twitter:url" content="http://localhost:4000/about/">
+
+  
+    <meta name="twitter:card" content="summary">
     
+      <meta name="twitter:image" content="http://localhost:4000/cat_tty_sm.png">
+    
+  
 
-<meta charset="utf-8">
+  
 
 
 
-<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="DEV | TTY Feed">
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/about/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "http://localhost:4000",
+      "logo": "http://localhost:4000/cat_tty_sm.png"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Jose Gomes",
+      "url": "http://localhost:4000",
+      "sameAs": ["https://twitter.com/devttyuk","https://www.linkedin.com/in/jjgomes","https://github.com/gomesjj"]
+    }
+  </script>
+
+
+
+
+  <meta name="msvalidate.01" content="426C494E4ED223A19760E7EA3829FC1A">
+
+
+  <meta name="alexaVerifyID" content="yvVjIPUlqkOeQBGvpxEw95Xu2yg">
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="DEV | TTY Feed">
 
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
@@ -21,59 +104,83 @@
 </script>
 
 <!-- For all browsers -->
-<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/main.css">
 
-<meta http-equiv="cleartype" content="on">
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
     <!-- start custom head snippets -->
 
-<!-- insert favicons. use http://realfavicongenerator.net/ -->
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
 
 <!-- end custom head snippets -->
+
   </head>
 
-  <body>
+  <body class="layout--single">
 
     <!--[if lt IE 9]>
-<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
 <![endif]-->
-    
 
-<div class="masthead">
+    <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
-        <button><div class="navicon"></div></button>
+        <a class="site-title" href="/">DEV | TTY</a>
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">DEV | TTY</a></li>
           
             
-            <li class="masthead__menu-item"><a href="http://localhost:4000/year-archive/">Posts</a></li>
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/year-archive/" >Posts</a>
+            </li>
           
             
-            <li class="masthead__menu-item"><a href="http://localhost:4000/categories/">Categories</a></li>
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/categories/" >Categories</a>
+            </li>
           
             
-            <li class="masthead__menu-item"><a href="http://localhost:4000/tags/">Tags</a></li>
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/tags/" >Tags</a>
+            </li>
           
             
-            <li class="masthead__menu-item"><a href="http://localhost:4000/about/">About</a></li>
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/about/" >About</a>
+            </li>
           
         </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
         <ul class="hidden-links hidden"></ul>
       </nav>
     </div>
   </div>
 </div>
 
-    
-
-
+    <div class="initial-content">
+      
 
 
   
     
-
-
 
 
 
@@ -95,67 +202,123 @@
     
   </ol>
 </nav>
+
   
 
 
 <div id="main" role="main">
   
-
-
   <div class="sidebar sticky">
   
 
 
-
 <div itemscope itemtype="http://schema.org/Person">
 
-  <div class="author__avatar">
-    
-    	<img src="http://localhost:4000/images/bio-photo.png" class="author__avatar" alt="Jose Gomes">
-    
-  </div>
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/bio-photo.png" alt="Jose Gomes" itemprop="image">
+      
+    </div>
+  
 
   <div class="author__content">
-    <h3 class="author__name">Jose Gomes</h3>
-    <p class="author__bio">... is just another techie.</p>
+    
+      <h3 class="author__name" itemprop="name">Jose Gomes</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        ... is just another techie.
+      </p>
+    
   </div>
 
   <div class="author__urls-wrapper">
     <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
       
-        <li><i class="fa fa-fw fa-map-marker" aria-hidden="true"></i> United Kingdom</li>
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">United Kingdom</span>
+        </li>
       
+
       
+
       
+
       
+
       
-        <li><a href="http://twitter.com/devttyuk"><i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        <li>
+          <a href="https://twitter.com/devttyuk" itemprop="sameAs">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter
+          </a>
+        </li>
       
+
       
+
       
+
       
-        <li><a href="http://linkedin.com/in/jjgomes"><i class="fa fa-fw fa-linkedin-square" aria-hidden="true"></i> LinkedIn</a></li>
+        <li>
+          <a href="https://www.linkedin.com/in/jjgomes" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
       
+
       
+
       
+
       
+
       
+
       
-        <li><a href="http://github.com/gomesjj"><i class="fa fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
+        <li>
+          <a href="https://github.com/gomesjj" itemprop="sameAs">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
       
+
       
+
       
+
       
+
       
+
       
+
       
+
       
+
       
+
       
+
       
+
       
+
       
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
     </ul>
   </div>
 </div>
@@ -173,13 +336,14 @@
     <div class="page__inner-wrap">
       
         <header>
-          <h1 class="page__title" itemprop="headline">About
+          <h1 id="page-title" class="page__title" itemprop="headline">About
 </h1>
           
         </header>
       
 
       <section class="page__content" itemprop="text">
+        
         <p>My name is Jose Gomes. I am an IT Architect, originally from Brazil, but living in the United Kingdom for the last 26 years. I love motorbikes, classic cars, computers, wine, beer (real ale), reading, good drama and most anything techie.</p>
 
 <p>To pay the bills, I specialise in the provisioning of infrastructure solutions, and have detailed experience in the IT Services Support, Banking, Government and Telecommunications sectors. I have extensive experience in the design, validation and build of technical solutions, particularly in the area of virtualisation (both Wintel and UNIX).</p>
@@ -202,16 +366,12 @@
         
 
 
-
-
         
       </footer>
 
       
 
       
-
-
     </div>
 
     
@@ -220,55 +380,48 @@
   
   
 </div>
+    </div>
+
+    
 
     <div class="page__footer">
       <footer>
-        
+        <!-- start custom footer snippets -->
 
-<div class="page__footer-follow">
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
   <ul class="social-icons">
     
       <li><strong>Follow:</strong></li>
     
     
-      <li><a href="https://twitter.com/devttyuk"><i class="fa fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+      <li><a href="https://twitter.com/devttyuk"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
     
     
     
-      <li><a href="http://github.com/gomesjj"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+      <li><a href="https://github.com/gomesjj"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
     
     
-    <li><a href="http://localhost:4000/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
   </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2018 Jose Gomes. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2018 Jose Gomes. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
       </footer>
     </div>
 
-    <script src="http://localhost:4000/assets/js/main.min.js"></script>
-
-
-
-
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-77925543-1', 'auto');
-  ga('send', 'pageview');
-</script>
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"></script>
 
 
 
 
 
-    <!-- start custom footer snippets -->
 
-<!-- end custom footer snippets -->
+
 
   </body>
 </html>
-
