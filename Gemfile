@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 3.5"
-gem "minimal-mistakes-jekyll"
+gem "jekyll"
+gem "jekyll-feed"
 gem "github-pages"
+# gem "jekyll-archives"

@@ -14,8 +14,7 @@ description              : "The personal blog of Jose Gomes"
 url                      : "http://www.devtty.uk"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 gh_repo                  :
-teaser                   : "/images/cat_tty.png"
-theme										 : minimal-mistakes-jekyll
+teaser                   : "cat_tty.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -63,7 +62,7 @@ facebook:
   app_id                 :
   publisher              :
 
-og_image                 : "/images/cat_tty_sm.png"
+og_image                 : "cat_tty_sm.png"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -88,7 +87,7 @@ google_ad_slot           :
 # Site Author
 author:
   name             : "Jose Gomes"
-  avatar           : "/images/bio-photo.png"
+  avatar           : "bio-photo.png"
   bio              : "... is just another techie."
   location         : "United Kingdom"
   email            :
