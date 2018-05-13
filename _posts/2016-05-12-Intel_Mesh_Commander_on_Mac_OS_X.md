@@ -2,7 +2,7 @@
 title: Intel Mesh Commander on Mac OS X
 excerpt: "A Mac OS X application for the management of computers with Intel AMT (Active Management Technology), supporting redirection, remote desktop, remote terminal and scripted management."
 header:
-  teaser: "commander.png"
+  teaser: "/images/commander.png"
 category: [Apple] 
 tags: [Mac, OS X, NW.js, Homelab, Virtualisation, NUC]
 ---
