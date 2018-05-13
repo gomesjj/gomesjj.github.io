@@ -85,42 +85,42 @@
   
   <url>
     <loc>http://localhost:4000/about/</loc>
-    <lastmod>2016-12-05T16:43:27+00:00</lastmod>
+    <lastmod>2016-12-06T22:21:27+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://localhost:4000/categories/</loc>
-    <lastmod>2016-12-05T16:43:27+00:00</lastmod>
+    <lastmod>2016-12-06T22:21:27+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://localhost:4000/</loc>
-    <lastmod>2016-12-05T16:43:27+00:00</lastmod>
+    <lastmod>2016-12-06T22:21:27+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://localhost:4000/page-archive/</loc>
-    <lastmod>2016-12-05T16:43:27+00:00</lastmod>
+    <lastmod>2016-12-06T22:21:27+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://localhost:4000/tags/</loc>
-    <lastmod>2016-12-05T16:43:27+00:00</lastmod>
+    <lastmod>2016-12-06T22:21:27+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://localhost:4000/year-archive/</loc>
-    <lastmod>2016-12-05T16:43:27+00:00</lastmod>
+    <lastmod>2016-12-06T22:21:27+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

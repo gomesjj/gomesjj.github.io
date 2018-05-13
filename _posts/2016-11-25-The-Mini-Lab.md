@@ -74,7 +74,7 @@ At the moment, just a second NAS with the same specification as that of the mini
 
 **Note:** The NUCs are now housed on my Lego NUC Rack. I will be writing another post with instructions on how to build a rack just like that soon (maybe!).
 
-![Lego NUCRack](/images/nucrack/47_rack_front_final.png){: .align-center} 
+![Lego NUCRack](/images/rack/rack_final_no_door_sm.png){: .align-center} 
 
 ## The Chief Architect says:
 

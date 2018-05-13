@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-12-03T17:54:08+00:00</updated><id>http://localhost:4000/</id><title type="html">DEV | TTY</title><subtitle>The personal blog of Jose Gomes</subtitle><author><name>Jose Gomes</name></author><entry><title type="html">How I built a Lego Rack for the Intel NUCs</title><link href="http://localhost:4000/homelab/How-I-Built-a-Lego-Rack-for-the-Intel-NUCs/" rel="alternate" type="text/html" title="How I built a Lego Rack for the Intel NUCs" /><published>2016-11-27T00:00:00+00:00</published><updated>2016-11-27T00:00:00+00:00</updated><id>http://localhost:4000/homelab/How-I-Built-a-Lego-Rack-for-the-Intel-NUCs</id><content type="html" xml:base="http://localhost:4000/homelab/How-I-Built-a-Lego-Rack-for-the-Intel-NUCs/">&lt;aside class=&quot;sidebar__right&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="2.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2016-12-06T22:21:27+00:00</updated><id>http://localhost:4000/</id><title type="html">DEV | TTY</title><subtitle>The personal blog of Jose Gomes</subtitle><author><name>Jose Gomes</name></author><entry><title type="html">How I built a Lego Rack for the Intel NUCs</title><link href="http://localhost:4000/homelab/How-I-Built-a-Lego-Rack-for-the-Intel-NUCs/" rel="alternate" type="text/html" title="How I built a Lego Rack for the Intel NUCs" /><published>2016-11-27T00:00:00+00:00</published><updated>2016-11-27T00:00:00+00:00</updated><id>http://localhost:4000/homelab/How-I-Built-a-Lego-Rack-for-the-Intel-NUCs</id><content type="html" xml:base="http://localhost:4000/homelab/How-I-Built-a-Lego-Rack-for-the-Intel-NUCs/">&lt;aside class=&quot;sidebar__right&quot;&gt;
 &lt;nav class=&quot;toc&quot;&gt;
     &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fa fa-&quot;&gt;&lt;/i&gt; &lt;/h4&gt;&lt;/header&gt;
 &lt;ul class=&quot;toc__menu&quot; id=&quot;markdown-toc&quot;&gt;
@@ -337,7 +337,7 @@
 
 &lt;u&gt;Step 3&lt;/u&gt;
 
-&lt;p&gt;Build the front and back “partition” walls by stacking five 4x2 grey brick right in the middle of the opening: &lt;/p&gt;
+&lt;p&gt;Build the front and back “partition” walls by stacking five 4x2 grey bricks right in the middle of the opening: &lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;/images/rack/base_front_back_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/base_front_back_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 
@@ -659,7 +659,7 @@
 
 &lt;h3 id=&quot;the-work-so-far&quot;&gt;The Work so Far&lt;/h3&gt;
 
-&lt;p&gt;We now have a rack that will suit most people.&lt;/p&gt;
+&lt;p&gt;We now we have a rack that will suit most people.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;/images/rack/rack_no_door_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/rack_no_door_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;  &lt;/p&gt;
 
@@ -932,7 +932,7 @@
 
 &lt;h3 id=&quot;the-nucrac&quot;&gt;The NUCRac&lt;/h3&gt;
 
-&lt;p&gt;Now, we simply attach the assembled door to the frame: the top hinge goes into the overhang of the second floor and the bottom hing into the overhang of the first floor. And that’s it, the rack is complete:&lt;/p&gt;
+&lt;p&gt;Now, we simply attach the assembled door to the frame: the top hinge goes into the overhang of the second floor and the bottom hinge into the overhang of the first floor. And that’s it, the rack is complete:&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;/images/rack/final_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/final_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt; &lt;a href=&quot;/images/rack/rack_final_no_door_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/rack_final_no_door_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;
 
