@@ -14,7 +14,8 @@ description              : "The personal blog of Jose Gomes"
 url                      : "http://localhost:4000"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 gh_repo                  :
-teaser                   : "cat_tty.png"
+teaser                   : "/images/cat_tty.png"
+theme										 : minimal-mistakes-jekyll
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
 comments:
@@ -62,7 +63,7 @@ facebook:
   app_id                 :
   publisher              :
 
-og_image                 : "cat_tty_sm.png"
+og_image                 : "/images/cat_tty_sm.png"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -87,7 +88,7 @@ google_ad_slot           :
 # Site Author
 author:
   name             : "Jose Gomes"
-  avatar           : "bio-photo.png"
+  avatar           : "/images/bio-photo.png"
   bio              : "... is just another techie."
   location         : "United Kingdom"
   email            :

@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-05-13T11:49:01+01:00</updated><id>http://localhost:4000/</id><title type="html">DEV | TTY</title><subtitle>The personal blog of Jose Gomes</subtitle><author><name>Jose Gomes</name></author><entry><title type="html">How I built a Lego Rack for the Intel NUCs</title><link href="http://localhost:4000/homelab/How-I-Built-a-Lego-Rack-for-the-Intel-NUCs/" rel="alternate" type="text/html" title="How I built a Lego Rack for the Intel NUCs" /><published>2016-11-27T00:00:00+00:00</published><updated>2016-11-27T00:00:00+00:00</updated><id>http://localhost:4000/homelab/How-I-Built-a-Lego-Rack-for-the-Intel-NUCs</id><content type="html" xml:base="http://localhost:4000/homelab/How-I-Built-a-Lego-Rack-for-the-Intel-NUCs/">&lt;aside class=&quot;sidebar__right&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-05-13T14:12:34+01:00</updated><id>http://localhost:4000/</id><title type="html">DEV | TTY</title><subtitle>The personal blog of Jose Gomes</subtitle><author><name>Jose Gomes</name></author><entry><title type="html">How I built a Lego Rack for the Intel NUCs</title><link href="http://localhost:4000/homelab/How-I-Built-a-Lego-Rack-for-the-Intel-NUCs/" rel="alternate" type="text/html" title="How I built a Lego Rack for the Intel NUCs" /><published>2016-11-27T00:00:00+00:00</published><updated>2016-11-27T00:00:00+00:00</updated><id>http://localhost:4000/homelab/How-I-Built-a-Lego-Rack-for-the-Intel-NUCs</id><content type="html" xml:base="http://localhost:4000/homelab/How-I-Built-a-Lego-Rack-for-the-Intel-NUCs/">&lt;aside class=&quot;sidebar__right&quot;&gt;
 &lt;nav class=&quot;toc&quot;&gt;
-    &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fa fa-file-text&quot;&gt;&lt;/i&gt; Contents&lt;/h4&gt;&lt;/header&gt;
+    &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fas fa-file-alt&quot;&gt;&lt;/i&gt; Contents&lt;/h4&gt;&lt;/header&gt;
 &lt;ul class=&quot;toc__menu&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#the-story&quot; id=&quot;markdown-toc-the-story&quot;&gt;The story&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#pick-a-brick&quot; id=&quot;markdown-toc-pick-a-brick&quot;&gt;Pick a Brick&lt;/a&gt;&lt;/li&gt;
@@ -948,7 +948,7 @@
 
 &lt;p&gt;&lt;a href=&quot;/images/rack/kitchen_lg.png&quot;&gt; &lt;img src=&quot;/images/rack/kitchen_sm.png&quot; alt=&quot;&quot; /&gt; &lt;/a&gt;&lt;/p&gt;</content><author><name>Jose Gomes</name></author><category term="[&quot;Homelab&quot;]" /><category term="Homelab" /><category term="Education" /><category term="Virtualisation" /><category term="Lego" /><category term="NUC" /><category term="Rack" /><category term="Server" /><summary type="html">Building a Lego Rack for the Intel NUCs, including a working front door. Lots of sweat, tears and last minute purchases from eBay...</summary></entry><entry><title type="html">The Mini Lab</title><link href="http://localhost:4000/homelab/The-Mini-Lab/" rel="alternate" type="text/html" title="The Mini Lab" /><published>2016-11-25T00:00:00+00:00</published><updated>2016-11-25T00:00:00+00:00</updated><id>http://localhost:4000/homelab/The-Mini-Lab</id><content type="html" xml:base="http://localhost:4000/homelab/The-Mini-Lab/">&lt;aside class=&quot;sidebar__right&quot;&gt;
 &lt;nav class=&quot;toc&quot;&gt;
-    &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fa fa-file-text&quot;&gt;&lt;/i&gt; Contents&lt;/h4&gt;&lt;/header&gt;
+    &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fas fa-file-alt&quot;&gt;&lt;/i&gt; Contents&lt;/h4&gt;&lt;/header&gt;
 &lt;ul class=&quot;toc__menu&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#burning-the-money-dont-tell-the-wife&quot; id=&quot;markdown-toc-burning-the-money-dont-tell-the-wife&quot;&gt;Burning the money (don’t tell the wife)&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#lets-get-physical&quot; id=&quot;markdown-toc-lets-get-physical&quot;&gt;Let’s get physical&lt;/a&gt;    &lt;ul&gt;
@@ -1093,7 +1093,7 @@
 
 &lt;aside class=&quot;sidebar__right&quot;&gt;
 &lt;nav class=&quot;toc&quot;&gt;
-    &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fa fa-file-text&quot;&gt;&lt;/i&gt; Contents&lt;/h4&gt;&lt;/header&gt;
+    &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fas fa-file-alt&quot;&gt;&lt;/i&gt; Contents&lt;/h4&gt;&lt;/header&gt;
 &lt;ul class=&quot;toc__menu&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#whats-new&quot; id=&quot;markdown-toc-whats-new&quot;&gt;What’s new&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#tested-devices&quot; id=&quot;markdown-toc-tested-devices&quot;&gt;Tested devices&lt;/a&gt;    &lt;ul&gt;
@@ -1200,7 +1200,7 @@
 
 &lt;aside class=&quot;sidebar__right&quot;&gt;
 &lt;nav class=&quot;toc&quot;&gt;
-    &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fa fa-file-text&quot;&gt;&lt;/i&gt; Contents&lt;/h4&gt;&lt;/header&gt;
+    &lt;header&gt;&lt;h4 class=&quot;nav__title&quot;&gt;&lt;i class=&quot;fas fa-file-alt&quot;&gt;&lt;/i&gt; Contents&lt;/h4&gt;&lt;/header&gt;
 &lt;ul class=&quot;toc__menu&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#first-of-all&quot; id=&quot;markdown-toc-first-of-all&quot;&gt;First of all&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#the-story&quot; id=&quot;markdown-toc-the-story&quot;&gt;The story&lt;/a&gt;&lt;/li&gt;
