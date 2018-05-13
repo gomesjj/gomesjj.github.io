@@ -1,0 +1,1564 @@
+<!DOCTYPE html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.11.2 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+--><html lang="en" class="no-js">
+  <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>            How I built a Lego Rack for the Intel NUCs - DEV      TTY      </title>
+<meta name="description" content="Building a Lego Rack for the Intel NUCs, including a working front door. Lots of sweat, tears and last minute purchases from eBay…">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_UK">
+<meta property="og:site_name" content="DEV | TTY">
+<meta property="og:title" content="How I built a Lego Rack for the Intel NUCs">
+<meta property="og:url" content="http://localhost:4000/homelab/How-I-Built-a-Lego-Rack-for-the-Intel-NUCs/">
+
+
+  <meta property="og:description" content="Building a Lego Rack for the Intel NUCs, including a working front door. Lots of sweat, tears and last minute purchases from eBay…">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/images/kitchen_teaser.png">
+
+
+
+  <meta name="twitter:site" content="@devttyuk">
+  <meta name="twitter:title" content="How I built a Lego Rack for the Intel NUCs">
+  <meta name="twitter:description" content="Building a Lego Rack for the Intel NUCs, including a working front door. Lots of sweat, tears and last minute purchases from eBay…">
+  <meta name="twitter:url" content="http://localhost:4000/homelab/How-I-Built-a-Lego-Rack-for-the-Intel-NUCs/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="http://localhost:4000/images/kitchen_teaser.png">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2016-11-27T00:00:00+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/homelab/How-I-Built-a-Lego-Rack-for-the-Intel-NUCs/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "http://localhost:4000",
+      "logo": "http://localhost:4000/images/cat_tty_sm.png"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Jose Gomes",
+      "url": "http://localhost:4000",
+      "sameAs": ["https://twitter.com/devttyuk","https://www.linkedin.com/in/jjgomes","https://github.com/gomesjj"]
+    }
+  </script>
+
+
+
+
+  <meta name="msvalidate.01" content="426C494E4ED223A19760E7EA3829FC1A">
+
+
+  <meta name="alexaVerifyID" content="yvVjIPUlqkOeQBGvpxEw95Xu2yg">
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="DEV | TTY Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">DEV | TTY</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/year-archive/">Posts</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/categories/">Categories</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/tags/">Tags</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/about/">About</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1">
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="/homelab" itemprop="item"><span itemprop="name">Homelab</span></a>
+          <meta itemprop="position" content="2">
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">How I built a Lego Rack for the Intel NUCs</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/images/bio-photo.png" alt="Jose Gomes" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Jose Gomes</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        ... is just another techie.
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">United Kingdom</span>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/devttyuk" itemprop="sameAs">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/jjgomes" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/gomesjj" itemprop="sameAs">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="How I built a Lego Rack for the Intel NUCs">
+    <meta itemprop="description" content="Building a Lego Rack for the Intel NUCs, including a working front door. Lots of sweat, tears and last minute purchases from eBay…">
+    <meta itemprop="datePublished" content="November 27, 2016">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">How I built a Lego Rack for the Intel NUCs
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  12 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title">
+<i class="fas fa-file-alt"></i> Contents</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#the-story" id="markdown-toc-the-story">The story</a></li>
+  <li><a href="#pick-a-brick" id="markdown-toc-pick-a-brick">Pick a Brick</a></li>
+  <li><a href="#bill-of-materials-bom" id="markdown-toc-bill-of-materials-bom">Bill of Materials (BOM)</a></li>
+  <li>
+<a href="#the-build-in-pictures-and-words" id="markdown-toc-the-build-in-pictures-and-words">The Build in Pictures (and words)</a>    <ul>
+      <li><a href="#ground-floor" id="markdown-toc-ground-floor">Ground Floor</a></li>
+      <li><a href="#first-floor" id="markdown-toc-first-floor">First Floor</a></li>
+      <li><a href="#second-floor" id="markdown-toc-second-floor">Second Floor</a></li>
+      <li><a href="#third-floor" id="markdown-toc-third-floor">Third Floor</a></li>
+      <li><a href="#roof" id="markdown-toc-roof">Roof</a></li>
+      <li><a href="#the-work-so-far" id="markdown-toc-the-work-so-far">The Work so Far</a></li>
+      <li><a href="#the-door" id="markdown-toc-the-door">The Door</a></li>
+      <li><a href="#the-glass" id="markdown-toc-the-glass">The Glass</a></li>
+      <li><a href="#door-finish" id="markdown-toc-door-finish">Door Finish</a></li>
+      <li><a href="#the-nucrac" id="markdown-toc-the-nucrac">The NUCRac</a></li>
+      <li><a href="#what-could-be-better" id="markdown-toc-what-could-be-better">What could be better?</a></li>
+      <li><a href="#parting-shot" id="markdown-toc-parting-shot">Parting Shot</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </nav>
+</aside>
+
+<p>I wrote about my new mini lab in this <a href="/homelab/The-Mini-Lab/">post</a> recently, where I mentioned the fact that I had built a rack out of legos for my Intel NUCs. I had also posted a few pics of my set-up on Twitter and Reddit and I got quite a few requests to write a set of detailed build instructions for the Lego <del>House</del> Rack.</p>
+
+<p><strong>Note:</strong> No musical sensibilities were harmed during the writing of this blog post. Ed Sheeran’s Lego House was not played even once… <img class="emoji" title=":wink:" alt=":wink:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f609.png" height="20" width="20"></p>
+
+<h2 id="the-story">The story</h2>
+
+<p>There are some quite nice looking Lego based racks around the Web. For example, the awesome <a href="http://vmnick0.me/?p=7">Lego VSAN EVO Rack</a> by Nicholas Farmer, or the also brilliant <a href="https://roguevcdx.com/2016/06/10/fun-with-legos-and-intel-nucs/">Fun with Legos and Intel NUCs</a> by Andy Smith. Problem is, nobody is writing any guides on how to build the little beasties…</p>
+
+<p>For my build, I wanted to mix (I mean, steal) the best aspects of both Nicholas’ and Andy’s designs. I started by examining their pictures and then came up with a design, initially sketched on paper, so that I could have a basic idea of the number of bricks required. The overhang column seen on my design was inspired by the case design of the Power Macintosh 8600/9600 with the side compartment for the motherboard:</p>
+
+<p><img src="/images/rack/power-mac-9600.jpg" alt="Power Macintosh 9600" class="align-center"></p>
+
+<p>But, I must confess that it was a lot of trial and error and that I didn’t keep the best of notes as I was building the rack. For this guide, in the spirit of helping the community, I sucked it up and dismantled the rack to document the build again…</p>
+
+<h2 id="pick-a-brick">Pick a Brick</h2>
+
+<p>It turned out to be very difficult to source the Lego bricks I needed for this build. I initially thought about a blue and black build (like the EVO), but blue bricks were very hard to come by. I suspect my friends in the US of A will have better luck…</p>
+
+<p>Even the black stackable base plates are now hard to find in the UK (other colours available). They are available directly from <a href="http://strictlybriks.com/stackable-baseplates/6-x-6-single-color-stackables.html">Strictly Briks</a>, though.</p>
+
+<h2 id="bill-of-materials-bom">Bill of Materials (BOM)</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td><b>Quantity</b></td>
+      <td><b>Type</b></td>
+      <td><b>Colour</b></td>
+      <td><b>Size</b></td>
+    </tr>
+    <tr>
+      <td>1 (pack of 10)</td>
+      <td>Stackable Plates</td>
+      <td>Black</td>
+      <td>20x20 (6” x 6”)</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Brick</td>
+      <td>Black</td>
+      <td>1x16</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Brick</td>
+      <td>Black</td>
+      <td>1x8</td>
+    </tr>
+    <tr>
+      <td>64</td>
+      <td>Brick</td>
+      <td>Grey</td>
+      <td>2x6</td>
+    </tr>
+    <tr>
+      <td>48</td>
+      <td>Brick</td>
+      <td>Black</td>
+      <td>2x6</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>Brick</td>
+      <td>Grey</td>
+      <td>2x4</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Brick</td>
+      <td>Black</td>
+      <td>2x4</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Brick</td>
+      <td>Black</td>
+      <td>1x4</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Brick</td>
+      <td>Grey</td>
+      <td>2x2</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>Brick</td>
+      <td>Black</td>
+      <td>2x2</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>Brick</td>
+      <td>Grey</td>
+      <td>1x4</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Brick</td>
+      <td>Grey</td>
+      <td>1x3</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Brick</td>
+      <td>Grey</td>
+      <td>1x2</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Corner Brick</td>
+      <td>Grey</td>
+      <td>1x2</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Roof Tiles</td>
+      <td>Black</td>
+      <td>2x8/45˚</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Roof Tiles</td>
+      <td>Black</td>
+      <td>2x4/45˚</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Flat Tiles</td>
+      <td>Grey</td>
+      <td>1x8</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Flat Tiles</td>
+      <td>Grey</td>
+      <td>1x6</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Flat Tiles</td>
+      <td>Grey</td>
+      <td>1x4</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Flat Tiles</td>
+      <td>Grey</td>
+      <td>1x2</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Flat Tiles</td>
+      <td>Black</td>
+      <td>1x6</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Flat Tiles</td>
+      <td>Black</td>
+      <td>1x4</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Flat Tiles</td>
+      <td>Black</td>
+      <td>1x1</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Arch Continuous Bow</td>
+      <td>Black</td>
+      <td>1x6</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Plate</td>
+      <td>Grey</td>
+      <td>2x16</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Plate</td>
+      <td>Grey</td>
+      <td>2x12</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Plate</td>
+      <td>Grey</td>
+      <td>2x10</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Plate</td>
+      <td>Grey</td>
+      <td>2x8</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Plate</td>
+      <td>Grey</td>
+      <td>2x6</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Plate</td>
+      <td>Grey</td>
+      <td>2x4</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Plate</td>
+      <td>Grey</td>
+      <td>1x2</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Angle Plate</td>
+      <td>Grey</td>
+      <td>1x2/2x2</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Hinge Plate Locking Dual Finger on End</td>
+      <td>Black</td>
+      <td>1x2</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Hinge Plate Locking Single Finger on Top</td>
+      <td>Grey</td>
+      <td>1x2</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Other than the bricks and plates above, I also used the following items to complete the rack door:</p>
+
+<ul>
+  <li><a href="http://www.hobbycraft.co.uk/midwest-polyester-clear-sheet-006-mm-single/569117-1000">Midwest Polyester Clear Sheet 0.06 mm Single</a></li>
+  <li><a href="http://www.hobbycraft.co.uk/stix2-self_adhesive-magnetic-tape-3-metres/606215-1000?queryFromSuggest=true&amp;userInput=magnetic%20tape">Stix2 Self-Adhesive Magnetic Tape</a></li>
+  <li><a href="http://www.hobbycraft.co.uk/modelcraft-universal-razor-saw/569370-1000?queryFromSuggest=true&amp;userInput=craft%20saw">Modelcraft Universal Razor Saw</a></li>
+</ul>
+
+<h2 id="the-build-in-pictures-and-words">The Build in Pictures (and words)</h2>
+
+<p>I spent a considerable amount of time thinking about what size rack I wanted to build. I had seen the Strictly Briks’ Stackable Base Plates before and noticed that Andy had used them for his own rack, so it was just a question of selecting a size that was enough to accommodate the NUCs.</p>
+
+<p>I decided to go with the smallest of the bases, which are available in sizes of 20x20 (brick dots), 22x26, 32x32 and even 50x50 (from other vendors); the larger plates just seemed too big for the look and proportions I wanted to achieve. However, the first build looked a bit boring, so I ended up having to come up with a way of extending the plates somehow, which then allowed me to incorporate the side overhang to my design.</p>
+
+<h3 id="ground-floor">Ground Floor</h3>
+
+<p>The basic building blocks are the Strictly Briks Stackable Plates and the hollow building bricks that come with them. When two of these bricks are joined together, they form a nice 2x2x5 smooth column.</p>
+
+<p>BOM for this section:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><b>Quantity</b></td>
+      <td><b>Type</b></td>
+      <td><b>Colour</b></td>
+      <td><b>Size</b></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Plates</td>
+      <td>Black</td>
+      <td>20x20</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>Stackable/Column Brick</td>
+      <td>Black</td>
+      <td>1x16</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Brick</td>
+      <td>Grey</td>
+      <td>2x6</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Brick</td>
+      <td>Grey</td>
+      <td>2x4</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Brick</td>
+      <td>Black</td>
+      <td>2x6</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><u>Step 1</u></p>
+
+<p>Sandwich together two of the base plates and add four building blocks to each corner to form a 4x2x5 column.</p>
+
+<p><a href="/images/rack/base_and_column_lg.png"> <img src="/images/rack/base_and_column_sm.png" alt=""> </a> <a href="/images/rack/column_brick_lg.png"> <img src="/images/rack/column_brick_sm.png" alt=""> </a></p>
+
+<p><u>Step 2</u></p>
+
+<p>Two sides of the base plate will have a narrower gap: stick four 6x2 grey bricks (two over two) to complete the lower side wall.</p>
+
+<p><a href="/images/rack/base_lower_wall_lg.png"> <img src="/images/rack/base_lower_wall_sm.png" alt=""> </a></p>
+
+<p><u>Step 3</u></p>
+
+<p>Build the front and back “partition” walls by stacking five 4x2 grey bricks right in the middle of the opening:</p>
+
+<p><a href="/images/rack/base_front_back_lg.png"> <img src="/images/rack/base_front_back_sm.png" alt=""> </a></p>
+
+<p><u>Step 4</u></p>
+
+<p>It is now time to put together the second pair of plates, which will enclose the base and serve as the 1st level “floor”. As I decided to have a kind of overhang on one side of the rack, two plates will be placed on top of each other, but this time the top one will be offset by four “dots”.</p>
+
+<p><a href="/images/rack/overhang_lg.png"> <img src="/images/rack/overhang_sm.png" alt=""> </a></p>
+
+<p><u>Step 5</u></p>
+
+<p>We are left with a “step-down” at one end of both the top and bottom of the combined plate, which will need to be filled up with two 4x8 and one 4x4 plates on each side.</p>
+
+<p><a href="/images/rack/overhang_fill_lg.png"> <img src="/images/rack/overhang_fill_sm.png" alt=""> </a></p>
+
+<p>Once done, the base plates for the 1st, and subsequent floors, will have an overall size of 24 dots (w) by 20 dots (d).</p>
+
+<p><a href="/images/rack/overhang_final_lg.png"> <img src="/images/rack/overhang_final_sm.png" alt=""> </a></p>
+
+<p><u>Step 6</u></p>
+
+<p>Turn the baseplate upside down and add to the middle of the short edges four 2x6 black bricks (two over two); on one side, right on the edge, and on the other offset by four dots. Those will form the upper half of the side wall of the base, including a gap in the middle.</p>
+
+<p><a href="/images/rack/base_upper_wall_lg.png"> <img src="/images/rack/base_upper_wall_sm.png" alt=""> </a></p>
+
+<p>Finally, place the assembled 1st level plate over the base.</p>
+
+<p><a href="/images/rack/base_complete_lg.png"> <img src="/images/rack/base_complete_sm.png" alt=""> </a> <a href="/images/rack/base_side_lg.png"> <img src="/images/rack/base_side_sm.png" alt=""> </a></p>
+
+<h3 id="first-floor">First Floor</h3>
+
+<p>BOM for this section:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><b>Quantity</b></td>
+      <td><b>Type</b></td>
+      <td><b>Colour</b></td>
+      <td><b>Size</b></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Plates</td>
+      <td>Black</td>
+      <td>20x20</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Plates</td>
+      <td>Black</td>
+      <td>4x8</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Plates</td>
+      <td>Black</td>
+      <td>4x4</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Stackable/Column Brick</td>
+      <td>Black</td>
+      <td>1x16</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>Brick</td>
+      <td>Grey</td>
+      <td>2x6</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Brick</td>
+      <td>Grey</td>
+      <td>2x4</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Brick</td>
+      <td>Grey</td>
+      <td>2x2</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Brick</td>
+      <td>Black</td>
+      <td>2x6</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Brick</td>
+      <td>Black</td>
+      <td>2x2</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><u>Step 7</u></p>
+
+<p>The first floor build starts by adding the side walls to the base plate (floor). Place three 2x6 grey bricks along the overhang edge (offset by four dots) and finish off with a 2x4 brick running lengthwise along the bottom edge of the plate.</p>
+
+<p><a href="/images/rack/1st_row1_lg.png"> <img src="/images/rack/1st_row1_sm.png" alt=""> </a></p>
+
+<p>Start the second row with a 2x2 grey brick, followed by three 2x6 grey bricks.</p>
+
+<p><a href="/images/rack/1st_row2_lg.png"> <img src="/images/rack/1st_row2_sm.png" alt=""> </a></p>
+
+<p>Rows 3 and 4 are built with 2x6 black bricks only, leaving a gap in the middle; rows 5 and 6 are built with 2x2 and 2x6 black bricks – I started with the 2x2 bricks at different ends of the plate.</p>
+
+<p><a href="/images/rack/1st_row3_6_lg.png"> <img src="/images/rack/1st_row3_6_sm.png" alt=""> </a></p>
+
+<p><a href="/images/rack/1st_final_lg.png"> <img src="/images/rack/1st_final_sm.png" alt=""> </a></p>
+
+<p>Finally, place 2 building bricks together at each end of the overhang, capped by a 2x2 black brick. This will give extra height to the column, matching the six row wall.</p>
+
+<p><a href="/images/rack/column_lg.png"> <img src="/images/rack/column_sm.png" alt=""> </a> <a href="/images/rack/1st_column_lg.png"> <img src="/images/rack/1st_column_sm.png" alt=""> </a></p>
+
+<h3 id="second-floor">Second Floor</h3>
+
+<p>BOM for this section:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><b>Quantity</b></td>
+      <td><b>Type</b></td>
+      <td><b>Colour</b></td>
+      <td><b>Size</b></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Plates</td>
+      <td>Black</td>
+      <td>20x20</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Plates</td>
+      <td>Black</td>
+      <td>4x8</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Plates</td>
+      <td>Black</td>
+      <td>4x4</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Stackable/Column Brick</td>
+      <td>Black</td>
+      <td>1x16</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>Brick</td>
+      <td>Black</td>
+      <td>2x6</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Brick</td>
+      <td>Black</td>
+      <td>2x4</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Brick</td>
+      <td>Black</td>
+      <td>2x2</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Brick</td>
+      <td>Grey</td>
+      <td>2x6</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Brick</td>
+      <td>Grey</td>
+      <td>2x2</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><u>Step 8</u></p>
+
+<p>Build the base plate (floor) as per steps 4 and 5.</p>
+
+<p><u>Step 9</u></p>
+
+<p>As per Step 7, but starting with black, instead of grey, bricks.</p>
+
+<p><a href="/images/rack/2nd_floor_walls_lg.png"> <img src="/images/rack/2nd_floor_walls_sm.png" alt=""> </a></p>
+
+<h3 id="third-floor">Third Floor</h3>
+
+<p>BOM for this section:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><b>Quantity</b></td>
+      <td><b>Type</b></td>
+      <td><b>Colour</b></td>
+      <td><b>Size</b></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Plates</td>
+      <td>Black</td>
+      <td>20x20</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Plates</td>
+      <td>Black</td>
+      <td>4x8</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Plates</td>
+      <td>Black</td>
+      <td>4x4</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Stackable/Column Brick</td>
+      <td>Black</td>
+      <td>1x16</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>Brick</td>
+      <td>Grey</td>
+      <td>2x6</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Brick</td>
+      <td>Grey</td>
+      <td>2x4</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Brick</td>
+      <td>Grey</td>
+      <td>2x2</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Brick</td>
+      <td>Black</td>
+      <td>2x6</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Brick</td>
+      <td>Black</td>
+      <td>2x2</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>A repeat of steps 4, 5 and 7 (grey bricks).</p>
+
+<h3 id="roof">Roof</h3>
+
+<p>BOM for this section:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><b>Quantity</b></td>
+      <td><b>Type</b></td>
+      <td><b>Colour</b></td>
+      <td><b>Size</b></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Plates</td>
+      <td>Black</td>
+      <td>20x20</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Roof Tiles</td>
+      <td>Black</td>
+      <td>2x8/45˚</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Roof Tiles</td>
+      <td>Black</td>
+      <td>2x4/45˚</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Flat Tiles</td>
+      <td>Grey</td>
+      <td>1x8</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Flat Tiles</td>
+      <td>Grey</td>
+      <td>1x4</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The top of the rack (roof, if you will) is built with the same overhang base plates, then finished off by 2x8/45˚ and 2x4/45˚ black roof tiles, and capped by two 1x8 and one 1x4 grey smooth plates to the sides. The front and back of the roof are finished off with one 1x16 and one 1x4 black bricks capped by two 1x6 and one 1x8 grey smooth plates.</p>
+
+<p><a href="/images/rack/roof_front_lg.png"> <img src="/images/rack/roof_front_sm.png" alt=""> </a> <a href="/images/rack/roof_side_lg.png"> <img src="/images/rack/roof_side_sm.png" alt=""> </a></p>
+
+<p><a href="/images/rack/roof_final_lg.png"> <img src="/images/rack/roof_final_sm.png" alt=""> </a></p>
+
+<h3 id="the-work-so-far">The Work so Far</h3>
+
+<p>We now we have a rack that will suit most people.</p>
+
+<p><a href="/images/rack/rack_no_door_lg.png"> <img src="/images/rack/rack_no_door_sm.png" alt=""> </a></p>
+
+<p>I myself wanted the rack to have a working door. Off course, it is not essential, but I just enjoyed the challenge… <img class="emoji" title=":wink:" alt=":wink:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f609.png" height="20" width="20"></p>
+
+<h3 id="the-door">The Door</h3>
+
+<p>BOM for this section:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><b>Quantity</b></td>
+      <td><b>Type</b></td>
+      <td><b>Colour</b></td>
+      <td><b>Size</b></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Corner Brick</td>
+      <td>Grey</td>
+      <td>1x2</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>Brick</td>
+      <td>Grey</td>
+      <td>1x4</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Brick</td>
+      <td>Grey</td>
+      <td>1x3</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Brick</td>
+      <td>Grey</td>
+      <td>1x2</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Plate</td>
+      <td>Grey</td>
+      <td>2x16</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Plate</td>
+      <td>Grey</td>
+      <td>2x12</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Plate</td>
+      <td>Grey</td>
+      <td>2x10</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Plate</td>
+      <td>Grey</td>
+      <td>2x8</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Plate</td>
+      <td>Grey</td>
+      <td>2x6</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Plate</td>
+      <td>Grey</td>
+      <td>2x4</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Plate</td>
+      <td>Grey</td>
+      <td>1x2</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Angle Plate</td>
+      <td>Grey</td>
+      <td>1x2/2x2</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Hinge Plate Locking Dual Finger on End</td>
+      <td>Black</td>
+      <td>1x2</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Hinge Plate Locking Single Finger on Top</td>
+      <td>Grey</td>
+      <td>1x2</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Designing and building the door frame was reasonably easy, but the hinges (ah the hinges) proved to be a much tougher nut to crack. There are plenty of different, nice looking hinges out there and I tested most of them. Some come fully assembled, some are hard to put together, but all proved to be either too weak to support the door or just impossible to attach to the frame. The one thing I didn’t want was to glue any parts together…</p>
+
+<p>I had to come up with a custom design, and it proved to be not only strong enough to hold the door, but also pretty reliable in operation. The hinges are built by using four Hinge Plate Locking Dual Finger on End (black), four Hinge Plate Locking Single Finger on Top (grey) and two 1x2/2x2 grey Angle Plates.</p>
+
+<p><a href="/images/rack/hinge_pieces_lg.png"> <img src="/images/rack/hinge_pieces_sm.png" alt=""> </a></p>
+
+<p>Well, lets get on with the program…</p>
+
+<p><u>Step 10</u></p>
+
+<p>The basic shape for the door frame is built by arranging two 2x16 grey plates (width) and four 2x12 grey plates (height).</p>
+
+<p><a href="/images/rack/door_frame_lg.png"> <img src="/images/rack/door_frame_sm.png" alt=""> </a></p>
+
+<p><u>Step 11</u></p>
+
+<p>On the hinge side, start joining the base plate with one 2x4 grey plate offset by two dots; leave another two dots free and add one 2x6 grey plate. Finally, skip another two dots and add a second 2x4 grey plate.</p>
+
+<p><a href="/images/rack/door_frame_hinge_side_lg.png"> <img src="/images/rack/door_frame_hinge_side_sm.png" alt=""> </a></p>
+
+<p><u>Step 12</u></p>
+
+<p>Place two black hinge plates (with the two “fingers”) on each gap between the 2x4 and 2x6 plates, and  connected to the grey hinge plates (“single finger on top”); the hinges are finished off by two 1x2 black smooth plates. Finally, attach the angle plates.</p>
+
+<p><a href="/images/rack/hinge_connected_lg.png"> <img src="/images/rack/hinge_connected_sm.png" alt=""> </a> <a href="/images/rack/hinge_capped_lg.png"> <img src="/images/rack/hinge_capped_sm.png" alt=""> </a> <a href="/images/rack/hinge_angle_plate_lg.png"> <img src="/images/rack/hinge_angle_plate_sm.png" alt=""> </a></p>
+
+<p><a href="/images/rack/door_frame_and_hinge_lg.png"> <img src="/images/rack/door_frame_and_hinge_sm.png" alt=""> </a></p>
+
+<p class="notice--info">I couldn’t find a mounting position for the hinges that would line up correctly with the distance between two overhangs. The top hinge needs to be “packed” with one 1x4 grey brick and two 1x2 grey plates to compensate for this.</p>
+
+<p><a href="/images/rack/hinge_packers_lg.png"> <img src="/images/rack/hinge_packers_sm.png" alt=""> </a> <a href="/images/rack/hinge_top_detail_lg.png"> <img src="/images/rack/hinge_top_detail_sm.png" alt=""> </a></p>
+
+<p><u>Step 13</u></p>
+
+<p>On the handle side, the base plates are simply joined by three 2x6 plates offset by two dots either side.</p>
+
+<p><a href="/images/rack/door_frame_handle_side_lg.png"> <img src="/images/rack/door_frame_handle_side_sm.png" alt=""> </a></p>
+
+<p><u>Step 14</u></p>
+
+<p>The top and bottom base plates are fixed by adding two 2x10 grey plates, starting from the free 2x2 space on each of the side plates.</p>
+
+<p><a href="/images/rack/door_frame_top_bottom_lg.png"> <img src="/images/rack/door_frame_top_bottom_sm.png" alt=""> </a></p>
+
+<p>The complete door base frame:</p>
+
+<p><a href="/images/rack/door_frame_final_lg.png"> <img src="/images/rack/door_frame_final_sm.png" alt=""> </a></p>
+
+<p><u>Step 15</u></p>
+
+<p>Starting with the 1x2 corner bricks, add grey 1x4 bricks around the outer perimeter of the base frame.</p>
+
+<p><a href="/images/rack/door_frame_edge_lg.png"> <img src="/images/rack/door_frame_edge_sm.png" alt=""> </a> <a href="/images/rack/door_frame_edge_2_lg.png"> <img src="/images/rack/door_frame_edge_2_sm.png" alt=""> </a></p>
+
+<p>Note that on the handle side, an extra two 1x3 (or one 1x6) grey bricks are set in the middle of the lower perimeter; those bricks form the basis where the door handle itself will sit.</p>
+
+<p><a href="/images/rack/door_frame_edge_handle_lg.png"> <img src="/images/rack/door_frame_edge_handle_sm.png" alt=""> </a></p>
+
+<p><u>Step 16</u></p>
+
+<p>To finish off the inner frame, place 1x8 grey smooth plates around the inner perimeter. Note that on the hinge side, one 1x6 grey smooth plate is placed between the two 1x8 plates.</p>
+
+<p><a href="/images/rack/door_frame_inner_lg.png"> <img src="/images/rack/door_frame_inner_sm.png" alt=""> </a></p>
+
+<h3 id="the-glass">The Glass</h3>
+
+<p>BOM for this section:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><b>Quantity</b></td>
+      <td><b>Type</b></td>
+      <td><b>Colour</b></td>
+      <td><b>Size</b></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Midwest Polyester Clear Sheet Single</td>
+      <td>Clear</td>
+      <td>0.06 mm</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Stix2 Self-Adhesive Magnetic Tape</td>
+      <td>Brown</td>
+      <td>3 m</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Modelcraft Universal Razor Saw</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Note:</strong> I used a razor saw, but I suppose a sharp pair of scissors would also do the trick.</p>
+
+<p><u>Step 17</u></p>
+
+<p>Measure and cut the polyester sheet to the desired size. In this case, the sheet was cut to a size of 144mm x 175mm, which fits snuggly within the inner edge of the door frame. On the handle side of the frame, a cut measuring 50mm x 10mm is also required in order for the glass to wrap around the door handle itself. The glass is then framed with the magnetic tape (both sides):</p>
+
+<p><a href="/images/rack/door_glass_lg.png"> <img src="/images/rack/door_glass_sm.png" alt=""> </a> <a href="/images/rack/door_glass_cut_lg.png"> <img src="/images/rack/door_glass_cut_sm.png" alt=""> </a></p>
+
+<p><u>Step 18</u></p>
+
+<p>Carefully place the polyester sheet within the door frame. As mentioned above, the glass sits very snugly within the frame and might require some gentle persuasion when fit to the frame.</p>
+
+<p><a href="/images/rack/door_with_glass_lg.png"> <img src="/images/rack/door_with_glass_sm.png" alt=""> </a></p>
+
+<h3 id="door-finish">Door Finish</h3>
+
+<p>BOM for this section:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td><b>Quantity</b></td>
+      <td><b>Type</b></td>
+      <td><b>Colour</b></td>
+      <td><b>Size</b></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Arch Continuous Bow</td>
+      <td>Black</td>
+      <td>1x6</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Flat Tiles</td>
+      <td>Grey</td>
+      <td>1x6</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Flat Tiles</td>
+      <td>Black</td>
+      <td>1x6</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Flat Tiles</td>
+      <td>Black</td>
+      <td>1x4</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Flat Tiles</td>
+      <td>Black</td>
+      <td>1x1</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The handle is made up of two black arch continuous bows capped off by 1x6 grey tiles:</p>
+
+<p><a href="/images/rack/door_handle_lg.png"> <img src="/images/rack/door_handle_sm.png" alt=""> </a></p>
+
+<p>With the glass and handle in place, the only thing left is to cap the outer frame bricks with smooth black tiles.</p>
+
+<p>Starting with one 1x1 black smooth tile at the corners, add six 1x6 smooth black tiles to the top and bottom edges; three 1x6 and one 1x4 black smooth tiles to the hinge side and four 1x4 black smooth tiles to the handle side.</p>
+
+<p><a href="/images/rack/door_finish_lg.png"> <img src="/images/rack/door_finish_sm.png" alt=""> </a> <a href="/images/rack/door_final_lg.png"> <img src="/images/rack/door_final_sm.png" alt=""> </a></p>
+
+<h3 id="the-nucrac">The NUCRac</h3>
+
+<p>Now, we simply attach the assembled door to the frame: the top hinge goes into the overhang of the second floor and the bottom hinge into the overhang of the first floor. And that’s it, the rack is complete:</p>
+
+<p><a href="/images/rack/final_lg.png"> <img src="/images/rack/final_sm.png" alt=""> </a> <a href="/images/rack/rack_final_no_door_lg.png"> <img src="/images/rack/rack_final_no_door_sm.png" alt=""> </a></p>
+
+<h3 id="what-could-be-better">What could be better?</h3>
+
+<p>Well, the top of the NUCs are very close to the “floor” above and it is very difficult to reach the power button. It is not much of a problem, because I don’t expect to be powering the NUCs up and down on a regular basis. Besides, my NUCs all have vPro/AMT, so I can use the remote out-of-band features to power them up. <img class="emoji" title=":wink:" alt=":wink:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f609.png" height="20" width="20"></p>
+
+<p>As I was preparing this guide I thought about changing the height of the sections by an extra row of bricks, however, that would change the proportions of the door – I just didn’t feel like re-designing it all again…</p>
+
+<h3 id="parting-shot">Parting Shot</h3>
+
+<p>Lastly, the wife (<img class="emoji" title=":ok_woman:" alt=":ok_woman:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f646.png" height="20" width="20">) was so happy with the end product, she decided it could stay in the kitchen…</p>
+
+<p><a href="/images/rack/kitchen_lg.png"> <img src="/images/rack/kitchen_sm.png" alt=""> </a></p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2016-11-27T00:00:00+00:00">November 27, 2016</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=devttyuk&amp;text=How+I+built+a+Lego+Rack+for+the+Intel+NUCs%20http%3A%2F%2Flocalhost%3A4000%2Fhomelab%2FHow-I-Built-a-Lego-Rack-for-the-Intel-NUCs%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fhomelab%2FHow-I-Built-a-Lego-Rack-for-the-Intel-NUCs%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2Fhomelab%2FHow-I-Built-a-Lego-Rack-for-the-Intel-NUCs%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Flocalhost%3A4000%2Fhomelab%2FHow-I-Built-a-Lego-Rack-for-the-Intel-NUCs%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/homelab/The-Mini-Lab/" class="pagination--pager" title="The Mini Lab
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/mini_lab_small.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/homelab/The-Mini-Lab/" rel="permalink">The Mini Lab
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">The evolution of the home lab: Intel Avoton, Intel NUC, FreeNAS, ESXi and FreeNAS
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/usb_adapters_65.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/homelab/USB-Ethernet-driver-for-ESXi-6.5/" rel="permalink">USB Ethernet driver for ESXi 6.5
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">ESXi 6.5 drivers for USB 3.0 Gigabit Ethernet adapters based on the ASIX ax88179_178a or the Realtek RLT8153/RTL8152 chipsets
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/usb_adapters.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/" rel="permalink">Want a USB Ethernet driver for ESXi? You can have two.
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  11 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">ESXi drivers for USB 3.0 Gigabit Ethernet adapters based on the ASIX ax88179_178a or the Realtek RLT8153/RTL8152 chipsets
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src="/images/commander.png" alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/apple/Intel_Mesh_Commander_on_Mac_OS_X/" rel="permalink">Intel Mesh Commander on Mac OS X
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">A Mac OS X application for the management of computers with Intel AMT (Active Management Technology), supporting redirection, remote desktop, remote terminal...</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+      <li><a href="https://twitter.com/devttyuk"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+    
+    
+    
+      <li><a href="https://github.com/gomesjj"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">© 2018 Jose Gomes. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://localhost:4000/homelab/How-I-Built-a-Lego-Rack-for-the-Intel-NUCs/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/homelab/How-I-Built-a-Lego-Rack-for-the-Intel-NUCs"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://devttyuk.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+
+
+  
+
+
+
+  </body>
+</html>

@@ -1,0 +1,829 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.11.2 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>            Intel Mesh Commander on Mac OS X - DEV      TTY      </title>
+<meta name="description" content="A Mac OS X application for the management of computers with Intel AMT (Active Management Technology), supporting redirection, remote desktop, remote terminal and scripted management.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_UK">
+<meta property="og:site_name" content="DEV | TTY">
+<meta property="og:title" content="Intel Mesh Commander on Mac OS X">
+<meta property="og:url" content="http://localhost:4000/apple/Intel_Mesh_Commander_on_Mac_OS_X/">
+
+
+  <meta property="og:description" content="A Mac OS X application for the management of computers with Intel AMT (Active Management Technology), supporting redirection, remote desktop, remote terminal and scripted management.">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/images/commander.png">
+
+
+
+  <meta name="twitter:site" content="@devttyuk">
+  <meta name="twitter:title" content="Intel Mesh Commander on Mac OS X">
+  <meta name="twitter:description" content="A Mac OS X application for the management of computers with Intel AMT (Active Management Technology), supporting redirection, remote desktop, remote terminal and scripted management.">
+  <meta name="twitter:url" content="http://localhost:4000/apple/Intel_Mesh_Commander_on_Mac_OS_X/">
+
+  
+    <meta name="twitter:card" content="summary">
+    
+      <meta name="twitter:image" content="http://localhost:4000/images/commander.png">
+    
+  
+
+  
+
+
+
+  <meta property="article:published_time" content="2016-05-12T00:00:00+01:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/apple/Intel_Mesh_Commander_on_Mac_OS_X/">
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Organization",
+      "url": "http://localhost:4000",
+      "logo": "http://localhost:4000/images/cat_tty_sm.png"
+    }
+  </script>
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Jose Gomes",
+      "url": "http://localhost:4000",
+      "sameAs": ["https://twitter.com/devttyuk","https://www.linkedin.com/in/jjgomes","https://github.com/gomesjj"]
+    }
+  </script>
+
+
+
+
+  <meta name="msvalidate.01" content="426C494E4ED223A19760E7EA3829FC1A">
+
+
+  <meta name="alexaVerifyID" content="yvVjIPUlqkOeQBGvpxEw95Xu2yg">
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="DEV | TTY Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">DEV | TTY</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/year-archive/" >Posts</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/categories/" >Categories</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/tags/" >Tags</a>
+            </li>
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/about/" >About</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="http://localhost:4000/" itemprop="item"><span itemprop="name">Home</span></a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+          <a href="/apple" itemprop="item"><span itemprop="name">Apple</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">Intel Mesh Commander on Mac OS X</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/images/bio-photo.png" alt="Jose Gomes" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Jose Gomes</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        ... is just another techie.
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">United Kingdom</span>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://twitter.com/devttyuk" itemprop="sameAs">
+            <i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/jjgomes" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/gomesjj" itemprop="sameAs">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Intel Mesh Commander on Mac OS X">
+    <meta itemprop="description" content="A Mac OS X application for the management of computers with Intel AMT (Active Management Technology), supporting redirection, remote desktop, remote terminal and scripted management.">
+    <meta itemprop="datePublished" content="May 12, 2016">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Intel Mesh Commander on Mac OS X
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <div class="notice--warning">
+  <p><strong>Update (25/05/16)</strong></p>
+
+  <li>Pre-built package of MeshCommander updated to version 0.2.1</li>
+  <p></p>
+  <p>The modifications I made to the code have been accepted by Ylian Saint-Hilaire and are now part of Mesh Commander's source.</p>
+
+  <p><strong>Update (14/11/16)</strong></p>
+
+  <li>Pre-built package of MeshCommander updated to version 0.3.8</li>
+  <p></p>
+
+  <p><strong>Update (20/02/17)</strong></p>
+
+  <li>Pre-built package of MeshCommander updated to version 0.4.4</li>
+  <p></p>
+
+  <p><strong>Update (03/07/17)</strong></p>
+
+  <li>Pre-built package of MeshCommander updated to version 0.4.7</li>
+  <p></p>
+
+  <p><strong>Update (05/12/17)</strong></p>
+
+  <li>Pre-built package of MeshCommander updated to version 0.5.7</li>
+  <p></p>
+</div>
+
+<p>Intel Active Management Technology is one of the hardware technologies (perhaps the most recognised and representative) that is part of Intel’s <a href="http://www.intel.co.uk/content/www/uk/en/architecture-and-technology/vpro/vpro-technology-general.html">vPro</a> offerings. AMT offers the benefits of out-of-band management similar to <abbr title="Intelligent Platform Management Interface">IPMI</abbr>, but for personal computers as opposed to servers.</p>
+
+<p>When I was selecting the NUC model(s) to use for my ESXi home lab, the fact that both the <a href="http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-dc53427hye-board-d53427rke.html">DC53427HYEA</a> and the <a href="http://www.intel.co.uk/content/www/uk/en/nuc/nuc-kit-nuc5i5ryh.html">NUC5i5RYH</a> sported processors with vPro and AMT support helped me sway towards them. The NUCs were replacing kit that had full <abbr title="Intelligent Platform Management Interface">IPMI</abbr> functionality, and I knew how much I would miss the convenience of managing the new “servers” remotely.</p>
+
+<p>There was a little fly in the ointment though. As I researched the technology it became clear that all the management tools were Windows only. Even Linux support was almost non-existent except for some example code distributed with the AMT SDK. Bummer, I thought to myself, another “Macs need not apply” zone.</p>
+
+<p>I do run a Windows 7 VM on my laptop solely because of Visio (another bummer), so I resigned to the fact that the VM would just have to spin a few more times a week. That is, until I came across <a href="http://www.meshcommander.com/meshcommander">Mesh Commander</a>. Mesh Commander is open source software developed by Intel’s Ylian Saint-Hilaire, which is distributed as a WIN64 binary or as a website served from <abbr title="Internet Information Services">IIS</abbr> (Yuck!). Since the <abbr title="Internet Information Services">IIS</abbr> version included the source code, I decided to download it and see if I could coerce the code to run on Apache or something else. To my surprise, in the bowels of the source code, I found an NW.js folder. That was more like it!</p>
+
+<p>I dabble from time to time with some coding and scripting, particularly when I want to have some piece of software running on Mac OS X; but, I had never played with NW.js (née node-webkit). If you are not familiar with NW.js, you can see what it is all about <a href="http://nwjs.io">here</a>.</p>
+
+<p>To start with, I downloaded version 0.1.3 of Mesh Commander (it’s now at 0.2.0) and version 0.12.3 of NW.js (stable is 0.14.5 now). I must confess I had much more problems with the code than I expected, but I think it was down to NW.js. Since then I have tested with later versions and the total amount of changes to the source code is now insignificant, amounting to just a couple of Mac OS X specific GUI items.</p>
+
+<p>So, lets move on to the recipe.</p>
+
+<h3 id="the-ingredients">The Ingredients</h3>
+
+<p>1. Apple Developer ID</p>
+
+<p>You will need a valid Developer ID and signing certificate, otherwise the resulting application will not even run. The Mac Developer Program costs GBP 79 / USD 99 per year for an individual.</p>
+
+<p><a href="https://developer.apple.com/programs/">Apple Developer Program</a></p>
+
+<p class="notice--info">Have you had enough already and don’t want to bake anymore? You can download one that I prepared earlier, fully signed, <a href="https://bintray.com/gomesjj/APPS/download_file?file_path=OSX%2FMeshCommander.dmg.zip">here</a>.</p>
+
+<p>2. Xcode</p>
+
+<p>If you haven’t installed Xcode yet, get it from the App Store, or download from <a href="https://developer.apple.com/xcode/download/"> Developer</a>.</p>
+
+<p>Time for a cuppa of whatever rocks your boat, as it will take some time…</p>
+
+<p>3. Install <code class="highlighter-rouge">node</code>:</p>
+
+<p>The easiest way is by installing Homebrew first</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby <span class="nt">-e</span> <span class="s2">"</span><span class="k">$(</span>curl <span class="nt">-fsSL</span> https://raw.githubusercontent.com/Homebrew/install/master/install<span class="k">)</span><span class="s2">"</span>
+</code></pre></div></div>
+<p>Now, you could just install <code class="highlighter-rouge">node</code> and <code class="highlighter-rouge">npm</code> straight away, but I recommend you follow the instructions in this <a href="https://johnpapa.net/how-to-use-npm-global-without-sudo-on-osx/">post</a> by John Papa. The instructions show how to use <code class="highlighter-rouge">npm global</code> without the need for <code class="highlighter-rouge">sudo</code>.</p>
+
+<p><strong><em>or</em></strong></p>
+
+<p>If you don’t mind running code compiled by someone else, just install the <code class="highlighter-rouge">node</code> binary, which also includes <code class="highlighter-rouge">npm</code>. Download it from <a href="https://nodejs.org/en/download/">here</a>.</p>
+
+<p>4. Install <code class="highlighter-rouge">nw-builder</code>:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install <span class="nt">-g</span> nw-builder
+</code></pre></div></div>
+<p>I have used both <code class="highlighter-rouge">nw-builder</code> and <code class="highlighter-rouge">nwjs-macappstore-builder</code>. Whilst both of them work well, I prefer <code class="highlighter-rouge">nw-builder</code> as it offers more control.</p>
+
+<p>If you would rather decide for yourself, have a look at <a href="https://github.com/nwjs/nw-builder">nw-builder</a> and <a href="https://www.npmjs.com/package/nwjs-macappstore-builder">nwjs-macappstore-builder</a>.</p>
+
+<p>5. Grab the modified source files and other requisites from my GitHub <a href="https://github.com/gomesjj/MeshCommander">repository</a></p>
+
+<h3 id="lets-bake-it">Lets bake it</h3>
+
+<p>1. Create a directory to store the files and the built application.</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir <span class="nt">-p</span> ~/devel
+</code></pre></div></div>
+
+<p>If you downloaded the contents of my repository, just copy them over to the above created folder. You can also clone the contents directly with <code class="highlighter-rouge">git</code></p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~/devel
+git clone https://github.com/gomesjj/MeshCommander.git
+</code></pre></div></div>
+<p>You should end-up with something like this</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls
+</span>MeshCommander/
+
+<span class="nb">ls</span> <span class="nt">-lR</span> MeshCommander
+total 16
+<span class="nt">-rw-r--r--</span>  1 gj1606  staff    90B 4 May 14:00 README.md
+<span class="nt">-rwxr-xr-x</span>  1 gj1606  staff   1.8K 4 May 14:00 mkapp<span class="k">*</span>
+drwxr-xr-x  5 gj1606  staff   170B 4 May 14:00 files/
+drwxr-xr-x  7 gj1606  staff   238B 4 May 14:00 <span class="nb">source</span>/
+
+MeshCommander/files:
+total 88
+<span class="nt">-rw-r--r--</span>  1 gj1606  staff   2.6K 4 May 14:00 Info.plist
+<span class="nt">-rw-r--r--</span>  1 gj1606  staff   600B 4 May 14:00 InfoPlist.strings
+<span class="nt">-rw-r--r--</span>  1 gj1606  staff    36K 4 May 14:00 meshcommander.icns
+
+MeshCommander/source:
+total 3504
+<span class="nt">-rw-r--r--</span>  1 gj1606  staff   1.7M 4 May 14:00 Commander.htm
+<span class="nt">-rwxr-xr-x</span>  1 gj1606  staff   3.6K 4 May 14:00 favicon.ico<span class="k">*</span>
+<span class="nt">-rwxr-xr-x</span>  1 gj1606  staff   3.1K 4 May 14:00 favicon.png<span class="k">*</span>
+<span class="nt">-rw-r--r--</span>  1 gj1606  staff   593B 4 May 14:00 package.json
+<span class="nt">-rw-r--r--</span>  1 gj1606  staff    18K 4 May 14:00 scriptblocks.txt
+</code></pre></div></div>
+<p>2. Build the application</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>MeshCommander
+<span class="nb">.</span> ./mkapp
+</code></pre></div></div>
+<p>If the build is successful you should see output similar to this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>node:61321) fs: re-evaluating native module sources is not supported. If you are using the graceful-fs module, please update it to a more recent version.
+  downloading [====================] 100% 0.0s
+
+all done!
+
+Copying "InfoPlist.strings" to "en.lproj" directory
+
+Signing Application
+
+./build/MeshCommander/osx64/MeshCommander.app/Contents/Versions/51.0.2704.47/nwjs Framework.framework/Helpers/crashpad_handler: signed Mach-O thin (x86_64) [crashpad_handler]
+./build/MeshCommander/osx64/MeshCommander.app/Contents/Versions/51.0.2704.47/nwjs Framework.framework/Resources/APP_mode_loader.APP/Contents/MacOS/APP_mode_loader: signed app bundle with Mach-O thin (x86_64) [io.nwjs.nw.app.@APP_MODE_SHORTCUT_ID@]
+./build/MeshCommander/osx64/MeshCommander.app/Contents/Versions/51.0.2704.47/nwjs Helper.APP/Contents/MacOS/nwjs Helper: signed app bundle with Mach-O thin (x86_64) [io.nwjs.nw.helper]
+./build/MeshCommander/osx64/MeshCommander.app: signed app bundle with Mach-O thin (x86_64) [com.intel.MeshCommander]
+
+Verifying signature
+
+Executable=/Users/gj1606/devel/MeshCommander/build/clone/MeshCommander/build/MeshCommander/osx64/MeshCommander.app/Contents/MacOS/nwjs
+Identifier=com.intel.MeshCommander
+Format=app bundle with Mach-O thin (x86_64)
+CodeDirectory v=20200 size=311 flags=0x0(none) hashes=3+4 location=embedded
+Hash type=sha256 size=32
+CandidateCDHash sha1=e3afaf1ada749b9e2617ff53c25761ec9b5125a7
+CandidateCDHash sha256=b25da72bd96ab5ffbbeda9e0094846c53ea23757
+Hash choices=sha1,sha256
+CDHash=b25da72bd96ab5ffbbeda9e0094846c53ea23757
+Signature size=8908
+Authority=Developer ID Application: Jose Gomes (3JU95247N3)
+Authority=Developer ID Certification Authority
+Authority=Apple Root CA
+Timestamp=13 May 2016, 15:22:34
+Info.plist entries=28
+TeamIdentifier=3JU95247N3
+Sealed Resources version=2 rules=12 files=86
+Internal requirements count=1 size=184
+
+
+Veriyfing Gatekeeper acceptance...
+
+./build/MeshCommander/osx64/MeshCommander.app: accepted
+source=Developer ID
+override=security disabled
+</code></pre></div></div>
+
+<p><strong>Note:</strong> On first run, NW.js is downloaded and cached locally for subsequent builds:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;SNIP&gt;
+  downloading <span class="o">[====================]</span> 100% 0.0s
+&lt;/SNIP&gt;
+
+<span class="nb">ls </span>cache/
+0.15.0-rc2/
+</code></pre></div></div>
+<p>The packaged application will be under the <strong>build</strong> directory:</p>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">ls</span> ./build/MeshCommander/osx64/
+MeshCommander.app
+</code></pre></div></div>
+
+<h3 id="look-whats-come-out-from-the-oven">Look what’s come out from the oven</h3>
+
+<p><img src="/images/mesh/mesh.png" alt="Start" /></p>
+
+<p><img src="/images/mesh/about.png" alt="About" /></p>
+
+<p><img src="/images/mesh/status.png" alt="Status" /></p>
+
+<p><img src="/images/mesh/hw.png" alt="Hardware" /></p>
+
+<p><img src="/images/mesh/rdesk.png" alt="Remote" /></p>
+
+<h3 id="can-i-eat-it">Can I eat it?</h3>
+
+<p>Yes, you can. Download the latest version of the application:</p>
+
+<p><img src="/images/mesh/meshcommander_app.png" alt="MeshCommander.app" /> <a href="https://bintray.com/gomesjj/APPS/MeshCommander.app/_latestVersion"> <img src="https://api.bintray.com/packages/gomesjj/APPS/MeshCommander.app/images/download.svg" alt="Download" /> </a></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2016-05-12T00:00:00+01:00">May 12, 2016</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?via=devttyuk&text=Intel+Mesh+Commander+on+Mac+OS+X%20http%3A%2F%2Flocalhost%3A4000%2Fapple%2FIntel_Mesh_Commander_on_Mac_OS_X%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fapple%2FIntel_Mesh_Commander_on_Mac_OS_X%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2Fapple%2FIntel_Mesh_Commander_on_Mac_OS_X%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fapple%2FIntel_Mesh_Commander_on_Mac_OS_X%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/homelab/NUC-Squarepants/" class="pagination--pager" title="NUC Squarepants
+">Previous</a>
+    
+    
+      <a href="/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/" class="pagination--pager" title="Want a USB Ethernet driver for ESXi? You can have two.
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/images/kitchen_teaser.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/homelab/How-I-Built-a-Lego-Rack-for-the-Intel-NUCs/" rel="permalink">How I built a Lego Rack for the Intel NUCs
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  11 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Building a Lego Rack for the Intel NUCs, including a working front door. Lots of sweat, tears and last minute purchases from eBay…
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/images/mini_lab_small.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/homelab/The-Mini-Lab/" rel="permalink">The Mini Lab
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">The evolution of the home lab: Intel Avoton, Intel NUC, FreeNAS, ESXi and FreeNAS
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/images/usb_adapters_65.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/homelab/USB-Ethernet-driver-for-ESXi-6.5/" rel="permalink">USB Ethernet driver for ESXi 6.5
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">ESXi 6.5 drivers for USB 3.0 Gigabit Ethernet adapters based on the ASIX ax88179_178a or the Realtek RLT8153/RTL8152 chipsets
+</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/images/usb_adapters.png"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/" rel="permalink">Want a USB Ethernet driver for ESXi? You can have two.
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  10 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">ESXi drivers for USB 3.0 Gigabit Ethernet adapters based on the ASIX ax88179_178a or the Realtek RLT8153/RTL8152 chipsets
+</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+      <li><a href="https://twitter.com/devttyuk"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+    
+    
+    
+      <li><a href="https://github.com/gomesjj"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2018 Jose Gomes. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://localhost:4000/apple/Intel_Mesh_Commander_on_Mac_OS_X/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/apple/Intel_Mesh_Commander_on_Mac_OS_X"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://devttyuk.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+  </body>
+</html>
