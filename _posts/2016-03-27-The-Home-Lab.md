@@ -1,7 +1,7 @@
 ---
 title: The Home Lab
 header:
-   teaser: "dc.png"
+   teaser: "/images/dc.png"
 category: [Homelab] 
 tags: [Homelab, Education, Virtualisation, NAS]
 ---
