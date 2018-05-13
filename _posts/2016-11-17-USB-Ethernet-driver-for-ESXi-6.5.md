@@ -2,7 +2,7 @@
 title: USB Ethernet driver for ESXi 6.5
 excerpt: "ESXi 6.5 drivers for USB 3.0 Gigabit Ethernet adapters based on the ASIX ax88179_178a or the Realtek RLT8153/RTL8152 chipsets"
 header:
-  teaser: "usb_adapters_65.png"
+  teaser: "/images/usb_adapters_65.png"
 category: [Homelab]
 tags: [Homelab, ESXi, USB, Ethernet]
 ---
