@@ -2,7 +2,7 @@
 title: iTunes Media Folder on NFS share
 excerpt: "Place your iTunes Media folder on a NFS share, mounted automatically at startup with 'automount'."
 header:
-  teaser: "itunes_media.png"
+  teaser: "/images/itunes_media.png"
 category: [Apple]
 tags: [Mac, OS X, iTunes, NFS, NAS]
 ---
