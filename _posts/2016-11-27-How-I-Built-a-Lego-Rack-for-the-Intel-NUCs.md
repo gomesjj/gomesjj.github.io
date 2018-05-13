@@ -2,7 +2,7 @@
 title: How I built a Lego Rack for the Intel NUCs
 excerpt: "Building a Lego Rack for the Intel NUCs, including a working front door. Lots of sweat, tears and last minute purchases from eBay..."
 header:
-   teaser: "kitchen_teaser.png"
+   teaser: "/images/kitchen_teaser.png"
 category: [Homelab] 
 tags: [Homelab, Education, Virtualisation, Lego, NUC, Rack, Server]
 ---  
