@@ -2,7 +2,7 @@
 title: The Mini Lab
 excerpt: "The evolution of the home lab: Intel Avoton, Intel NUC, FreeNAS, ESXi and FreeNAS"
 header:
-   teaser: "mini_lab_small.png"
+   teaser: "/images/mini_lab_small.png"
 category: [Homelab] 
 tags: [Homelab, Education, Virtualisation, NAS, NUC]
 ---  
