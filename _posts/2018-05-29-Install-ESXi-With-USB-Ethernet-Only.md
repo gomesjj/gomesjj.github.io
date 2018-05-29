@@ -21,7 +21,7 @@ So, I started by perusing the GitHub repository (mainly Python scripts), but I c
 
 ## The hack
 
-Once I identified the script that had the adapter hardcoded (applycoices.py) it didn't take very long to work out a hack to overcome that. It is not pretty, and involves more hard-coding, but it works.
+Once I identified the script that had the adapter hardcoded (applychoices.py) it didn't take very long to work out a hack to overcome that. It is not pretty, and involves more hard-coding, but it works.
 
 Here is the how to:
 
