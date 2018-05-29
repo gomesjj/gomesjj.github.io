@@ -11,7 +11,7 @@ It has been more than a year since I wrote about the ASIX and Realtek USB Ethern
 
 Now, one would expect to be able to whip a customised ISO installer with the USB Ethernet drivers, boot from it and be able to install ESXi. Sadly, that is not the case.
 
-I tried to come up with various "solutions", including a custom kick start file to either set the network or the netdevice, but nothing worked. That was a few months ago, but I have recently managed to find some time to dedicate to the issue... Guess what? Network configuration is hard-coded to use vmnic0".
+I tried to come up with various "solutions", including a custom kickstart file to either set the network or the netdevice, but nothing worked. That was a few months ago, but I have recently managed to find some time to dedicate to the issue... Guess what? Network configuration is hard-coded to use vmnic0.
 
 ## Weasel
 
@@ -44,11 +44,10 @@ Or this for an ASIX adapter:
 ``` device = networking.findPhysicalNicByName('vusb0') ```   
 
 Recreate the tar file:   
-``` tar cvf ../weaselin.tar * ```   
+``` tar -cvf ../weaselin.tar * ```   
 ``` cd ../ ```   
 
 Repackage the VIB:
-
 ``` vmtar -c weaselin.tar -o weaselin.vtar ```  
 ``` gzip < weaselin.vtar > weaselin.t00 ```   
 
