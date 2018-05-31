@@ -114,7 +114,7 @@ Once the ISO is created, you can use a tool such as [UNetbootin](https://unetboo
 
 ### Too much work! Give me the VIBs
 
-You can also download the customised Weasel VIBs using the following links:
+~~You can also download the customised Weasel VIBs using the following links:~~
 
 ~~### ASIX~~
 
