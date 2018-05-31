@@ -13,6 +13,16 @@ Now, one would expect to be able to whip a customised ISO installer with the USB
 
 I tried to come up with various "solutions", including a custom kickstart file to either set the network or the netdevice, but nothing worked. That was a few months ago, but I have recently managed to find some time to dedicate to the issue... Guess what? Network configuration is hard-coded to use vmnic0.
 
+<div class="notice--warning" markdown="1">  
+
+**Update (19/05/16)**  
+
+I have changed the solution to use the first physical NIC device which is reporting link up state. No hardcoding -- yeah!
+
+<p></p>
+
+</div>
+
 ## Weasel
 
 Weasel is VMware's operating system installer, which is very similar to RedHat's Anaconda. Weasel was originally a "Fling" that was released in 2010 as an Open Source [project](https://github.com/vmware/weasel).
@@ -27,27 +37,60 @@ Here is the how to:
 
 ## Editing and repackaging the VIB
 
-Copy the VIB (weaselin.t00), say, to /tmp
+Copy the VIB (weaselin.t00), say, to /tmp and extract the contents to a suitable sub-directory:
 
 ``` cp /bootbank/weaselin.t00 /tmp/ ```  
 ``` cd /tmp ```  
 ``` vmtar -x weaselin.t00 -o weaselin.tar ```  
 ``` mkdir weaselin_mod ```   
 ``` cd weaselin_mod ```  
-``` tar -xf ../weaselin.tar ```  
+``` tar -xf ../weaselin.tar ```    
+
+Edit networking/networking_base.py:  
+
+vi -c 70 networking/networking_base.py   
+
+Add the following functions:  
+
+```  
+
+# ----------------------------------------------------------------------------
+def getFirstPluggedInPhysicalNic():
+    ''' Return the first pnic object which is reporting linkUp state'''
+    for pnic in [pnicPtr.get() for pnicPtr in _netInfo.GetPnics()]:
+        if pnic.IsLinkUp():
+            return pnic[0]
+    return None
+
+# ----------------------------------------------------------------------------
+def getPluggedInPhysicalNicName():
+    ''' Return a device name string of the first pnic which is reporting linkUp state'''
+    pnic = getPluggedInPhysicalNic()
+    if pnic:
+        return pnic.GetName()
+    return None
+    
+```
+
+Edit "applychoices.py":  
+  
 ``` vi -c 154 usr/lib/vmware/weasel/applychoices.py ```  
   
 Change line 154 from:  
    
-``` device = networking.findPhysicalNicByName('vmnic0') ```  
+~~``` device = networking.findPhysicalNicByName('vmnic0') ```~~  
    
-To this for a Realtek adapter:  
+~~To this for a Realtek adapter:~~    
    
-``` device = networking.findPhysicalNicByName('vmnic32') ```  
+~~``` device = networking.findPhysicalNicByName('vmnic32') ```~~ 
    
-Or this for an ASIX adapter:  
+~~Or this for an ASIX adapter:~~ 
    
-``` device = networking.findPhysicalNicByName('vusb0') ```   
+~~``` device = networking.findPhysicalNicByName('vusb0') ```~~   
+
+To this:   
+
+``` device = networking.getFirstPluggedInPhysicalNicName() ```  
 
 Recreate the tar file:  
    
