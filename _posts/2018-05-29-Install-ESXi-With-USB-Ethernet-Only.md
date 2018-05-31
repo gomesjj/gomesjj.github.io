@@ -118,11 +118,11 @@ You can also download the customised Weasel VIBs using the following links:
 
 ~~### ASIX~~
 
-~~[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/ASIX_weaselin.t00.zip/images/download.svg) ](https://bintray.com/gomesjj/VIBs/ASIX_weaselin.t00.zip/_latestVersion)~~
-
 ~~### Realtek~~
 
-~~[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/RTL_weaselin.t00.zip/images/download.svg) ](https://bintray.com/gomesjj/VIBs/RTL_weaselin.t00.zip/_latestVersion)~~
+
+Download the VIB, then copy the weasilin.t00 VIB to your bootable USB stick.  
+
+[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/weaselling.t00.zip/images/download.svg?version=1.1) ](https://bintray.com/gomesjj/VIBs/weaselling.t00.zip/1.1/link)  
 
 
-Download the appropriate VIB for your use case, un-zip, then copy the weasilin.t00 VIB to your bootable USB stick.
