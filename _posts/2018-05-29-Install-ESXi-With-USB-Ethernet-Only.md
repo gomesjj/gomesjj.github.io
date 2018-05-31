@@ -116,13 +116,13 @@ Once the ISO is created, you can use a tool such as [UNetbootin](https://unetboo
 
 You can also download the customised Weasel VIBs using the following links:
 
-### ASIX
+~~### ASIX~~
 
-[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/ASIX_weaselin.t00.zip/images/download.svg) ](https://bintray.com/gomesjj/VIBs/ASIX_weaselin.t00.zip/_latestVersion)
+~~[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/ASIX_weaselin.t00.zip/images/download.svg) ](https://bintray.com/gomesjj/VIBs/ASIX_weaselin.t00.zip/_latestVersion)~~
 
-### Realtek
+~~### Realtek~~
 
-[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/RTL_weaselin.t00.zip/images/download.svg) ](https://bintray.com/gomesjj/VIBs/RTL_weaselin.t00.zip/_latestVersion)
+~~[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/RTL_weaselin.t00.zip/images/download.svg) ](https://bintray.com/gomesjj/VIBs/RTL_weaselin.t00.zip/_latestVersion)~~
 
 
 Download the appropriate VIB for your use case, un-zip, then copy the weasilin.t00 VIB to your bootable USB stick.
