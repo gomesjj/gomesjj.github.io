@@ -123,6 +123,9 @@ Once the ISO is created, you can use a tool such as [UNetbootin](https://unetboo
 
 Download the VIB, then copy the weasilin.t00 VIB to your bootable USB stick.  
 
-[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/weaselling.t00.zip/images/download.svg?version=1.1) ](https://bintray.com/gomesjj/VIBs/weaselling.t00.zip/1.1/link)  
+[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/weaselling.t00.zip/images/download.svg?version=1.1) ](https://bintray.com/gomesjj/VIBs/weaselling.t00.zip/1.1/link)
+
+### Hey VMware open source here; please feel free to edit source as needed!
+ Feel free to remove the hardcoded vmknic.  
 
 
