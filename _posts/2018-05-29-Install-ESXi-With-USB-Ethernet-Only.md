@@ -36,18 +36,26 @@ Copy the VIB (weaselin.t00), say, to /tmp
 ``` cd weaselin_mod ```  
 ``` tar -xf ../weaselin.tar ```  
 ``` vi -c 154 usr/lib/vmware/weasel/applychoices.py ```  
-Change line 154 from:   
-``` device = networking.findPhysicalNicByName('vmnic0') ```   
-To this for a Realtek adapter:   
-``` device = networking.findPhysicalNicByName('vmnic32') ```   
-Or this for an ASIX adapter:   
+  
+Change line 154 from:  
+   
+``` device = networking.findPhysicalNicByName('vmnic0') ```  
+   
+To this for a Realtek adapter:  
+   
+``` device = networking.findPhysicalNicByName('vmnic32') ```  
+   
+Or this for an ASIX adapter:  
+   
 ``` device = networking.findPhysicalNicByName('vusb0') ```   
 
-Recreate the tar file:   
+Recreate the tar file:  
+   
 ``` tar -cvf ../weaselin.tar * ```   
 ``` cd ../ ```   
 
-Repackage the VIB:
+Repackage the VIB:  
+
 ``` vmtar -c weaselin.tar -o weaselin.vtar ```  
 ``` gzip < weaselin.vtar > weaselin.t00 ```   
 
