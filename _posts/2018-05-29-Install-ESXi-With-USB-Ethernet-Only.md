@@ -46,9 +46,9 @@ Copy the VIB (weaselin.t00), say, to /tmp and extract the contents to a suitable
 ``` cd weaselin_mod ```  
 ``` tar -xf ../weaselin.tar ```    
 
-Edit networking/networking_base.py:  
+Edit networking_base.py:  
 
-vi -c 70 networking/networking_base.py   
+vi -c 70 usr/lib/vmware/weasel/networking/networking_base.py   
 
 Add the following functions:  
 
