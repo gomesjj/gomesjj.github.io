@@ -15,7 +15,7 @@ I tried to come up with various "solutions", including a custom kickstart file t
 
 <div class="notice--warning" markdown="1">  
 
-**Update (19/05/16)**  
+**Update (31/05/2018)**  
 
 I have changed the solution to use the first physical NIC device which is reporting link up state. No hardcoding -- yeah!
 
