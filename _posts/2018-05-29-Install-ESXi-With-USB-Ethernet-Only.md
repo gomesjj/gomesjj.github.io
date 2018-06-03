@@ -19,6 +19,12 @@ I tried to come up with various "solutions", including a custom kickstart file t
 
 I have changed the solution to use the first physical NIC device which is reporting link up state. No hardcoding -- yeah!
 
+<p></p>  
+
+**Update (3/06/2018)**  
+
+New VIBs for ESXi 6.5 and ESXi 6.7 available for download.
+
 <p></p>
 
 </div>
@@ -44,7 +50,7 @@ Copy the VIB (weaselin.t00), say, to /tmp and extract the contents to a suitable
 ``` vmtar -x weaselin.t00 -o weaselin.tar ```  
 ``` mkdir weaselin_mod ```   
 ``` cd weaselin_mod ```  
-``` tar -xf ../weaselin.tar ```    
+``` tar -xf ../weaselin.tar ```   
 
 Edit networking_base.py:  
 
@@ -114,6 +120,12 @@ Once the ISO is created, you can use a tool such as [UNetbootin](https://unetboo
 
 ### Too much work! Give me the VIBs
 
+<div class="notice--danger">
+<p><b>Update 3/06/2018:</b></p>
+<p>Trying to troubleshoot an issue for a reader I realised that the custom VIB I made available for download would only work with the ESXi 6.7 installer image.</p>
+<p>Please see below for the relevant VIBs for 6.5 and 6.7 installations.</p>
+</div> 
+
 ~~You can also download the customised Weasel VIBs using the following links:~~
 
 ~~### ASIX~~
@@ -121,9 +133,15 @@ Once the ISO is created, you can use a tool such as [UNetbootin](https://unetboo
 ~~### Realtek~~
 
 
-Download the VIB, then copy the weasilin.t00 VIB to your bootable USB stick.  
+Download the VIB for the relevant ESXi version, then copy the weasilin.t00 VIB to your bootable USB stick. 
 
-[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/weaselling.t00.zip/images/download.svg?version=1.1) ](https://bintray.com/gomesjj/VIBs/weaselling.t00.zip/1.1/link)
+#### ESXi 6.5 VIB 
+
+[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/ESXi65_weaselin.t00/images/download.svg) ](https://bintray.com/gomesjj/VIBs/ESXi65_weaselin.t00/_latestVersion)  
+
+#### ESXi 6.7 VIB  
+
+[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/ESXi67_weaselin.t00/images/download.svg) ](https://bintray.com/gomesjj/VIBs/ESXi67_weaselin.t00/_latestVersion)
 
 ### Hey, VMware!
  Hardcoded values are not cool. 😉  
