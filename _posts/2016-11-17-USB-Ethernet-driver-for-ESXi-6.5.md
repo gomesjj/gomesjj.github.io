@@ -27,6 +27,17 @@ echo -e "VMK_NAMESPACE_REQUIRED(\"com.vmware.usb\", \"10.0\");\
 
 Note the sneak change introduced by VMware -- the USB namespace is version 10.0 now...
 
+<div class="notice--warning" markdown="1">
+**Update (19/05/16)**  
+
+<p></p>
+
+Driver update to version 1.19.0 (Latest source code from ASIX).    
+
+<p></p>
+
+</div> 
+
 {% include toc %}
 
 ## What's new
@@ -85,7 +96,7 @@ You can download the VIBs using the following links:
 
 #### ESXi 6.5 VIB 
 
-[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/ax88179_esxi65_vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/ax88179_esxi65_vib/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/ax88179_esxi65_67_vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/ax88179_esxi65_67_vib/_latestVersion)
 
 ### Realtek
 
