@@ -28,7 +28,7 @@ echo -e "VMK_NAMESPACE_REQUIRED(\"com.vmware.usb\", \"10.0\");\
 Note the sneak change introduced by VMware -- the USB namespace is version 10.0 now...
 
 <div class="notice--warning" markdown="1">
-**Update (19/05/16)**  
+**Update (07/02/19)**  
 
 <p></p>
 
