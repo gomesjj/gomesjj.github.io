@@ -9,9 +9,7 @@ tags: [Homelab, ESXi, USB, Ethernet]
 
 <div class="notice--danger" markdown="1">
 **Update (25/02/19)**  
-<li>Driver updated to version 2.11.0 (latest)</li>
 <li>Do not update your existing VIB! The VIB should be removed, followed by a reboot and re-install. Updating the ViB will result on an inability to load the usbnet module.</li>
-<li>Version 2.11.0 adds support for the upcoming 2.5G USB C Ethernet adapters (RTL8156; not tested)</li>
 <p></p>
 </div> 
 
@@ -40,8 +38,15 @@ Note the sneak change introduced by VMware -- the USB namespace is version 10.0 
 
 <p></p>
 
-Driver update to version 1.19.0 (Latest source code from ASIX).    
+<li>Driver update to version 1.19.0 (Latest source code from ASIX).</li>   
 
+<p></p>
+
+**Update (07/02/19)**   
+
+<p></p>
+<li>Driver updated to version 2.11.0 (latest)</li>
+<li>Version 2.11.0 adds support for the upcoming 2.5G USB C Ethernet adapters (RTL8156; not tested)</li>
 <p></p>
 
 </div> 
