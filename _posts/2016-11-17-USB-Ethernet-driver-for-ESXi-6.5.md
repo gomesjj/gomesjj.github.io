@@ -45,8 +45,9 @@ Note the sneak change introduced by VMware -- the USB namespace is version 10.0 
 **Update (07/02/19)**   
 
 <p></p>
-<li>Driver updated to version 2.11.0 (latest)</li>
+<li>Realtek driver updated to version 2.11.0 (latest)</li>
 <li>Version 2.11.0 adds support for the upcoming 2.5G USB C Ethernet adapters (RTL8156; not tested)</li>
+<li>ASIX driver updated to version 1.19.0 (latest)</li>
 <p></p>
 
 </div> 
