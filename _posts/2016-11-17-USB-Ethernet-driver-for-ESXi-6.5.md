@@ -7,6 +7,14 @@ category: [Homelab]
 tags: [Homelab, ESXi, USB, Ethernet]
 ---
 
+<div class="notice--danger" markdown="1">
+**Update (25/02/19)**  
+<li>Driver updated to version 2.11.0 (latest)</li>
+<li>Do not update your existing VIB! The VIB should be removed, followed by a reboot and re-install. Updating the ViB will result on an inability to load the usbnet module.</li>
+<li>Version 2.11.0 adds support for the upcoming 2.5G USB C Ethernet adapters (RTL8156; not tested)</li>
+<p></p>
+</div> 
+
 Back in May I wrote this [piece](/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/) about USB Ethernet drivers for ESXi. I have been using both Realtek and ASIX adapters to complement the single Ethernet adapter on the Intel NUCs, and they have proved to be rock solid. 
 
 Fast forward a few months, and as soon as ESXi 6.5 was announced people started asking if I could recompile the drivers for the new release. Finally I had some time this week to look into that. The result? A lot of wasted time downloading the 6.5 disclosure packages, setting up the environment, tweaking build scripts, etc. It turns out that compiling the drivers in the ESXi 6.0 environment I built previously worked much better, with just a single trivial change to the USB namespace.
