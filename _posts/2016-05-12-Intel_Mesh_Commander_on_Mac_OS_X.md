@@ -41,6 +41,11 @@ tags: [Mac, OS X, NW.js, Homelab, Virtualisation, NUC]
 **Update (07/02/19)**
 
 <li>Pre-built package of MeshCommander updated to version 0.7.4</li>
+<p></p>   
+
+**Update (08/06/19)**
+
+<li>Pre-built package of MeshCommander updated to version 0.7.6</li>
 <p></p>
 </div>  
 
@@ -231,4 +236,4 @@ MeshCommander.app
 
 Yes, you can. Download the latest version of the application:
 
-![MeshCommander.app](/images/mesh/meshcommander_app.png) [ ![Download](https://api.bintray.com/packages/gomesjj/APPS/MeshCommander.app/images/download.svg) ](https://bintray.com/gomesjj/APPS/MeshCommander.app/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/gomesjj/APPS/MeshCommander.app/images/download.svg) ](https://bintray.com/gomesjj/APPS/MeshCommander.app/_latestVersion)
