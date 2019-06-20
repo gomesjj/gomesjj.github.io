@@ -46,6 +46,12 @@ tags: [Mac, OS X, NW.js, Homelab, Virtualisation, NUC]
 **Update (08/06/19)**
 
 <li>Pre-built package of MeshCommander updated to version 0.7.6</li>
+<p></p>   
+
+**Update (20/06/19)**
+
+<li>Pre-built package of MeshCommander updated to version 0.7.7</li>   
+<li>Includes new JS based IDER functionality</li>
 <p></p>
 </div>  
 
