@@ -1,6 +1,6 @@
 ---
-title: USB Ethernet driver for ESXi 6.5
-excerpt: "ESXi 6.5 drivers for USB 3.0 Gigabit Ethernet adapters based on the ASIX ax88179_178a or the Realtek RLT8153/RTL8152 chipsets"
+title: USB 2.5G Ethernet drive support for ESXi 6.5 and 6.7
+excerpt: "ESXi 6.5/.67 drivers for USB 3.0 Gigabit Ethernet 2.5G adapters based on the Realtek RLT8156 chipsets"
 header:
   teaser: "/images/usb_adapters_65.png"
 category: [Homelab]
@@ -8,12 +8,14 @@ tags: [Homelab, ESXi, USB, Ethernet]
 ---
 
 <div class="notice--danger" markdown="1">
-**Update (25/02/19)**  
-<li>Do not update your existing VIB! The VIB should be removed, followed by a reboot and re-install. Updating the ViB will result on an inability to load the usbnet module.</li>
+<b>Note</b></p> 
+Do not update your existing VIB! The VIB should be removed, followed by a reboot and re-install. Updating the VIB will result on an inability to load the usbnet module.
 <p></p>
 </div> 
 
-Back in May I wrote this [piece](/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/) about USB Ethernet drivers for ESXi. I have been using both Realtek and ASIX adapters to complement the single Ethernet adapter on the Intel NUCs, and they have proved to be rock solid. 
+I know the future for ESXi is based on a Linux free World; but for those of us still rocking a Home Lab based on either ESXi 6.5 or 6.7, having the ability to step-up to the dizzying heights of better than Gigabit Ethernet, and for that matter, with USB based adapters, is quite something. Not to mention the fact that some of those adapters are quite inexpensive!
+
+Some days ago I was contacted by someone based in the Netherlands who was trying to get the RTL8156 based adapters he had recently purchased working on ESXi. You might or might not have read this [piece](/homelab/Want-a-USB-Ethernet-driver-for-ESXi-You-can-have-two/) about USB Ethernet drivers for ESXi. I have been using both Realtek and ASIX adapters to complement the single Ethernet adapter on the Intel NUCs, and they have proved to be rock solid. 
 
 Fast forward a few months, and as soon as ESXi 6.5 was announced people started asking if I could recompile the drivers for the new release. Finally I had some time this week to look into that. The result? A lot of wasted time downloading the 6.5 disclosure packages, setting up the environment, tweaking build scripts, etc. It turns out that compiling the drivers in the ESXi 6.0 environment I built previously worked much better, with just a single trivial change to the USB namespace.
 
