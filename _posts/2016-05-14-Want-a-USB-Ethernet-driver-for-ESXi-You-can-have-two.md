@@ -7,6 +7,15 @@ category: [Homelab]
 tags: [Homelab, ESXi, USB, Ethernet]
 ---
 
+---
+<div class="notice--warning" markdown="1">
+**Update (18/01/2022)**
+
+<li>Pre-built packages of the VIPs for ESXi 6.0, 5.5 and 5.1</li>
+<p></p>
+<p>You shouldn't be using this package anymore, particularly if you want to use ESXi 7.x. Have a look at the fling [USB Native Driver](https://flings.vmware.com/usb-network-native-driver-for-esxi)</p>     
+</div>
+
 Ah, that mythical home lab beast: a working USB Ethernet driver for ESXi. You wait and wait for one, and then two come along...
 
 {% include toc %}
