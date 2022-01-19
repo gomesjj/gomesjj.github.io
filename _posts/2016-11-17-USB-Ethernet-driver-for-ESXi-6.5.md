@@ -109,12 +109,12 @@ You can download the VIBs using the following links:
 
 ### ASIX
 
-#### ESXi 6.5 VIB 
+#### ESXi 6.5/6.7 VIB 
 
-[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/ax88179_esxi65_67_vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/ax88179_esxi65_67_vib/_latestVersion)
+[Download](https://devtty.jfrog.io/ui/native/default-generic-local/Asix/ax88179-1.15.1-1_esxi65.vib)
 
 ### Realtek
 
-#### ESXi 6.5 VIB
+#### ESXi 6.5/6.7 VIB
 
-[ ![Download](https://api.bintray.com/packages/gomesjj/VIBs/r8152_esxi65_vib/images/download.svg) ](https://bintray.com/gomesjj/VIBs/r8152_esxi65_vib/_latestVersion)
+[Download](https://devtty.jfrog.io/ui/native/default-generic-local/Realtek/r8152-2.12.0_vmw.650.x86_64.vib)
