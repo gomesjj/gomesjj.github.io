@@ -68,6 +68,12 @@ tags: [Mac, OS X, NW.js, Homelab, Virtualisation, NUC]
 
 <li>Pre-built package of MeshCommander updated to version 0.8.9</li>
 <p></p>    
+</div> 
+
+**Update (02/06/22)**
+
+<li>Pre-built package of MeshCommander updated to version 0.9.5</li>
+<p></p>    
 </div>  
 
 Intel Active Management Technology is one of the hardware technologies (perhaps the most recognised and representative) that is part of Intel's [vPro](http://www.intel.co.uk/content/www/uk/en/architecture-and-technology/vpro/vpro-technology-general.html) offerings. AMT offers the benefits of out-of-band management similar to IPMI, but for personal computers as opposed to servers.
@@ -257,4 +263,4 @@ MeshCommander.app
 
 Yes, you can. Download the latest version of the application:
 
-[ ![Download](https://api.bintray.com/packages/gomesjj/APPS/MeshCommander.app/images/download.svg) ](https://bintray.com/gomesjj/APPS/MeshCommander.app/_latestVersion)
+[ ![Download](/images/install-software-download.svg) ](https://github.com/gomesjj/MeshCommander/releases/download/dmg/MeshCommander.dmg.zip)

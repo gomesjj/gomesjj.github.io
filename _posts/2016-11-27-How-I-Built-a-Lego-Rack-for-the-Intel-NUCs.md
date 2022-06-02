@@ -32,6 +32,7 @@ Even the black stackable base plates are now hard to find in the UK (other colou
 ## Bill of Materials (BOM)  
 
 |<b>Quantity</b>|<b>Type</b>|<b>Colour</b>|<b>Size</b>|
+| :--- | :--- | :--- | :--- |
 |1 (pack of 10)|Stackable Plates|Black|20x20 (6" x 6")|
 |2|Brick|Black|1x16|
 |4|Brick|Black|1x8|
@@ -86,6 +87,7 @@ The basic building blocks are the Strictly Briks Stackable Plates and the hollow
 BOM for this section:
 
 |<b>Quantity</b>|<b>Type</b>|<b>Colour</b>|<b>Size</b>|
+| :--- | :--- | :--- | :--- |
 |2 |Plates|Black|20x20|
 |16|Stackable/Column Brick|Black|1x16|
 |8 |Brick|Grey|2x6|
@@ -146,6 +148,7 @@ Finally, place the assembled 1st level plate over the base.
 BOM for this section:
 
 |<b>Quantity</b>|<b>Type</b>|<b>Colour</b>|<b>Size</b>|
+| :--- | :--- | :--- | :--- |
 |2|Plates|Black|20x20|
 |4|Plates|Black|4x8|
 |2|Plates|Black|4x4|
@@ -182,6 +185,7 @@ Finally, place 2 building bricks together at each end of the overhang, capped by
 BOM for this section:
 
 |<b>Quantity</b>|<b>Type</b>|<b>Colour</b>|<b>Size</b>|
+| :--- | :--- | :--- | :--- |
 |2|Plates|Black|20x20|
 |4|Plates|Black|4x8|
 |2|Plates|Black|4x4|
@@ -207,6 +211,7 @@ As per Step 7, but starting with black, instead of grey, bricks.
 BOM for this section:
 
 |<b>Quantity</b>|<b>Type</b>|<b>Colour</b>|<b>Size</b>|
+| :--- | :--- | :--- | :--- |
 |2|Plates|Black|20x20|
 |4|Plates|Black|4x8|
 |2|Plates|Black|4x4|
@@ -224,6 +229,7 @@ A repeat of steps 4, 5 and 7 (grey bricks).
 BOM for this section: 
 
 |<b>Quantity</b>|<b>Type</b>|<b>Colour</b>|<b>Size</b>|
+| :--- | :--- | :--- | :--- |
 |2|Plates|Black|20x20|
 |4|Roof Tiles|Black|2x8/45˚|
 |2|Roof Tiles	|Black|2x4/45˚
@@ -249,6 +255,7 @@ I myself wanted the rack to have a working door. Off course, it is not essential
 BOM for this section: 
 
 |<b>Quantity</b>|<b>Type</b>|<b>Colour</b>|<b>Size</b>|
+| :--- | :--- | :--- | :--- |
 |4|Corner Brick|Grey|1x2|
 |18|Brick|Grey|1x4|
 |2|Brick|Grey|1x3|
@@ -335,6 +342,7 @@ To finish off the inner frame, place 1x8 grey smooth plates around the inner per
 BOM for this section: 
 
 |<b>Quantity</b>|<b>Type</b>|<b>Colour</b>|<b>Size</b>|
+| :--- | :--- | :--- | :--- |
 |1|Midwest Polyester Clear Sheet Single|Clear|0.06 mm|
 |1|Stix2 Self-Adhesive Magnetic Tape|Brown|3 m|
 |1|Modelcraft Universal Razor Saw|N/A|N/A|
@@ -358,6 +366,7 @@ Carefully place the polyester sheet within the door frame. As mentioned above, t
 BOM for this section: 
 
 |<b>Quantity</b>|<b>Type</b>|<b>Colour</b>|<b>Size</b>|
+| :--- | :--- | :--- | :--- |
 |2|Arch Continuous Bow|Black|1x6|
 |2|Flat Tiles|Grey|1x6|
 |9|Flat Tiles|Black|1x6|
