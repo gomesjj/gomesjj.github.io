@@ -67,8 +67,7 @@ tags: [Mac, OS X, NW.js, Homelab, Virtualisation, NUC]
 **Update (22/11/20)**
 
 <li>Pre-built package of MeshCommander updated to version 0.8.9</li>
-<p></p>    
-</div> 
+<p></p>
 
 **Update (02/06/22)**
 
